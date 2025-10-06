@@ -26,4 +26,4 @@
 * 预计导出一百万条记录大约需要 35 分钟。
 
 
-有关数据调查和报告的详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html["调查组织中存储的数据"]。
+有关数据调查和报告的详细信息，请参阅 https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["调查组织中存储的数据"]。

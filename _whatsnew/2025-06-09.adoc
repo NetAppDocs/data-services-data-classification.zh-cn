@@ -37,7 +37,7 @@
 | 开放权限 | 24 小时 
 
 
-| 已保存的查询 | 2 小时 
+| 保存的搜索 | 2 小时 
 
 
 | 敏感数据和广泛权限 | 24 小时 
@@ -51,7 +51,7 @@
 
 | 按敏感度级别划分的顶级数据存储库 | 2 小时 
 |===
-您可以查看上次更新的时间，并手动更新重复文件、非业务数据、已保存的查询、陈旧数据和按敏感度级别划分的顶级数据存储库组件。有关治理仪表板的更多信息，请参阅link:https://docs.netapp.com/us-en/bluexp-classification/task-controlling-governance-data.html["查看有关组织中存储的数据的治理详细信息"]。
+您可以查看上次更新的时间，并按敏感度级别手动更新重复文件、非业务数据、已保存的搜索、陈旧数据和顶级数据存储库组件。有关治理仪表板的更多信息，请参阅link:https://docs.netapp.com/us-en/data-services-data-classification/task-controlling-governance-data.html["查看有关组织中存储的数据的治理详细信息"]。
 
 .性能和安全性改进
 已做出改进以提高BlueXP分类的性能、内存消耗和安全性。

@@ -173,7 +173,7 @@ IMPORTANT: BlueXP私有模式（传统BlueXP接口）通常用于没有互联网
 
 数据分类捕获元数据，例如：文件名、权限、创建时间、上次访问和上次修改。这包括数据调查详情页面和数据调查报告中显示的所有元数据。
 
-数据分类可以识别多种类型的私人数据，例如个人信息（PII）和敏感个人信息（SPII）。有关私人数据的详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html["数据分类扫描的私人数据类别"]。
+数据分类可以识别多种类型的私人数据，例如个人信息（PII）和敏感个人信息（SPII）。有关私人数据的详细信息，请参阅xref:reference-private-data-categories.html[数据分类扫描的私人数据类别]。
 
 
 
@@ -245,7 +245,7 @@ NetApp无法访问敏感数据，也不会在 UI 中显示它。敏感数据被�
 * 对于本地ONTAP系统：控制台代理位于本地。
 
 
-如果您在这些位置有数据，您可能需要使用 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#when-to-use-multiple-connectors["多个控制台代理"^]。
+如果您在这些位置有数据，您可能需要使用 https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#when-to-use-multiple-connectors["多个控制台代理"^]。
 
 
 

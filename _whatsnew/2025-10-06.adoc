@@ -14,17 +14,25 @@ BlueXP已重新命名并重新设计，以更好地反映其在管理数据基�
 
 NetApp控制台提供企业级跨本地和云环境的存储和数据服务的集中管理，提供实时洞察、更快的工作流程和简化的管理。
 
-有关更改的详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-relnotes/index.html["NetApp控制台发行说明"]。
+有关更改的详细信息，请参阅 https://docs.netapp.com/us-en/console-relnotes/index.html["NetApp控制台发行说明"]。
 
-.操作（预览）
-数据分类现在支持调查页面中的操作。您可以从数据分类中复制、移动和删除文件。
+.增强调查体验
+使用新的可搜索过滤器、每个值的结果计数、总结关键发现的实时见解以及具有可自定义列和滑出详细信息窗格的刷新结果表，更快地查找和理解您的数据。
 
-.支持标记文件（预览）
-数据分类现在支持标记单个文件。使用文件标签，您可以为特定文件创建自定义标识符，用于识别和过滤数据。通过标签，您可以识别数据调查中的特定质量，或根据标签结果创建已保存的查询和策略。
+有关更多信息，请参阅link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html#view-file-metada["调查数据"] 。
 
-有关更多信息，请参阅link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html#view-file-metada["查看文件元数据"] 。
+.新的治理与合规仪表板
+通过直观的小部件、更清晰的视觉效果和改进的加载性能更快地获得关键见解。有关详细信息，请参阅link:https://docs.netapp.com/us-en/data-services-data-classification//task-controlling-governance-data.html["审查有关您的数据的治理信息"]和link:https://docs.netapp.com/us-en/data-services-data-classification/task-controlling-private-data.html["查看有关您的数据的合规性信息"]。
 
 .已保存查询的策略（预览）
-已保存的搜索已重命名为已保存的查询。您还可以将已保存的查询转变为可操作的策略：根据已保存的查询结果删除数据或发送电子邮件通知。
+数据分类现在使您能够通过条件操作实现治理自动化。您可以创建保留规则，设置自动删除和定期电子邮件通知，所有这些都可以通过更新的已保存查询页面进行管理。
 
 有关更多信息，请参阅link:https://docs.netapp.com/us-en/data-services-data-classification/task-using-policies.html["创建策略"] 。
+
+.操作（预览）
+从调查页面直接控制 - 单独或批量删除、移动、复制或标记文件，以实现高效的数据管理和补救。
+
+有关更多信息，请参阅link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html#view-file-metada["调查数据"] 。
+
+.支持Google Cloud NetApp Volumes
+数据分类现在支持在Google Cloud NetApp Volumes上进行扫描。从NetApp控制台轻松添加Google Cloud NetApp Volumes，实现无缝数据扫描和分类。

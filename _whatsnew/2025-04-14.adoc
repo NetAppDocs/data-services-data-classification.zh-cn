@@ -14,4 +14,4 @@ BlueXP classification支持工作环境的批量操作。您可以选择启用�
 .本地下载调查报告
 BlueXP classification支持将数据调查报告下载到本地以便在浏览器中查看。如果选择本地选项，数据调查仅以 CSV 格式提供，并且仅显示前 10,000 行数据。
 
-有关更多信息，请参阅link:https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html#create-the-data-investigation-report["使用BlueXP classification调查组织中存储的数据"] 。
+有关更多信息，请参阅link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html#create-the-data-investigation-report["使用BlueXP classification调查组织中存储的数据"] 。

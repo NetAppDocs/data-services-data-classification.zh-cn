@@ -36,10 +36,10 @@ image:diagram_deploy_onprem_cloud_instance.png["所需控制台和网络组件�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]创建控制台代理
 [role="quick-margin-para"]
-如果您还没有控制台代理， https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["在本地部署控制台代理"^]在您的网络中的 Linux 主机上，或在云中的 Linux 主机上。
+如果您还没有控制台代理， https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["在本地部署控制台代理"^]在您的网络中的 Linux 主机上，或在云中的 Linux 主机上。
 
 [role="quick-margin-para"]
-您还可以与您的云提供商一起创建控制台代理。看 https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html["在 AWS 中创建控制台代理"^]， https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["在 Azure 中创建控制台代理"^] ， 或者 https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["在 GCP 中创建控制台代理"^]。
+您还可以与您的云提供商一起创建控制台代理。看 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["在 AWS 中创建控制台代理"^]， https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["在 Azure 中创建控制台代理"^] ， 或者 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["在 GCP 中创建控制台代理"^]。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]审查先决条件
 [role="quick-margin-para"]
@@ -56,9 +56,9 @@ image:diagram_deploy_onprem_cloud_instance.png["所需控制台和网络组件�
 
 == 创建控制台代理
 
-您需要先安装控制台代理，然后才能安装和使用数据分类。在大多数情况下，您可能会在尝试激活数据分类之前设置控制台代理，因为大多数 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["控制台功能需要控制台代理"]，但有些情况下您需要立即设置一个。
+您需要先安装控制台代理，然后才能安装和使用数据分类。在大多数情况下，您可能会在尝试激活数据分类之前设置控制台代理，因为大多数 https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["控制台功能需要控制台代理"]，但有些情况下您需要立即设置一个。
 
-要在您的云提供商环境中创建一个，请参阅 https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html["在 AWS 中创建控制台代理"^]， https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["在 Azure 中创建控制台代理"^] ， 或者 https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["在 GCP 中创建控制台代理"^]。
+要在您的云提供商环境中创建一个，请参阅 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["在 AWS 中创建控制台代理"^]， https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["在 Azure 中创建控制台代理"^] ， 或者 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["在 GCP 中创建控制台代理"^]。
 
 在某些情况下，您必须使用部署在特定云提供商中的控制台代理：
 
@@ -72,7 +72,7 @@ image:diagram_deploy_onprem_cloud_instance.png["所需控制台和网络组件�
 
 可以使用任何这些云控制台代理来扫描本地ONTAP系统、 NetApp文件共享和数据库帐户。
 
-请注意，您还可以 https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["在本地部署控制台代理"^]在您的网络中的 Linux 主机上或云中的 Linux 主机上。一些计划在本地安装数据分类的用户可能还会选择在本地安装控制台代理。
+请注意，您还可以 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["在本地部署控制台代理"^]在您的网络中的 Linux 主机上或云中的 Linux 主机上。一些计划在本地安装数据分类的用户可能还会选择在本地安装控制台代理。
 
 安装数据分类时，您将需要控制台代理系统的 IP 地址或主机名。如果您在您的场所安装了控制台代理，您将获得此信息。如果控制台代理部署在云中，您可以从控制台中找到此信息：选择帮助图标，然后选择*支持*，然后选择**控制台代理**。
 
@@ -210,16 +210,16 @@ NOTE: 安装后，数据分类主机系统的 IP 地址无法更改。
 | 端点 | 目的 
 
 
-| \ https://api.bluexp.netapp.com | 与控制台的通信，其中包括NetApp帐户。 
+| \ https://api.console.netapp.com | 与控制台的通信，其中包括NetApp帐户。 
 
 
 | \ https://netapp-cloud-account.auth0.com \ https://auth0.com | 与控制台网站通信，实现集中用户身份验证。 
 
 
-| \ https://support.compliance.api.bluexp.netapp.com/ \ https://hub.docker.com \ https://auth.docker.io \ https://registry-1.docker.io \ https://index.docker.io/ \ https://dseasb33srnrn.cloudfront.net/ \ https://production.cloudflare.docker.com/ | 提供对软件映像、清单、模板的访问以及发送日志和指标。 
+| \ https://support.compliance.api.console.netapp.com/ \ https://hub.docker.com \ https://auth.docker.io \ https://registry-1.docker.io \ https://index.docker.io/ \ https://dseasb33srnrn.cloudfront.net/ \ https://production.cloudflare.docker.com/ | 提供对软件映像、清单、模板的访问以及发送日志和指标。 
 
 
-| \ https://support.compliance.api.bluexp.netapp.com/ | 使NetApp能够从审计记录中流式传输数据。 
+| \ https://support.compliance.api.console.netapp.com/ | 使NetApp能够从审计记录中流式传输数据。 
 
 
 | https://github.com/docker https://download.docker.com | 提供docker安装的必备包。 
@@ -293,7 +293,7 @@ image:diagram_deploy_onprem_single_host_internet.png["该图表显示了使用�
 只要实例具有互联网连接，数据分类软件的升级就会自动进行。
 
 
-NOTE: 当软件安装在本地时，数据分类当前无法扫描 S3 存储桶、 Azure NetApp Files或 FSx for ONTAP 。在这些情况下，您需要在云中部署单独的控制台代理和数据分类实例，并且 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["在连接器之间切换"^]适用于不同的数据源。
+NOTE: 当软件安装在本地时，数据分类当前无法扫描 S3 存储桶、 Azure NetApp Files或 FSx for ONTAP 。在这些情况下，您需要在云中部署单独的控制台代理和数据分类实例，并且 https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["在连接器之间切换"^]适用于不同的数据源。
 
 
 

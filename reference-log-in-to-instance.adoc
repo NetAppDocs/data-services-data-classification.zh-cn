@@ -35,7 +35,7 @@ summary: 有时您可能需要登录NetApp数据分类系统，以便访问日�
 
 需要修改安全组入站规则才能访问云端的系统。有关详细信息，请参阅：
 
-* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-aws.html["AWS 中的安全组规则"^]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-azure.html["Azure 中的安全组规则"^]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-gcp.html["Google Cloud 中的防火墙规则"^]
+* https://docs.netapp.com/us-en/console-setup-admin/reference-ports-aws.html["AWS 中的安全组规则"^]
+* https://docs.netapp.com/us-en/console-setup-admin/reference-ports-azure.html["Azure 中的安全组规则"^]
+* https://docs.netapp.com/us-en/console-setup-admin/reference-ports-gcp.html["Google Cloud 中的防火墙规则"^]
 

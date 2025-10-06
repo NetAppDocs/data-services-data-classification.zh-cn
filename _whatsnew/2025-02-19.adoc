@@ -20,9 +20,9 @@
 
 优先权是一次性授予的。映射数据的自动重新扫描按照默认顺序进行。
 
-优先级仅限于link:https://docs.netapp.com/us-en/bluexp-classification/concept-classification.html["仅映射扫描"^]；它不适用于地图和分类扫描。
+优先级仅限于link:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["仅映射扫描"^]；它不适用于地图和分类扫描。
 
-有关更多信息，请参阅link:https://docs.netapp.com/us-en/bluexp-classification/task-managing-repo-scanning.html#prioritize-scans["优先扫描"^] 。
+有关更多信息，请参阅link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html#prioritize-scans["优先扫描"^] 。
 
 .重试所有扫描
 BlueXP classification支持批量重试所有失败扫描的功能。
@@ -36,4 +36,4 @@ BlueXP classification支持批量重试所有失败扫描的功能。
 
 
 .提高分类模型的准确性
-机器学习模型的准确率link:https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-sensitive-personal-datapredefined-categories["预定义类别"]提高了11%。
+机器学习模型的准确率link:https://docs.netapp.com/us-en/data-services-data-classification/reference-private-data-categories.html#types-of-sensitive-personal-datapredefined-categories["预定义类别"]提高了11%。

@@ -13,9 +13,9 @@
 
 以下操作系统需要使用 Podman 容器引擎，并且需要BlueXP classification版本 1.30 或更高版本：Red Hat Enterprise Linux 版本 8.8、8.10、9.0、9.1、9.2、9.3 和 9.4。
 
-详细了解 https://docs.netapp.com/us-en/bluexp-classification/concept-classification.html["BlueXP classification"]。
+详细了解 https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["BlueXP classification"]。
 
 .支持 NFS v4.1
 此版本除了支持以前支持的版本外，还提供对 NFS v4.1 的支持。
 
-详细了解 https://docs.netapp.com/us-en/bluexp-classification/concept-classification.html["BlueXP classification"]。
+详细了解 https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["BlueXP classification"]。

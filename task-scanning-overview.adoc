@@ -72,7 +72,7 @@ NetApp数据分类会扫描您选择的存储库（卷、数据库模式或其�
 
 | 能够查看文件中的元数据** | 否 | 是 
 |===
-{asterisk} 数据分类不会对其可以扫描的数据量施加限制。每个控制台代理支持扫描和显示 500 TiB 的数据。要扫描超过 500 TiB 的数据，link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#connector-installation["安装另一个控制台代理"^]然后link:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-overview.html["部署另一个数据分类实例"]。 + 控制台 UI 显示来自单个连接器的数据。有关查看来自多个控制台代理的数据的提示，请参阅link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["使用多个控制台代理"^]。
+{asterisk} 数据分类不会对其可以扫描的数据量施加限制。每个控制台代理支持扫描和显示 500 TiB 的数据。要扫描超过 500 TiB 的数据，link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["安装另一个控制台代理"^]然后link:task-deploy-overview.html["部署另一个数据分类实例"]。+ 控制台 UI 显示来自单个连接器的数据。有关查看来自多个控制台代理的数据的提示，请参阅link:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["使用多个控制台代理"^]。
 
 {asterisk}{asterisk} 在映射扫描期间从文件中提取以下元数据：
 
