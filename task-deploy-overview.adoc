@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: task-deploy-overview.html 
+keywords: cloud compliance, data sense, get started, deploy cloud data sense, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, bluexp classification 
+summary: 规划哪种NetApp数据分类部署可以满足您的需求。 
+---
+= 您应该使用哪种NetApp数据分类部署？
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以通过不同的方式部署NetApp数据分类。了解哪种方法可以满足您的需求。
+
+数据分类可以通过以下方式部署：
+
+* link:task-deploy-cloud-compliance.html["使用控制台在云中部署"] 。控制台将数据分类实例部署在与控制台代理相同的云提供商网络中。
+* link:task-deploy-compliance-onprem.html["在可以访问互联网的 Linux 主机上安装"] 。在您的网络中的 Linux 主机上或云中的 Linux 主机上安装数据分类，前提是该主机可以访问互联网。如果您希望使用同样位于本地的数据分类实例来扫描本地ONTAP系统，则这种类型的安装可能是一个不错的选择，尽管这不是必需的。
+* link:task-deploy-compliance-dark-site.html["在没有互联网访问的本地站点的 Linux 主机上安装"]，也称为_私人模式_。这种安装类型使用安装脚本，与控制台 SaaS 层没有连接。
+
+
+
+IMPORTANT: BlueXP私有模式（传统BlueXP接口）通常用于没有互联网连接的本地环境和安全云区域，其中包括 AWS Secret Cloud、AWS Top Secret Cloud 和 Azure IL6。NetApp继续通过传统的BlueXP界面支持这些环境。有关旧版BlueXP界面中的私有模式文档，请参阅link:https://docs.netapp.com/us-en/console-setup-admin/media/BlueXP-Private-Mode-legacy-interface.pdf["BlueXP私人模式的 PDF 文档"^]。
+
+无论是在有互联网访问的 Linux 主机上安装，还是在没有互联网访问的 Linux 主机上进行本地安装，都使用安装脚本。脚本首先检查系统和环境是否满足先决条件。如果满足先决条件，则安装开始。如果您想独立于运行数据分类安装来验证先决条件，您可以下载一个单独的软件包，该软件包仅测试先决条件。
+
+请参阅link:task-test-linux-system.html["检查您的 Linux 主机是否已准备好安装数据分类"] 。

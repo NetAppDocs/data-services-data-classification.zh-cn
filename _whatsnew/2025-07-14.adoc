@@ -1,0 +1,19 @@
+= 1.45 版
+:allow-uri-read: 
+
+
+
+
+=== 1.45 版
+
+此BlueXP classification版本包括优化资源利用率的代码更改以及：
+
+.改进了添加文件共享进行扫描的工作流程
+将文件共享添加到文件共享组的工作流程已经简化。该流程现在还根据身份验证类型（Kerberos 或 NTLM）区分 CIFS 协议支持。
+
+有关更多信息，请参阅link:https://docs.netapp.com/us-en/bluexp-classification/task-scanning-file-shares.html["扫描文件共享"] 。
+
+.增强文件所有者信息
+您现在可以在“调查”选项卡中查看有关捕获的文件的文件所有者的更多信息。在“调查”选项卡中查看文件的元数据时，找到文件所有者，然后选择“查看详细信息”以查看用户名、电子邮件和 SAM 帐户名称。您还可以查看该用户拥有的其他物品。此功能仅适用于具有 Active Directory 的工作环境。
+
+有关更多信息，请参阅link:https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html["调查组织中存储的数据"] 。

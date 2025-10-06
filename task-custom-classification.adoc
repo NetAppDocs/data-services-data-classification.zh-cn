@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: task-custom-classification.html 
+keywords: custom classification, customize, regular expression, keyword, regex 
+summary: NetApp数据分类使您能够自定义敏感信息的搜索，并根据与您的组织相关的个别模式和关键字定制服务。 
+---
+= 在NetApp数据分类中创建自定义分类
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用NetApp数据分类，您可以创建敏感信息的自定义搜索。搜索范围可以限定为正则表达式（regex）。
+
+
+
+== 创建自定义分类
+
+自定义分类仅适用于地图和分类扫描，不适用于仅映射扫描。此功能目前处于预览状态。
+
+.步骤
+. 选择**自定义分类**选项卡。
+. 选择**添加新分类器**按钮。
+. 为新分类器添加分类器名称和描述。
+. 选择将分类器添加为*个人标识符*或*类别*。
++
+image:screenshot-custom-classifier-name.png["添加分类器的屏幕截图"]
+
+. 选择“下一步”。
+. 要将自定义添加为正则表达式，请选择**自定义正则表达式**，然后选择**下一步**。
+. 添加一个模式来检测数据的特定信息。选择**验证**来确认您输入的语法。image:screenshot-create-logic-regex.png["创建正则表达式的对话框的屏幕截图。"]
+. 选择**完成**来创建自定义分类。
+
+
+新的定制将在下一次计划扫描中捕获。要查看结果，请参阅xref:task-generating-compliance-reports.html[生成合规性报告]。

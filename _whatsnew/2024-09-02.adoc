@@ -1,0 +1,12 @@
+= 1.35 版
+:allow-uri-read: 
+
+
+
+
+=== 1.35 版
+
+.扫描StorageGRID数据
+BlueXP classification支持扫描StorageGRID中的数据。
+
+有关详细信息，请参阅link:task-scanning-storagegrid.html["扫描StorageGRID数据"]。

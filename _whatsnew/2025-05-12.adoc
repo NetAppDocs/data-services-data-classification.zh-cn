@@ -1,0 +1,41 @@
+= 1.43 版
+:allow-uri-read: 
+
+
+
+
+=== 1.43 版
+
+此数据分类版本包括：
+
+.优先进行分类扫描
+数据分类除了支持仅映射扫描之外，还支持对映射和分类扫描进行优先排序的功能，使您可以选择首先完成哪些扫描。在扫描开始期间和开始之前，支持对地图和分类扫描进行优先排序。如果您选择在扫描过程中确定扫描的优先级，则映射扫描和分类扫描都会被优先处理。
+
+有关更多信息，请参阅link:https://docs.netapp.com/us-en/bluexp-classification/task-managing-repo-scanning.html#prioritize-scans["优先扫描"] 。
+
+.支持加拿大个人身份信息 (PII) 数据类别
+数据分类扫描识别加拿大 PII 数据类别。这些类别包括加拿大所有省份和地区的银行信息、护照号码、社会保险号码、驾驶执照号码和健康卡号码。
+
+有关更多信息，请参阅link:https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-personal-data["个人数据类别"] 。
+
+.自定义分类（预览）
+数据分类支持地图和分类扫描的自定义分类。通过自定义分类，您可以定制数据分类扫描，以使用正则表达式捕获特定于您的组织的数据。此功能目前处于预览状态。
+
+有关更多信息，请参阅link:https://docs.netapp.com/us-en/bluexp-classification/task-custom-classification.html["添加自定义分类"] 。
+
+.已保存的查询选项卡
+**政策** 选项卡已重命名link:https://docs.netapp.com/us-en/bluexp-classification/task-using-policies.html["**已保存的查询**"]。功能没有改变。
+
+.将扫描事件发送到审核页面
+数据分类支持发送分类事件（扫描启动时和扫描结束时）到link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-bluexp-timeline["NetApp Console 审计页面"^]。
+
+.安全更新
+* Keras 包已更新，缓解了漏洞（BDSA-2025-0107 和 BDSA-2025-1984）。
+* Docker 容器配置已更新。容器不再有权访问主机的网络接口来制作原始网络数据包。通过减少不必要的访问，此更新可减轻潜在的安全风险。
+
+
+.性能增强
+已经实施了代码增强，以减少 RAM 使用率并提高数据分类的整体性能。
+
+.错误修复
+导致StorageGRID扫描失败、调查页面过滤选项无法加载以及无法下载大容量评估的数据发现评估的错误已得到修复。

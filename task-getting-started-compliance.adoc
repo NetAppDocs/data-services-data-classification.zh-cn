@@ -1,0 +1,120 @@
+---
+sidebar: sidebar 
+permalink: task-getting-started-compliance.html 
+keywords: cloud compliance, get started, enable cloud compliance, cifs credentials, smb credentials, cloud compliance access, privacy, compliance, dp volumes, data protection volumes, CVO, Cloud Volumes ONTAP, data sense 
+summary: 完成几个步骤即可开始使用NetApp数据分类扫描您的Cloud Volumes ONTAP和本地ONTAP卷。 
+---
+= 使用NetApp数据分类扫描Cloud Volumes ONTAP和本地ONTAP卷
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+完成几个步骤即可开始使用NetApp数据分类扫描您的Cloud Volumes ONTAP和本地ONTAP卷。
+
+
+
+== 前提条件
+
+在启用数据分类之前，请确保您具有受支持的配置。
+
+* 如果您正在扫描可通过互联网访问的Cloud Volumes ONTAP和本地ONTAP系统，您可以link:task-deploy-cloud-compliance.html["在云中部署数据分类"]或者link:task-deploy-compliance-onprem.html["在可以访问互联网的本地位置"]。
+* 如果您要扫描安装在没有互联网访问的暗站中的本地ONTAP系统，则需要link:task-deploy-compliance-dark-site.html["在没有互联网访问的同一本地位置部署数据分类"]。这要求将控制台代理部署在同一本地位置。
+
+
+
+
+== 在您的系统中启用数据分类扫描
+
+您可以在任何受支持的云提供商的Cloud Volumes ONTAP系统以及本地ONTAP集群上启用数据分类扫描。
+
+.步骤
+. 从数据分类菜单中，选择*配置*。
++
+配置页面显示多个系统。
+
++
+image:screen-cl-config-cvo.png["显示Cloud Volumes ONTAP系统的配置选项卡的屏幕截图。"]
+
+. 选择一个系统，然后选择*配置*。
++
+image:screen-cl-config-cvo-map-options.png["配置选项卡的屏幕截图显示了映射和分类存储库的选项。"]
+
+. 如果您不介意是否重置上次访问时间，请打开*缺少“写入属性”权限时扫描*开关，无论权限如何，都会扫描所有文件。
++
+页面顶部的“缺少“写入属性”权限时扫描”开关默认处于禁用状态。这意味着，如果数据分类在 CIFS 中没有写属性权限，或者在 NFS 中没有写权限，系统将不会对文件进行分类，因为数据分类无法将“上次访问时间”恢复为原始时间戳。link:reference-collected-metadata.html["了解更多"^] 。
+
+. 选择如何扫描每个系统中的卷。link:concept-classification.html#whats-the-difference-between-mapping-and-classification-scans["了解映射和分类扫描"]：
++
+** 要映射所有卷，请选择*映射*。
+** 要映射和分类所有卷，请选择*映射和分类*。
+** 要自定义每个卷的扫描，请选择*自定义*，然后选择要映射和/或分类的卷。
+
+
+. 在确认对话框中，选择“*批准*”以使数据分类开始扫描您的卷。
+
+
+.结果
+数据分类开始扫描您在系统中选择的卷。一旦数据分类开始扫描，结果就会开始出现在合规性仪表板中。完成所需的时间取决于数据量——可能是几分钟或几小时。
+
+
+NOTE: 数据分类仅扫描卷下的一个文件共享。如果您的卷中有多个共享，则需要将这些其他共享作为共享组单独扫描。link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume["查看有关此数据分类限制的更多详细信息"^] 。
+
+
+
+== 验证数据分类是否有权访问卷
+
+通过检查网络、安全组和导出策略，确保数据分类可以访问卷。您需要向数据分类提供 CIFS 凭据，以便它可以访问 CIFS 卷。
+
+.清单
+* 确保数据分类实例与包含Cloud Volumes ONTAP或本地ONTAP集群的卷的每个网络之间存在网络连接。
+* 确保Cloud Volumes ONTAP的安全组允许来自数据分类实例的入站流量。
++
+您可以为来自数据分类实例的 IP 地址的流量打开安全组，也可以为来自虚拟网络内部的所有流量打开安全组。
+
+* 确保 NFS 卷导出策略包含数据分类实例的 IP 地址，以便它可以访问每个卷上的数据。
+
+
+.步骤
+. 从数据分类菜单中，选择*配置*。
++
+image:screen-cl-config-cvo-map-options.png["配置选项卡的屏幕截图显示了映射和分类存储库的选项。"]..如果您使用 CIFS，请向数据分类提供 Active Directory 凭据，以便它可以扫描 CIFS 卷。对于每个系统，选择*编辑 CIFS 凭据*并输入数据分类访问系统上的 CIFS 卷所需的用户名和密码。
+
++
++ 凭据可以是只读的，但提供管理员凭据可确保数据分类可以读取任何需要提升权限的数据。凭证存储在数据分类实例上。
+
++
++ 如果您想确保文件的“上次访问时间”不会因数据分类扫描而改变，建议用户在 CIFS 中具有写入属性权限或在 NFS 中具有写入权限。如果可能，请将 Active Directory 用户配置为组织中具有所有文件权限的父组的一部分。
+
++
++ 输入凭据后，您应该会看到一条消息，提示所有 CIFS 卷均已成功验证。
+
+. 在配置页面上，选择*配置*以查看每个 CIFS 和 NFS 卷的状态并纠正任何错误。
+
+
+
+
+== 禁用卷上的合规性扫描
+
+您可以随时从配置页面启动或停止系统中的仅映射扫描或映射和分类扫描。您还可以从仅映射扫描更改为映射和分类扫描，反之亦然。我们建议您扫描所有卷。
+
+
+NOTE: 仅当您在标题区域中设置了 *Map* 或 *Map & Classify* 设置时，才会自动扫描添加到系统的新卷。当标题区域中的选项设置为*自定义*或*关闭*时，您需要在系统中添加的每个新卷上激活映射和/或完整扫描。
+
+.步骤
+. 从数据分类菜单中，选择*配置*。
+. 选择您想要更改的系统的*配置*按钮。
++
+image:screen-cl-config-cvo-map-options.png["配置选项卡的屏幕截图显示了映射和分类存储库的选项。"]
+
+. 执行以下操作之一：
++
+** 要禁用对卷的扫描，请在卷区域中选择“*关闭*”。
+** 要禁用对所有卷的扫描，请在标题区域中选择“*关闭*”。
+
+
+

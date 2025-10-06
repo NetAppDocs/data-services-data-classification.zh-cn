@@ -1,0 +1,81 @@
+---
+sidebar: sidebar 
+permalink: task-controlling-private-data.html 
+keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights 
+summary: '通过查看组织中的个人数据 (PII) 和敏感个人数据 (SPII) 的详细信息来控制您的私人数据。您还可以通过查看数据分类在您的数据中发现的类别和文件类型来获得可见性。' 
+---
+= 使用NetApp数据分类查看组织中存储的私人数据的合规性详细信息
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+通过查看组织中的个人数据 (PII) 和敏感个人数据 (SPII) 的详细信息来控制您的私人数据。您还可以通过查看NetApp数据分类在您的数据中找到的类别和文件类型来获得可见性。
+
+
+NOTE: 仅当您执行完整分类扫描时，才可获得文件级合规性详细信息。仅映射扫描不会产生文件级详细信息。
+
+默认情况下，数据分类仪表板显示所有系统和数据库的合规性数据。要仅查看部分系统的数据，请选择它们。
+
+image:screenshot_compliance_dashboard.png["数据分类仪表板的屏幕截图"]
+
+您可以从数据调查页面过滤结果，并将结果报告下载为 CSV 文件。看link:task-investigate-data.html["在数据调查页面中过滤数据"]了解详情。
+
+
+
+== 查看包含个人数据的文件
+
+数据分类自动识别数据中的特定单词、字符串和模式（正则表达式）。link:link:reference-private-data-categories.html["例如，信用卡号、社会保险号、银行账号、密码等等。"]数据分类可在单个文件、目录（共享和文件夹）内的文件以及数据库表中识别此类信息。
+
+您还可以创建自定义搜索词来识别特定于您组织的个人数据。有关更多信息，请参阅link:task-custom-classification.html["创建自定义分类"] 。
+
+对于某些类型的个人数据，数据分类使用_邻近验证_来验证其发现。通过查找与找到的个人数据接近的一个或多个预定义关键字来进行验证。例如，如果数据分类看到旁边有一个近似词（例如，_SSN_ 或 _social security_），它就会将美国社会保障号码 (SSN) 识别为 SSN。link:reference-private-data-categories.html["个人资料表"]显示数据分类何时使用邻近验证。
+
+.步骤
+. 从数据分类菜单中，选择“*合规性*”选项卡。
+. 要调查所有个人数据的详细信息，请选择个人数据百分比旁边的图标。
++
+image:screenshot_compliance_dashboard.png["数据分类仪表板的屏幕截图"]
+
+. 要调查特定类型的个人数据的详细信息，请选择*查看全部*，然后选择特定类型的个人数据（例如电子邮件地址）的*调查结果*箭头图标。
++
+image:screenshot_personal_files.png["个人文件对话框的屏幕截图，您可以在其中选择个人数据类型旁边的调查结果图标。"]
+
+. 通过搜索、排序、扩展特定文件的详细信息、选择“调查结果”箭头查看屏蔽信息或下载文件列表来调查数据。
++
+下图显示在目录（共享和文件夹）中找到的个人数据。在“结构化”选项卡中，您可以查看数据库中的个人数据。在“非结构化”选项卡中，您可以查看文件级数据。
+
++
+image:screenshot_compliance_investigation_page.png["单击“调查结果”后在文件中发现的详细信息的屏幕截图。"]
+
++
+image:screenshot_compliance_investigation_page_directory.png["单击“调查结果”后在目录中找到的详细信息的屏幕截图。"]
+
+
+
+
+
+== 查看包含敏感个人数据的文件
+
+数据分类会自动识别隐私法规所定义的特殊类型的敏感个人信息，例如 https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&from=EN#d1e2051-1-1["GDPR 第 9 条和第 10 条"^]。例如，有关一个人的健康、种族或性取向的信息。link:reference-private-data-categories.html["查看完整列表"] 。数据分类可在单个文件、目录（共享和文件夹）内的文件以及数据库表中识别此类信息。
+
+数据分类使用人工智能、自然语言处理 (NLP)、机器学习 (ML) 和认知计算 (CC) 来理解其扫描的内容的含义，以便提取实体并对其进行相应的分类。
+
+例如，GDPR 数据的一个敏感类别是种族来源。由于其 NLP 能力，数据分类可以区分“乔治是墨西哥人”（表示 GDPR 第 9 条规定的敏感数据）和“乔治正在吃墨西哥食物”之间的区别。
+
+
+NOTE: 扫描敏感个人数据时仅支持英语。稍后将添加对更多语言的支持。
+
+.步骤
+. 从数据分类菜单中，选择*合规性*。
+. 要调查所有敏感个人数据的详细信息，请找到**敏感个人信息结果**卡，然后选择**显示全部**。
++
+image:screenshot-sensitive-personal.png["敏感个人信息结果卡的屏幕截图"] 。
+
+. 要调查特定类型的敏感个人数据的详细信息，请选择“查看全部”，然后选择特定类型的敏感个人数据的“调查结果”箭头图标。
+. 通过搜索、排序、扩展特定文件的详细信息、单击“调查结果”查看屏蔽信息或下载文件列表来调查数据。
+

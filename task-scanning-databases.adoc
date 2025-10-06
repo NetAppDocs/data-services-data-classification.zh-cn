@@ -1,0 +1,117 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-databases.html 
+keywords: cloud compliance, enable cloud compliance, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, databases, database schemas, Oracle, SAP HANA, SQL Server, MongoDB, PostgreSQL, data sense 
+summary: 完成几个步骤即可开始使用NetApp数据分类扫描数据库模式。 
+---
+= 使用NetApp数据分类扫描数据库模式
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+完成几个步骤即可开始使用NetApp数据分类扫描数据库模式。
+
+
+
+== 审查先决条件
+
+在启用数据分类之前，请查看以下先决条件，以确保您具有受支持的配置。
+
+
+
+=== 支持的数据库
+
+数据分类可以扫描以下数据库中的模式：
+
+* 亚马逊关系数据库服务 (Amazon RDS)
+* MongoDB
+* MySQL
+* Oracle
+* PostgreSQL
+* SAP HANA
+* SQL 服务器 (MSSQL)
+
+
+
+CAUTION: 数据库中必须启用统计信息收集功能。
+
+
+
+=== 数据库要求
+
+任何与数据分类实例连接的数据库都可以被扫描，无论它托管在何处。您只需要以下信息即可连接到数据库：
+
+* IP 地址或主机名
+* 端口
+* 服务名称（仅用于访问 Oracle 数据库）
+* 允许读取架构的凭证
++
+选择用户名和密码时，务必选择对要扫描的所有模式和表具有完全读取权限的用户名和密码。我们建议您为数据分类系统创建一个具有所有必需权限的专用用户。
+
+
+
+
+NOTE: 对于 MongoDB，需要只读管理员角色。
+
+
+
+== 部署数据分类实例
+
+如果尚未部署实例，则部署数据分类。
+
+如果您正在扫描可通过互联网访问的数据库模式，您可以link:task-deploy-cloud-compliance.html["在云中部署数据分类"^]或者link:task-deploy-compliance-onprem.html["在可以访问互联网的本地位置部署数据分类"^]。
+
+如果您正在扫描安装在没有互联网访问的暗网中的数据库模式，则需要link:task-deploy-compliance-dark-site.html["在没有互联网访问的同一本地位置部署数据分类"^]。这还要求将控制台代理部署在同一本地位置。
+
+
+
+== 添加数据库服务器
+
+添加架构所在的数据库服务器。
+
+. 从数据分类菜单中，选择*配置*。
+. 在配置页面中，选择*添加系统* > *添加数据库服务器*。
+. 输入所需信息以识别数据库服务器。
++
+.. 选择数据库类型。
+.. 输入端口和主机名或 IP 地址以连接到数据库。
+.. 对于 Oracle 数据库，输入服务名称。
+.. 输入凭据以便数据分类可以访问服务器。
+.. 选择*添加数据库服务器*。
++
+image:screenshot_compliance_add_db_server_dialog.png["添加数据库服务器页面的屏幕截图，以便您识别数据库。"]
+
+
+
+
+
+该数据库已添加到系统列表中。
+
+
+
+== 启用和禁用数据库模式的合规性扫描
+
+您可以随时停止或开始对您的模式进行全面扫描。
+
+
+TIP: 没有选项可以选择仅映射数据库模式的扫描。
+
+. 在配置页面中，选择要配置的数据库的*配置*按钮。
++
+image:screenshot_compliance_db_server_config.png["扫描配置页面的屏幕截图，您可以在其中选择配置按钮。"]
+
+. 通过向右移动滑块来选择要扫描的模式。
++
+image:screenshot_compliance_select_schemas.png["扫描配置页面的屏幕截图，您可以在其中选择要扫描的模式。"]
+
+
+
+.结果
+数据分类开始扫描您启用的数据库模式。您可以通过导航到**配置**菜单然后选择**系统配置**来跟踪初始扫描的进度。每次扫描的进度都显示为进度条。您还可以将鼠标悬停在进度条上，查看相对于卷中总文件数的已扫描文件数。如果有任何错误，它们将出现在“状态”列中，并显示修复错误所需的操作。
+
+数据分类每天扫描您的数据库一次；数据库不像其他数据源那样被连续扫描。

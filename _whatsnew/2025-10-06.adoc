@@ -1,0 +1,30 @@
+= 1.47 版
+:allow-uri-read: 
+
+
+
+
+=== 1.47 版
+
+.BlueXP classification现为NetApp数据分类
+BlueXP classification已重命名为NetApp数据分类。除了重命名之外，用户界面也得到了增强。
+
+.BlueXP现在是NetApp控制台
+BlueXP已重新命名并重新设计，以更好地反映其在管理数据基础设施中的作用。
+
+NetApp控制台提供企业级跨本地和云环境的存储和数据服务的集中管理，提供实时洞察、更快的工作流程和简化的管理。
+
+有关更改的详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-relnotes/index.html["NetApp控制台发行说明"]。
+
+.操作（预览）
+数据分类现在支持调查页面中的操作。您可以从数据分类中复制、移动和删除文件。
+
+.支持标记文件（预览）
+数据分类现在支持标记单个文件。使用文件标签，您可以为特定文件创建自定义标识符，用于识别和过滤数据。通过标签，您可以识别数据调查中的特定质量，或根据标签结果创建已保存的查询和策略。
+
+有关更多信息，请参阅link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html#view-file-metada["查看文件元数据"] 。
+
+.已保存查询的策略（预览）
+已保存的搜索已重命名为已保存的查询。您还可以将已保存的查询转变为可操作的策略：根据已保存的查询结果删除数据或发送电子邮件通知。
+
+有关更多信息，请参阅link:https://docs.netapp.com/us-en/data-services-data-classification/task-using-policies.html["创建策略"] 。

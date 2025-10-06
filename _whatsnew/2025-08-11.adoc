@@ -1,0 +1,19 @@
+= 1.46 版
+:allow-uri-read: 
+
+
+
+
+=== 1.46 版
+
+此数据分类版本包括错误修复和以下更新：
+
+.审计页面中增强的扫描事件洞察
+审计页面现在支持对BlueXP classification的扫描事件的增强洞察。审计页面现在显示系统扫描的开始时间、系统状态以及任何问题。共享和系统的状态仅适用于映射扫描。
+
+有关审计页面的更多信息，请参阅link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html["监控NetApp控制台操作"^]。
+
+.支持 RHEL 9.6
+此版本增加了对 Red Hat Enterprise Linux v9.6 的支持，用于手动本地安装BlueXP classification，包括暗站部署。
+
+以下操作系统需要使用 Podman 容器引擎，并且需要BlueXP classification版本 1.30 或更高版本：Red Hat Enterprise Linux 版本 8.8、8.10、9.0、9.1、9.2、9.3、9.4 和 9.5。

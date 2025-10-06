@@ -1,0 +1,160 @@
+---
+sidebar: sidebar 
+permalink: task-exclude-scan-paths.html 
+keywords: exclude scans, folders, directories 
+summary: 如果您希望NetApp数据分类排除驻留在特定数据源目录中的扫描数据，则可以将这些目录名称添加到配置文件中。应用此更改后，数据分类引擎将排除这些目录中的扫描数据。 
+---
+= 从NetApp数据分类扫描中排除特定目录
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果您希望NetApp数据分类从扫描中排除特定目录，则可以将这些目录名称添加到配置文件中。应用此更改后，数据分类引擎将从扫描中排除这些目录。
+
+
+NOTE: 默认情况下，数据分类扫描排除与卷中的源相同的卷快照数据。
+
+
+
+== 支持的数据源
+
+以下数据源中的 NFS 和 CIFS 共享支持从数据分类扫描中排除特定目录：
+
+* 本地ONTAP
+* Cloud Volumes ONTAP
+* Amazon FSx for NetApp ONTAP
+* Azure NetApp Files
+* 常规文件共享
+
+
+
+
+== 定义要排除在扫描之外的目录
+
+在将目录排除在分类扫描之外之前，您需要登录数据分类系统，以便可以编辑配置文件并运行脚本。了解如何link:reference-log-in-to-instance.html["登录数据分类系统"]取决于您是否在 Linux 机器上手动安装了该软件，或者是否在云中部署了该实例。
+
+.注意事项
+* 每个数据分类系统最多可以排除 50 个目录路径。
+* 排除目录路径可能会影响扫描时间。
+
+
+.步骤
+. 在数据分类系统上，转到“/opt/netapp/config/custom_configuration”，然后打开文件 `data_provider.yaml`。
+. 在“exclude:”行下的“data_providers”部分中，输入要排除的目录路径。例如：
++
+....
+exclude:
+- "folder1"
+- "folder2"
+....
++
+请勿修改此文件中的任何其他内容。
+
+. 保存对文件的更改。
+. 转到“/opt/netapp/Datasense/tools/customer_configuration/data_providers”并运行以下脚本：
+
+
+`update_data_providers_from_config_file.sh`
+
++ 此命令将要排除在扫描范围之外的目录提交给分类引擎。
+
+.结果
+对您的数据进行的所有后续扫描都将排除对这些指定目录的扫描。
+
+您可以使用相同的步骤从排除列表中添加、编辑或删除项目。运行脚本提交更改后，修改后的排除列表将会更新。
+
+
+
+== 示例
+
+.配置1：
+名称中包含“folder1”的每个文件夹都将被排除在所有数据源之外。
+
+....
+data_providers:
+   exclude:
+   - "folder1"
+....
+.将被排除的路径的预期结果：
+* /CVO1/文件夹1
+* /CVO1/文件夹1名称
+* /CVO1/文件夹10
+* /CVO1/*文件夹1
+* /CVO1/+文件夹1名称
+* /CVO1/notfolder10
+* /CVO22/文件夹1
+* /CVO22/文件夹1名称
+* /CVO22/文件夹10
+
+
+.不会被排除的路径示例：
+* /CVO1/*文件夹
+* /CVO1/文件夹名称
+* /CVO22/*folder20
+
+
+.配置2：
+仅在名称开头包含“*folder1”的每个文件夹都将被排除。
+
+....
+data_providers:
+   exclude:
+   - "\\*folder1"
+....
+.将被排除的路径的预期结果：
+* /CVO/*文件夹1
+* /CVO/*文件夹1名称
+* /CVO/*folder10
+
+
+.不会被排除的路径示例：
+* /CVO/文件夹1
+* /CVO/文件夹1名称
+* /CVO/not*folder10
+
+
+.配置3：
+数据源“CVO22”中名称中包含“folder1”的每个文件夹都将被排除。
+
+....
+data_providers:
+   exclude:
+   - "CVO22/folder1"
+....
+.将被排除的路径的预期结果：
+* /CVO22/文件夹1
+* /CVO22/文件夹1名称
+* /CVO22/文件夹10
+
+
+.不会被排除的路径示例：
+* /CVO1/文件夹1
+* /CVO1/文件夹1名称
+* /CVO1/文件夹10
+
+
+
+
+== 转义文件夹名称中的特殊字符
+
+如果您的文件夹名称包含以下特殊字符之一，并且您想要排除该文件夹中的数据进行扫描，则需要在文件夹名称前使用转义序列 \\。
+
+ ., +, *, ?, ^, $, (, ), [, ], {, }, |
+例如：
+
+源中的路径： `/project/*not_to_scan`
+
+排除文件中的语法： `"\\*not_to_scan"`
+
+
+
+== 查看当前排除列表
+
+内容可能 `data_provider.yaml`配置文件与运行后实际提交的内容不同 `update_data_providers_from_config_file.sh`脚本。要查看已从数据分类扫描中排除的当前目录列表，请从“/opt/netapp/Datasense/tools/customer_configuration/data_providers”运行以下命令：
+
+ get_data_providers_configuration.sh

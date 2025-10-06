@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: task-access.html 
+keywords: log in, sign in 
+summary: 通过访问NetApp控制台中的服务开始使用NetApp数据分类。 
+---
+= 访问NetApp数据分类
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以通过NetApp控制台访问NetApp数据分类。
+
+要登录控制台，您可以使用您的NetApp支持站点凭据，也可以使用您的电子邮件和密码注册NetApp控制台登录。link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["了解有关登录控制台的更多信息"^] 。
+
+特定任务需要特定的控制台用户角色。link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的控制台访问角色"^] 。
+
+.开始之前
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["您应该添加一个控制台代理。"^]
+* link:task-deploy-cloud-compliance.html["了解哪种数据分类部署样式适合您的工作负载。"]
+
+
+.步骤
+. 在 Web 浏览器中，导航至link:https://console.netapp.com/["控制台"^]。
+. 登录控制台。
+. 从NetApp控制台主页中，选择“治理”>“数据分类”。
+. 如果这是您第一次访问数据分类，则会出现登录页面。
++
+选择*在本地或云中部署分类*以开始部署您的分类实例。有关详细信息，请参阅link:task-deploy-cloud-compliance.html["您应该使用哪种数据分类部署？"]
+
++
+image:screenshot-deploy-classification.png["选择按钮以激活数据分类的屏幕截图。"]
+
++
+否则，将出现数据分类仪表板。
+
+

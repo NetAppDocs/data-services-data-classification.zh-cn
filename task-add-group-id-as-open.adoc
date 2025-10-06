@@ -1,0 +1,57 @@
+---
+sidebar: sidebar 
+permalink: task-add-group-id-as-open.html 
+keywords: permissions, open to organization, file access 
+summary: '当组 ID 附加到 NFS 文件共享中的文件或文件夹时，它们定义了文件或文件夹的权限；例如它们是否“对组织开放”。如果某些组 ID (GID) 最初未设置“向组织开放”权限级别，则可以将该权限添加到 GID，以便附加该 GID 的任何文件和文件夹都将被视为“向组织开放”。' 
+---
+= 在NetApp数据分类中将其他组 ID 定义为对组织开放
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+当组 ID (GID) 附加到 NFS 文件共享中的文件或文件夹时，它们定义了文件或文件夹的权限；例如它们是否“对组织开放”。如果某些 GID 最初未设置“向组织开放”权限级别，您可以向 GID 添加该权限，以便任何附加了该 GID 的文件和文件夹都将被视为“向组织开放”。
+
+在您进行此更改并且NetApp数据分类重新扫描您的文件和文件夹后，任何附加了这些组 ID 的文件和文件夹都将在“调查详细信息”页面中显示此权限，并且它们还将出现在您显示文件权限的报告中。
+
+要激活此功能，您需要登录数据分类系统，以便可以编辑配置文件并运行脚本。了解如何link:reference-log-in-to-instance.html["登录数据分类系统"]取决于您是否在 Linux 机器上手动安装了该软件，或者是否在云中部署了该实例。
+
+
+
+== 为群组 ID 添加“向组织开放”权限
+
+在开始此任务之前，您需要有组 ID 号 (GID)。
+
+.步骤
+. 在数据分类系统上，转到“/opt/netapp/config/custom_configuration”并打开文件 `data_provider.yaml`。
+. 在“organization_group_ids: []”行中添加组 ID。例如：
++
+ organization_group_ids: [1014, 1015, 21, 2021, 1013, 2020, 1018, 1019]
++
+不要更改此文件中的任何其他内容。
+
+. 保存对文件的更改。
+. 转到“/opt/netapp/Datasense/tools/customer_configuration/data_providers”并运行以下脚本：
++
+ update_data_providers_from_config_file.sh
++
+此命令将修改后的组 ID 权限提交给分类引擎。
+
+
+
+.结果
+对您的数据进行的所有后续扫描都将识别出附加有这些组 ID 且标记为“向组织开放”的文件或文件夹。
+
+您可以使用相同的步骤编辑组 ID 列表并删除过去添加的任何组 ID。运行脚本提交更改后，修改后的组 ID 列表将会更新。
+
+
+
+== 查看当前组ID列表
+
+内容可能 `data_provider.yaml`配置文件与运行后实际提交的内容不同 `update_data_providers_from_config_file.sh`脚本。要查看已添加到数据分类的当前组 ID 列表，请从“/opt/netapp/Datasense/tools/customer_configuration/data_providers”运行以下命令：
+
+ get_data_providers_configuration.sh

@@ -1,0 +1,82 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-storagegrid.html 
+keywords: cloud compliance, enable cloud compliance, privacy, compliance, object storage, data sense 
+summary: 完成几个步骤即可直接使用NetApp数据分类开始扫描StorageGRID内的数据。 
+---
+= 使用NetApp数据分类扫描StorageGRID数据
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+完成几个步骤即可直接使用NetApp数据分类开始扫描StorageGRID内的数据。
+
+
+
+== 查看StorageGRID要求
+
+在启用数据分类之前，请查看以下先决条件，以确保您具有受支持的配置。
+
+* 您需要有端点 URL 才能连接对象存储服务。
+* 您需要拥有来自StorageGRID的访问密钥和密钥，以便数据分类可以访问存储桶。
+
+
+
+
+== 部署数据分类实例
+
+如果尚未部署实例，则部署数据分类。
+
+如果您正在扫描可通过互联网访问的StorageGRID数据，您可以link:task-deploy-cloud-compliance.html["在云中部署数据分类"^]或者link:task-deploy-compliance-onprem.html["在可以访问互联网的本地位置部署数据分类"^]。
+
+如果您要扫描安装在没有互联网访问的暗站中的StorageGRID数据，则需要link:task-deploy-compliance-dark-site.html["在没有互联网访问的同一本地位置部署数据分类"^]。这还要求将控制台代理部署在同一本地位置。
+
+
+
+== 将StorageGRID服务添加到数据分类
+
+添加StorageGRID服务。
+
+.步骤
+. 从数据分类菜单中，选择*配置*选项。
+. 在配置页面中，选择“添加系统”>“添加StorageGRID”。
+. 在添加StorageGRID服务对话框中，输入StorageGRID服务的详细信息并选择*继续*。
++
+.. 输入您想要使用的系统名称。此名称应反映您要连接的StorageGRID服务的名称。
+.. 输入 Endpoint URL 以访问对象存储服务。
+.. 输入访问密钥和密钥，以便数据分类可以访问StorageGRID中的存储桶。
++
+image:screenshot-scanning-storagegrid-add.png["输入值以访问StorageGRID服务的对话框的屏幕截图。"]
+
+
+
+
+
+.结果
+StorageGRID已添加到系统列表中。
+
+
+
+== 在StorageGRID桶上启用和禁用合规性扫描
+
+在StorageGRID上启用数据分类后，下一步是配置要扫描的存储桶。数据分类发现这些存储桶并将它们显示在您创建的系统中。
+
+.步骤
+. 在配置页面中，找到StorageGRID系统。
+. 在StorageGRID系统图块上，选择 *配置*。
+. 完成以下步骤之一来启用或禁用扫描：
++
+** 要对存储桶启用仅映射扫描，请选择*Map*。
+** 要对存储桶启用完整扫描，请选择*Map & Classify*。
+** 要禁用对存储桶的扫描，请选择“关闭”。
+
+
+
+
+.结果
+数据分类开始扫描您启用的存储桶。您可以通过导航到**配置**菜单然后选择**系统配置**来跟踪初始扫描的进度。每次扫描的进度都显示为进度条。您还可以将鼠标悬停在进度条上，查看相对于卷中总文件数的已扫描文件数。如果有任何错误，它们将出现在“状态”列中，并显示修复错误所需的操作。

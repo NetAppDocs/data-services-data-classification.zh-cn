@@ -1,0 +1,134 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-anf.html 
+keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, ANF, azure netApp files, data sense 
+summary: 完成几个步骤即可开始使用Azure NetApp Files的数据分类。 
+---
+= 使用NetApp数据分类扫描Azure NetApp Files卷
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+完成几个步骤即可开始使用适用于Azure NetApp Files的NetApp数据分类。
+
+
+
+== 发现要扫描的Azure NetApp Files系统Discover the Azure NetApp Files system that you want to scan
+
+如果要扫描的Azure NetApp Files系统尚未作为系统出现在NetApp控制台中，link:https://docs.netapp.com/us-en/bluexp-azure-netapp-files/task-quick-start.html["将其添加到系统页面"^] 。
+
+
+
+== 部署数据分类实例
+
+link:task-deploy-cloud-compliance.html["部署数据分类"^]如果尚未部署实例。
+
+扫描Azure NetApp Files卷时，必须在云中部署数据分类，并且必须将其部署在与要扫描的卷相同的区域中。
+
+*注意：*扫描Azure NetApp Files卷时，当前不支持在本地位置部署数据分类。
+
+
+
+== 在您的系统中启用数据分类
+
+您可以在Azure NetApp Files卷上启用数据分类。
+
+. 从数据分类菜单中，选择*配置*。
++
+image:screenshot_cloud_compliance_anf_scan_config.png["部署数据分类实例后立即显示的“配置”选项卡的屏幕截图。"]
+
+. 选择如何扫描每个系统中的卷。link:concept-classification.html#whats-the-difference-between-mapping-and-classification-scans["了解映射和分类扫描"]：
++
+** 要映射所有卷，请选择*映射所有卷*。
+** 要映射和分类所有卷，请选择*映射和分类所有卷*。
+** 要自定义每个卷的扫描，请选择*或选择每个卷的扫描类型*，然后选择要映射和/或分类的卷。
++
+看<<启用和禁用卷上的合规性扫描,启用和禁用卷上的合规性扫描>>了解详情。
+
+
+
+. 在确认对话框中，选择*批准*。
+
+
+.结果
+数据分类开始扫描您在系统中选择的卷。一旦数据分类完成初始扫描，结果就会显示在合规性仪表板中。所需时间取决于数据量——可能是几分钟或几小时。您可以通过导航到**配置**菜单然后选择**系统配置**来跟踪初始扫描的进度。每次扫描的进度都显示为进度条。您还可以将鼠标悬停在进度条上，查看相对于卷中总文件数的已扫描文件数。
+
+* 默认情况下，如果数据分类在 CIFS 中没有写入属性权限，或者在 NFS 中没有写入权限，系统将不会扫描卷中的文件，因为数据分类无法将“上次访问时间”恢复为原始时间戳。如果您不介意上次访问时间是否重置，请选择*或为每个卷选择扫描类型*。结果页面有一个您可以启用的设置，以便数据分类可以扫描卷，而不管权限如何。
+* 数据分类仅扫描卷下的一个文件共享。如果您的卷中有多个共享，则需要将这些其他共享作为共享组单独扫描。link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume["了解此数据分类限制"^] 。
+
+
+
+
+== 验证数据分类是否有权访问卷
+
+通过检查网络、安全组和导出策略，确保数据分类可以访问卷。您需要为数据分类提供 CIFS 凭据，以便它可以访问 CIFS 卷。
+
+
+NOTE: 对于Azure NetApp Files，数据分类只能扫描与控制台位于同一区域的卷。
+
+.清单
+* 确保数据分类实例与包含Azure NetApp Files卷的每个网络之间存在网络连接。
+* 确保以下端口对数据分类实例开放：
++
+** 对于 NFS – 端口 111 和 2049。
+** 对于 CIFS – 端口 139 和 445。
+
+
+* 确保 NFS 卷导出策略包含数据分类实例的 IP 地址，以便它可以访问每个卷上的数据。
+
+
+.步骤
+. 从数据分类菜单中，选择*配置*。
++
+.. 如果您使用 CIFS（SMB），请确保 Active Directory 凭据正确。对于每个系统，选择*编辑 CIFS 凭据*，然后输入数据分类访问系统上的 CIFS 卷所需的用户名和密码。
++
+凭据可以是只读的，但提供管理员凭据可确保数据分类可以读取任何需要提升权限的数据。凭证存储在数据分类实例上。
+
++
+如果您想确保文件的“上次访问时间”不会因数据分类扫描而改变，建议用户在 CIFS 中具有写入属性权限或在 NFS 中具有写入权限。如果可能，请将 Active Directory 用户配置为组织中具有所有文件权限的父组的一部分。
+
++
+输入凭据后，您应该会看到一条消息，表明所有 CIFS 卷均已成功验证。
+
++
+image:screenshot_cifs_status.gif["屏幕截图显示了配置页面和一个已成功提供 CIFS 凭据的Cloud Volumes ONTAP系统。"]
+
+
+
+. 在配置页面上，选择*查看详细信息*以查看每个 CIFS 和 NFS 卷的状态并纠正任何错误。
++
+例如，下图显示了四个卷；其中一个卷由于数据分类实例和卷之间的网络连接问题而无法扫描。
+
++
+image:screenshot_compliance_volume_details.gif["扫描配置中的“查看详细信息”页面的屏幕截图显示了四个卷；其中一个卷由于数据分类和卷之间的网络连接而未被扫描。"]
+
+
+
+
+
+== 启用和禁用卷上的合规性扫描
+
+您可以随时从配置页面启动或停止系统中的仅映射扫描或映射和分类扫描。您还可以从仅映射扫描更改为映射和分类扫描，反之亦然。我们建议您扫描所有卷。
+
+
+TIP: 仅当您在标题区域中设置了 *Map* 或 *Map & Classify* 设置时，才会自动扫描添加到系统的新卷。当在标题区域设置为*自定义*或*关闭*时，您需要在系统中添加的每个新卷上激活映射和/或完整扫描。
+
+页面顶部的“缺少“写入属性”权限时扫描”开关默认处于禁用状态。这意味着，如果数据分类在 CIFS 中没有写属性权限，或者在 NFS 中没有写权限，系统将不会扫描文件，因为数据分类无法将“上次访问时间”恢复为原始时间戳。如果您不介意是否重置上次访问时间，请打开开关，无论权限如何，都会扫描所有文件。link:reference-collected-metadata.html#last-access-time-timestamp["了解更多"^] 。
+
+image:screenshot_volume_compliance_selection.png["配置页面的屏幕截图，您可以在其中启用或禁用对单个卷的扫描。"]
+
+.步骤
+. 从数据分类菜单中，选择*配置*。
+. 执行以下操作之一：
++
+** 要在卷上启用仅映射扫描，请在卷区域中选择 *Map*。要在所有卷上启用，请在标题区域中选择*地图*。
+** 要对卷启用完整扫描，请在卷区域中选择*映射和分类*。要在所有卷上启用，请在标题区域中选择*Map & Classify*。
+** 要禁用对卷的扫描，请在卷区域中选择“*关闭*”。要禁用对所有卷的扫描，请在标题区域中选择“*关闭*”。
+
+
+

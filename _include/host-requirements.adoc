@@ -1,0 +1,90 @@
+= 
+:allow-uri-read: 
+
+
+* 与其他应用程序共享的主机不支持数据分类 - 该主机必须是专用主机。
+* 在您的场所构建主机系统时，您可以根据计划进行数据分类扫描的数据集的大小从这些系统大小中进行选择。
++
+[cols="17,17,27,31"]
+|===
+| 系统大小 | CPU | RAM（必须禁用交换内存） | 磁盘 
+
+
+| *超大* | 32 个 CPU | 128 GB 内存  a| 
+** / 上 1 TiB SSD，或 /opt 上 100 GiB 可用
+** /var/lib/docker 上可用 895 GiB
+** /tmp 上 5 GiB
+** *对于 Podman，/var/tmp 上有 30 GB*
+
+
+
+
+| *大的* | 16 个 CPU | 64 GB 内存  a| 
+** / 上 500 GiB SSD，或 /opt 上 100 GiB 可用
+** /var/lib/docker 或 Podman /var/lib/containers 上可用 400 GiB
+** /tmp 上 5 GiB
+** *对于 Podman，/var/tmp 上有 30 GB*
+
+
+|===
+* 在云中为数据分类安装部署计算实例时，建议您使用满足上述“大型”系统要求的系统：
++
+** *Amazon Elastic Compute Cloud (Amazon EC2) 实例类型*：“m6i.4xlarge”。link:reference-instance-types.html#aws-instance-types["查看其他 AWS 实例类型"^] 。
+** *Azure VM 大小*：“Standard_D16s_v3”。link:reference-instance-types.html#azure-instance-types["查看其他 Azure 实例类型"^] 。
+** *GCP 机器类型*：“n2-standard-16”。link:reference-instance-types.html#gcp-instance-types["查看其他 GCP 实例类型"^] 。
+
+
+* *UNIX 文件夹权限*：需要以下最低 UNIX 权限：
++
+[cols="25,25"]
+|===
+| 文件夹 | 最低权限 
+
+
+| /tmp | `rwxrwxrwt` 
+
+
+| /选择 | `rwxr-xr-x` 
+
+
+| /var/lib/docker | `rwx------` 
+
+
+| /usr/lib/systemd/系统 | `rwxr-xr-x` 
+|===
+* *操作系统*：
++
+** 以下操作系统需要使用 Docker 容器引擎：
++
+*** Red Hat Enterprise Linux 版本 7.8 和 7.9
+*** Ubuntu 22.04（需要数据分类版本 1.23 或更高版本）
+*** Ubuntu 24.04（需要数据分类版本 1.23 或更高版本）
+
+
+** 以下操作系统需要使用 Podman 容器引擎，并且需要数据分类版本 1.30 或更高版本：
++
+*** Red Hat Enterprise Linux 版本 8.8、8.10、9.0、9.1、9.2、9.3、9.4、9.5 和 9.6。
+
+
+** 必须在主机系统上启用高级矢量扩展 (AVX2)。
+
+
+* *Red Hat 订阅管理*：主机必须在 Red Hat 订阅管理中注册。如果未注册，系统将无法访问存储库来在安装期间更新所需的第三方软件。
+* *附加软件*：安装数据分类之前，必须在主机上安装以下软件：
++
+** 根据您使用的操作系统，您需要安装其中一个容器引擎：
++
+*** Docker Engine 版本 19.3.1 或更高版本。 https://docs.docker.com/engine/install/["查看安装说明"^] 。
+*** Podman 版本 4 或更高版本。要安装 Podman，请输入(`sudo yum install podman netavark -y`）。
+
+
+
+
+
+
+* Python 版本 3.6 或更高版本。 https://www.python.org/downloads/["查看安装说明"^] 。
++
+** *NTP 注意事项*： NetApp建议配置数据分类系统以使用网络时间协议 (NTP) 服务。数据分类系统和控制台代理系统之间的时间必须同步。
+
+
+

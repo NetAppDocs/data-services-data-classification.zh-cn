@@ -1,0 +1,17 @@
+= 1.36 版
+:allow-uri-read: 
+
+
+
+
+=== 1.36 版
+
+.支持 RHEL 9.4
+此版本除了支持以前支持的版本外，还提供对 Red Hat Enterprise Linux v9.4 的支持。这适用于BlueXP classification的任何手动本地安装，包括暗站部署。
+
+以下操作系统需要使用 Podman 容器引擎，并且需要BlueXP classification版本 1.30 或更高版本：Red Hat Enterprise Linux 版本 8.8、9.0、9.1、9.2、9.3 和 9.4。
+
+详细了解 https://docs.netapp.com/us-en/bluexp-classification/task-deploy-overview.html["BlueXP classification部署概述"]。
+
+.改进的扫描性能
+此版本提供了改进的扫描性能。

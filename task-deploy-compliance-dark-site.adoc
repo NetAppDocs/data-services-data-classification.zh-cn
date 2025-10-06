@@ -1,0 +1,20 @@
+---
+sidebar: sidebar 
+permalink: task-deploy-compliance-dark-site.html 
+keywords: cloud compliance, bluexp, data sense, get started, web browser connectivity, cloud compliance access, privacy, linux, ubuntu, compliance, on-premises, dark site, upgrade, private mode, docker, podman, rhel, bluexp classification, classification, install, cloud data sense, linux host 
+summary: 完成几个步骤即可在没有互联网访问的本地站点的 Linux 主机上安装NetApp数据分类 - 也称为“私有模式”。这种类型的安装非常适合您的安全站点。 
+---
+= 在没有互联网访问的 Linux 主机上安装NetApp数据分类
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在没有互联网访问权限的本地站点的 Linux 主机上安装NetApp数据分类称为_私有模式_。这种安装类型使用安装脚本，与NetApp Console SaaS 层没有连接。
+
+
+IMPORTANT: BlueXP私有模式（传统BlueXP接口）通常用于没有互联网连接的本地环境和安全云区域，其中包括 AWS Secret Cloud、AWS Top Secret Cloud 和 Azure IL6。NetApp继续通过传统的BlueXP界面支持这些环境。有关旧版BlueXP界面中的私有模式文档，请参阅link:https://docs.netapp.com/us-en/console-setup-admin/media/BlueXP-Private-Mode-legacy-interface.pdf["BlueXP私人模式的 PDF 文档"^]。

@@ -1,0 +1,247 @@
+---
+sidebar: sidebar 
+permalink: task-deploy-cloud-compliance.html 
+keywords: cloud compliance, data sense, quickstart, outbound internet, endpoints, cloud compliance internet, browser connectivity, cloud compliance access, privacy, compliance, bluexp classification, classification, netapp console, 
+summary: 完成几个步骤即可在云中部署NetApp数据分类。  NetApp控制台将数据分类实例部署在与控制台代理相同的云提供商网络中。 
+---
+= 使用NetApp控制台在云中部署NetApp数据分类
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用NetApp控制台在云中部署NetApp数据分类。控制台将数据分类实例部署在与控制台代理相同的云提供商网络中。
+
+请注意，您还可以link:task-deploy-compliance-onprem.html["在可以访问互联网的 Linux 主机上安装数据分类"]。如果您希望使用同样位于本地的数据分类实例来扫描本地ONTAP系统，则这种类型的安装可能是一个不错的选择 - 但这不是必需的。无论您选择哪种安装方法，软件的功能都完全相同。
+
+
+
+== 快速启动
+
+按照以下步骤快速开始，或者向下滚动到其余部分以获取完整详细信息。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]创建控制台代理
+[role="quick-margin-para"]
+如果您还没有控制台代理，请创建一个。看 https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html["在 AWS 中创建控制台代理"^]， https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["在 Azure 中创建控制台代理"^] ， 或者 https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["在 GCP 中创建控制台代理"^]。
+
+[role="quick-margin-para"]
+您还可以 https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["在本地安装控制台代理"^]在您的网络中的 Linux 主机上或云中的 Linux 主机上。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]先决条件
+[role="quick-margin-para"]
+确保您的环境能够满足先决条件。这包括实例的出站互联网访问、控制台代理和数据分类之间通过端口 443 的连接等等。  << 先决条件，请参阅完整列表>>。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"]部署数据分类
+[role="quick-margin-para"]
+启动安装向导以在云中部署数据分类实例。
+
+
+
+== 创建控制台代理
+
+如果您还没有控制台代理，请在您的云提供商中创建一个控制台代理。看 https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html["在 AWS 中创建控制台代理"^]或者 https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["在 Azure 中创建控制台代理"^]， 或者 https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["在 GCP 中创建控制台代理"^]。在大多数情况下，您可能会在尝试激活数据分类之前设置控制台代理，因为大多数 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#when-a-connector-is-required["控制台功能需要控制台代理"]，但有些情况下您需要立即设置一个。
+
+在某些情况下，您必须使用部署在特定云提供商中的控制台代理：
+
+* 在 AWS 中的Cloud Volumes ONTAP或Amazon FSx for ONTAP存储桶中扫描数据时，您可以使用 AWS 中的控制台代理。
+* 在 Azure 中的Cloud Volumes ONTAP或Azure NetApp Files中扫描数据时，您可以使用 Azure 中的控制台代理。
++
+** 对于Azure NetApp Files，它必须部署在与您要扫描的卷相同的区域中。
+
+
+* 在 GCP 中的Cloud Volumes ONTAP中扫描数据时，您可以使用 GCP 中的控制台代理。
+
+
+使用任何这些云控制台代理时，都可以扫描本地ONTAP系统、 NetApp文件共享和数据库。
+
+请注意，您还可以 https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["在本地安装控制台代理"^]在您的网络或云中的 Linux 主机上。一些计划在本地安装数据分类的用户可能还会选择在本地安装控制台代理。
+
+正如你所见，在某些情况下，你可能需要使用 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#multiple-connectors["多个控制台代理"]。
+
+
+TIP: 数据分类不会对其可以扫描的数据量施加限制。每个控制台代理支持扫描和显示 500 TiB 的数据。要扫描超过 500 TiB 的数据，link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#connector-installation["安装另一个控制台代理"^]然后link:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-overview.html["部署另一个数据分类实例"]。 + 控制台 UI 显示来自单个连接器的数据。有关查看来自多个控制台代理的数据的提示，请参阅link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["使用多个控制台代理"^]。
+
+
+
+=== 政府区域支持
+
+当控制台代理部署在政府区域（AWS GovCloud、Azure Gov 或 Azure DoD）时，支持数据分类。以这种方式部署时，数据分类具有以下限制：
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-restricted-mode.html["查看有关在政府区域部署控制台代理的更多信息"^] 。
+
+
+
+== 前提条件
+
+在云中部署数据分类之前，请查看以下先决条件，以确保您具有受支持的配置。当您在云中部署数据分类时，它与控制台代理位于同一子网中。
+
+启用数据分类的出站互联网访问:: 数据分类需要出站互联网访问。如果您的虚拟或物理网络使用代理服务器进行互联网访问，请确保数据分类实例具有出站互联网访问权限以联系以下端点。代理必须是非透明的。目前不支持透明代理。
++
+--
+根据您是在 AWS、Azure 还是 GCP 中部署数据分类，查看下面的相应表格。
+
+--
+
+
+[role="tabbed-block"]
+====
+.AWS 所需的终端节点
+--
+[cols="43,57"]
+|===
+| 端点 | 目的 
+
+
+| \ https://api.bluexp.netapp.com | 与控制台服务（包括NetApp帐户）的通信。 
+
+
+| \ https://netapp-cloud-account.auth0.com \ https://auth0.com | 与控制台网站通信，实现集中用户身份验证。 
+
+
+| \ https://cloud-compliance-support-netapp.s3.us-west-2.amazonaws.com \ https://hub.docker.com \ https://auth.docker.io \ https://registry-1.docker.io \ https://index.docker.io/ \ https://dseasb33srnrn.cloudfront.net/ \ https://production.cloudflare.docker.com/ | 提供对软件映像、清单和模板的访问。 
+
+
+| \ https://kinesis.us-east-1.amazonaws.com | 使NetApp能够从审计记录中流式传输数据。 
+
+
+| \ https://cognito-idp.us-east-1.amazonaws.com \ https://cognito-identity.us-east-1.amazonaws.com \ https://user-feedback-store-prod.s3.us-west-2.amazonaws.com \ https://customer-data-production.s3.us-west-2.amazonaws.com | 启用数据分类来访问和下载清单和模板，以及发送日志和指标。 
+|===
+--
+.Azure 所需的终结点
+--
+[cols="43,57"]
+|===
+| 端点 | 目的 
+
+
+| \ https://api.bluexp.netapp.com | 与控制台服务（包括NetApp帐户）的通信。 
+
+
+| \ https://netapp-cloud-account.auth0.com \ https://auth0.com | 与控制台网站通信，实现集中用户身份验证。 
+
+
+| \ https://support.compliance.api.bluexp.netapp.com/ \ https://hub.docker.com \ https://auth.docker.io \ https://registry-1.docker.io \ https://index.docker.io/ \ https://dseasb33srnrn.cloudfront.net/ \ https://production.cloudflare.docker.com/ | 提供对软件映像、清单、模板的访问以及发送日志和指标。 
+
+
+| \ https://support.compliance.api.bluexp.netapp.com/ | 使NetApp能够从审计记录中流式传输数据。 
+|===
+--
+.GCP 所需的端点
+--
+[cols="43,57"]
+|===
+| 端点 | 目的 
+
+
+| \ https://api.bluexp.netapp.com | 与控制台服务（包括NetApp帐户）的通信。 
+
+
+| \ https://netapp-cloud-account.auth0.com \ https://auth0.com | 与控制台网站通信，实现集中用户身份验证。 
+
+
+| \ https://support.compliance.api.bluexp.netapp.com/ \ https://hub.docker.com \ https://auth.docker.io \ https://registry-1.docker.io \ https://index.docker.io/ \ https://dseasb33srnrn.cloudfront.net/ \ https://production.cloudflare.docker.com/ | 提供对软件映像、清单、模板的访问以及发送日志和指标。 
+
+
+| \ https://support.compliance.api.bluexp.netapp.com/ | 使NetApp能够从审计记录中流式传输数据。 
+|===
+--
+====
+确保数据分类具有所需的权限:: 确保数据分类具有部署资源和为数据分类实例创建安全组的权限。
++
+--
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-gcp.html["Google Cloud 权限"^]
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html#classification["AWS 权限"^]
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html#classification["Azure 权限"^]
+
+
+--
+确保控制台代理可以访问数据分类:: 确保控制台代理和数据分类实例之间的连接。控制台代理的安全组必须允许通过端口 443 进出数据分类实例的入站和出站流量。此连接支持部署数据分类实例，并允许您查看“合规性和治理”选项卡中的信息。  AWS 和 Azure 的政府区域支持数据分类。
++
+--
+AWS 和 AWS GovCloud 部署需要额外的入站和出站安全组规则。看 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-aws.html["AWS 中的控制台代理规则"^]了解详情。
+
+Azure 和 Azure 政府部署需要额外的入站和出站安全组规则。看 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-azure.html["Azure 中的控制台代理规则"^]了解详情。
+
+--
+确保数据分类能够持续运行:: 数据分类实例需要保持开启状态以持续扫描您的数据。
+确保 Web 浏览器连接到数据分类:: 启用数据分类后，确保用户从与数据分类实例有连接的主机访问控制台界面。
++
+--
+数据分类实例使用私有 IP 地址来确保索引数据无法被互联网访问。因此，您用来访问控制台的 Web 浏览器必须连接到该私有 IP 地址。该连接可以来自与云提供商的直接连接（例如 VPN），也可以来自与数据分类实例位于同一网络内的主机。
+
+--
+检查您的 vCPU 限制:: 确保您的云提供商的 vCPU 限制允许部署具有必要数量的核心的实例。您需要验证控制台运行区域中相关实例系列的 vCPU 限制。link:concept-classification.html#the-data-classification-instance["查看所需的实例类型"] 。
++
+--
+有关 vCPU 限制的更多详细信息，请参阅以下链接：
+
+* https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html["AWS 文档：Amazon EC2 服务配额"^]
+* https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quotas["Azure 文档：虚拟机 vCPU 配额"^]
+* https://cloud.google.com/compute/quotas["Google Cloud 文档：资源配额"^]
+
+
+--
+
+
+
+
+== 在云中部署数据分类
+
+按照以下步骤在云中部署数据分类实例。控制台代理将在云中部署实例，然后在该实例上安装数据分类软件。
+
+在默认实例类型不可用的区域中，数据分类在link:reference-instance-types.html["备用实例类型"]。
+
+[role="tabbed-block"]
+====
+.在 AWS 中部署
+--
+.步骤
+. 从数据分类主页中，选择*在本地或云中部署分类*。
++
+image:screenshot-deploy-classification.png["选择按钮以激活数据分类的屏幕截图。"]
+
+. 从“安装”页面中，选择“部署”>“部署”以使用“大型”实例大小并启动云部署向导。
+. 向导在执行部署步骤时会显示进度。当需要输入或遇到问题时，系统会提示您。
+. 当实例部署完毕并安装数据分类后，选择“继续配置”进入“配置”页面。
+
+
+--
+.在 Azure 中部署
+--
+.步骤
+. 从数据分类主页中，选择*在本地或云中部署分类*。
++
+image:screenshot-deploy-classification.png["选择按钮以激活数据分类的屏幕截图。"]
+
+. 选择*部署*以启动云部署向导。
+. 向导在执行部署步骤时会显示进度。如果遇到任何问题，它将停止并提示输入。
+. 当实例部署完毕并安装数据分类后，选择“继续配置”进入“配置”页面。
+
+
+--
+.在 Google Cloud 中部署
+--
+.步骤
+. 从数据分类主页中，选择*治理>分类*。
+. 选择*在本地或云中部署分类*。
++
+image:screenshot-deploy-classification.png["选择按钮以激活数据分类的屏幕截图。"]
+
+. 选择*部署*以启动云部署向导。
+. 向导在执行部署步骤时会显示进度。如果遇到任何问题，它将停止并提示输入。
+. 当实例部署完毕并安装数据分类后，选择“继续配置”进入“配置”页面。
+
+
+--
+====
+.结果
+控制台在您的云提供商中部署数据分类实例。
+
+只要实例具有互联网连接，控制台代理和数据分类软件的升级就会自动进行。
+
+.下一步
+您可以从配置页面选择要扫描的数据源。

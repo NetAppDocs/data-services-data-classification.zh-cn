@@ -1,0 +1,119 @@
+---
+sidebar: sidebar 
+permalink: task-active-directory.html 
+keywords: active directory, ad, data sense, cloud data sense 
+summary: 您可以将全局 Active Directory 与NetApp数据分类集成，以增强数据分类报告有关文件所有者以及哪些用户和组有权访问您的文件的结果。 
+---
+= 将您的 Active Directory 与NetApp数据分类集成
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以将全局 Active Directory 与NetApp数据分类集成，以增强数据分类报告有关文件所有者以及哪些用户和组有权访问您的文件的结果。
+
+当您设置某些数据源（如下所列）时，您需要输入 Active Directory 凭据以便数据分类扫描 CIFS 卷。此集成为数据分类提供了驻留在这些数据源中的数据的文件所有者和权限详细信息。为这些数据源输入的 Active Directory 可能与您在此处输入的全局 Active Directory 凭据不同。数据分类将在所有集成的活动目录中查找用户和权限详细信息。
+
+此集成在数据分类的以下位置提供了附加信息：
+
+* 您可以使用“文件所有者”link:task-investigate-data.html["筛选"]并在调查窗格中的文件元数据中查看结果。它不是包含 SID（安全标识符）的文件所有者，而是填充实际的用户名。
++
+您还可以查看有关文件所有者的更多详细信息：帐户名称、电子邮件地址和 SAM 帐户名称，或查看该用户拥有的项目。
+
+* 你可以看到link:task-investigate-data.html["完整文件权限"]当您单击“查看所有权限”按钮时，每个文件和目录都会显示所有权限。
+* 在link:task-controlling-governance-data.html["治理仪表板"]，打开权限面板将显示有关您的数据的更详细的详细信息。
+
+
+
+NOTE: 本地用户 SID 和来自未知域的 SID 不会转换为实际用户名。
+
+
+
+== 支持的数据源
+
+Active Directory 与数据分类的集成可以识别来自以下数据源的数据：
+
+* 本地ONTAP系统
+* Cloud Volumes ONTAP
+* Azure NetApp Files
+* 适用于ONTAP的 FSx
+
+
+
+
+== 连接到您的 Active Directory 服务器
+
+部署数据分类并激活数据源扫描后，您可以将数据分类与 Active Directory 集成。可以使用 DNS 服务器 IP 地址或 LDAP 服务器 IP 地址访问 Active Directory。
+
+Active Directory 凭据可以是只读的，但提供管理员凭据可确保数据分类可以读取任何需要提升权限的数据。凭证存储在数据分类实例上。
+
+对于 CIFS 卷/文件共享，如果您想确保文件的“上次访问时间”不会因数据分类扫描而改变，则用户应该具有写入属性权限。如果可能的话，我们建议将 Active Directory 配置的用户作为组织中对所有文件具有权限的父组的一部分。
+
+.要求
+* 您必须已经为公司用户设置了 Active Directory。
+* 您必须具有 Active Directory 的信息：
++
+** DNS 服务器 IP 地址，或多个 IP 地址
++
+或
+
++
+LDAP 服务器 IP 地址，或多个 IP 地址
+
+** 访问服务器的用户名和密码
+** 域名（Active Directory 名称）
+** 您是否使用安全 LDAP (LDAPS)
+** LDAP 服务器端口（LDAP 通常为 389，安全 LDAP 通常为 636）
+
+
+* 必须打开以下端口以供数据分类实例进行出站通信：
++
+[cols="20,20,30,30"]
+|===
+| 协议 | 端口 | 目标 | 目的 
+
+
+| TCP 和 UDP | 389 | Active Directory | LDAP 
+
+
+| TCP | 636 | Active Directory | 基于 SSL 的 LDAP 
+
+
+| TCP | 3268 | Active Directory | 全局目录 
+
+
+| TCP | 3269 | Active Directory | 通过 SSL 的全局目录 
+|===
+
+
+.步骤
+. 在数据分类配置页面中，单击*添加 Active Directory*。
++
+image:screenshot_compliance_integrate_active_directory.png["屏幕截图显示单击按钮将 Active Directory 服务器添加到数据分类中。"]
+
+. 在“连接到 Active Directory”对话框中，输入 Active Directory 详细信息，然后单击“连接”。
++
+如果需要，您可以通过选择“添加 IP”来添加多个 IP 地址。
+
++
+image:screenshot_compliance_active_directory_dialog.png["定义要与数据分类集成的 Active Directory 的对话框的屏幕截图。"]
+
++
+数据分类集成到 Active Directory，并在配置页面中添加一个新部分。
+
++
+image:screenshot_compliance_active_directory_added.png["屏幕截图显示了数据分类中集成的新 Active Directory。"]
+
+
+
+
+
+== 管理您的 Active Directory 集成
+
+如果您需要修改 Active Directory 集成中的任何值，请单击“*编辑*”按钮并进行更改。
+
+您还可以选择image:button-gallery-options.gif["更多按钮"]按钮，然后*删除 Active Directory*。

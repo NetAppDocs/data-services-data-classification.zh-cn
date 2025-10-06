@@ -1,0 +1,226 @@
+---
+sidebar: sidebar 
+permalink: concept-classification.html 
+keywords: artificial intelligence, ai, compliance, cloud compliance, dsar, personal data, personal information, sensitive, personal sensitive data, gdpr, hipaa, scans, scanning,  governance, cloud data sense, data sense, privacy control, classification, optimization, bluexp, bluexp classification, netapp console 
+summary: 数据分类是NetApp控制台的一项数据治理服务，它可以扫描您的企业内部和云数据源以映射和分类数据并识别私人信息。这可以帮助降低您的安全和合规风险，降低存储成本，并协助您的数据迁移项目。 
+---
+= 了解NetApp数据分类
+:allow-uri-read: 
+:no-hardbreaks: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp数据分类是NetApp控制台的一项数据治理服务，它可以扫描您的企业内部和云数据源以映射和分类数据并识别私人信息。这可以帮助降低您的安全和合规风险，降低存储成本，并协助您的数据迁移项目。
+
+
+IMPORTANT: 从 1.31 版开始，数据分类作为NetApp控制台中的一项核心功能提供。无需额外付费。无需分类许可或订阅。  + 如果您一直在使用旧版本 1.30 或更早版本，则该版本在您的订阅到期之前可用。
+
+
+
+== NetApp控制台
+
+可以通过NetApp控制台访问数据分类。
+
+NetApp控制台提供企业级跨本地和云环境的NetApp存储和数据服务的集中管理。需要控制台才能访问和使用NetApp数据服务。作为管理界面，它使您能够从一个界面管理许多存储资源。控制台管理员可以控制企业内所有系统的存储和服务的访问。
+
+您不需要许可证或订阅即可开始使用NetApp控制台，并且只有当您需要在云中部署控制台代理以确保与存储系统或NetApp数据服务的连接时才需要付费。但是，一些可从控制台访问的NetApp数据服务是需要许可或基于订阅的。
+
+详细了解link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-overview.html["NetApp控制台"^]。
+
+
+
+== 功能
+
+数据分类使用人工智能 (AI)、自然语言处理 (NLP) 和机器学习 (ML) 来理解其扫描的内容，以便提取实体并对内容进行相应的分类。这使得数据分类能够提供以下功能领域。
+
+https://bluexp.netapp.com/netapp-cloud-data-sense["了解数据分类的用例"^] 。
+
+.保持合规
+数据分类提供了多种工具，可以帮助您实现合规性。您可以使用数据分类来：
+
+* 识别个人身份信息 (PII)。
+* 根据 GDPR、CCPA、PCI 和 HIPAA 隐私法规的要求识别广泛的敏感个人信息。
+* 根据姓名或电子邮件地址响应数据主体访问请求 (DSAR)。
+
+
+.加强安全
+数据分类可以识别可能被犯罪分子访问的数据。您可以使用数据分类来：
+
+* 识别向整个组织或公众公开的所有具有开放权限的文件和目录（共享和文件夹）。
+* 识别位于初始专用位置之外的敏感数据。
+* 遵守数据保留政策。
+* 使用__Policies__自动检测新的安全问题，以便安全人员可以立即采取行动。
+
+
+.优化存储使用情况
+数据分类提供可帮助您降低存储总拥有成本 (TCO) 的工具。您可以使用数据分类来：
+
+* 通过识别重复或与业务无关的数据来提高存储效率。
+* 通过识别可以分层到较便宜的对象存储的非活动数据来节省存储成本。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["了解有关Cloud Volumes ONTAP系统分层的更多信息"^] 。 https://docs.netapp.com/us-en/bluexp-tiering/concept-cloud-tiering.html["了解有关本地ONTAP系统分层的更多信息"^] 。
+
+
+
+
+== 支持的系统和数据源
+
+数据分类可以扫描和分析来自以下类型的系统和数据源的结构化和非结构化数据：
+
+*系统*
+
+* Amazon FSx for NetApp ONTAP管理
+* Azure NetApp Files
+* Cloud Volumes ONTAP （部署在 AWS、Azure 或 GCP 中）
+* 本地ONTAP集群
+* StorageGRID
+
+
+*数据来源*
+
+* NetApp文件共享
+* 数据库：
++
+** 亚马逊关系数据库服务 (Amazon RDS)
+** MongoDB
+** MySQL
+** Oracle
+** PostgreSQL
+** SAP HANA
+** SQL 服务器 (MSSQL)
+
+
+
+
+数据分类支持 NFS 版本 3.x、4.0 和 4.1，以及 CIFS 版本 1.x、2.0、2.1 和 3.0。
+
+
+
+== 成本
+
+数据分类可以免费使用。无需分类许可或付费订阅。
+
+
+
+=== 基础设施成本
+
+* 在云中安装数据分类需要部署云实例，这会导致部署云的云提供商收取费用。看<<数据分类实例,为每个云提供商部署的实例类型>> 。如果您在本地系统上安装数据分类，则无需付费。
+* 数据分类要求您部署控制台代理。在许多情况下，由于您在控制台中使用其他存储和服务，因此您已经拥有控制台代理。控制台代理实例会导致其部署所在的云提供商收取费用。查看 https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["为每个云提供商部署的实例类型"^]。如果您在本地系统上安装控制台代理，则无需付费。
+
+
+
+
+=== 数据传输成本
+
+数据传输成本取决于您的设置。如果数据分类实例和数据源位于同一可用区和区域，则没有数据传输成本。但是，如果数据源（例如Cloud Volumes ONTAP系统）位于不同的可用区或区域，那么您的云提供商将向您收取数据传输费用。请参阅以下链接以了解更多详细信息：
+
+* https://aws.amazon.com/ec2/pricing/on-demand/["AWS：Amazon Elastic Compute Cloud (Amazon EC2) 定价"^]
+* https://azure.microsoft.com/en-us/pricing/details/bandwidth/["Microsoft Azure：带宽定价详情"^]
+* https://cloud.google.com/storage-transfer/pricing["Google Cloud：存储传输服务定价"^]
+
+
+
+
+== 数据分类实例
+
+当您在云中部署数据分类时，控制台会将实例部署在与控制台代理相同的子网中。 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["了解有关控制台代理的更多信息。"^]
+
+image:diagram_cloud_compliance_instance.png["该图表显示了在您的云提供商中运行的控制台实例和数据分类实例。"]
+
+请注意有关默认实例的以下几点：
+
+* 在 AWS 中，数据分类在 https://aws.amazon.com/ec2/instance-types/m6i/["m6i.4xlarge 实例"^]带有 500 GiB GP2 磁盘。操作系统映像是 Amazon Linux 2。在 AWS 中部署时，如果您要扫描少量数据，则可以选择较小的实例大小。
+* 在 Azure 中，数据分类在link:https://docs.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series["Standard_D16s_v3 VM"^]带有 500 GiB 磁盘。操作系统映像是 Ubuntu 22.04。
+* 在 GCP 中，数据分类在link:https://cloud.google.com/compute/docs/general-purpose-machines#n2_machines["n2-standard-16 虚拟机"^]配备 500 GiB 标准持久磁盘。操作系统映像是 Ubuntu 22.04。
+* 在默认实例不可用的区域中，数据分类在备用实例上运行。link:reference-instance-types.html["查看替代实例类型"] 。
+* 该实例名为 _CloudCompliance_，并带有与之连接的生成的哈希值（UUID）。例如：_CloudCompliance-16bb6564-38ad-4080-9a92-36f5fd2f71c7_
+* 每个控制台代理仅部署一个数据分类实例。
+
+
+您还可以在您的场所内的 Linux 主机上或您首选的云提供商的主机上部署数据分类。无论您选择哪种安装方法，软件的功能都完全相同。只要实例可以访问互联网，数据分类软件的升级就会自动进行。
+
+
+TIP: 实例应始终保持运行，因为数据分类会持续扫描数据。
+
+*在不同的实例类型上部署*
+
+查看实例类型的以下规范：
+
+[cols="18,31,51"]
+|===
+| 系统大小 | 规格 | 限制 
+
+
+| 特大号 | 32 个 CPU、128 GB RAM、1 TiB SSD | 最多可扫描 5 亿个文件。 
+
+
+| 大（默认） | 16 个 CPU、64 GB RAM、500 GiB SSD | 最多可扫描 2.5 亿个文件。 
+|===
+在 Azure 或 GCP 中部署数据分类时，如果您想使用较小的实例类型，请发送电子邮件至 ng-contact-data-sense@netapp.com 寻求帮助。
+
+
+
+== 数据分类扫描的工作原理
+
+从高层次来看，数据分类扫描的工作原理如下：
+
+. 您在控制台中部署数据分类实例。
+. 您可以在一个或多个数据源上启用高级映射（称为“仅映射”扫描）或深层扫描（称为“映射和分类”扫描）。
+. 数据分类使用人工智能学习过程扫描数据。
+. 您可以使用提供的仪表板和报告工具来帮助您实现合规性和治理工作。
+
+
+启用数据分类并选择要扫描的存储库（这些是卷、数据库模式或其他用户数据）后，它会立即开始扫描数据以识别个人和敏感数据。在大多数情况下，您应该专注于扫描实时生产数据，而不是备份、镜像或 DR 站点。然后，数据分类映射您的组织数据，对每个文件进行分类，并识别和提取数据中的实体和预定义模式。扫描结果是个人信息、敏感个人信息、数据类别和文件类型的索引。
+
+数据分类通过安装 NFS 和 CIFS 卷像任何其他客户端一样连接到数据。  NFS 卷自动以只读方式访问，而您需要提供 Active Directory 凭据来扫描 CIFS 卷。
+
+image:diagram_cloud_compliance_scan.png["该图表显示了在您的云提供商中运行的控制台实例和数据分类实例。数据分类实例连接到 NFS 和 CIFS 卷和数据库以对其进行扫描。"]
+
+初始扫描后，数据分类将以循环方式持续扫描您的数据以检测增量变化。这就是为什么保持实例运行很重要。
+
+您可以在卷级别或数据库模式级别启用和禁用扫描。
+
+
+NOTE: 数据分类不会对其可以扫描的数据量施加限制。每个控制台代理支持扫描和显示 500 TiB 的数据。要扫描超过 500 TiB 的数据，link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#connector-installation["安装另一个控制台代理"^]然后link:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-overview.html["部署另一个数据分类实例"]。 + 控制台 UI 显示来自单个连接器的数据。有关查看来自多个控制台代理的数据的提示，请参阅link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["使用多个控制台代理"^]。
+
+
+
+== 映射扫描和分类扫描之间有什么区别
+
+您可以在数据分类中进行两种类型的扫描：
+
+* **仅映射扫描**仅提供数据的高级概览，并在选定的数据源上执行。仅映射扫描比映射和分类扫描花费的时间更少，因为它们不访问文件来查看其中的数据。您可能希望首先执行此操作来确定研究领域，然后对这些领域执行地图和分类扫描。
+* **地图和分类扫描** 为您的数据提供深层扫描。
+
+
+有关映射扫描和分类扫描之间的差异的详细信息，请参阅link:task-scanning-overview.html["映射和分类扫描之间有什么区别？"]。
+
+
+
+== 数据分类所分类的信息
+
+数据分类收集、索引并分配以下数据的类别：
+
+* 关于文件的*标准元数据*：文件类型、大小、创建和修改日期等等。
+* *个人数据*：个人身份信息 (PII)，例如电子邮件地址、身份证号码或信用卡号，数据分类使用文件中的特定单词、字符串和模式进行识别。link:task-controlling-private-data.html#view-files-that-contain-personal-data["了解有关个人数据的更多信息"^] 。
+* *敏感个人信息*：《通用数据保护条例》（GDPR）和其他隐私法规定义的特殊类型的敏感个人信息（SPII），例如健康数据、种族血统或政治观点。link:task-controlling-private-data.html#view-files-that-contain-sensitive-personal-data["了解有关敏感个人数据的更多信息"^] 。
+* *类别*：数据分类将扫描的数据分为不同类型的类别。类别是基于 AI 对每个文件的内容和元数据的分析的主题。link:task-controlling-private-data.html#view-files-by-categories["了解有关类别的更多信息"^] 。
+* *类型*：数据分类获取其扫描的数据并按文件类型进行细分。link:task-controlling-private-data.html#view-files-by-file-types["了解有关类型的更多信息"^] 。
+* *名称实体识别*：数据分类使用人工智能从文档中提取人们的自然姓名。link:task-generating-compliance-reports.html["了解如何响应数据主体访问请求"^] 。
+
+
+
+
+== 网络概述
+
+数据分类可以在您选择的任何地方部署单个服务器或集群：在云端或本地。服务器通过标准协议连接到数据源，并在 Elasticsearch 集群中对结果进行索引，该集群也部署在同一服务器上。这使得能够支持多云、跨云、私有云和本地环境。
+
+控制台使用安全组部署数据分类实例，该安全组启用来自控制台代理的入站 HTTP 连接。
+
+当您在 SaaS 模式下使用控制台时，与控制台的连接通过 HTTPS 提供，并且您的浏览器和数据分类实例之间发送的私人数据使用 TLS 1.2 进行端到端加密保护，这意味着NetApp和第三方无法读取它。
+
+出站规则完全开放。需要互联网访问来安装和升级数据分类软件以及发送使用情况指标。
+
+如果您有严格的网络要求，link:task-deploy-cloud-compliance.html#prerequisites["了解数据分类联系的端点"^] 。

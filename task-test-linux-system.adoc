@@ -1,0 +1,264 @@
+---
+sidebar: sidebar 
+permalink: task-test-linux-system.html 
+keywords: cloud compliance, bluexp, data sense, get started, deploy, data classification, cloud compliance access, compliance, on-premises, linux, test linux system, docker, podman, ubuntu, rhel, dark site 
+summary: 在 Linux 主机上手动安装数据分类之前，您可以在主机上运行脚本来验证安装数据分类的所有先决条件是否都已具备。您可以在网络中的 Linux 主机上或云中的 Linux 主机上运行此脚本。主机可以连接到互联网，或者主机可以驻留在没有互联网访问的站点。 
+---
+= 检查您的 Linux 主机是否已准备好安装NetApp数据分类
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 Linux 主机上手动安装NetApp数据分类之前，可以选择在主机上运行脚本以验证安装数据分类的所有先决条件是否都已具备。您可以在网络中的 Linux 主机上或云中的 Linux 主机上运行此脚本。主机可以连接到互联网，或者主机可以驻留在没有互联网访问的站点（暗站）。
+
+还有一个先决条件测试脚本，它是数据分类安装脚本的一部分。此处描述的脚本专门为想要独立于运行数据分类安装脚本来验证 Linux 主机的用户设计。
+
+
+
+== 入门指南
+
+您将执行以下任务。
+
+. 如果您尚未安装控制台代理，则可以选择安装一个。您可以在未安装控制台代理的情况下运行测试脚本，但脚本会检查控制台代理和数据分类主机之间的连接 - 因此建议您安装控制台代理。
+. 准备主机并验证其是否满足所有要求。
+. 启用数据分类主机的出站互联网访问。
+. 验证所有系统上的所有必需端口是否都已启用。
+. 下载并运行先决条件测试脚本。
+
+
+
+
+== 创建控制台代理
+
+您需要先安装控制台代理，然后才能安装和使用数据分类。但是，您可以在没有控制台代理的情况下运行先决条件脚本。
+
+你可以 https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["在本地安装控制台代理"^]在您的网络中的 Linux 主机上或云中的 Linux 主机上。一些计划在本地安装数据分类的用户可能还会选择在本地安装控制台代理。
+
+要在您的云提供商环境中创建控制台代理，请参阅 https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html["在 AWS 中创建控制台代理"^]， https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["在 Azure 中创建控制台代理"^] ， 或者 https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["在 GCP 中创建控制台代理"^]。
+
+运行先决条件脚本时，您将需要控制台代理系统的 IP 地址或主机名。如果您在您的场所安装了控制台代理，您将获得此信息。如果控制台代理部署在云中，您可以从控制台中找到此信息：选择帮助图标，然后选择*支持*，然后选择*控制台代理*。
+
+
+
+== 验证主机要求
+
+数据分类软件必须在满足特定操作系统要求、RAM 要求、软件要求等的主机上运行。
+
+* 与其他应用程序共享的主机不支持数据分类 - 该主机必须是专用主机。
+* 在您的场所构建主机系统时，您可以根据计划进行数据分类扫描的数据集的大小从这些系统大小中进行选择。
++
+[cols="17,17,27,31"]
+|===
+| 系统大小 | CPU | RAM（必须禁用交换内存） | 磁盘 
+
+
+| *超大* | 32 个 CPU | 128 GB 内存  a| 
+** / 上 1 TiB SSD，或 /opt 上 100 GiB 可用
+** /var/lib/docker 上可用 895 GiB
+** /tmp 上 5 GiB
+** *对于 Podman，/var/tmp 上有 30 GB*
+
+
+
+
+| *大的* | 16 个 CPU | 64 GB 内存  a| 
+** / 上 500 GiB SSD，或 /opt 上 100 GiB 可用
+** /var/lib/docker 或 Podman /var/lib/containers 上可用 400 GiB
+** /tmp 上 5 GiB
+** *对于 Podman，/var/tmp 上有 30 GB*
+
+
+|===
+* 在云中为数据分类安装部署计算实例时，建议您使用满足上述“大型”系统要求的系统：
++
+** *Amazon Elastic Compute Cloud (Amazon EC2) 实例类型*：“m6i.4xlarge”。link:reference-instance-types.html#aws-instance-types["查看其他 AWS 实例类型"^] 。
+** *Azure VM 大小*：“Standard_D16s_v3”。link:reference-instance-types.html#azure-instance-types["查看其他 Azure 实例类型"^] 。
+** *GCP 机器类型*：“n2-standard-16”。link:reference-instance-types.html#gcp-instance-types["查看其他 GCP 实例类型"^] 。
+
+
+* *UNIX 文件夹权限*：需要以下最低 UNIX 权限：
++
+[cols="25,25"]
+|===
+| 文件夹 | 最低权限 
+
+
+| /tmp | `rwxrwxrwt` 
+
+
+| /选择 | `rwxr-xr-x` 
+
+
+| /var/lib/docker | `rwx------` 
+
+
+| /usr/lib/systemd/系统 | `rwxr-xr-x` 
+|===
+* *操作系统*：
++
+** 以下操作系统需要使用 Docker 容器引擎：
++
+*** Red Hat Enterprise Linux 版本 7.8 和 7.9
+*** Ubuntu 22.04（需要数据分类版本 1.23 或更高版本）
+*** Ubuntu 24.04（需要数据分类版本 1.23 或更高版本）
+
+
+** 以下操作系统需要使用 Podman 容器引擎，并且需要数据分类版本 1.30 或更高版本：
++
+*** Red Hat Enterprise Linux 版本 8.8、8.10、9.0、9.1、9.2、9.3、9.4、9.5 和 9.6。
+
+
+** 必须在主机系统上启用高级矢量扩展 (AVX2)。
+
+
+* *Red Hat 订阅管理*：主机必须在 Red Hat 订阅管理中注册。如果未注册，系统将无法访问存储库来在安装期间更新所需的第三方软件。
+* *附加软件*：安装数据分类之前，必须在主机上安装以下软件：
++
+** 根据您使用的操作系统，您需要安装其中一个容器引擎：
++
+*** Docker Engine 版本 19.3.1 或更高版本。 https://docs.docker.com/engine/install/["查看安装说明"^] 。
+*** Podman 版本 4 或更高版本。要安装 Podman，请输入(`sudo yum install podman netavark -y`）。
+
+
+
+
+
+
+* Python 版本 3.6 或更高版本。 https://www.python.org/downloads/["查看安装说明"^] 。
++
+** *NTP 注意事项*： NetApp建议配置数据分类系统以使用网络时间协议 (NTP) 服务。数据分类系统和控制台代理系统之间的时间必须同步。
+
+
+
+
+* *Firewalld 注意事项*：如果您计划使用 `firewalld`，我们建议您在安装数据分类之前启用它。运行以下命令进行配置 `firewalld`以便与数据分类兼容：
++
+....
+firewall-cmd --permanent --add-service=http
+firewall-cmd --permanent --add-service=https
+firewall-cmd --permanent --add-port=80/tcp
+firewall-cmd --permanent --add-port=8080/tcp
+firewall-cmd --permanent --add-port=443/tcp
+firewall-cmd --reload
+....
++
+如果您计划使用其他数据分类主机作为扫描器节点（在分布式模型中），请在此时将这些规则添加到您的主系统：
+
++
+....
+firewall-cmd --permanent --add-port=2377/tcp
+firewall-cmd --permanent --add-port=7946/udp
+firewall-cmd --permanent --add-port=7946/tcp
+firewall-cmd --permanent --add-port=4789/udp
+....
++
+请注意，每次启用或更新时都必须重新启动 Docker 或 Podman `firewalld`设置。
+
+
+
+
+
+== 启用数据分类的出站互联网访问
+
+数据分类需要出站互联网访问。如果您的虚拟或物理网络使用代理服务器进行互联网访问，请确保数据分类实例具有出站互联网访问权限以联系以下端点。
+
+
+TIP: 对于安装在没有互联网连接的站点的主机系统，不需要本节。
+
+[cols="43,57"]
+|===
+| 端点 | 目的 
+
+
+| \ https://api.bluexp.netapp.com | 与控制台服务（包括NetApp帐户）的通信。 
+
+
+| \ https://netapp-cloud-account.auth0.com \ https://auth0.com | 与控制台网站通信，实现集中用户身份验证。 
+
+
+| \ https://support.compliance.api.bluexp.netapp.com/ \ https://hub.docker.com \ https://auth.docker.io \ https://registry-1.docker.io \ https://index.docker.io/ \ https://dseasb33srnrn.cloudfront.net/ \ https://production.cloudflare.docker.com/ | 提供对软件映像、清单、模板的访问以及发送日志和指标。 
+
+
+| \ https://support.compliance.api.bluexp.netapp.com/ | 使NetApp能够从审计记录中流式传输数据。 
+
+
+| https://github.com/docker https://download.docker.com | 提供docker安装的必备包。 
+
+
+| \ http://packages.ubuntu.com/ \ http://archive.ubuntu.com | 提供 Ubuntu 安装的必备软件包。 
+|===
+
+
+== 验证所有必需的端口均已启用
+
+您必须确保所有必需的端口都已打开，以便控制台代理、数据分类、Active Directory 和数据源之间进行通信。
+
+[cols="25,25,50"]
+|===
+| 连接类型 | 端口 | 描述 
+
+
+| 控制台代理<>数据分类 | 8080 (TCP)、443 (TCP) 和 80。9000 | 控制台代理的防火墙或路由规则必须允许通过端口 443 进出数据分类实例的入站和出站流量。确保端口 8080 已打开，以便您可以在控制台中看到安装进度。如果 Linux 主机上使用防火墙，则 Ubuntu 服务器内的内部进程需要端口 9000。 
+
+
+| 控制台代理<> ONTAP集群 (NAS) | 443（TCP）  a| 
+控制台使用 HTTPS 发现ONTAP集群。如果您使用自定义防火墙策略，控制台代理主机必须允许通过端口 443 进行出站 HTTPS 访问。如果控制台代理位于云中，则预定义的防火墙或路由规则允许所有出站通信。
+
+|===
+
+
+== 运行数据分类先决条件脚本
+
+按照以下步骤运行数据分类先决条件脚本。
+
+https://youtu.be/5ONowfPWkFs?si=QLGUw8mqPrz9qs4B["观看此视频"^]了解如何运行先决条件脚本并解释结果。
+
+.开始之前
+* 验证您的 Linux 系统是否满足<<验证主机要求,主机要求>>。
+* 验证系统是否安装了两个必备软件包（Docker Engine 或 Podman 和 Python 3）。
+* 确保您在 Linux 系统上拥有 root 权限。
+
+
+.步骤
+. 从下载数据分类先决条件脚本 https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/["NetApp 支持站点"^]。您应该选择的文件名为 *standalone-pre-requisite-tester-<version>*。
+. 将文件复制到您计划使用的 Linux 主机（使用 `scp`或其他方法）。
+. 分配运行脚本的权限。
++
+[source, cli]
+----
+chmod +x standalone-pre-requisite-tester-v1.25.0
+----
+. 使用以下命令运行脚本。
++
+[source, cli]
+----
+ ./standalone-pre-requisite-tester-v1.25.0 <--darksite>
+----
++
+仅当您在没有互联网访问的主机上运行脚本时才添加选项“--darksite”。当主机未连接到互联网时，某些先决条件测试将被跳过。
+
+. 该脚本会提示您输入数据分类主机的 IP 地址。
++
+** 输入 IP 地址或主机名。
+
+
+. 该脚本会提示您是否安装了控制台代理。
++
+** 如果您没有安装控制台代理，请输入 *N*。
+** 如果您确实安装了控制台代理，请输入 *Y*。然后输入控制台代理的 IP 地址或主机名，以便测试脚本可以测试此连接。
+
+
+. 该脚本在系统上运行各种测试，并在运行过程中显示结果。完成后，它会将会话日志写入名为 `prerequisites-test-<timestamp>.log`在目录中 `/opt/netapp/install_logs`。
+
+
+.结果
+如果所有先决条件测试均成功运行，您可以在准备就绪后在主机上安装数据分类。
+
+如果发现任何问题，则将其归类为“建议”或“需要”修复。推荐的问题通常是会使数据分类扫描和分类任务运行速度变慢的项目。这些项目不需要更正 - 但您可能需要解决它们。
+
+如果您有任何“必需”问题，您应该修复这些问题并再次运行先决条件测试脚本。

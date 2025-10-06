@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: task-uninstall.html 
+keywords: remove, delete, stop, stop scans, stop scanning, delete cloud data sense, terminate, deactivate, data sense 
+summary: 您可以卸载数据分类软件来解决问题或从主机中永久删除该软件。删除实例也会删除索引数据所在的关联磁盘。数据分类扫描的所有信息将被永久删除。 
+---
+= 卸载NetApp数据分类
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以卸载NetApp Data Classification 来解决问题或从主机中永久删除该软件。删除实例还会删除索引数据所在的关联磁盘，这意味着数据分类扫描的所有信息都将被永久删除。
+
+您需要使用的步骤取决于您是在云中还是在本地主机上部署数据分类。
+
+
+
+== 从云提供商处卸载数据分类
+
+. 从数据分类中，选择**配置**。
+. 在配置页面底部，选择**卸载分类**。
++
+image:screenshot-uninstall.png["卸载数据分类按钮的屏幕截图。"]
+
+. 在对话框中，输入“卸载”以继续断开数据分类实例与控制台代理的连接。选择**卸载**进行确认。
+. 在“卸载分类”对话框中，键入“*卸载*”以确认您要断开数据分类实例与控制台代理的连接，然后选择“*卸载*”。
+. 要完成卸载过程，请转到云提供商的控制台并删除数据分类实例。该实例名为 _CloudCompliance_，并带有与之连接的生成的哈希值（UUID）。例如：_CloudCompliance-16bb6564-38ad-4080-9a92-36f5fd2f71c7_
+
+
+
+
+== 从本地部署中卸载数据分类
+
+. 从数据分类中，选择**配置**。
+. 在配置页面底部，选择**卸载分类**。
++
+image:screenshot-uninstall.png["卸载数据分类按钮的屏幕截图。"]
+
+. 在对话框中，输入“卸载”以继续断开数据分类实例与控制台代理的连接。选择**卸载**进行确认。
+. 要从主机卸载软件，请运行 `cleanup.sh`数据分类主机上的脚本，例如：
++
+[source, cli]
+----
+cleanup.sh
+----
++
+该脚本位于 `/install/light_probe/onprem_installer/cleanup.sh`目录。了解如何link:reference-log-in-to-instance.html["登录数据分类主机"]。
+
+

@@ -1,0 +1,109 @@
+---
+settings:
+  name: NetApp Data Classification
+  internal:
+    pdf_enabled: true
+    termcheck_enabled: true
+    lipi_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  rss_page: whats-new.html
+  langs: zh-cn,us-en,de-de,es-es,fr-fr,it-it,pt-br,ja-jp,ko-kr,zh-tw
+sidebar:
+  entries:
+  - title: NetApp数据分类文档
+    url: "/index.html"
+  - title: 发行说明
+    entries:
+    - title: 什么是新的
+      url: "/whats-new.html"
+    - title: 已知限制
+      url: "/reference-limitations.html"
+  - title: 开始使用
+    entries:
+    - title: 了解数据分类
+      url: "/concept-classification.html"
+    - title: 访问数据分类
+      url: "/task-access.html"
+    - title: 部署数据分类
+      entries:
+      - title: 您应该使用哪种部署
+        url: "/task-deploy-overview.html"
+      - title: 在云中部署
+        url: "/task-deploy-cloud-compliance.html"
+      - title: 在可以访问互联网的 Linux 主机上安装
+        url: "/task-deploy-compliance-onprem.html"
+      - title: 在没有互联网访问的本地 Linux 主机上安装
+        url: "/task-deploy-compliance-dark-site.html"
+      - title: 检查您的 Linux 主机是否已准备好安装数据分类
+        url: "/task-test-linux-system.html"
+    - title: 激活数据源扫描
+      entries:
+      - title: 扫描数据源概览
+        url: "/task-scanning-overview.html"
+      - title: Azure NetApp Files
+        url: "/task-scanning-anf.html"
+      - title: 适用于ONTAP 的Amazon FSx
+        url: "/task-scanning-fsx.html"
+      - title: Cloud Volumes ONTAP和本地ONTAP
+        url: "/task-getting-started-compliance.html"
+      - title: 数据库模式
+        url: "/task-scanning-databases.html"
+      - title: 文件共享
+        url: "/task-scanning-file-shares.html"
+      - title: StorageGRID
+        url: "/task-scanning-storagegrid.html"
+    - title: 集成 Active Directory
+      url: "/task-active-directory.html"
+  - title: 使用数据分类
+    entries:
+    - title: 查看有关您的数据的治理详细信息
+      url: "/task-controlling-governance-data.html"
+    - title: 查看有关您的数据的合规性详细信息
+      url: "/task-controlling-private-data.html"
+    - title: 私人数据类别
+      url: "/reference-private-data-categories.html"
+    - title: 创建自定义扫描
+      url: "/task-custom-classification.html"
+    - title: 调查数据
+      url: "/task-investigate-data.html"
+    - title: 管理已保存的查询
+      url: "/task-using-policies.html"
+    - title: 修改扫描设置
+      url: "/task-managing-repo-scanning.html"
+    - title: 生成合规性报告
+      url: "/task-generating-compliance-reports.html"
+  - title: 管理数据分类
+    entries:
+    - title: 从扫描中排除目录
+      url: "/task-exclude-scan-paths.html"
+    - title: 将现有组 ID 定义为“对组织开放”
+      url: "/task-add-group-id-as-open.html"
+    - title: 从数据分类中删除数据源
+      url: "/task-managing-compliance.html"
+    - title: 卸载数据分类
+      url: "/task-uninstall.html"
+  - title: 参考
+    entries:
+    - title: 支持的数据分类实例类型
+      url: "/reference-instance-types.html"
+    - title: 从数据源收集的元数据
+      url: "/reference-collected-metadata.html"
+    - title: 登录数据分类
+      url: "/reference-log-in-to-instance.html"
+    - title: 数据分类 API
+      url: "/api-classification.html"
+  - title: 知识和支持
+    entries:
+    - title: 注册以获得支持
+      url: "/task-support-registration.html"
+    - title: 获取帮助
+      url: "/task-get-help.html"
+  - title: 常见问题解答
+    url: "/faq-cloud-compliance.html"
+  - title: 法律声明
+    url: "/legal-notices.html"
+product-family:
+  name: NetApp Data Services
+  repo: data-services-family

@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: reference-instance-types.html 
+keywords: BlueXP classification, installation, deployment, instance, virtual machine, cpu, ram, memory, disk, capacity 
+summary: 数据分类软件必须在满足特定操作系统要求、RAM 要求、软件要求等的主机上运行。在云中部署数据分类时，建议您使用具有“大型”特性的系统以实现全部功能。 
+---
+= 支持的NetApp数据分类实例类型
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp数据分类软件必须在满足特定操作系统要求、RAM 要求、软件要求等的主机上运行。在云中部署数据分类时，我们建议您使用具有“大型”特性的系统以实现全部功能。
+
+您可以在具有较少 CPU 和较少 RAM 的系统上部署数据分类，但在使用这些功能较弱的系统时会受到一些限制。link:concept-classification.html["了解这些限制"^] 。
+
+在下表中，如果标记为“默认”的系统在您安装数据分类的区域中不可用，则将部署表中的下一个系统。
+
+
+
+== AWS 实例类型
+
+[cols="20,30,25"]
+|===
+| 系统大小 | 规格 | 实例类型 
+
+
+| 特大号 | 32 个 CPU、128 GB RAM、1 TiB gp3 SSD | https://aws.amazon.com/ec2/instance-types/m6i/["m6i.8xlarge"^]（默认） 
+
+
+| 大型 | 16 个 CPU、64 GB RAM、500 GiB SSD | https://aws.amazon.com/ec2/instance-types/m6i/["m6i.4xlarge"^]（默认）m6a.4xlarge m5a.4xlarge m5.4xlarge m4.4xlarge 
+
+
+| 中 | 8 个 CPU、32 GB RAM、200 GiB SSD | https://aws.amazon.com/ec2/instance-types/m6i/["m6i.2xlarge"^]（默认）m6a.2xlarge m5a.2xlarge m5.2xlarge m4.2xlarge 
+
+
+| 小型 | 8 个 CPU、16 GB RAM、100 GiB SSD | https://aws.amazon.com/ec2/instance-types/c6a/["c6a.2xlarge"^]（默认）c5a.2xlarge c5.2xlarge c4.2xlarge 
+|===
+
+
+== Azure 实例类型
+
+[cols="20,30,25"]
+|===
+| 系统大小 | 规格 | 实例类型 
+
+
+| 特大号 | 32 个 CPU、128 GB RAM、OS 磁盘（2,048 GiB，最小吞吐量 250 MB/s）和数据磁盘（1 TiB SSD，最小吞吐量 750 MB/s） | https://learn.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dv3-series["Standard_D32_v3"^]（默认） 
+
+
+| 大型 | 16 个 CPU、64 GB RAM、500 GiB SSD | https://learn.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series["Standard_D16s_v3"^]（默认） 
+|===
+
+
+== GCP 实例类型
+
+[cols="20,30,25"]
+|===
+| 系统大小 | 规格 | 实例类型 
+
+
+| 大型 | 16 个 CPU、64 GB RAM、500 GiB SSD | https://cloud.google.com/compute/docs/general-purpose-machines#n2_machines["n2-标准-16"^]（默认）n2d-standard-16 n1-standard-16 
+|===

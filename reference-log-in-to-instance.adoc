@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: reference-log-in-to-instance.html 
+keywords: log in, data sense, classification 
+summary: 有时您可能需要登录NetApp数据分类系统，以便访问日志文件或编辑配置文件。 
+---
+= 登录NetApp数据分类系统
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您需要登录NetApp数据分类系统，以便访问日志文件或编辑配置文件。
+
+当数据分类安装在您本地的 Linux 机器上或在云中部署的 Linux 机器上时，您可以直接访问配置文件和脚本。
+
+当数据分类部署在云中时，您需要通过 SSH 连接到数据分类实例。您可以通过输入用户和密码，或使用控制台代理安装期间提供的 SSH 密钥，通过 SSH 连接到系统。  SSH 命令是：
+
+`ssh -i <path_to_the_ssh_key> <machine_user>@<datasense_ip>`
+
+* `<path_to_the_ssh_key>`= ssh 身份验证密钥的位置
+* `<machine_user>:`
++
+** 对于 AWS：使用 <ec2-user>
+** 对于 Azure：使用为控制台实例创建的用户
+** 对于 GCP：使用为控制台实例创建的用户
+
+
+* `<datasense_ip>`= 虚拟机实例的 IP 地址
+
+
+需要修改安全组入站规则才能访问云端的系统。有关详细信息，请参阅：
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-aws.html["AWS 中的安全组规则"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-azure.html["Azure 中的安全组规则"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-gcp.html["Google Cloud 中的防火墙规则"^]
+
