@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-exclude-scan-paths.html 
 keywords: exclude scans, folders, directories 
-summary: 如果您希望NetApp数据分类排除驻留在特定数据源目录中的扫描数据，则可以将这些目录名称添加到配置文件中。应用此更改后，数据分类引擎将排除这些目录中的扫描数据。 
+summary: 如果您希望NetApp Data Classification排除驻留在特定数据源目录中的扫描数据，则可以将这些目录名称添加到配置文件中。应用此更改后，数据分类引擎将排除这些目录中的扫描数据。 
 ---
-= 从NetApp数据分类扫描中排除特定目录
+= 从NetApp Data Classification扫描中排除特定目录
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 如果您希望NetApp数据分类排除驻留在特定数据源目录�
 
 
 [role="lead"]
-如果您希望NetApp数据分类从扫描中排除特定目录，则可以将这些目录名称添加到配置文件中。应用此更改后，数据分类引擎将从扫描中排除这些目录。
+如果您希望NetApp Data Classification从扫描中排除特定目录，则可以将这些目录名称添加到配置文件中。应用此更改后，数据分类引擎将从扫描中排除这些目录。
 
 
 NOTE: 默认情况下，数据分类扫描排除与卷中的源相同的卷快照数据。

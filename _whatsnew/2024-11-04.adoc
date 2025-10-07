@@ -9,7 +9,7 @@
 此BlueXP classification版本包括以下更新。
 
 .支持 RHEL 8.10
-此版本除了支持以前支持的版本外，还提供了对 Red Hat Enterprise Linux v8.10 的支持。这适用于BlueXP classification的任何手动本地安装，包括暗站部署。
+此版本除了支持以前支持的版本外，还提供对 Red Hat Enterprise Linux v8.10 的支持。这适用于BlueXP classification的任何手动本地安装，包括暗站部署。
 
 以下操作系统需要使用 Podman 容器引擎，并且需要BlueXP classification版本 1.30 或更高版本：Red Hat Enterprise Linux 版本 8.8、8.10、9.0、9.1、9.2、9.3 和 9.4。
 

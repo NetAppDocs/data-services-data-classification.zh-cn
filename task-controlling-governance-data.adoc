@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-controlling-governance-data.html 
 keywords: savings, stale data, duplicate data, highlights, data discovery assessment report, data mapping overview report, data repositories, sensitive data, wide permissions, open permissions, age of data, size of data, classification, costs of data 
-summary: 控制与组织存储资源上的数据相关的成本。  NetApp数据分类可识别系统中陈旧数据、重复文件和超大文件的数量，以便您可以决定是否要删除某些文件或将某些文件分层到成本较低的对象存储中。 
+summary: 控制与组织存储资源上的数据相关的成本。  NetApp Data Classification可识别系统中陈旧数据、重复文件和超大文件的数量，以便您可以决定是否要删除某些文件或将某些文件分层到成本较低的对象存储中。 
 ---
-= 使用NetApp数据分类查看组织中存储的数据的治理详细信息
+= 使用NetApp Data Classification查看组织中存储的数据的治理详细信息
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 控制与组织存储资源上的数据相关的成本。  NetApp数据
 
 
 [role="lead"]
-控制与组织存储资源上的数据相关的成本。  NetApp数据分类可识别系统中陈旧数据、重复文件和超大文件的数量，以便您可以决定是否要删除某些文件或将某些文件分层到成本较低的对象存储中。
+控制与组织存储资源上的数据相关的成本。  NetApp Data Classification可识别系统中陈旧数据、重复文件和超大文件的数量，以便您可以决定是否要删除某些文件或将某些文件分层到成本较低的对象存储中。
 
 您应该从这里开始您的研究。从治理仪表板中，您可以选择一个区域进行进一步调查。
 
@@ -29,7 +29,7 @@ summary: 控制与组织存储资源上的数据相关的成本。  NetApp数据
 image:screenshot_compliance_governance_dashboard.png["数据分类治理仪表板的屏幕截图。"]
 
 .步骤
-. 从NetApp控制台菜单中，选择 *治理 > 分类*。
+. 从NetApp Console菜单中，选择 *治理 > 分类*。
 . 选择*治理*。
 +
 出现治理仪表板。
@@ -163,7 +163,7 @@ image:screenshot-compliance-report-buttons.png["治理仪表板的屏幕截图�
 
 === 查看按开放权限类型列出的数据
 
-数据映射概览报告的“开放权限”区域显示正在扫描的所有文件中每种权限的百分比。该图表显示以下类型的权限：
+数据映射概览报告的“打开权限”区域显示正在扫描的所有文件中每种权限的百分比。该图表显示以下类型的权限：
 
 * 无开放权限
 * 向组织开放

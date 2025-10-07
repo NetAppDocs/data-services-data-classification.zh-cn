@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: api-classification.html 
 keywords: api, rest, authorization, data classification, data sense, swagger 
-summary: 通过 Web UI 提供的NetApp数据分类功能也可通过 API 提供。 
+summary: 通过 Web UI 提供的NetApp Data Classification功能也可通过 API 提供。 
 ---
-= NetApp数据分类 API
+= NetApp Data ClassificationAPI
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 通过 Web UI 提供的NetApp数据分类功能也可通过 API 提供�
 
 
 [role="lead"]
-通过 Web UI 提供的NetApp数据分类功能也可通过 REST API 提供。
+通过 Web UI 提供的NetApp Data Classification功能也可通过 REST API 提供。
 
 数据分类中定义了四个类别，与 UI 中的选项卡相对应：
 

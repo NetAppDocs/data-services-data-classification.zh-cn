@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-db-capabilities.html 
 keywords: database actions, database filters, supported, unsupported 
-summary: 扫描数据库模式时， NetApp数据分类无法提供某些特性和功能。 
+summary: 扫描数据库模式时， NetApp Data Classification无法提供某些特性和功能。 
 ---
-= NetApp数据分类中支持和不支持的数据库功能
+= NetApp Data Classification中支持和不支持的数据库功能
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 扫描数据库模式时， NetApp数据分类无法提供某些特性�
 
 
 [role="lead"]
-扫描数据库模式时， NetApp数据分类无法提供某些特性和功能。请参阅下面的列表。
+扫描数据库模式时， NetApp Data Classification无法提供某些特性和功能。请参阅下面的列表。
 
 您可以将数据库模式添加到数据分类中进行扫描link:task-scanning-databases.html["如此处所述"^]。
 

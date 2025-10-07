@@ -4,7 +4,7 @@ permalink: task-uninstall.html
 keywords: remove, delete, stop, stop scans, stop scanning, delete cloud data sense, terminate, deactivate, data sense 
 summary: 您可以卸载数据分类软件来解决问题或从主机中永久删除该软件。删除实例也会删除索引数据所在的关联磁盘。数据分类扫描的所有信息将被永久删除。 
 ---
-= 卸载NetApp数据分类
+= 卸载NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 您可以卸载数据分类软件来解决问题或从主机中永久�
 
 
 [role="lead"]
-您可以卸载NetApp Data Classification 来解决问题或从主机中永久删除该软件。删除实例还会删除索引数据所在的关联磁盘，这意味着数据分类扫描的所有信息都将被永久删除。
+您可以卸载NetApp Data Classification来解决问题或从主机中永久删除该软件。删除实例还会删除索引数据所在的关联磁盘，这意味着数据分类扫描的所有信息都将被永久删除。
 
 您需要使用的步骤取决于您是在云中还是在本地主机上部署数据分类。
 

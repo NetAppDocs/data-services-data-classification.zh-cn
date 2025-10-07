@@ -4,7 +4,7 @@ permalink: task-add-group-id-as-open.html
 keywords: permissions, open to organization, file access 
 summary: '当组 ID 附加到 NFS 文件共享中的文件或文件夹时，它们定义了文件或文件夹的权限；例如它们是否“对组织开放”。如果某些组 ID (GID) 最初未设置“向组织开放”权限级别，则可以将该权限添加到 GID，以便附加该 GID 的任何文件和文件夹都将被视为“向组织开放”。' 
 ---
-= 在NetApp数据分类中将其他组 ID 定义为对组织开放
+= 在NetApp Data Classification其他组 ID 定义为对组织开放
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,7 +16,7 @@ summary: '当组 ID 附加到 NFS 文件共享中的文件或文件夹时，它�
 [role="lead"]
 当组 ID (GID) 附加到 NFS 文件共享中的文件或文件夹时，它们定义了文件或文件夹的权限；例如它们是否“对组织开放”。如果某些 GID 最初未设置“向组织开放”权限级别，您可以向 GID 添加该权限，以便任何附加了该 GID 的文件和文件夹都将被视为“向组织开放”。
 
-在您进行此更改并且NetApp数据分类重新扫描您的文件和文件夹后，任何附加了这些组 ID 的文件和文件夹都将在“调查详细信息”页面中显示此权限，并且它们还将出现在您显示文件权限的报告中。
+在您进行此更改并且NetApp Data Classification重新扫描您的文件和文件夹后，任何附加了这些组 ID 的文件和文件夹都将在“调查详细信息”页面中显示此权限，并且它们还将出现在您显示文件权限的报告中。
 
 要激活此功能，您需要登录数据分类系统，以便可以编辑配置文件并运行脚本。了解如何link:reference-log-in-to-instance.html["登录数据分类系统"]取决于您是否在 Linux 机器上手动安装了该软件，或者是否在云中部署了该实例。
 

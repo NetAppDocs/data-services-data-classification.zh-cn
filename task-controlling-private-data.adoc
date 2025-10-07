@@ -4,7 +4,7 @@ permalink: task-controlling-private-data.html
 keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights 
 summary: '通过查看组织中的个人数据 (PII) 和敏感个人数据 (SPII) 的详细信息来控制您的私人数据。您还可以通过查看数据分类在您的数据中发现的类别和文件类型来获得可见性。' 
 ---
-= 使用NetApp数据分类查看组织中存储的私人数据的合规性详细信息
+= 使用NetApp Data Classification查看组织中存储的私人数据的合规性详细信息
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,10 +14,10 @@ summary: '通过查看组织中的个人数据 (PII) 和敏感个人数据 (SPII
 
 
 [role="lead"]
-通过查看组织中的个人数据 (PII) 和敏感个人数据 (SPII) 的详细信息来控制您的私人数据。您还可以通过查看NetApp数据分类在您的数据中找到的类别和文件类型来获得可见性。
+通过查看组织中的个人数据 (PII) 和敏感个人数据 (SPII) 的详细信息来控制您的私人数据。您还可以通过查看NetApp Data Classification在您的数据中找到的类别和文件类型来获得可见性。
 
 
-NOTE: 仅当您执行完整分类扫描时，才可获得文件级合规性详细信息。仅映射扫描不会产生文件级详细信息。
+NOTE: 仅当您执行完整的分类扫描时，才可以获得文件级合规性详细信息。仅映射扫描不会产生文件级详细信息。
 
 默认情况下，数据分类仪表板显示所有系统和数据库的合规性数据。要仅查看部分系统的数据，请选择它们。
 

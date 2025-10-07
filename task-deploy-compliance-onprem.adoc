@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-deploy-compliance-onprem.html 
 keywords: cloud compliance, data sense, get started, deploy cloud data sense, outbound internet, endpoints, cloud compliance internet, web browser connectivity, linux, ubuntu, cloud compliance access, privacy, compliance, on-premises 
-summary: 要在您的网络中的 Linux 主机或具有 Internet 访问权限的云中的 Linux 主机上部署NetApp数据分类，您需要在您的网络或云中手动部署 Linux 主机。 
+summary: 要在您的网络中的 Linux 主机或具有 Internet 访问权限的云中的 Linux 主机上部署NetApp Data Classification，您需要在您的网络或云中手动部署 Linux 主机。 
 ---
-= 在可以访问互联网的主机上安装NetApp数据分类
+= 在可以访问互联网的主机上安装NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 要在您的网络中的 Linux 主机或具有 Internet 访问权限的
 
 
 [role="lead"]
-要在您的网络中的 Linux 主机或具有 Internet 访问权限的云中的 Linux 主机上部署NetApp数据分类，您需要在您的网络或云中手动部署 Linux 主机。
+要在您的网络中的 Linux 主机或具有 Internet 访问权限的云中的 Linux 主机上部署NetApp Data Classification，您需要在您的网络或云中手动部署 Linux 主机。
 
 如果您希望使用同样位于本地的数据分类实例来扫描本地ONTAP系统，则本地安装是一个不错的选择。这不是必需的。无论选择哪种安装方法，软件的功能都是相同的。
 
@@ -182,7 +182,7 @@ firewall-cmd --permanent --add-port=443/tcp
 firewall-cmd --reload
 ....
 +
-如果您计划使用其他数据分类主机作为扫描仪节点，请在此时将这些规则添加到您的主系统：
+如果您计划使用其他数据分类主机作为扫描器节点，请在此时将这些规则添加到您的主系统：
 
 +
 ....

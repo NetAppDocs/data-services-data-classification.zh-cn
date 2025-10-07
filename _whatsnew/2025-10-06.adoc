@@ -6,15 +6,15 @@
 
 === 1.47 版
 
-.BlueXP classification现为NetApp数据分类
-BlueXP classification已重命名为NetApp数据分类。除了重命名之外，用户界面也得到了增强。
+.BlueXP classification现为NetApp Data Classification
+BlueXP classification已重命名为NetApp Data Classification。除了重命名之外，用户界面也得到了增强。
 
-.BlueXP现在是NetApp控制台
+.BlueXP现在是NetApp Console
 BlueXP已重新命名并重新设计，以更好地反映其在管理数据基础设施中的作用。
 
-NetApp控制台提供企业级跨本地和云环境的存储和数据服务的集中管理，提供实时洞察、更快的工作流程和简化的管理。
+NetApp Console提供企业级跨本地和云环境的存储和数据服务的集中管理，提供实时洞察、更快的工作流程和简化的管理。
 
-有关更改的详细信息，请参阅 https://docs.netapp.com/us-en/console-relnotes/index.html["NetApp控制台发行说明"]。
+有关更改的详细信息，请参阅 https://docs.netapp.com/us-en/console-relnotes/index.html["NetApp Console发行说明"]。
 
 .增强调查体验
 使用新的可搜索过滤器、每个值的结果计数、总结关键发现的实时见解以及具有可自定义列和滑出详细信息窗格的刷新结果表，更快地查找和理解您的数据。
@@ -35,4 +35,4 @@ NetApp控制台提供企业级跨本地和云环境的存储和数据服务的�
 有关更多信息，请参阅link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html#view-file-metada["调查数据"] 。
 
 .支持Google Cloud NetApp Volumes
-数据分类现在支持在Google Cloud NetApp Volumes上进行扫描。从NetApp控制台轻松添加Google Cloud NetApp Volumes，实现无缝数据扫描和分类。
+数据分类现在支持在Google Cloud NetApp Volumes上进行扫描。从NetApp Console轻松添加Google Cloud NetApp Volumes，实现无缝数据扫描和分类。

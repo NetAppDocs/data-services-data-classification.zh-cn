@@ -4,7 +4,7 @@ permalink: task-managing-compliance.html
 keywords: remove, stop, stop scans, stop scanning, cloud compliance, stop cloud compliance, deactivate, deactivating cloud compliance, data sense 
 summary: 如果需要，您可以停止数据分类扫描一个或多个系统、数据库、文件共享组、OneDrive 帐户、Google Drive 帐户或 SharePoint 帐户。 
 ---
-= 从NetApp数据分类中删除数据源
+= 从NetApp Data Classification中删除数据源
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 如果需要，您可以停止数据分类扫描一个或多个系统�
 
 
 [role="lead"]
-如果需要，您可以停止NetApp数据分类扫描一个或多个系统、数据库或文件共享组。
+如果需要，您可以停止NetApp Data Classification扫描一个或多个系统、数据库或文件共享组。
 
 
 

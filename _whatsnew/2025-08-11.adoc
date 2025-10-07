@@ -11,7 +11,7 @@
 .审计页面中增强的扫描事件洞察
 审计页面现在支持对BlueXP classification的扫描事件的增强洞察。审计页面现在显示系统扫描的开始时间、系统状态以及任何问题。共享和系统的状态仅适用于映射扫描。
 
-有关审计页面的更多信息，请参阅link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html["监控NetApp控制台操作"^]。
+有关审计页面的更多信息，请参阅link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html["监控NetApp Console操作"^]。
 
 .支持 RHEL 9.6
 此版本增加了对 Red Hat Enterprise Linux v9.6 的支持，用于手动本地安装BlueXP classification，包括暗站部署。

@@ -4,7 +4,7 @@ permalink: reference-private-data-categories.html
 keywords: personal files, personal data, sensitive personal files, sensitive personal data, categories, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, sex, criminal, compliance, privacy, 
 summary: 数据分类可以在您的卷中识别多种类型的私人数据。 
 ---
-= NetApp数据分类中的私有数据类别
+= NetApp Data Classification中的私有数据类别
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 数据分类可以在您的卷中识别多种类型的私人数据。
 
 
 [role="lead"]
-NetApp数据分类可以在您的卷和数据库中识别多种类型的私有数据。
+NetApp Data Classification可以在您的卷和数据库中识别多种类型的私有数据。
 
 数据分类识别两种类型的个人数据：
 
@@ -134,7 +134,7 @@ TIP: 如果您需要数据分类来识别其他私人数据类型，例如额外
 | 加拿大驾驶执照 - 萨斯喀彻温省 | 是 | ✓ |  |  |  |  
 
 
-| 加拿大育空地区驾驶执照 | 是 | ✓ |  |  |  |  
+| 加拿大驾照 - 育空地区 | 是 | ✓ |  |  |  |  
 
 
 | 加拿大健康卡号码 - 艾伯塔省 PHIN | 是 | ✓ |  |  |  |  
@@ -224,7 +224,7 @@ TIP: 如果您需要数据分类来识别其他私人数据类型，例如额外
 | 德国银行转账内部 ID | 是 | ✓ | ✓ | ✓ |  |  
 
 
-| 德国社会保障号 (Sozialversicherungsnummer) | 是 | ✓ | ✓ | ✓ |  |  
+| 德国社会安全号码 (Sozialversicherungsnummer) | 是 | ✓ | ✓ | ✓ |  |  
 
 
 | 德国纳税识别号 (Steuerliche Identifikationsnummer) | 是 | ✓ | ✓ | ✓ |  |  

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-managing-repo-scanning.html 
 keywords: compliance, stop scan, start scan, map scan, classify scan, data sense, pause scan, resume scan, cloud data sense, bluexp classification 
-summary: 您可以在NetApp数据分类中管理每个系统和数据源中的数据扫描方式。您可以在“存储库”基础上进行更改；这意味着您可以根据正在扫描的数据源类型对每个卷、存储桶、共享、模式、用户等进行更改。 
+summary: 您可以在NetApp Data Classification中管理在每个系统和数据源中扫描数据的方式。您可以在“存储库”基础上进行更改；这意味着您可以根据正在扫描的数据源类型对每个卷、存储桶、共享、模式、用户等进行更改。 
 ---
-= 更改存储库的NetApp数据分类扫描设置
+= 更改存储库的NetApp Data Classification扫描设置
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,13 +16,13 @@ summary: 您可以在NetApp数据分类中管理每个系统和数据源中的�
 [role="lead"]
 您可以管理在每个系统和数据源中如何扫描数据。您可以在“存储库”基础上进行更改；这意味着您可以根据正在扫描的数据源类型对每个卷、模式、用户等进行更改。
 
-您可以更改的一些内容包括是否扫描存储库，以及NetApp数据分类是否正在执行link:concept-classification.html["映射扫描或映射和分类扫描"]。您还可以暂停和恢复扫描，例如，如果您需要在一段时间内停止扫描某个卷。
+您可以更改的一些内容包括是否扫描存储库，以及NetApp Data Classification是否正在执行link:concept-classification.html["映射扫描或映射和分类扫描"]。您还可以暂停和恢复扫描，例如，如果您需要在一段时间内停止扫描某个卷。
 
 
 
 == 查看存储库的扫描状态
 
-您可以查看NetApp数据分类正在为每个系统和数据源扫描的各个存储库（卷、存储桶等）。您还可以看到有多少已被“映射”，有多少已被“分类”。分类需要更长的时间，因为所有数据都进行了完整的 AI 识别。
+您可以查看NetApp Data Classification正在为每个系统和数据源扫描的各个存储库（卷、存储桶等）。您还可以看到有多少已被“映射”，有多少已被“分类”。分类需要更长的时间，因为所有数据都进行了完整的 AI 识别。
 
 您可以在配置页面查看各个工作环境的扫描状态：
 
@@ -117,7 +117,7 @@ image:screenshot_compliance_repo_scan_settings.png["显示如何选择存储桶�
 
 == 暂停并恢复存储库扫描
 
-如果您想暂时停止扫描某些内容，您可以“暂停”存储库上的扫描。暂停扫描意味着数据分类将不会对存储库的更改或添加执行任何未来扫描，但所有当前结果仍将显示在系统中。暂停扫描并不会停止对已扫描的数据收费，因为数据仍然存在。
+如果您想暂时停止扫描某些内容，您可以“暂停”存储库扫描。暂停扫描意味着数据分类将不会对存储库的更改或添加执行任何未来扫描，但所有当前结果仍将显示在系统中。暂停扫描并不会停止对已扫描的数据收费，因为数据仍然存在。
 
 您可以随时“恢复”扫描。
 

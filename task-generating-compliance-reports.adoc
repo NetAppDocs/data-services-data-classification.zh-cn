@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-generating-compliance-reports.html 
 keywords: report, privacy, risk, privacy risk assessment, compliance status, severity, compliance, privacy risk, data subjects, privacy, credit cards, pci dss, hipaa, csv file, json file, dsar 
-summary: NetApp数据分类提供报告，您可以使用这些报告更好地了解组织的数据隐私计划的状态。 
+summary: NetApp Data Classification提供报告，您可以使用这些报告更好地了解组织的数据隐私计划的状态。 
 ---
-= 查看NetApp数据分类合规性报告
+= 查看NetApp Data Classification合规性报告
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: NetApp数据分类提供报告，您可以使用这些报告更好地�
 
 
 [role="lead"]
-NetApp数据分类提供报告，您可以使用这些报告更好地了解组织的数据隐私计划的状态。
+NetApp Data Classification提供报告，您可以使用这些报告更好地了解组织的数据隐私计划的状态。
 
 默认情况下，数据分类仪表板显示所有系统、数据库和数据源的合规性和治理数据。如果您想要查看仅包含部分系统数据的报告，您可以进行筛选以仅查看这些系统的数据。
 
@@ -148,7 +148,7 @@ image:screenshot-report-options.png["合规性页面中的报告选项的屏幕�
 
 * 概述：有多少个文件包含信用卡信息以及在哪些系统中。
 * 加密：加密或未加密系统中包含信用卡信息的文件的百分比。此信息特定于Cloud Volumes ONTAP。
-* 勒索软件保护：在启用或未启用勒索软件保护的系统上，包含信用卡信息的文件的百分比。此信息特定于Cloud Volumes ONTAP。
+* 勒索软件防护：在启用或未启用勒索软件防护的系统上，包含信用卡信息的文件的百分比。此信息特定于Cloud Volumes ONTAP。
 * 保留：文件最后修改的时间范围。这很有用，因为您不应该将信用卡信息保存的时间超过处理所需的时间。
 * 信用卡信息分发：发现信用卡信息的系统以及是否启用了加密和勒索软件保护。
 

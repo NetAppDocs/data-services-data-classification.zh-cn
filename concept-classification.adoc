@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-classification.html 
 keywords: artificial intelligence, ai, compliance, cloud compliance, dsar, personal data, personal information, sensitive, personal sensitive data, gdpr, hipaa, scans, scanning,  governance, cloud data sense, data sense, privacy control, classification, optimization, bluexp, bluexp classification, netapp console 
-summary: 数据分类是NetApp控制台的一项数据治理服务，它可以扫描您的企业内部和云数据源以映射和分类数据并识别私人信息。这可以帮助降低您的安全和合规风险，降低存储成本，并协助您的数据迁移项目。 
+summary: 数据分类是NetApp Console的一项数据治理服务，它可以扫描您的企业内部和云数据源以映射和分类数据并识别私人信息。这可以帮助降低您的安全和合规风险，降低存储成本，并协助您的数据迁移项目。 
 ---
-= 了解NetApp数据分类
+= 了解NetApp Data Classification
 :allow-uri-read: 
 :no-hardbreaks: 
 :nofooter: 
@@ -14,22 +14,22 @@ summary: 数据分类是NetApp控制台的一项数据治理服务，它可以�
 
 
 [role="lead"]
-NetApp数据分类是NetApp控制台的一项数据治理服务，它可以扫描您的企业内部和云数据源以映射和分类数据并识别私人信息。这可以帮助降低您的安全和合规风险，降低存储成本，并协助您的数据迁移项目。
+NetApp Data Classification是NetApp Console的一项数据治理服务，它可以扫描您的企业内部和云数据源以映射和分类数据并识别私人信息。这可以帮助降低您的安全和合规风险，降低存储成本，并协助您的数据迁移项目。
 
 
-IMPORTANT: 从 1.31 版开始，数据分类作为NetApp控制台中的一项核心功能提供。无需额外付费。无需分类许可或订阅。  + 如果您一直在使用旧版本 1.30 或更早版本，则该版本在您的订阅到期之前可用。
+IMPORTANT: 从 1.31 版开始，数据分类作为NetApp Console中的一项核心功能提供。无需额外付费。无需分类许可或订阅。  + 如果您一直在使用旧版本 1.30 或更早版本，则该版本在您的订阅到期之前可用。
 
 
 
-== NetApp控制台
+== NetApp Console
 
-可以通过NetApp控制台访问数据分类。
+可以通过NetApp Console访问数据分类。
 
-NetApp控制台提供企业级跨本地和云环境的NetApp存储和数据服务的集中管理。需要控制台才能访问和使用NetApp数据服务。作为管理界面，它使您能够从一个界面管理许多存储资源。控制台管理员可以控制企业内所有系统的存储和服务的访问。
+NetApp Console提供企业级跨本地和云环境的NetApp存储和数据服务的集中管理。需要控制台才能访问和使用NetApp数据服务。作为管理界面，它使您能够从一个界面管理许多存储资源。控制台管理员可以控制企业内所有系统的存储和服务的访问。
 
-您不需要许可证或订阅即可开始使用NetApp控制台，并且只有当您需要在云中部署控制台代理以确保与存储系统或NetApp数据服务的连接时才需要付费。但是，一些可从控制台访问的NetApp数据服务是需要许可或基于订阅的。
+您不需要许可证或订阅即可开始使用NetApp Console，并且只有当您需要在云中部署控制台代理以确保与存储系统或NetApp数据服务的连接时才需要付费。但是，一些可从控制台访问的NetApp数据服务是需要许可或基于订阅的。
 
-详细了解link:https://docs.netapp.com/us-en/console-setup-admin/concept-overview.html["NetApp控制台"^]。
+详细了解link:https://docs.netapp.com/us-en/console-setup-admin/concept-overview.html["NetApp Console"^]。
 
 
 
@@ -184,7 +184,7 @@ image:diagram_cloud_compliance_scan.png["该图表显示了在您的云提供商
 您可以在卷级别或数据库模式级别启用和禁用扫描。
 
 
-NOTE: 数据分类不会对其可以扫描的数据量施加限制。每个控制台代理支持扫描和显示 500 TiB 的数据。要扫描超过 500 TiB 的数据，link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["安装另一个控制台代理"^]然后link:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-overview.html["部署另一个数据分类实例"]。+ 控制台 UI 显示来自单个连接器的数据。有关查看来自多个控制台代理的数据的提示，请参阅link:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["使用多个控制台代理"^]。
+NOTE: 数据分类不会对其可以扫描的数据量施加限制。每个控制台代理支持扫描和显示 500 TiB 的数据。要扫描超过 500 TiB 的数据，link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["安装另一个控制台代理"^]然后link:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-overview.html["部署另一个数据分类实例"]。 + 控制台 UI 显示来自单个连接器的数据。有关查看来自多个控制台代理的数据的提示，请参阅link:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["使用多个控制台代理"^]。
 
 
 

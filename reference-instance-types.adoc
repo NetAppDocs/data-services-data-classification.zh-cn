@@ -4,7 +4,7 @@ permalink: reference-instance-types.html
 keywords: BlueXP classification, installation, deployment, instance, virtual machine, cpu, ram, memory, disk, capacity 
 summary: 数据分类软件必须在满足特定操作系统要求、RAM 要求、软件要求等的主机上运行。在云中部署数据分类时，建议您使用具有“大型”特性的系统以实现全部功能。 
 ---
-= 支持的NetApp数据分类实例类型
+= 支持的NetApp Data Classification实例类型
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 数据分类软件必须在满足特定操作系统要求、RAM 要求�
 
 
 [role="lead"]
-NetApp数据分类软件必须在满足特定操作系统要求、RAM 要求、软件要求等的主机上运行。在云中部署数据分类时，我们建议您使用具有“大型”特性的系统以实现全部功能。
+NetApp Data Classification软件必须在满足特定操作系统要求、RAM 要求、软件要求等的主机上运行。在云中部署数据分类时，我们建议您使用具有“大型”特性的系统以实现全部功能。
 
 您可以在具有较少 CPU 和较少 RAM 的系统上部署数据分类，但在使用这些功能较弱的系统时会受到一些限制。link:concept-classification.html["了解这些限制"^] 。
 

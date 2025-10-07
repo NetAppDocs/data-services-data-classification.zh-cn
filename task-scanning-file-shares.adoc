@@ -4,7 +4,7 @@ permalink: task-scanning-file-shares.html
 keywords: cloud compliance, enable cloud compliance, privacy, compliance, file shares, nfs, cifs, smb, data sense, 7-mode 
 summary: 完成几个步骤即可开始使用数据分类直接扫描非NetApp NFS 或 CIFS 文件共享。这些文件共享可以驻留在本地或云端。 
 ---
-= 使用NetApp数据分类扫描文件共享
+= 使用NetApp Data Classification扫描文件共享
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 完成几个步骤即可开始使用数据分类直接扫描非NetApp N
 
 
 [role="lead"]
-要扫描文件共享，您必须首先在NetApp数据分类中创建一个文件共享组。文件共享组适用于本地或云中托管的 NFS 或 CIFS (SMB) 共享。
+要扫描文件共享，您必须首先在NetApp Data Classification中创建一个文件共享组。文件共享组适用于本地或云中托管的 NFS 或 CIFS (SMB) 共享。
 
 
 NOTE: 数据分类核心版本不支持扫描非NetApp文件共享的数据。

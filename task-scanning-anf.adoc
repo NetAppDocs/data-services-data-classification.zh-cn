@@ -4,7 +4,7 @@ permalink: task-scanning-anf.html
 keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, ANF, azure netApp files, data sense 
 summary: 完成几个步骤即可开始使用Azure NetApp Files的数据分类。 
 ---
-= 使用NetApp数据分类扫描Azure NetApp Files卷
+= 使用NetApp Data Classification扫描Azure NetApp Files卷
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ summary: 完成几个步骤即可开始使用Azure NetApp Files的数据分类�
 
 
 [role="lead"]
-完成几个步骤即可开始使用适用于Azure NetApp Files的NetApp数据分类。
+完成几个步骤即可开始使用适用于Azure NetApp Files的NetApp Data Classification。
 
 
 
 == 发现要扫描的Azure NetApp Files系统Discover the Azure NetApp Files system that you want to scan
 
-如果要扫描的Azure NetApp Files系统尚未作为系统出现在NetApp控制台中，link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html["将其添加到系统页面"^] 。
+如果要扫描的Azure NetApp Files系统尚未作为系统出现在NetApp Console中，link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html["将其添加到系统页面"^] 。
 
 
 
@@ -28,7 +28,7 @@ summary: 完成几个步骤即可开始使用Azure NetApp Files的数据分类�
 
 link:task-deploy-cloud-compliance.html["部署数据分类"^]如果尚未部署实例。
 
-扫描Azure NetApp Files卷时，必须在云中部署数据分类，并且必须将其部署在与要扫描的卷相同的区域中。
+扫描Azure NetApp Files卷时，数据分类必须部署在云中，并且必须部署在与要扫描的卷相同的区域中。
 
 *注意：*扫描Azure NetApp Files卷时，当前不支持在本地位置部署数据分类。
 

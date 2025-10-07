@@ -4,7 +4,7 @@ permalink: reference-limitations.html
 keywords: limitations, data sense, classification, scan shares 
 summary: 已知限制标识了此版本产品不支持的功能或无法与其正确互操作的功能。仔细审查这些限制。 
 ---
-= NetApp数据分类的已知限制
+= NetApp Data Classification的已知限制
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -18,7 +18,7 @@ summary: 已知限制标识了此版本产品不支持的功能或无法与其�
 
 
 
-== NetApp数据分类禁用选项
+== NetApp Data Classification禁用选项
 
 2023 年 12 月（版本 1.26.6）版本删除了以下选项：
 

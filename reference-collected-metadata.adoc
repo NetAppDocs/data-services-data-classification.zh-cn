@@ -4,7 +4,7 @@ permalink: reference-collected-metadata.html
 keywords: compliance, metadata, permissions, time stamps, privacy, last access time 
 summary: 数据分类在对来自数据源和系统的数据执行分类扫描时收集某些元数据。数据分类可以访问我们对数据进行分类所需的大部分元数据，但有些来源我们无法访问所需的数据。 
 ---
-= 从NetApp数据分类中的数据源收集的元数据
+= 从NetApp Data Classification中的数据源收集的元数据
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 数据分类在对来自数据源和系统的数据执行分类扫描�
 
 
 [role="lead"]
-NetApp数据分类在对来自数据源和系统的数据执行分类扫描时收集某些元数据。数据分类可以访问我们对数据进行分类所需的大部分元数据，但有些来源我们无法访问所需的数据。
+NetApp Data Classification在对来自数据源和系统的数据执行分类扫描时收集某些元数据。数据分类可以访问我们对数据进行分类所需的大部分元数据，但有些来源我们无法访问所需的数据。
 
 [cols="15,25,25,25"]
 |===

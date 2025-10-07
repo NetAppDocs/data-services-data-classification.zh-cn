@@ -4,7 +4,7 @@ permalink: task-using-policies.html
 keywords: compliance, privacy, filter data, highlights, policies, notifications, saved query, tags, data sense, edit query 
 summary: 已保存的查询是自定义过滤器，可在调查页面中提供常见合规性查询的搜索结果。数据分类根据常见请求提供了一组默认保存的查询，或者您可以创建自己的查询。 
 ---
-= 使用NetApp数据分类管理已保存的查询
+= 使用NetApp Data Classification管理已保存的查询
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

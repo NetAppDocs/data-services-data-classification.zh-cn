@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-active-directory.html 
 keywords: active directory, ad, data sense, cloud data sense 
-summary: 您可以将全局 Active Directory 与NetApp数据分类集成，以增强数据分类报告有关文件所有者以及哪些用户和组有权访问您的文件的结果。 
+summary: 您可以将全局 Active Directory 与NetApp Data Classification集成，以增强数据分类报告有关文件所有者以及哪些用户和组有权访问您的文件的结果。 
 ---
-= 将您的 Active Directory 与NetApp数据分类集成
+= 将您的 Active Directory 与NetApp Data Classification集成
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 您可以将全局 Active Directory 与NetApp数据分类集成，以�
 
 
 [role="lead"]
-您可以将全局 Active Directory 与NetApp数据分类集成，以增强数据分类报告有关文件所有者以及哪些用户和组有权访问您的文件的结果。
+您可以将全局 Active Directory 与NetApp Data Classification集成，以增强数据分类报告有关文件所有者以及哪些用户和组有权访问您的文件的结果。
 
 当您设置某些数据源（如下所列）时，您需要输入 Active Directory 凭据以便数据分类扫描 CIFS 卷。此集成为数据分类提供了驻留在这些数据源中的数据的文件所有者和权限详细信息。为这些数据源输入的 Active Directory 可能与您在此处输入的全局 Active Directory 凭据不同。数据分类将在所有集成的活动目录中查找用户和权限详细信息。
 

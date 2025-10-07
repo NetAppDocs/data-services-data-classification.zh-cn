@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-getting-started-compliance.html 
 keywords: cloud compliance, get started, enable cloud compliance, cifs credentials, smb credentials, cloud compliance access, privacy, compliance, dp volumes, data protection volumes, CVO, Cloud Volumes ONTAP, data sense 
-summary: 完成几个步骤即可开始使用NetApp数据分类扫描您的Cloud Volumes ONTAP和本地ONTAP卷。 
+summary: 完成几个步骤即可开始使用NetApp Data Classification扫描您的Cloud Volumes ONTAP和本地ONTAP卷。 
 ---
-= 使用NetApp数据分类扫描Cloud Volumes ONTAP和本地ONTAP卷
+= 使用NetApp Data Classification扫描Cloud Volumes ONTAP和本地ONTAP卷
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 完成几个步骤即可开始使用NetApp数据分类扫描您的Cloud
 
 
 [role="lead"]
-完成几个步骤即可开始使用NetApp数据分类扫描您的Cloud Volumes ONTAP和本地ONTAP卷。
+完成几个步骤即可开始使用NetApp Data Classification扫描您的Cloud Volumes ONTAP和本地ONTAP卷。
 
 
 

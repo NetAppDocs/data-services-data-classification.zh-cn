@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-log-in-to-instance.html 
 keywords: log in, data sense, classification 
-summary: 有时您可能需要登录NetApp数据分类系统，以便访问日志文件或编辑配置文件。 
+summary: 有时您可能需要登录NetApp Data Classification系统，以便访问日志文件或编辑配置文件。 
 ---
-= 登录NetApp数据分类系统
+= 登录NetApp Data Classification系统
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 有时您可能需要登录NetApp数据分类系统，以便访问日�
 
 
 [role="lead"]
-您需要登录NetApp数据分类系统，以便访问日志文件或编辑配置文件。
+您需要登录NetApp Data Classification系统，以便访问日志文件或编辑配置文件。
 
 当数据分类安装在您本地的 Linux 机器上或在云中部署的 Linux 机器上时，您可以直接访问配置文件和脚本。
 

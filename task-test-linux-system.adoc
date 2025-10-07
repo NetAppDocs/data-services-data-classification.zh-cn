@@ -4,7 +4,7 @@ permalink: task-test-linux-system.html
 keywords: cloud compliance, bluexp, data sense, get started, deploy, data classification, cloud compliance access, compliance, on-premises, linux, test linux system, docker, podman, ubuntu, rhel, dark site 
 summary: 在 Linux 主机上手动安装数据分类之前，您可以在主机上运行脚本来验证安装数据分类的所有先决条件是否都已具备。您可以在网络中的 Linux 主机上或云中的 Linux 主机上运行此脚本。主机可以连接到互联网，或者主机可以驻留在没有互联网访问的站点。 
 ---
-= 检查您的 Linux 主机是否已准备好安装NetApp数据分类
+= 检查您的 Linux 主机是否已准备好安装NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 在 Linux 主机上手动安装数据分类之前，您可以在主机�
 
 
 [role="lead"]
-在 Linux 主机上手动安装NetApp数据分类之前，可以选择在主机上运行脚本以验证安装数据分类的所有先决条件是否都已具备。您可以在网络中的 Linux 主机上或云中的 Linux 主机上运行此脚本。主机可以连接到互联网，或者主机可以驻留在没有互联网访问的站点（暗站）。
+在 Linux 主机上手动安装NetApp Data Classification之前，可以选择在主机上运行脚本以验证安装数据分类的所有先决条件是否都已具备。您可以在网络中的 Linux 主机上或云中的 Linux 主机上运行此脚本。主机可以连接到互联网，或者主机可以驻留在没有互联网访问的站点（暗站）。
 
 还有一个先决条件测试脚本，它是数据分类安装脚本的一部分。此处描述的脚本专门为想要独立于运行数据分类安装脚本来验证 Linux 主机的用户设计。
 

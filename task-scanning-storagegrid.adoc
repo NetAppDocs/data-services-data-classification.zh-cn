@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-scanning-storagegrid.html 
 keywords: cloud compliance, enable cloud compliance, privacy, compliance, object storage, data sense 
-summary: 完成几个步骤即可直接使用NetApp数据分类开始扫描StorageGRID内的数据。 
+summary: 完成几个步骤即可直接使用NetApp Data Classification开始扫描StorageGRID内的数据。 
 ---
-= 使用NetApp数据分类扫描StorageGRID数据
+= 使用NetApp Data Classification扫描StorageGRID数据
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 完成几个步骤即可直接使用NetApp数据分类开始扫描Stora
 
 
 [role="lead"]
-完成几个步骤即可直接使用NetApp数据分类开始扫描StorageGRID内的数据。
+完成几个步骤即可直接使用NetApp Data Classification开始扫描StorageGRID内的数据。
 
 
 
