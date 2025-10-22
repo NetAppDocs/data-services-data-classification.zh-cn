@@ -64,4 +64,4 @@ image:screenshot_scan_analysis_event_filter.png["过滤器的屏幕截图，用�
 * “已分类并更新的上次访问时间” - 这显示已分类的文件，并且数据分类无法将上次访问时间重置回原始日期。此过滤器仅与您打开*缺少“写入属性”权限时扫描*的环境相关。
 
 
-如果需要，您可以将这些结果导出到报告中，以便查看哪些文件由于权限原因而被扫描，哪些文件未被扫描。link:task-investigate-data.html#data-investigation-report["了解有关数据调查报告的更多信息"^] 。
+如果需要，您可以将这些结果导出到报告中，以便查看哪些文件由于权限原因而被扫描，哪些文件未被扫描。link:task-investigate-data.html#download-your-report["了解有关数据调查报告的更多信息"^]。

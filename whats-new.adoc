@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: 'what"s new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes, data sense, cloud data sense, bluexp, bluexp classification' 
-summary: 了解BlueXP classification中的新功能。 
+summary: 了解NetApp Data Classification的新功能。 
 ---
 = NetApp Data Classification的新功能
 :hardbreaks:
@@ -53,7 +53,7 @@ NetApp Console提供企业级跨本地和云环境的存储和数据服务的集
 有关更多信息，请参阅link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html#view-file-metada["调查数据"] 。
 
 .支持Google Cloud NetApp Volumes
-数据分类现在支持在Google Cloud NetApp Volumes上进行扫描。从NetApp Console轻松添加Google Cloud NetApp Volumes，实现无缝数据扫描和分类。
+数据分类现在支持在Google Cloud NetApp Volumes上进行扫描。从NetApp Console轻松添加Google Cloud NetApp Volumes，实现无缝数据扫描和分类。有关详细信息，请参阅 link:https://docs.netapp.com/us-en/data-services-data-classification/task-scan-google-cloud.html["扫描Google Cloud NetApp Volumes"^]。
 
 
 

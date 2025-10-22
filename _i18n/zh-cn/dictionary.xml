@@ -253,7 +253,6 @@
   <block id="d57567637ab51796d55a7b44fb6ebc11" category="paragraph-title">操作（预览）</block>
   <block id="680190e7731697b57d44b7ccb192ec16" category="paragraph">从调查页面直接控制 - 单独或批量删除、移动、复制或标记文件，以实现高效的数据管理和补救。</block>
   <block id="89d69ff3dca93dc4c1c160728186e722" category="paragraph-title">支持Google Cloud NetApp Volumes</block>
-  <block id="028f3210e3fb8059c59cfc831af1660c" category="paragraph">数据分类现在支持在Google Cloud NetApp Volumes上进行扫描。从NetApp Console轻松添加Google Cloud NetApp Volumes，实现无缝数据扫描和分类。</block>
   <block id="5eb2a16d2fa5bf1cf608a92f8904a2ae" category="summary">通过 Web UI 提供的NetApp Data Classification功能也可通过 API 提供。</block>
   <block id="e5ae04a842e199bfb2c83e0176275a5e" category="doc">NetApp Data ClassificationAPI</block>
   <block id="8d1948df96be05c01e7136dc702e5932" category="paragraph">通过 Web UI 提供的NetApp Data Classification功能也可通过 REST API 提供。</block>
@@ -319,7 +318,6 @@
   <block id="12745f1753f4a2151c5bd9d0d7cadbd9" category="list-text">通过识别重复或与业务无关的数据来提高存储效率。</block>
   <block id="d54227dbf49473f423d5988bdb7771ff" category="inline-link">了解有关Cloud Volumes ONTAP系统分层的更多信息</block>
   <block id="aeaf9676bf6ac22ff407af9053be1238" category="inline-link">了解有关本地ONTAP系统分层的更多信息</block>
-  <block id="9b317123224190f31630700e3d04b51f" category="list-text">通过识别可以分层到较便宜的对象存储的非活动数据来节省存储成本。<block ref="a40f0fdd4afe274f77ca519732617a55" category="inline-link-rx"></block> 。<block ref="e06f3c17ab825c043e1b562901775a66" category="inline-link-rx"></block> 。</block>
   <block id="14d419d6dcfdbca61341f104ce611d2c" category="section-title">支持的系统和数据源</block>
   <block id="b06f93a227008c7db0423fc12da7a094" category="paragraph">数据分类可以扫描和分析来自以下类型的系统和数据源的结构化和非结构化数据：</block>
   <block id="e3c12542b137e17b4e96acf4577f9ef4" category="paragraph">*系统*</block>
@@ -410,9 +408,6 @@
   <block id="902c63c889818696415465bcf8e0b76b" category="inline-link-macro">了解有关敏感个人数据的更多信息</block>
   <block id="e60672f803602bf222f416a6205b3b39" category="list-text">*敏感个人信息*：《通用数据保护条例》（GDPR）和其他隐私法规定义的特殊类型的敏感个人信息（SPII），例如健康数据、种族血统或政治观点。<block ref="6221f6509a9900ea9a8146767340b3a8" category="inline-link-macro-rx"></block> 。</block>
   <block id="6a92cf43085c9bfddf06d24557be9d88" category="inline-link-macro">了解有关类别的更多信息</block>
-  <block id="5badd7449ae6b26469255f50a65f81e6" category="list-text">*类别*：数据分类将扫描的数据分为不同类型的类别。类别是基于 AI 对每个文件的内容和元数据的分析的主题。<block ref="722783767558c868b0670a999b08f996" category="inline-link-macro-rx"></block> 。</block>
-  <block id="5cb163817b0d897b166cc75827e8c477" category="inline-link-macro">了解有关类型的更多信息</block>
-  <block id="e9a1ac97bbbe34a2ac9989e7b6e46fcd" category="list-text">*类型*：数据分类获取其扫描的数据并按文件类型进行细分。<block ref="a23a1c3a68ab723cb619be8574a4637d" category="inline-link-macro-rx"></block> 。</block>
   <block id="13d0a191166a1a3dc29ebcd8e3aae81f" category="inline-link-macro">了解如何响应数据主体访问请求</block>
   <block id="ff80eccbdfe1ad9fdbbd3d1942864e42" category="list-text">*名称实体识别*：数据分类使用人工智能从文档中提取人们的自然姓名。<block ref="8e814e02dddb19e3bb4166c15fc34470" category="inline-link-macro-rx"></block> 。</block>
   <block id="7b895b198aba9634ffec5e0ec9a3aff4" category="section-title">网络概述</block>
@@ -596,8 +591,6 @@
   <block id="7d72055dc8f09beeb77f4fa9d71f6382" category="paragraph">过滤器选择包括：</block>
   <block id="a66a4b74b70237f4c0cbce83303f74d2" category="list-text">“未分类 - 无法恢复上次访问时间” - 这显示由于缺少写入权限而未分类的文件。</block>
   <block id="3856c8caab06eda61e5fe3e07996939a" category="list-text">“已分类并更新的上次访问时间” - 这显示已分类的文件，并且数据分类无法将上次访问时间重置回原始日期。此过滤器仅与您打开*缺少“写入属性”权限时扫描*的环境相关。</block>
-  <block id="529e58159a0567a96e1265aa7c80760b" category="inline-link-macro">了解有关数据调查报告的更多信息</block>
-  <block id="527a617e21a6be89120075fb2d22b20d" category="paragraph">如果需要，您可以将这些结果导出到报告中，以便查看哪些文件由于权限原因而被扫描，哪些文件未被扫描。<block ref="20c76d71f84d76d844619e46acfe2877" category="inline-link-macro-rx"></block> 。</block>
   <block id="eacfad7ae9e6aba32bdbef2948b1d628" category="summary">扫描数据库模式时， NetApp Data Classification无法提供某些特性和功能。</block>
   <block id="e6dbbec80e173d3f91cf2b227477d31c" category="doc">NetApp Data Classification中支持和不支持的数据库功能</block>
   <block id="ad52d3616ca8f733ae442a642767c792" category="paragraph">扫描数据库模式时， NetApp Data Classification无法提供某些特性和功能。请参阅下面的列表。</block>
@@ -1044,8 +1037,6 @@
   <block id="dc6d9a4419750aae3db17878ffe18e5c" category="inline-link-macro">查看显示的重复文件类型</block>
   <block id="5791d2ebf242b348a1cbfa550a356083" category="list-text">*重复文件* - 您正在扫描的数据源中其他位置重复的文件。<block ref="4f528c73ac5ca4ef85380f36d4dccad7" category="inline-link-macro-rx"></block> 。</block>
   <block id="dfd23906ba391609b608a93fdd40fdb2" category="admonition">如果您的任何数据源实现了数据分层，则可以在“陈旧数据”类别中识别已经驻留在对象存储中的旧数据。</block>
-  <block id="bd203b634f0baf19f7dc16bb7777276f" category="section-title">创建数据发现评估报告</block>
-  <block id="dd1535c28f9298eb259ec7b1044576aa" category="paragraph">数据发现评估报告对扫描环境进行了高级分析，以显示关注区域和潜在的补救步骤。结果基于数据的映射和分类。本报告的目标是提高您对数据集三个重要方面的认识：</block>
   <block id="21021ea0e52be8e9c599f4dff41e5be0" category="cell">功能</block>
   <block id="4fc6419c6a12af16883e770d99dbf849" category="cell">数据治理问题</block>
   <block id="29682fe2b70e1decc5fcddf7dc56bb80" category="cell">您拥有的所有数据以及可以减少数据量以节省成本的区域的详细图片。</block>
@@ -1361,9 +1352,6 @@
   <block id="bbdb5f5f026c712f36de4a68700316f5" category="list-text">将安装程序文件复制到您计划使用的 Linux 主机（使用<block ref="8a444a43bdf534c0c6338bb7809659b3" prefix=" " category="inline-code"></block>或其他方法）。</block>
   <block id="65a0409250bc34ad7aed301586de5abc" category="list-text">在主机上解压安装程序文件，例如：</block>
   <block id="f74ff5e319b8679db4cb8aab068461b0" category="list-text">在控制台中，选择*治理&gt;分类*。</block>
-  <block id="0d95a08f2a398b91d89d59fe584125fa" category="list-text">根据您是在云中准备的实例上还是在本地准备的实例上安装数据分类，选择适当的*部署*按钮来启动数据分类安装。</block>
-  <block id="61e502f75046009c8f7e172353c01f46" category="inline-image-macro">选择按钮在云端或本地机器上部署数据分类的屏幕截图。</block>
-  <block id="4df2d8ccf8e96a6ee638e4eeec016d8c" category="paragraph"><block ref="4df2d8ccf8e96a6ee638e4eeec016d8c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1781a6174152dad2cbc44fa1aedd744a" category="list-text">将显示“在本地部署数据分类”对话框。复制提供的命令（例如：<block ref="a402a6c8a10b4c24d7596599c6dfb7db" prefix=" " category="inline-code"></block> ) 并将其粘贴到文本文件中，以便稍后使用。然后选择*关闭*以关闭对话框。</block>
   <block id="9c219f00fda547ddab566c43975acd6b" category="list-text">在主机上，输入您复制的命令，然后按照一系列提示进行操作，或者您可以提供包含所有必需参数的完整命令作为命令行参数。</block>
   <block id="e3dd4dfda4973beedb5de6104236142b" category="paragraph">请注意，安装程序会执行预检查以确保您的系统和网络要求满足，以便成功安装。<block ref="dea23cd1830b75045583053d44b9aee3" category="inline-link-rx"></block>了解预检信息和含义。</block>
@@ -1463,12 +1451,6 @@
   <block id="2ffbb4d4b106c6402d19dceecdbdd3ac" category="list-text">仅当您对数据源执行完整分类扫描时，才可获得合规性报告。已进行仅映射扫描的数据源只能生成数据映射报告。</block>
   <block id="49e4565ecb975105c89d40403267b6a2" category="list-text">NetApp无法保证数据分类识别的个人数据和敏感个人数据 100% 的准确性。您应该始终通过查看数据来验证信息。</block>
   <block id="b4223e54de7bb06eb93615ec4a7887e5" category="paragraph">以下报告可用于数据分类：</block>
-  <block id="46e3b95cc12c4fba5a55ddd543dff215" category="list-text">*数据发现评估报告*：对扫描环境进行高级分析，以突出系统的发现并显示关注领域和潜在的补救步骤。</block>
-  <block id="5e83638af643acf178e1a4b351856b6c" category="list-text">*数据映射报告*：提供有关系统中文件的大小和数量的信息。这包括使用容量、数据年限、数据大小和文件类型。</block>
-  <block id="9909dc2351eca640364cec030cf9786c" category="list-text">*数据主体访问请求报告*：使您能够提取包含有关数据主体的特定名称或个人标识符信息的所有文件的报告。</block>
-  <block id="33f6511365a85edd06d0094f0ab09328" category="list-text">*HIPAA 报告*：帮助您识别文件中健康信息的分布。</block>
-  <block id="e883052b60bcd04edd516ceb983401c9" category="list-text">*PCI DSS 报告*：帮助您识别文件中信用卡信息的分布。</block>
-  <block id="05bbeb335d6ce4af3edd8e3632e01959" category="list-text">*隐私风险评估报告*：提供来自您的数据的隐私见解和隐私风险评分。</block>
   <block id="ab8e4c2175f43bc36ea1e7d7134d793e" category="list-text">*特定信息类型的报告*：可提供包含已识别文件（包含个人数据和敏感个人数据）详细信息的报告。您还可以查看按类别和文件类型细分的文件。</block>
   <block id="da6aa36452d97d74b7d583d7dc704b4d" category="section-title">选择报告系统</block>
   <block id="a77562c0bf4c2ab9ac5dd5d38593f494" category="paragraph">您可以过滤数据分类合规性仪表板的内容，以查看所有系统和数据库的合规性数据，或仅查看特定系统的合规性数据。</block>
@@ -1488,15 +1470,6 @@
   <block id="95fbc0e5629d1a6565b155bfc1a72f1f" category="inline-link-macro">任何个人信息类型</block>
   <block id="b1756115b43af54f8219ae6280f166c5" category="paragraph">搜索数据主体的全名或已知标识符，然后下载文件列表报告或 DSAR 报告。您可以通过以下方式搜索<block ref="76348aa3184d665f25590b1b87226e3a" category="inline-link-macro-rx"></block>。</block>
   <block id="3fb31cc8efb6a784adfa36f5dcbd6dcb" category="admonition">搜索数据主体的姓名时支持英语、德语、日语和西班牙语。稍后将添加对更多语言的支持。</block>
-  <block id="29f679f7789bb30cd1bcd7ad23a88cf9" category="list-text">从合规性页面中，选择*数据主体*。</block>
-  <block id="f1c85eaf16c9599d4afcc94f0e5efb53" category="list-text">搜索数据主体的全名或已知标识符。</block>
-  <block id="6cb73fb6662a2fc29c22c33577236835" category="paragraph">下面是搜索名字 _john doe_ 的示例：</block>
-  <block id="209250b28ac23172bfd50430c08a4a0f" category="inline-image-macro">数据主体搜索的屏幕截图。</block>
-  <block id="16acbc92d3d99885771a85d366df1c57" category="paragraph"><block ref="16acbc92d3d99885771a85d366df1c57" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="59772cd45fd7de7bdf8d9834ebca71e7" category="list-text">选择以下可用选项之一：</block>
-  <block id="b4182caab927feb27f9e7550fcaa58b3" category="list-text">*下载 DSAR 报告*：您可以向数据主体发送的对访问请求的正式回应。该报告包含基于数据分类在数据主体上发现的数据自动生成的信息，旨在用作模板。您应该填写表格并在将其发送给数据主体之前进行内部审查。</block>
-  <block id="45c652234dbe5a9ab1456e9185eb8770" category="list-text">*调查结果*：该页面可让您通过搜索、排序、扩展特定文件的详细信息以及下载文件列表来调查数据。</block>
-  <block id="da4fc4e9038590549f810ab20ac23f1d" category="admonition">如果结果超过 10,000 个，则文件列表中仅显示前 10,000 个。</block>
   <block id="7a9564db05d5df4911abd4316ec3590c" category="section-title">健康保险流通与责任法案（HIPAA）报告</block>
   <block id="735e90eb124ecb1c36c6b0e2b385d879" category="paragraph">健康保险流通与责任法案 (HIPAA) 报告可以帮助您识别包含健康信息的文件。它旨在帮助您的组织遵守 HIPAA 数据隐私法的要求。数据分类寻找的信息包括：</block>
   <block id="9965e5c3b37cecfca0bb5cbb1e086c48" category="list-text">健康参考模式</block>
@@ -1640,24 +1613,12 @@
   <block id="ad22f2fca687e339c3a99a799f95294a" category="list-text">如果您正在扫描可通过互联网访问的Cloud Volumes ONTAP和本地ONTAP系统，您可以<block ref="9b986a8a976281324b99a59b146b499c" category="inline-link-macro-rx"></block>或者<block ref="5a9b85c630cd221f1500d766974af691" category="inline-link-macro-rx"></block>。</block>
   <block id="6517e955ead8d5182c698dcb9a58bf28" category="inline-link-macro">在没有互联网访问的同一本地位置部署数据分类</block>
   <block id="36f6e1fd37b21d9b861f6ed7b94c0222" category="list-text">如果您要扫描安装在没有互联网访问的暗站中的本地ONTAP系统，则需要<block ref="246da64168958d93ec1ede0bb19391a7" category="inline-link-macro-rx"></block>。这要求将控制台代理部署在同一本地位置。</block>
-  <block id="476d10250886e011c43077ba982f3c6c" category="section-title">在您的系统中启用数据分类扫描</block>
-  <block id="2b461a614bb4a396f0f7b860a32c018d" category="paragraph">您可以在任何受支持的云提供商的Cloud Volumes ONTAP系统以及本地ONTAP集群上启用数据分类扫描。</block>
   <block id="9904bc0365845ca1f4d75c8cc21aef31" category="list-text">从数据分类菜单中，选择*配置*。</block>
-  <block id="eeda9021cd4bb48743afdb8915e48c3b" category="paragraph">配置页面显示多个系统。</block>
-  <block id="453793acc565974735e19d5e2f2c36a8" category="inline-image-macro">显示Cloud Volumes ONTAP系统的配置选项卡的屏幕截图。</block>
-  <block id="5f4e46608a9737d82d7ff44695d4a60c" category="paragraph"><block ref="5f4e46608a9737d82d7ff44695d4a60c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="464c1ddcab7010f1d33492dd93698132" category="list-text">选择一个系统，然后选择*配置*。</block>
   <block id="5d15c50f3095cbbe7f9a035fc3d0eea3" category="inline-image-macro">配置选项卡的屏幕截图显示了映射和分类存储库的选项。</block>
   <block id="b74f578f58008eb6143bc5548b5fce12" category="paragraph"><block ref="b74f578f58008eb6143bc5548b5fce12" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="76159f8794878cfdca3d443c777ec734" category="list-text">如果您不介意是否重置上次访问时间，请打开*缺少“写入属性”权限时扫描*开关，无论权限如何，都会扫描所有文件。</block>
-  <block id="1f8a6c0c6f2225ae1d08579bc12988dc" category="paragraph">页面顶部的“缺少“写入属性”权限时扫描”开关默认处于禁用状态。这意味着，如果数据分类在 CIFS 中没有写属性权限，或者在 NFS 中没有写权限，系统将不会对文件进行分类，因为数据分类无法将“上次访问时间”恢复为原始时间戳。<block ref="d409432f1fbbcae04423137914c922d7" category="inline-link-macro-rx"></block> 。</block>
   <block id="dd786557a341a9cbd5fb1a642121a675" category="inline-link-macro">了解映射和分类扫描</block>
   <block id="c1b4fdc92468de00b14dcd8a25ee45c4" category="list-text">选择如何扫描每个系统中的卷。<block ref="7b158dfd9db05429635fb61176fa9ead" category="inline-link-macro-rx"></block>：</block>
-  <block id="325b2ca13daa9b67fd9c628d47370752" category="list-text">要映射所有卷，请选择*映射*。</block>
-  <block id="6524373e17cb08862d56de19b1a8d2b6" category="list-text">要映射和分类所有卷，请选择*映射和分类*。</block>
-  <block id="2258a9bb47cd683ffec374980f6db176" category="list-text">要自定义每个卷的扫描，请选择*自定义*，然后选择要映射和/或分类的卷。</block>
   <block id="e6154c92adc2673acc400ede114332fe" category="list-text">在确认对话框中，选择“*批准*”以使数据分类开始扫描您的卷。</block>
-  <block id="90222740ce3b3ee6041b16c414d08e80" category="paragraph">数据分类开始扫描您在系统中选择的卷。一旦数据分类开始扫描，结果就会开始出现在合规性仪表板中。完成所需的时间取决于数据量——可能是几分钟或几小时。</block>
   <block id="a2bbcc880bc925fcb9628a10c1e7b25d" category="inline-link-macro">查看有关此数据分类限制的更多详细信息</block>
   <block id="a8daee0219cefa4a18a4479f1e1157b4" category="admonition">数据分类仅扫描卷下的一个文件共享。如果您的卷中有多个共享，则需要将这些其他共享作为共享组单独扫描。<block ref="6dfc18994c4552d1f1c67fa40d6a2418" category="inline-link-macro-rx"></block> 。</block>
   <block id="4ebb6b3e78fe363abc8cca5976bcf110" category="section-title">验证数据分类是否有权访问卷</block>
@@ -1667,16 +1628,7 @@
   <block id="1da60e205d29e073bd7fd30e4a0fdc96" category="list-text">确保Cloud Volumes ONTAP的安全组允许来自数据分类实例的入站流量。</block>
   <block id="b70afa530c4cdfc09ac2c1e2f5493937" category="paragraph">您可以为来自数据分类实例的 IP 地址的流量打开安全组，也可以为来自虚拟网络内部的所有流量打开安全组。</block>
   <block id="cb95847988547647f53dba4f37025693" category="list-text">确保 NFS 卷导出策略包含数据分类实例的 IP 地址，以便它可以访问每个卷上的数据。</block>
-  <block id="91464bd52ce7bdd3203d6872d1a9ebac" category="paragraph"><block ref="b74f578f58008eb6143bc5548b5fce12" category="inline-image-macro-rx" type="image"></block>..如果您使用 CIFS，请向数据分类提供 Active Directory 凭据，以便它可以扫描 CIFS 卷。对于每个系统，选择*编辑 CIFS 凭据*并输入数据分类访问系统上的 CIFS 卷所需的用户名和密码。</block>
-  <block id="d581500d4075d23ad57e63d6a7f2cf6f" category="paragraph">+ 凭据可以是只读的，但提供管理员凭据可确保数据分类可以读取任何需要提升权限的数据。凭证存储在数据分类实例上。</block>
-  <block id="17d3a5b204e87e7f2cdc81a482b36a51" category="paragraph">+ 输入凭据后，您应该会看到一条消息，提示所有 CIFS 卷均已成功验证。</block>
   <block id="0079344bb0661607100d432cde92e6a5" category="list-text">在配置页面上，选择*配置*以查看每个 CIFS 和 NFS 卷的状态并纠正任何错误。</block>
-  <block id="072aa046dbe770717df535187221d112" category="section-title">禁用卷上的合规性扫描</block>
-  <block id="abc00b55bc4fdab9344bb3a37c3f61e5" category="paragraph">您可以随时从配置页面启动或停止系统中的仅映射扫描或映射和分类扫描。您还可以从仅映射扫描更改为映射和分类扫描，反之亦然。我们建议您扫描所有卷。</block>
-  <block id="d0a3b0b2a3cf0b5a6975da087e225239" category="admonition">仅当您在标题区域中设置了 *Map* 或 *Map &amp; Classify* 设置时，才会自动扫描添加到系统的新卷。当标题区域中的选项设置为*自定义*或*关闭*时，您需要在系统中添加的每个新卷上激活映射和/或完整扫描。</block>
-  <block id="5783a21ca051c64f8ea556c601a18b89" category="list-text">选择您想要更改的系统的*配置*按钮。</block>
-  <block id="a9ee13c2bd1bbf8024db5dca75abc71c" category="list-text">要禁用对卷的扫描，请在卷区域中选择“*关闭*”。</block>
-  <block id="8fdad01ebf5555cab54cc02a6d72d532" category="list-text">要禁用对所有卷的扫描，请在标题区域中选择“*关闭*”。</block>
   <block id="e90444baa59788bd6471cf703b12a16e" category="summary">您可以通过查看数据调查页面中的详细信息来调查来自您组织的数据。查看治理仪表板后，您可以在这里继续您的研究。</block>
   <block id="4c257f0482d661d1986f92f057e1c581" category="doc">使用NetApp Data Classification调查组织中存储的数据</block>
   <block id="7ce237dbe0011dccdc7c96c7be17d6ec" category="paragraph">数据调查仪表板显示文件和目录级别的数据洞察，使您能够对结果进行排序和过滤。数据调查页面提供有关文件和目录元数据和权限的见解以及识别重复文件。通过文件、目录和数据库级别的洞察，您可以采取措施来提高组织的合规性并节省存储空间。数据调查页面还支持移动、复制和删除文件。</block>
@@ -1911,10 +1863,7 @@
   <block id="997021f46ccb2a532d7192cfcff79a31" category="paragraph">完成几个步骤即可开始使用适用于Azure NetApp Files的NetApp Data Classification。</block>
   <block id="8c89db674531ab536128087dfb6cbe4f" category="section-title">发现要扫描的Azure NetApp Files系统Discover the Azure NetApp Files system that you want to scan</block>
   <block id="e600551a2da340f45ada0f5e1dc6e5a5" category="inline-link-macro">将其添加到系统页面</block>
-  <block id="16104e610aa1b9ce4fe67763f74712e0" category="paragraph">如果要扫描的Azure NetApp Files系统尚未作为系统出现在NetApp Console中，<block ref="feb1b46dea58df1c0d569dc99576840c" category="inline-link-macro-rx"></block> 。</block>
   <block id="842f910d26756f518671d7ec5b3d5121" category="section-title">部署数据分类实例</block>
-  <block id="f4ef9fdcc60c0330381d382e9ec1fc58" category="inline-link-macro">部署数据分类</block>
-  <block id="08c4981c70f1e972602ce371c0b2b57b" category="paragraph"><block ref="a2eab8ee506f152cc24568358989ad66" category="inline-link-macro-rx"></block>如果尚未部署实例。</block>
   <block id="6e18d9515dc0a188cd6d24f6fbce6465" category="paragraph">扫描Azure NetApp Files卷时，数据分类必须部署在云中，并且必须部署在与要扫描的卷相同的区域中。</block>
   <block id="244dfe89822bd7a0557bf1e5e9251080" category="paragraph">*注意：*扫描Azure NetApp Files卷时，当前不支持在本地位置部署数据分类。</block>
   <block id="6ff7a146d1b3d9e61301aa10f8f9c71b" category="section-title">在您的系统中启用数据分类</block>
@@ -1927,7 +1876,6 @@
   <block id="5c4a0511ffaeef83ec4f6f814c84e1f5" category="inline-xref">启用和禁用卷上的合规性扫描</block>
   <block id="c0c91d6f7c9b085f79f701932b3d9cc7" category="paragraph">看<block ref="95ce3baacaaadbae6a6ffc1a8884d40a" category="inline-xref-macro-rx"></block>了解详情。</block>
   <block id="fcb8c9e04be809b808c3a4762413c376" category="list-text">在确认对话框中，选择*批准*。</block>
-  <block id="58596b43fa0da77fa09156a77f62f84a" category="paragraph">数据分类开始扫描您在系统中选择的卷。一旦数据分类完成初始扫描，结果就会显示在合规性仪表板中。所需时间取决于数据量——可能是几分钟或几小时。您可以通过导航到**配置**菜单然后选择**系统配置**来跟踪初始扫描的进度。每次扫描的进度都显示为进度条。您还可以将鼠标悬停在进度条上，查看相对于卷中总文件数的已扫描文件数。</block>
   <block id="4a4bd4695f7ed79b6d5b23795d88275f" category="list-text">默认情况下，如果数据分类在 CIFS 中没有写入属性权限，或者在 NFS 中没有写入权限，系统将不会扫描卷中的文件，因为数据分类无法将“上次访问时间”恢复为原始时间戳。如果您不介意上次访问时间是否重置，请选择*或为每个卷选择扫描类型*。结果页面有一个您可以启用的设置，以便数据分类可以扫描卷，而不管权限如何。</block>
   <block id="2c0b9fc0f9659fa0f71a4337b2fc2043" category="inline-link-macro">了解此数据分类限制</block>
   <block id="fcc492b009ae46bdb956c856d82562f9" category="list-text">数据分类仅扫描卷下的一个文件共享。如果您的卷中有多个共享，则需要将这些其他共享作为共享组单独扫描。<block ref="951289bfacd7a4614d2fd45503ad30db" category="inline-link-macro-rx"></block> 。</block>
@@ -1945,16 +1893,8 @@
   <block id="87c4bf333272894340d4edac3e344ef9" category="inline-image-macro">屏幕截图显示了配置页面和一个已成功提供 CIFS 凭据的Cloud Volumes ONTAP系统。</block>
   <block id="f7a83214cccc2107033915c49ad94424" category="paragraph"><block ref="f7a83214cccc2107033915c49ad94424" category="inline-image-macro-rx" type="image"></block></block>
   <block id="61777805153edfb68af7738669a8fa28" category="list-text">在配置页面上，选择*查看详细信息*以查看每个 CIFS 和 NFS 卷的状态并纠正任何错误。</block>
-  <block id="11c0618f00a2a20779f1301b6ed3756a" category="paragraph">例如，下图显示了四个卷；其中一个卷由于数据分类实例和卷之间的网络连接问题而无法扫描。</block>
-  <block id="37e8780dd1c236a72c4c4669055cc457" category="inline-image-macro">扫描配置中的“查看详细信息”页面的屏幕截图显示了四个卷；其中一个卷由于数据分类和卷之间的网络连接而未被扫描。</block>
-  <block id="6a0cd34de7667c5acba37346803ad9b5" category="paragraph"><block ref="6a0cd34de7667c5acba37346803ad9b5" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="feadd870c347e81191ecf88a8502e539" category="admonition">仅当您在标题区域中设置了 *Map* 或 *Map &amp; Classify* 设置时，才会自动扫描添加到系统的新卷。当在标题区域设置为*自定义*或*关闭*时，您需要在系统中添加的每个新卷上激活映射和/或完整扫描。</block>
-  <block id="8fd1f03ce02f0c86f6f90ec7723333ab" category="paragraph">页面顶部的“缺少“写入属性”权限时扫描”开关默认处于禁用状态。这意味着，如果数据分类在 CIFS 中没有写属性权限，或者在 NFS 中没有写权限，系统将不会扫描文件，因为数据分类无法将“上次访问时间”恢复为原始时间戳。如果您不介意是否重置上次访问时间，请打开开关，无论权限如何，都会扫描所有文件。<block ref="62855d79cc7b1c143d998d83fe5addab" category="inline-link-macro-rx"></block> 。</block>
   <block id="7cac696e69d17c5d85711c514e2a9a5a" category="inline-image-macro">配置页面的屏幕截图，您可以在其中启用或禁用对单个卷的扫描。</block>
   <block id="a981acc4f50e3ee8e07a0e56bb5a7350" category="paragraph"><block ref="a981acc4f50e3ee8e07a0e56bb5a7350" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d1d296f2b9e5b8b2cc3d8284c315711a" category="list-text">要在卷上启用仅映射扫描，请在卷区域中选择 *Map*。要在所有卷上启用，请在标题区域中选择*地图*。</block>
-  <block id="2510c0a0455bb61d4cb97e4ad009c1bd" category="list-text">要对卷启用完整扫描，请在卷区域中选择*映射和分类*。要在所有卷上启用，请在标题区域中选择*Map &amp; Classify*。</block>
-  <block id="c2855e2ec2a3b644fcf3de0a8f9d45c5" category="list-text">要禁用对卷的扫描，请在卷区域中选择“*关闭*”。要禁用对所有卷的扫描，请在标题区域中选择“*关闭*”。</block>
   <block id="5e401746ac770afb258cea4e5cf7ad29" category="summary">完成几个步骤即可开始使用NetApp Data Classification扫描数据库模式。</block>
   <block id="40d306ce1d993a8a634f1ca31c94917b" category="doc">使用NetApp Data Classification</block>
   <block id="5de07b40dee2a8b07f30a0fd66bd33fa" category="section-title">审查先决条件</block>
@@ -2086,8 +2026,6 @@
   <block id="d95da9bdbf1342c2dce70b19e5d5b976" category="list-text">确保 NFS 卷导出策略包含数据分类实例的 IP 地址，以便它可以访问每个卷上的数据。</block>
   <block id="3ab8ec1d34ec6751cd2fd013afb62e68" category="list-text">如果您使用 CIFS，请向数据分类提供 Active Directory 凭据，以便它可以扫描 CIFS 卷。</block>
   <block id="0103a3d43d27c69471f2460c49eee7ab" category="list-text">对于每个系统，选择*编辑 CIFS 凭据*并输入数据分类访问系统上的 CIFS 卷所需的用户名和密码。</block>
-  <block id="96c78f8fbceb946764c1312e2c06283f" category="list-text">在配置页面中，找到要扫描的卷的系统。</block>
-  <block id="c3341bb4de7c50914afc4d1735bc5a60" category="list-text">要在卷上启用仅映射扫描，请在卷区域中选择 *Map*。或者，要在所有卷上启用，请在标题区域中选择*地图*。要对卷启用完整扫描，请在卷区域中选择*映射和分类*。或者，要在所有卷上启用，请在标题区域中选择*Map &amp; Classify*。</block>
   <block id="3f0bbcbd675537960ef9995a958d5fe0" category="section-title">扫描数据保护卷</block>
   <block id="848e71e211eddc5e24c1f7f1238c21d8" category="paragraph">默认情况下，不会扫描数据保护 (DP) 卷，因为它们未暴露在外部，并且数据分类无法访问它们。这些是来自 FSx for ONTAP文件系统的SnapMirror操作的目标卷。</block>
   <block id="cc2aceb1237f12696c6da3c671aebf3a" category="paragraph">最初，卷列表将这些卷标识为_类型_ *DP*，其_状态_ *未扫描*和_所需操作_ *启用对 DP 卷的访问*。</block>
@@ -2366,7 +2304,6 @@
   <block id="6c15cae74da0ae1c51b06ea41b437e7d" category="paragraph">包含具有个人数据标识符（包括身份证号码、税务识别号、驾驶执照号码、药品 ID 或护照号码）的文件或数据库列的文件</block>
   <block id="67b38a87fd423cd16109e7aa22a63937" category="list-text">**敏感个人数据 - 高风险**</block>
   <block id="375ac9949171e44e5a3bcb3367e9d309" category="paragraph">包含超过 20 个敏感个人数据标识符的文件或数据库列中超过 50% 的行包含敏感个人数据</block>
-  <block id="08aececdd8070f547d2aa65ea8c35446" category="summary">了解BlueXP classification中的新功能。</block>
   <block id="d0e6c573ecf8ac47b2b78a9239242114" category="doc">NetApp Data Classification的新功能</block>
   <block id="8b3921668a0940681eb83704de3fcb36" category="paragraph">了解NetApp Data Classification的新功能。</block>
   <block id="a41dd7aa7d921f9f0881a705d3679e6c" category="section-title">2025年10月6日</block>
@@ -2609,4 +2546,64 @@
   <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="sidebar">注册以获得支持</block>
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="sidebar">获取帮助</block>
   <block id="1fe917b01f9a3f87fa2d7d3b7643fac1" category="sidebar">常见问题解答</block>
+  <block id="b2298dd9d2802bd7b073b30e599e43ff" category="paragraph">您可以随时从配置页面启动或停止任何系统上的扫描。您还可以将扫描从仅映射扫描切换到映射和分类扫描，反之亦然。建议您扫描系统中的所有卷。</block>
+  <block id="8880d0f7664fb31681a5fef5eb98795a" category="admonition">仅当您在标题区域中选择了 *Map* 或 *Map &amp; Classify* 设置时，才会自动扫描添加到系统的新卷。当在标题区域设置为*自定义*或*关闭*时，您需要在系统中添加的每个新卷上激活映射和/或完整扫描。</block>
+  <block id="d1e404bd72a088f4b783934c2182e410" category="paragraph">页面顶部的“缺少“写入”权限时扫描”开关默认处于禁用状态。这意味着，如果数据分类在 CIFS 中没有写属性权限或在 NFS 中没有写权限，系统将不会扫描文件，因为数据分类无法将“上次访问时间”恢复为原始时间戳。如果您不介意是否重置上次访问时间，请打开开关，无论权限如何，都会扫描所有文件。<block ref="62855d79cc7b1c143d998d83fe5addab" category="inline-link-macro-rx"></block>。</block>
+  <block id="6efba9911ae8a5ed2cca805be1fc83f4" category="admonition">仅当您在标题区域中设置了 *Map* 或 *Map &amp; Classify* 设置时，才会自动扫描添加到系统的新卷。当所有卷的设置都是“自定义”或“关闭”时，您需要为添加的每个新卷手动激活扫描。</block>
+  <block id="7ff68e6cc5913763234b88a7877435bb" category="list-text">选择一个系统，然后选择*配置*。</block>
+  <block id="d05f690978afd870edb801524582f61d" category="list-text">要启用或禁用所有卷的扫描，请在所有卷上方的标题中选择**映射**、**映射和分类**或**关闭**。</block>
+  <block id="0cad8a14659284dd06732703372a030a" category="paragraph">要启用或禁用对单个卷的扫描，请在列表中找到该卷，然后选择卷名称旁边的**映射**、**映射和分类**或**关闭**。</block>
+  <block id="564008122b0cfa508443563de48651bb" category="paragraph">当您启用扫描时，数据分类将开始扫描您在系统中选择的卷。一旦数据分类开始扫描，结果就会开始出现在合规性仪表板中。扫描完成时间取决于数据量，从几分钟到几小时不等。</block>
+  <block id="8af0afdbb3b40b944bf32c94da112796" category="inline-link-macro">扫描Google Cloud NetApp Volumes</block>
+  <block id="0613f78859d4c1ee40ebf4902778200d" category="paragraph">数据分类现在支持在Google Cloud NetApp Volumes上进行扫描。从NetApp Console轻松添加Google Cloud NetApp Volumes，实现无缝数据扫描和分类。有关详细信息，请参阅 <block ref="ebe8ee8c7142d7ba7fe5b46fcd6a51db" category="inline-link-macro-rx"></block>。</block>
+  <block id="78fec667589f53471f473945289b1df5" category="list-text">通过识别可以分层到较便宜的对象存储的非活动数据来节省存储成本。<block ref="a40f0fdd4afe274f77ca519732617a55" category="inline-link-rx"></block> 。<block ref="f128c1ddd39d7ff58f7de848fcd36c2d" category="inline-link-rx"></block> 。</block>
+  <block id="ead4fb59aecd6e825b2032029bb14d83" category="list-text">*类别*：数据分类将扫描的数据分为不同类型的类别。类别是基于 AI 对每个文件的内容和元数据的分析的主题。<block ref="47725b7d77a9ed7fa3f732d2d0956fde" category="inline-link-macro-rx"></block>。</block>
+  <block id="3c17f47784918dfcb6d4bc5ed771d8e0" category="inline-link-macro">了解有关数据调查报告的更多信息</block>
+  <block id="802848fafcfe67f4f3f9ecf3f0a85b90" category="paragraph">如果需要，您可以将这些结果导出到报告中，以便查看哪些文件由于权限原因而被扫描，哪些文件未被扫描。<block ref="33ef7f32333657211456cfb75a487331" category="inline-link-macro-rx"></block>。</block>
+  <block id="33b4c33e0d5c61070467f208c8da0e6c" category="section-title">创建数据发现评估报告</block>
+  <block id="78fcc8f2d90c3a80b48d02edc4a150f6" category="paragraph">数据发现评估报告对扫描环境进行了高级分析，以显示关注区域和潜在的补救步骤。结果基于数据的映射和分类。本报告的目标是提高您对数据集三个重要方面的认识：</block>
+  <block id="4a32c4b09fba1c841da1e2c6f4a5096e" category="list-text">根据您是在云中准备的实例上还是在本地准备的实例上安装数据分类，选择适当的*部署*选项来启动数据分类安装。</block>
+  <block id="69f2abd0525f7c8325420a2a45195fc5" category="list-text">*数据发现评估报告*：对扫描环境进行高级分析，以突出系统的发现并显示关注领域和潜在的补救步骤。此报告可在治理仪表板中找到。</block>
+  <block id="f274b9a79af61a0ea5d3e21e13430239" category="list-text">*完整数据映射概览报告*：提供有关系统中文件的大小和数量的信息。这包括使用容量、数据年限、数据大小和文件类型。此报告可在治理仪表板中找到。</block>
+  <block id="db21a8a70959fc6cc58d5b69bc9c685b" category="list-text">*数据主体访问请求报告*：使您能够提取包含有关数据主体的特定名称或个人标识符信息的所有文件的报告。此报告可在合规性仪表板中找到。</block>
+  <block id="71f18eb1fddf0fef7ea666b53ceb9f4c" category="list-text">*HIPAA 报告*：帮助您识别文件中健康信息的分布。此报告可在合规性仪表板中找到。</block>
+  <block id="60b1dc86f7b7ed593b895f2aeb926a6f" category="list-text">*PCI DSS 报告*：帮助您识别文件中信用卡信息的分布。此报告可在合规性仪表板中找到。</block>
+  <block id="e61d04b92724ce7d4ce7cb24b30ecbeb" category="list-text">*隐私风险评估报告*：提供来自您的数据的隐私见解和隐私风险评分。此报告可在合规性仪表板中找到。</block>
+  <block id="11aa88efe743b518058706b0031336f9" category="list-text">在合规性页面中，找到**数据主体**选项卡。</block>
+  <block id="65f79833b84c202256676879e561be15" category="list-text">在“数据主体”部分，输入名称或已知标识符，然后选择“搜索”。</block>
+  <block id="ceec5886c06b751735fa0cd650e74f36" category="inline-image-macro">DSAR搜索截图</block>
+  <block id="6b67279e8975ffe073ee4c072ec4f34d" category="list-text">搜索完成后，选择**下载**以访问数据主体访问请求响应。选择**调查结果**以在数据调查页面中查看更多信息。<block ref="e3a0ceab4233f46b959fad85d3bdfd74" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3d16b16f7cb7025ce35d7943ee636d0b" category="list-text">查看数据分类中的结果或通过选择下载图标将其下载为报告。</block>
+  <block id="c37a420b5813583a66070dd39d40b015" category="list-text">选择下载图标后，配置您的下载设置：</block>
+  <block id="f48bf29dea0f45fe801bf049014646eb" category="list-text">选择影片格式：CSV 或 JSON</block>
+  <block id="ec77b435e67524fd5267854c5d5b10c7" category="list-text">输入*报告名称*</block>
+  <block id="698386230a5cefc7da951d7bfbb830de" category="list-text">选择导出目的地：*系统*或您的*本地*机器。</block>
+  <block id="fdcc6f322514e1d4dbe972bee0af1c43" category="paragraph">如果您选择系统，则会下载所有数据。您还必须选择*系统*、*卷*和*目标文件夹路径*。</block>
+  <block id="9c9202e7a07e03be52243b3cedd00e15" category="paragraph">如果您选择*本地*，则会将报告限制为前 10,000 行非结构化数据；5,000 行非结构化数据和 1,000 行结构化数据。</block>
+  <block id="489d650cff602991a8254badb67f7fc0" category="inline-image-macro">下载报告选项的屏幕截图</block>
+  <block id="d92ec11e353863659ec083dd3cb4ab40" category="list-text">选择**下载报告**开始下载。<block ref="48f681e58a358bb92f8ec86db72a6c4b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="95a431ef24e5dfc79c56f963ac7152d6" category="paragraph">数据分类生成 PDF 报告。</block>
+  <block id="488e0d6ceb8ec3581068670e21c24460" category="list-text">如果您使用 CIFS，请向数据分类提供 Active Directory 凭据，以便它可以扫描 CIFS 卷。对于每个系统，选择*编辑 CIFS 凭据*并输入数据分类访问系统上的 CIFS 卷所需的用户名和密码。</block>
+  <block id="47bea0551af7a88193903676421a2884" category="paragraph">如果您正确输入了凭据，则会出现一条消息确认所有 CIFS 卷均已成功验证。</block>
+  <block id="d6031f6c8e1261817237e5395a82b07d" category="section-title">启用或禁用卷上的合规性扫描</block>
+  <block id="5002a922d131391bac1c30df26fed3ac" category="summary">扫描您的Google Cloud NetApp Volumes系统以保持合规性和治理标准。</block>
+  <block id="85e2307ed44638546f781d27f1748e91" category="doc">使用NetApp Data Classification扫描Google Cloud NetApp Volumes</block>
+  <block id="4227556560d7227155d186a336f967ba" category="paragraph">NetApp Data Classification支持Google Cloud NetApp Volumes作为一个系统。了解如何扫描您的Google Cloud NetApp Volumes系统。</block>
+  <block id="221432fff89c56eb709a8c6f2fe91dbc" category="section-title">发现您要扫描的Google Cloud NetApp Volumes系统</block>
+  <block id="4a80274dcf991c34b5956171c013c144" category="inline-link-macro">将其添加到系统页面</block>
+  <block id="6c02eb9be6799dbf80efa5f0aa684d9e" category="paragraph">如果您要扫描的Google Cloud NetApp Volumes系统尚未作为系统出现在NetApp Console中，<block ref="4a990c89039ed63fb3397a291c6b4c94" category="inline-link-macro-rx"></block> 。</block>
+  <block id="c6ca688dd863d55aabff9036130681db" category="paragraph">扫描Google Cloud NetApp Volumes时，数据分类必须部署在云中，并且必须部署在与您要扫描的卷相同的区域。</block>
+  <block id="5db988cb24f7297a901e30610a6311f8" category="paragraph">*注意：*扫描Google Cloud NetApp Volumes时，目前不支持在本地位置部署数据分类。</block>
+  <block id="9d71375186fc16753f5fc52f0b7f7114" category="paragraph">您可以在Google Cloud NetApp Volumes系统上启用数据分类。</block>
+  <block id="5f9f4942401b1722e0938999c6900678" category="paragraph">数据分类开始扫描您在系统中选择的卷。一旦数据分类完成初始扫描，结果就会显示在合规性仪表板中。所需时间取决于数据量：几分钟到几个小时。您可以在**配置**菜单的**系统配置**部分跟踪初始扫描的进度。数据分类显示每次扫描的进度条。您还可以将鼠标悬停在进度条上，查看相对于卷中总文件数的已扫描文件数。</block>
+  <block id="1be72743ebc9f808e07668557f3066d7" category="list-text">数据分类仅扫描卷下的一个文件共享。如果您的卷中有多个共享，则需要将这些其他共享作为共享组单独扫描。<block ref="951289bfacd7a4614d2fd45503ad30db" category="inline-link-macro-rx"></block>。</block>
+  <block id="d51134943b678d0d2956c736054dc528" category="paragraph">通过检查您的网络、安全组和导出策略，确保数据分类可以访问卷。对于 CIFS 卷，您需要为数据分类提供 CIFS 凭据。</block>
+  <block id="19a3e4c5ff68ea69d240c24d1c6103de" category="admonition">对于Google Cloud NetApp Volumes，数据分类只能扫描与控制台位于同一区域的卷。</block>
+  <block id="e1332040409adf9251afa1321cf23a20" category="list-text">确保数据分类实例与包含Google Cloud NetApp Volumes的每个网络之间存在网络连接。</block>
+  <block id="45da27524d791af6f1e571237da8df65" category="paragraph">如果要扫描的Azure NetApp Files系统尚未作为系统出现在NetApp Console中，<block ref="feb1b46dea58df1c0d569dc99576840c" category="inline-link-macro-rx"></block> 。</block>
+  <block id="8021d90ea4b4eaa60c6b67625b16c3ac" category="list-text">要自定义每个卷的扫描，请选择*或选择每个卷的扫描类型*，然后选择要映射或映射和分类的卷。</block>
+  <block id="afde9dfecafd1f2bf5ef9e57f63f9a3c" category="paragraph">看<block ref="1f890962458e680b3a8ca61bbf2ebac4" category="inline-xref-macro-rx"></block>了解详情。</block>
+  <block id="144c87632bc931491147f528950c078a" category="paragraph">数据分类开始扫描您在系统中选择的卷。一旦数据分类完成初始扫描，结果就会显示在合规性仪表板中。所需时间取决于数据量——可能是几分钟或几小时。您可以通过导航到**配置**菜单然后选择**系统配置**来跟踪初始扫描的进度。数据分类显示每次扫描的进度条。您可以将鼠标悬停在进度条上，以查看相对于卷中文件总数的已扫描文件数。</block>
+  <block id="548327497cb41bdd13e0097d7dc46a2a" category="paragraph">凭据可以是只读的；提供管理员凭据可确保数据分类可以读取任何需要提升权限的数据。凭证存储在数据分类实例上。</block>
+  <block id="3449262b29ef380e61e714ff68b5d32c" category="list-text">在配置页面上，选择*查看详细信息*以查看每个 CIFS 和 NFS 卷的状态。如有必要，请纠正任何错误，例如网络连接问题。</block>
 </blocks>

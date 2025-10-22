@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: task-scanning-anf.html 
-keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, ANF, azure netApp files, data sense 
-summary: 完成几个步骤即可开始使用Azure NetApp Files的数据分类。 
+permalink: task-scan-google-cloud.html 
+keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, google cloud, google cloud netapp volumes 
+summary: 扫描您的Google Cloud NetApp Volumes系统以保持合规性和治理标准。 
 ---
-= 使用NetApp Data Classification扫描Azure NetApp Files卷
+= 使用NetApp Data Classification扫描Google Cloud NetApp Volumes
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ summary: 完成几个步骤即可开始使用Azure NetApp Files的数据分类�
 
 
 [role="lead"]
-完成几个步骤即可开始使用适用于Azure NetApp Files的NetApp Data Classification。
+NetApp Data Classification支持Google Cloud NetApp Volumes作为一个系统。了解如何扫描您的Google Cloud NetApp Volumes系统。
 
 
 
-== 发现要扫描的Azure NetApp Files系统Discover the Azure NetApp Files system that you want to scan
+== 发现您要扫描的Google Cloud NetApp Volumes系统
 
-如果要扫描的Azure NetApp Files系统尚未作为系统出现在NetApp Console中，link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html["将其添加到系统页面"^] 。
+如果您要扫描的Google Cloud NetApp Volumes系统尚未作为系统出现在NetApp Console中，link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html["将其添加到系统页面"^] 。
 
 
 
@@ -28,27 +28,24 @@ summary: 完成几个步骤即可开始使用Azure NetApp Files的数据分类�
 
 link:task-deploy-cloud-compliance.html["部署数据分类"^]如果尚未部署实例。
 
-扫描Azure NetApp Files卷时，数据分类必须部署在云中，并且必须部署在与要扫描的卷相同的区域中。
+扫描Google Cloud NetApp Volumes时，数据分类必须部署在云中，并且必须部署在与您要扫描的卷相同的区域。
 
-*注意：*扫描Azure NetApp Files卷时，当前不支持在本地位置部署数据分类。
+*注意：*扫描Google Cloud NetApp Volumes时，目前不支持在本地位置部署数据分类。
 
 
 
 == 在您的系统中启用数据分类
 
-您可以在Azure NetApp Files卷上启用数据分类。
+您可以在Google Cloud NetApp Volumes系统上启用数据分类。
 
 . 从数据分类菜单中，选择*配置*。
-+
-image:screenshot_cloud_compliance_anf_scan_config.png["部署数据分类实例后立即显示的“配置”选项卡的屏幕截图。"]
-
 . 选择如何扫描每个系统中的卷。link:concept-classification.html#whats-the-difference-between-mapping-and-classification-scans["了解映射和分类扫描"]：
 +
 ** 要映射所有卷，请选择*映射所有卷*。
 ** 要映射和分类所有卷，请选择*映射和分类所有卷*。
-** 要自定义每个卷的扫描，请选择*或选择每个卷的扫描类型*，然后选择要映射或映射和分类的卷。
+** 要自定义每个卷的扫描，请选择*或选择每个卷的扫描类型*，然后选择要映射和/或分类的卷。
 +
-看<<启用或禁用卷上的合规性扫描,启用或禁用卷上的合规性扫描>>了解详情。
+看<<启用和禁用卷上的合规性扫描,启用和禁用卷上的合规性扫描>>了解详情。
 
 
 
@@ -56,23 +53,23 @@ image:screenshot_cloud_compliance_anf_scan_config.png["部署数据分类实例�
 
 
 .结果
-数据分类开始扫描您在系统中选择的卷。一旦数据分类完成初始扫描，结果就会显示在合规性仪表板中。所需时间取决于数据量——可能是几分钟或几小时。您可以通过导航到**配置**菜单然后选择**系统配置**来跟踪初始扫描的进度。数据分类显示每次扫描的进度条。您可以将鼠标悬停在进度条上，以查看相对于卷中文件总数的已扫描文件数。
+数据分类开始扫描您在系统中选择的卷。一旦数据分类完成初始扫描，结果就会显示在合规性仪表板中。所需时间取决于数据量：几分钟到几个小时。您可以在**配置**菜单的**系统配置**部分跟踪初始扫描的进度。数据分类显示每次扫描的进度条。您还可以将鼠标悬停在进度条上，查看相对于卷中总文件数的已扫描文件数。
 
 * 默认情况下，如果数据分类在 CIFS 中没有写入属性权限，或者在 NFS 中没有写入权限，系统将不会扫描卷中的文件，因为数据分类无法将“上次访问时间”恢复为原始时间戳。如果您不介意上次访问时间是否重置，请选择*或为每个卷选择扫描类型*。结果页面有一个您可以启用的设置，以便数据分类可以扫描卷，而不管权限如何。
-* 数据分类仅扫描卷下的一个文件共享。如果您的卷中有多个共享，则需要将这些其他共享作为共享组单独扫描。link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume["了解此数据分类限制"^] 。
+* 数据分类仅扫描卷下的一个文件共享。如果您的卷中有多个共享，则需要将这些其他共享作为共享组单独扫描。link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume["了解此数据分类限制"^]。
 
 
 
 
 == 验证数据分类是否有权访问卷
 
-通过检查网络、安全组和导出策略，确保数据分类可以访问卷。您需要为数据分类提供 CIFS 凭据，以便它可以访问 CIFS 卷。
+通过检查您的网络、安全组和导出策略，确保数据分类可以访问卷。对于 CIFS 卷，您需要为数据分类提供 CIFS 凭据。
 
 
-NOTE: 对于Azure NetApp Files，数据分类只能扫描与控制台位于同一区域的卷。
+NOTE: 对于Google Cloud NetApp Volumes，数据分类只能扫描与控制台位于同一区域的卷。
 
 .清单
-* 确保数据分类实例与包含Azure NetApp Files卷的每个网络之间存在网络连接。
+* 确保数据分类实例与包含Google Cloud NetApp Volumes的每个网络之间存在网络连接。
 * 确保以下端口对数据分类实例开放：
 +
 ** 对于 NFS – 端口 111 和 2049。
@@ -87,7 +84,7 @@ NOTE: 对于Azure NetApp Files，数据分类只能扫描与控制台位于同�
 +
 .. 如果您使用 CIFS（SMB），请确保 Active Directory 凭据正确。对于每个系统，选择*编辑 CIFS 凭据*，然后输入数据分类访问系统上的 CIFS 卷所需的用户名和密码。
 +
-凭据可以是只读的；提供管理员凭据可确保数据分类可以读取任何需要提升权限的数据。凭证存储在数据分类实例上。
+凭据可以是只读的，但提供管理员凭据可确保数据分类可以读取任何需要提升权限的数据。凭证存储在数据分类实例上。
 
 +
 如果您想确保文件的“上次访问时间”不会因数据分类扫描而改变，建议用户在 CIFS 中具有写入属性权限或在 NFS 中具有写入权限。如果可能，请将 Active Directory 用户配置为组织中具有所有文件权限的父组的一部分。
@@ -100,12 +97,12 @@ image:screenshot_cifs_status.gif["屏幕截图显示了配置页面和一个已�
 
 
 
-. 在配置页面上，选择*查看详细信息*以查看每个 CIFS 和 NFS 卷的状态。如有必要，请纠正任何错误，例如网络连接问题。
+. 在配置页面上，选择*查看详细信息*以查看每个 CIFS 和 NFS 卷的状态并纠正任何错误。
 
 
 
 
-== 启用或禁用卷上的合规性扫描
+== 启用和禁用卷上的合规性扫描
 
 您可以随时从配置页面启动或停止任何系统上的扫描。您还可以将扫描从仅映射扫描切换到映射和分类扫描，反之亦然。建议您扫描系统中的所有卷。
 

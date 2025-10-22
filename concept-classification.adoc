@@ -60,7 +60,7 @@ link:https://www.netapp.com/data-services/classification/["了解数据分类的
 数据分类提供可帮助您降低存储总拥有成本 (TCO) 的工具。您可以使用数据分类来：
 
 * 通过识别重复或与业务无关的数据来提高存储效率。
-* 通过识别可以分层到较便宜的对象存储的非活动数据来节省存储成本。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["了解有关Cloud Volumes ONTAP系统分层的更多信息"^] 。 https://docs.netapp.com/us-en/data-services-tiering/concept-cloud-tiering.html["了解有关本地ONTAP系统分层的更多信息"^] 。
+* 通过识别可以分层到较便宜的对象存储的非活动数据来节省存储成本。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["了解有关Cloud Volumes ONTAP系统分层的更多信息"^] 。 https://docs.netapp.com/us-en/data-services-cloud-tiering/concept-cloud-tiering.html["了解有关本地ONTAP系统分层的更多信息"^] 。
 
 
 
@@ -207,8 +207,9 @@ NOTE: 数据分类不会对其可以扫描的数据量施加限制。每个控�
 * 关于文件的*标准元数据*：文件类型、大小、创建和修改日期等等。
 * *个人数据*：个人身份信息 (PII)，例如电子邮件地址、身份证号码或信用卡号，数据分类使用文件中的特定单词、字符串和模式进行识别。link:task-controlling-private-data.html#view-files-that-contain-personal-data["了解有关个人数据的更多信息"^] 。
 * *敏感个人信息*：《通用数据保护条例》（GDPR）和其他隐私法规定义的特殊类型的敏感个人信息（SPII），例如健康数据、种族血统或政治观点。link:task-controlling-private-data.html#view-files-that-contain-sensitive-personal-data["了解有关敏感个人数据的更多信息"^] 。
-* *类别*：数据分类将扫描的数据分为不同类型的类别。类别是基于 AI 对每个文件的内容和元数据的分析的主题。link:task-controlling-private-data.html#view-files-by-categories["了解有关类别的更多信息"^] 。
-* *类型*：数据分类获取其扫描的数据并按文件类型进行细分。link:task-controlling-private-data.html#view-files-by-file-types["了解有关类型的更多信息"^] 。
+* *类别*：数据分类将扫描的数据分为不同类型的类别。类别是基于 AI 对每个文件的内容和元数据的分析的主题。link:task-controlling-governance-data.html["了解有关类别的更多信息"^]。
+
+
 * *名称实体识别*：数据分类使用人工智能从文档中提取人们的自然姓名。link:task-generating-compliance-reports.html["了解如何响应数据主体访问请求"^] 。
 
 
