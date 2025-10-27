@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-managing-compliance.html 
 keywords: remove, stop, stop scans, stop scanning, cloud compliance, stop cloud compliance, deactivate, deactivating cloud compliance, data sense 
-summary: 如果需要，您可以停止数据分类扫描一个或多个系统、数据库、文件共享组、OneDrive 帐户、Google Drive 帐户或 SharePoint 帐户。 
+summary: 如果需要，您可以停止数据分类扫描系统、数据库或文件共享组。 
 ---
 = 从NetApp Data Classification中删除数据源
 :hardbreaks:
@@ -18,21 +18,21 @@ summary: 如果需要，您可以停止数据分类扫描一个或多个系统�
 
 
 
-== 停用系统的合规性扫描
+== 停用系统扫描
 
-当您停用扫描时，数据分类不再扫描系统上的数据，并且它会从数据分类实例中删除索引的合规性洞察（系统本身的数据不会被删除）。
+当您停用扫描时，数据分类不再扫描系统上的数据，并且它会从数据分类实例中删除索引的见解。系统本身的数据不会被删除。
 
 . 从“配置”页面中，选择image:button-gallery-options.gif["更多按钮"]系统行中的按钮，然后*停用数据分类*。
 
 
 
-TIP: 您还可以在选择系统时从“服务”面板禁用系统的合规性扫描。
+TIP: 您还可以在选择系统时从“服务”面板禁用系统扫描。
 
 
 
 == 从数据分类中删除数据库
 
-如果您不再想扫描某个数据库，您可以从数据分类界面将其删除并停止所有扫描。
+如果您不再需要扫描某个数据库，您可以从数据分类界面将其删除并停止所有扫描。
 
 . 从“配置”页面中，选择image:button-gallery-options.gif["更多按钮"]数据库行中的按钮，然后*删除数据库服务器*。
 
