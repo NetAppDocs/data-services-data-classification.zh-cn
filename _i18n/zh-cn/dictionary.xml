@@ -2609,4 +2609,5 @@
   <block id="020090d3590a2184408809832f12a6c5" category="paragraph">数据分类开始扫描您在系统中选择的卷。一旦数据分类完成初始扫描，结果将在合规性仪表板中提供。所需时间取决于数据量——可能是几分钟或几小时。您可以通过导航到**配置**菜单然后选择**系统配置**来跟踪初始扫描的进度。在进度条中跟踪每次扫描的进度；您可以将鼠标悬停在进度条上，以查看相对于卷中总文件数的扫描文件数。</block>
   <block id="3eb0c5821ef609291db2736478cac268" category="section-title">启用和禁用StorageGRID桶上的扫描</block>
   <block id="00b3ff2a0f57c13aa4ca3a4252659456" category="cell">\ https://support.compliance.api.bluexp.netapp.com/ \ https://hub.docker.com \ https://auth.docker.io \ https://registry-1.docker.io \ https://index.docker.io/ \ https://dseasb33srnrn.cloudfront.net/ \ https://production.cloudflare.docker.com/</block>
+  <block id="a326c778205842f816c52ca7e63cae5d" category="cell">https://support.compliance.api.bluexp.netapp.com/</block>
 </blocks>
