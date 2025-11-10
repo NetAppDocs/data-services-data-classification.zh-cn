@@ -162,7 +162,6 @@
   <block id="6b41c846432704bbeebdc71cd92e0ac2" category="inline-link-macro">使用BlueXP classification调查组织中存储的数据</block>
   <block id="e5ec12d2090a6862ed376344a123c006" category="paragraph">有关更多信息，请参阅<block ref="fceb47647e62ca77cd0675b07a84c97b" category="inline-link-macro-rx"></block> 。</block>
   <block id="67840d2b3ccd99d7c6db2904273f95ef" category="doc">1.43 版</block>
-  <block id="bb4c36ac9f10bc64e16bd125cb997dcd" category="paragraph">此数据分类版本包括：</block>
   <block id="3e05db4c28329af069ba30406ce8330c" category="paragraph-title">优先进行分类扫描</block>
   <block id="4aff63c206df7556bccc48f3a5f50de4" category="paragraph">数据分类除了支持仅映射扫描之外，还支持对映射和分类扫描进行优先排序的功能，使您可以选择首先完成哪些扫描。在扫描开始期间和开始之前，支持对地图和分类扫描进行优先排序。如果您选择在扫描过程中确定扫描的优先级，则映射扫描和分类扫描都会被优先处理。</block>
   <block id="f5d1ea19c8b9424efdf2f986ffd4074f" category="paragraph">有关更多信息，请参阅<block ref="b9518738dcb31100f52b6bb549f809dc" category="inline-link-macro-rx"></block> 。</block>
@@ -1735,8 +1734,6 @@
   <block id="293d9f51d90274c3eb6f28b88bdf5b95" category="list-text">选择用户或组的名称以刷新调查页面，以便您可以看到该用户或组有权访问的所有文件和目录。</block>
   <block id="33f1c68834e7b02c4c8b3b9dc4f796d3" category="section-title">检查存储系统中的重复文件</block>
   <block id="d353221e429d4e01e167115856394ba7" category="paragraph">您可以检查存储系统中是否存储了重复的文件。如果您想确定可以节省存储空间的区域，这将非常有用。确保具有特定权限或敏感信息的某些文件不会在存储系统中不必要地重复也是很好的。</block>
-  <block id="6c8f43fb3633672815a9819858118a4c" category="paragraph">您的所有文件（不包括数据库）如果大小为 1 MB 或更大，或包含个人或敏感个人信息，都会被进行比较，以查看是否有重复。</block>
-  <block id="1767c0592d0d28cdc0d9d1cd49e52537" category="paragraph">数据分类使用散列技术来确定重复文件。如果任何文件与另一个文件具有相同的哈希码，那么您可以 100% 确定这些文件是完全重复的 - 即使文件名不同。</block>
   <block id="54a7c4785d3d9e01ac8323dfbb334a4b" category="list-text">在“过滤器”窗格中，选择“文件大小”以及“重复项”（“有重复项”）以查看您的环境中哪些特定大小范围的文件是重复的。</block>
   <block id="4cf8fbbd65dba65137f55960d10a2882" category="list-text">或者，下载重复文件的列表并将其发送给存储管理员，以便他们可以决定可以删除哪些文件（如果有）。</block>
   <block id="3d860adc4ff3b65fee4d550f4bf11f96" category="list-text">您可以选择删除、标记或移动重复的文件。选择您想要执行操作的文件，然后选择适当的操作。</block>
@@ -1803,7 +1800,6 @@
   <block id="3d04e82ecfc4b95e7eb8eaf404dffadc" category="inline-image-macro">扫描配置页面中删除数据库服务器按钮的屏幕截图。</block>
   <block id="b695958db24ae26377f1c2e3a62b14eb" category="paragraph"><block ref="b695958db24ae26377f1c2e3a62b14eb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a5776459fdb4aaf699684c46e41832a8" category="list-text">从确认对话框中选择*删除共享组*。</block>
-  <block id="032990a2d529d70fdd578fbef47579da" category="summary">您可以在NetApp Data Classification中管理在每个系统和数据源中扫描数据的方式。您可以在“存储库”基础上进行更改；这意味着您可以根据正在扫描的数据源类型对每个卷、存储桶、共享、模式、用户等进行更改。</block>
   <block id="de10ad3938875667137fa1bd63542e62" category="doc">更改存储库的NetApp Data Classification扫描设置</block>
   <block id="161ac81baea8064d1337229d7ba5864f" category="paragraph">您可以管理在每个系统和数据源中如何扫描数据。您可以在“存储库”基础上进行更改；这意味着您可以根据正在扫描的数据源类型对每个卷、模式、用户等进行更改。</block>
   <block id="e4723f182b426a80c2a46707ff02e15e" category="inline-link-macro">映射扫描或映射和分类扫描</block>
@@ -1811,12 +1807,10 @@
   <block id="8f737a8c409b235d7a43941682f2a548" category="section-title">查看存储库的扫描状态</block>
   <block id="4fc4ab7968a59d858d5c460fb64f3f3c" category="paragraph">您可以查看NetApp Data Classification正在为每个系统和数据源扫描的各个存储库（卷、存储桶等）。您还可以看到有多少已被“映射”，有多少已被“分类”。分类需要更长的时间，因为所有数据都进行了完整的 AI 识别。</block>
   <block id="e415c7da5280de793049e6b59816274d" category="paragraph">您可以在配置页面查看各个工作环境的扫描状态：</block>
-  <block id="209f3dabc722accc7b4db77a133ef209" category="list-text">*初始化*（浅蓝色点）：地图或分类配置已激活。在开始“待处理队列”状态之前，这会持续几秒钟。</block>
   <block id="fbbc6bcf9c53aaad4b5476065f315bb1" category="list-text">*待处理队列*（橙色圆点）：扫描任务正在等待列入扫描队列。</block>
   <block id="ea7971f9c02e5fa9234d7af5cd0b34c7" category="list-text">*已排队*（橙色圆点）：任务已成功添加到扫描队列。当队列中的卷轮到达时，系统将开始映射或分类该卷。</block>
   <block id="478002532c0e9d87506035f8afb96c61" category="list-text">*正在运行*（绿点）：队列中的扫描任务正在选定的存储库上积极进行。</block>
   <block id="1110cfca2e7c6a5f3e560597c03abeab" category="list-text">*完成*（绿点）：存储库扫描已完成。</block>
-  <block id="da30b4408b5e1540ac02763204c943ad" category="list-text">*暂停*（灰点）：您选择了“暂停”选项来暂停扫描。虽然系统中没有显示音量的变化，但仍会显示扫描的见解。</block>
   <block id="7eac8ad7bb67a204924dcc6a4113f103" category="list-text">*错误*（红点）：扫描无法完成，因为遇到了问题。如果您需要完成某项操作，错误将出现在“所需操作”列下的工具提示中。否则，系统将显示“错误”状态并尝试恢复。完成后，状态就会改变。</block>
   <block id="4c5b4656410d347cf852f162490f2e15" category="list-text">*未扫描*：选择了“关闭”卷配置，系统未扫描该卷。</block>
   <block id="ae3859b6bf604c1664d2e6f3cb311c7f" category="inline-image-macro">显示如何选择系统配置按钮的屏幕截图。</block>
@@ -1825,7 +1819,6 @@
   <block id="c794003b8b71c52d57b2d4a1adc1e35c" category="list-text">在扫描配置页面中，查看所有存储库的扫描设置。</block>
   <block id="bf3aeefcdd65b55f2612004f45b7257f" category="inline-image-macro">屏幕截图显示您的存储桶是否正在被扫描以及当前扫描状态。</block>
   <block id="69c5667893c99e5a388e892cc9784e66" category="paragraph"><block ref="69c5667893c99e5a388e892cc9784e66" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3c6eaacb9399946d9d6cd4ced08320bf" category="list-text">将光标悬停在“映射状态”列中的图表上，查看每个存储库（本例中为存储桶）中仍需映射或分类的文件数。</block>
   <block id="0e7c3262eaa1e23e978644965f5cfcad" category="section-title">更改存储库的扫描类型</block>
   <block id="af0f4aea5a591706300708a645397bc4" category="paragraph">您可以随时从配置页面启动或停止系统中的仅映射扫描或映射和分类扫描。您还可以从仅映射扫描更改为映射和分类扫描，反之亦然。</block>
   <block id="1a8f03950c641e2ffffb33146f70ef55" category="admonition">数据库不能设置为仅映射扫描。数据库扫描可以关闭或打开；其中“打开”相当于“映射和分类”。</block>
@@ -1842,8 +1835,6 @@
   <block id="fbadcaa7267ae823837aff45d0dd7135" category="paragraph">如果您不再需要监控存储库（例如卷）的合规性，则可以停止扫描它。您可以通过关闭扫描来实现此目的。当扫描关闭时，有关该卷的所有索引和信息都将从系统中删除，并且扫描数据的收费也将停止。</block>
   <block id="565a8976f79d6c76ecebff0fff08e98a" category="list-text">在扫描配置页面中选择“*关闭*”以停止扫描特定存储桶。</block>
   <block id="3ea62d70182e6d0c238badaaf224dff9" category="section-title">暂停并恢复存储库扫描</block>
-  <block id="7445e229a53051f98f4c5bb878a24db4" category="paragraph">如果您想暂时停止扫描某些内容，您可以“暂停”存储库扫描。暂停扫描意味着数据分类将不会对存储库的更改或添加执行任何未来扫描，但所有当前结果仍将显示在系统中。暂停扫描并不会停止对已扫描的数据收费，因为数据仍然存在。</block>
-  <block id="0f9fab6026fbdbed86f2befe8eae64e1" category="paragraph">您可以随时“恢复”扫描。</block>
   <block id="5ad3e303fff11348579be9fa7186a3bf" category="inline-image-macro">操作图标</block>
   <block id="ceb02fa059b59b1ab250e24b23e83492" category="list-text">在扫描配置页面中，选择操作<block ref="9599256bd913e17dd34fce684015b2f9" category="inline-image-macro-rx" type="image"></block>图标。</block>
   <block id="d7530ec47cb0f60bf26bff38cfcd4f1f" category="list-text">选择“*暂停*”暂停对卷的扫描，或选择“*恢复*”恢复对先前已暂停的卷的扫描。</block>
@@ -1862,8 +1853,6 @@
   <block id="f3bf83f2c7aadc341ac1678567775abc" category="list-text">要映射所有卷，请选择*映射所有卷*。</block>
   <block id="c854572c2f5a5368403f0ee57aa1bb29" category="list-text">要映射和分类所有卷，请选择*映射和分类所有卷*。</block>
   <block id="9071a661cd1f2da138650405c0f6579b" category="list-text">要自定义每个卷的扫描，请选择*或选择每个卷的扫描类型*，然后选择要映射和/或分类的卷。</block>
-  <block id="5c4a0511ffaeef83ec4f6f814c84e1f5" category="inline-xref">启用和禁用卷上的合规性扫描</block>
-  <block id="c0c91d6f7c9b085f79f701932b3d9cc7" category="paragraph">看<block ref="95ce3baacaaadbae6a6ffc1a8884d40a" category="inline-xref-macro-rx"></block>了解详情。</block>
   <block id="fcb8c9e04be809b808c3a4762413c376" category="list-text">在确认对话框中，选择*批准*。</block>
   <block id="4a4bd4695f7ed79b6d5b23795d88275f" category="list-text">默认情况下，如果数据分类在 CIFS 中没有写入属性权限，或者在 NFS 中没有写入权限，系统将不会扫描卷中的文件，因为数据分类无法将“上次访问时间”恢复为原始时间戳。如果您不介意上次访问时间是否重置，请选择*或为每个卷选择扫描类型*。结果页面有一个您可以启用的设置，以便数据分类可以扫描卷，而不管权限如何。</block>
   <block id="2c0b9fc0f9659fa0f71a4337b2fc2043" category="inline-link-macro">了解此数据分类限制</block>
@@ -2610,4 +2599,23 @@
   <block id="3eb0c5821ef609291db2736478cac268" category="section-title">启用和禁用StorageGRID桶上的扫描</block>
   <block id="00b3ff2a0f57c13aa4ca3a4252659456" category="cell">\ https://support.compliance.api.bluexp.netapp.com/ \ https://hub.docker.com \ https://auth.docker.io \ https://registry-1.docker.io \ https://index.docker.io/ \ https://dseasb33srnrn.cloudfront.net/ \ https://production.cloudflare.docker.com/</block>
   <block id="a326c778205842f816c52ca7e63cae5d" category="cell">https://support.compliance.api.bluexp.netapp.com/</block>
+  <block id="649b850f0bca668f5279a8b29028973a" category="paragraph">本次BlueXP分类版本包含：</block>
+  <block id="73bb8d1c85014ba6981a002bd9fc9364" category="doc">1.48 版</block>
+  <block id="d34f29080dba1970a613ab39b7166d0c" category="paragraph">本次数据分类版本更新包括错误修复、安全改进和性能提升。</block>
+  <block id="8905ad2fb9f028e6bd28666015b4b50a" category="paragraph-title">增强扫描进度清晰度</block>
+  <block id="206c07a2ed5644be711186a00b2c6ae2" category="paragraph">扫描配置现在包含对扫描完成情况的更深入洞察。以前，进度条只在扫描进行时显示。现在，扫描完成后进度条仍然可见，以确认扫描已成功完成。您还可以查看已映射和已扫描的文件数量。</block>
+  <block id="dc9fb8f25cdf758c060f4782f41b0b0f" category="paragraph">有关扫描设置的更多信息，请参阅 <block ref="19cf1405cd38e956788f418f2be34a68" category="inline-link-macro-rx"></block>。</block>
+  <block id="eb3cd7064baa457b68c9e6f4bc37005a" category="paragraph">数据分类会比较所有文件（数据库除外）是否存在重复项，如果存在重复项，则进行以下操作：</block>
+  <block id="0ca96e556827c0f5e25df8d0643f52ed" category="list-text">1 MB 或更大</block>
+  <block id="618a117288f96069f1cdbf0f4bded643" category="list-text">或包含个人信息或敏感个人信息</block>
+  <block id="4e1bd09c39656dc2fa486f909e1674e7" category="paragraph">数据分类使用散列技术来确定重复文件。如果一个文件的哈希码与另一个文件相同，即使文件名不同，这两个文件也是完全相同的副本。</block>
+  <block id="b747cc8e0f2203370a4d444fcd5f79d5" category="summary">了解如何在NetApp Data Classification中修改系统的扫描设置。</block>
+  <block id="e27531ce5aac82b10b93cae589814bb8" category="list-text">*初始化*（浅蓝色点）：地图或分类配置已激活。此状态会短暂显示，然后过渡到“待处理队列”状态。</block>
+  <block id="fc0e8f9e94436c57e95a54ba5403b593" category="list-text">*已暂停*（灰点）：您已暂停扫描。虽然系统中未显示音量变化，但扫描结果仍然可用。</block>
+  <block id="2b275cce14d9fa4c2f7c2b688661866a" category="list-text">扫描期间，将光标悬停在“映射状态”列中的进度条上，即可查看该存储库中待映射或分类的文件数量。</block>
+  <block id="97b34fd1037fad45811be37e77cc8ee3" category="paragraph">如果您想暂时停止扫描某些内容，您可以“暂停”存储库扫描。暂停扫描意味着数据分类将不再对存储库中的更改或添加执行任何未来的扫描。所有当前的扫描结果仍可在数据分类中查看。</block>
+  <block id="dafb48c379602976f883f38decad477b" category="paragraph">即使暂停扫描，也不会免除计费费用，因为数据仍然保留在系统中。</block>
+  <block id="76d0e11c30b5dcbca92c93eb0f33daec" category="paragraph">您可以随时恢复扫描。</block>
+  <block id="e018b56ef561ad538d1aca1d6fae6b6c" category="paragraph">看<block ref="15dceb3fb9d388923f206ab616cd56a9" category="inline-xref-macro-rx"></block>了解详情。</block>
+  <block id="77750efa6f5ff153acdc42067058017f" category="section-title">2025年11月10日</block>
 </blocks>
