@@ -26,10 +26,10 @@ summary: 完成几个步骤即可在云中部署NetApp Data Classification。  N
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]创建控制台代理
 [role="quick-margin-para"]
-如果您还没有控制台代理，请创建一个。看 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["在 AWS 中创建控制台代理"^]， https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["在 Azure 中创建控制台代理"^] ， 或者 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["在 GCP 中创建控制台代理"^]。
+如果您还没有控制台代理，请创建一个。看link:https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-aws.html["在 AWS 中创建控制台代理"^]，link:https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-azure.html["在 Azure 中创建控制台代理"^] ， 或者link:https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-google.html["在 GCP 中创建控制台代理"^]。
 
 [role="quick-margin-para"]
-您还可以 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["在本地安装控制台代理"^]在您的网络中的 Linux 主机上或云中的 Linux 主机上。
+你也可以link:https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["在本地安装控制台代理"^]在您网络中的 Linux 主机上，或者在云端的 Linux 主机上。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]先决条件
 [role="quick-margin-para"]
@@ -43,7 +43,7 @@ summary: 完成几个步骤即可在云中部署NetApp Data Classification。  N
 
 == 创建控制台代理
 
-如果您还没有控制台代理，请在您的云提供商中创建一个控制台代理。看 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["在 AWS 中创建控制台代理"^]或者 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["在 Azure 中创建控制台代理"^]， 或者 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["在 GCP 中创建控制台代理"^]。在大多数情况下，您可能会在尝试激活数据分类之前设置控制台代理，因为大多数 https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#when-a-connector-is-required["控制台功能需要控制台代理"]，但有些情况下您需要立即设置一个。
+如果您还没有控制台代理，请在您的云提供商中创建一个控制台代理。看 https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-aws.html["在 AWS 中创建控制台代理"^]或者 https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-azure.html["在 Azure 中创建控制台代理"^]， 或者 https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-google.html["在 GCP 中创建控制台代理"^]。大多数情况下，您可能需要在尝试激活数据分类之前设置好控制台代理，因为大多数 https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["控制台功能需要控制台代理"]但有些情况下，你需要现在就设置一个。
 
 在某些情况下，您必须使用部署在特定云提供商中的控制台代理：
 
@@ -58,9 +58,9 @@ summary: 完成几个步骤即可在云中部署NetApp Data Classification。  N
 
 使用任何这些云控制台代理时，都可以扫描本地ONTAP系统、 NetApp文件共享和数据库。
 
-请注意，您还可以 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["在本地安装控制台代理"^]在您的网络或云中的 Linux 主机上。一些计划在本地安装数据分类的用户可能还会选择在本地安装控制台代理。
+请注意，您也可以 https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["在本地安装控制台代理"^]在网络或云端的 Linux 主机上。一些计划在本地安装数据分类的用户可能还会选择在本地安装控制台代理。
 
-正如你所见，在某些情况下，你可能需要使用 https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#multiple-connectors["多个控制台代理"]。
+可能有些情况下你需要使用 https://docs.netapp.com/us-en/console-setup-admin/concept-agents.html#multiple-systems-and-agents["多个控制台代理"^]。
 
 
 TIP: 数据分类不会对其可以扫描的数据量施加限制。每个控制台代理支持扫描和显示 500 TiB 的数据。要扫描超过 500 TiB 的数据，link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["安装另一个控制台代理"^]然后link:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-overview.html["部署另一个数据分类实例"]。 + 控制台 UI 显示来自单个连接器的数据。有关查看来自多个控制台代理的数据的提示，请参阅link:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["使用多个控制台代理"^]。
@@ -71,7 +71,7 @@ TIP: 数据分类不会对其可以扫描的数据量施加限制。每个控制
 
 当控制台代理部署在政府区域（AWS GovCloud、Azure Gov 或 Azure DoD）时，支持数据分类。以这种方式部署时，数据分类具有以下限制：
 
-https://docs.netapp.com/us-en/console-setup-admin/task-install-restricted-mode.html["查看有关在政府区域部署控制台代理的更多信息"^] 。
+link:https://docs.netapp.com/us-en/console-setup-admin/task-install-restricted-mode.html["了解如何在政府区域部署控制台代理"^]。
 
 
 
@@ -179,9 +179,9 @@ Azure 和 Azure 政府部署需要额外的入站和出站安全组规则。看 
 --
 有关 vCPU 限制的更多详细信息，请参阅以下链接：
 
-* https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html["AWS 文档：Amazon EC2 服务配额"^]
-* https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quotas["Azure 文档：虚拟机 vCPU 配额"^]
-* https://cloud.google.com/compute/quotas["Google Cloud 文档：资源配额"^]
+* link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html["AWS 文档：Amazon EC2 服务配额"^]
+* link:https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quotas["Azure 文档：虚拟机 vCPU 配额"^]
+* link:https://docs.cloud.google.com/docs/quotas/view-manage["Google Cloud 文档：资源配额"^]
 
 
 --

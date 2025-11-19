@@ -1153,9 +1153,7 @@
   <block id="77b5d2f21e25341a3f84901a513bf64c" category="inline-link">在 AWS 中创建控制台代理</block>
   <block id="5dc317f5e4506014a6457cea6e36b5e8" category="inline-link">在 Azure 中创建控制台代理</block>
   <block id="48c24d9c6f6e8d0b548116a386c62dbe" category="inline-link">在 GCP 中创建控制台代理</block>
-  <block id="6cf086fd7e27f5587a9831d78af8c5b6" category="paragraph">如果您还没有控制台代理，请创建一个。看<block ref="063a55799f8d644bc7ac566504e81809" category="inline-link-rx"></block>，<block ref="d06e67507fcb22c356889f00d5b444fe" category="inline-link-rx"></block> ， 或者<block ref="6805b3d46343d30ae27cc1503d8e2a50" category="inline-link-rx"></block>。</block>
   <block id="02559d50684120805e2f264bdea2e4c1" category="inline-link">在本地安装控制台代理</block>
-  <block id="1d9503a33ebe4a2fef4b7e15b1c066cd" category="paragraph">您还可以<block ref="343ab61366cc70436c2320a4d03ee96b" category="inline-link-rx"></block>在您的网络中的 Linux 主机上或云中的 Linux 主机上。</block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">两个</block>
   <block id="0e2ddd6334405299d1b4c44e894c9e78" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>先决条件</block>
   <block id="339dbb3aad86454446f85f0a0a7f7606" category="paragraph">确保您的环境能够满足先决条件。这包括实例的出站互联网访问、控制台代理和数据分类之间通过端口 443 的连接等等。  &lt;&lt; 先决条件，请参阅完整列表&gt;&gt;。</block>
@@ -1164,19 +1162,14 @@
   <block id="9f0ba00e2450c6e218eaa2d60c8c8ee7" category="paragraph">启动安装向导以在云中部署数据分类实例。</block>
   <block id="f3aee30a3a487c746572616e3f53dc9d" category="section-title">创建控制台代理</block>
   <block id="1f96813eb41ebd0c3dd5544a17de7743" category="inline-link">控制台功能需要控制台代理</block>
-  <block id="6b9d8db86615c626426dac3240a23cd9" category="paragraph">如果您还没有控制台代理，请在您的云提供商中创建一个控制台代理。看<block ref="063a55799f8d644bc7ac566504e81809" category="inline-link-rx"></block>或者<block ref="d06e67507fcb22c356889f00d5b444fe" category="inline-link-rx"></block>， 或者<block ref="6805b3d46343d30ae27cc1503d8e2a50" category="inline-link-rx"></block>。在大多数情况下，您可能会在尝试激活数据分类之前设置控制台代理，因为大多数<block ref="92d08814b1d84d2ad7da2f290b48da3c" category="inline-link-rx"></block>，但有些情况下您需要立即设置一个。</block>
   <block id="529213d44c3711e3260c35b12c2d2580" category="paragraph">在某些情况下，您必须使用部署在特定云提供商中的控制台代理：</block>
   <block id="cfea0a57313e8ccb9a39d4af86e20ca9" category="list-text">在 AWS 中的Cloud Volumes ONTAP或Amazon FSx for ONTAP存储桶中扫描数据时，您可以使用 AWS 中的控制台代理。</block>
   <block id="5603e4788fdafa67a19bd479883972c6" category="list-text">在 Azure 中的Cloud Volumes ONTAP或Azure NetApp Files中扫描数据时，您可以使用 Azure 中的控制台代理。</block>
   <block id="49346bec66601a23d58acfc71f396d3f" category="list-text">对于Azure NetApp Files，它必须部署在与您要扫描的卷相同的区域中。</block>
   <block id="2f3343ea56a236ac7df9fd71459af465" category="list-text">在 GCP 中的Cloud Volumes ONTAP中扫描数据时，您可以使用 GCP 中的控制台代理。</block>
   <block id="e49d11048063c821e2d61e7d656352c8" category="paragraph">使用任何这些云控制台代理时，都可以扫描本地ONTAP系统、 NetApp文件共享和数据库。</block>
-  <block id="db78195627af3608024c56bc521f4e79" category="paragraph">请注意，您还可以<block ref="343ab61366cc70436c2320a4d03ee96b" category="inline-link-rx"></block>在您的网络或云中的 Linux 主机上。一些计划在本地安装数据分类的用户可能还会选择在本地安装控制台代理。</block>
-  <block id="7bf578ebca82bd39e9c3d25054af4c2e" category="paragraph">正如你所见，在某些情况下，你可能需要使用<block ref="435c5800eb6a11448025dffd7c93a30f" category="inline-link-rx"></block>。</block>
   <block id="b39e81db6545fcc5e2567ec3c6930540" category="section-title">政府区域支持</block>
   <block id="90476c1dd7be704eec72e67e38b53fff" category="paragraph">当控制台代理部署在政府区域（AWS GovCloud、Azure Gov 或 Azure DoD）时，支持数据分类。以这种方式部署时，数据分类具有以下限制：</block>
-  <block id="2f39ad11fa41d7d59b3cab13367c7762" category="inline-link">查看有关在政府区域部署控制台代理的更多信息</block>
-  <block id="bb3d4632f65d269a14bed66aafbadc3f" category="paragraph"><block ref="7686ee2eb49af977f9d11ac7d13abc66" category="inline-link-rx"></block> 。</block>
   <block id="ee68e5b99222bbc29a480fcb0d1d6ee2" category="section-title">前提条件</block>
   <block id="f4df53c9081ea6340923013025dd19a1" category="paragraph">在云中部署数据分类之前，请查看以下先决条件，以确保您具有受支持的配置。当您在云中部署数据分类时，它与控制台代理位于同一子网中。</block>
   <block id="b3afed32875b4a54f2caed1b075ae9f5" category="list-text">启用数据分类的出站互联网访问</block>
@@ -1223,11 +1216,8 @@
   <block id="c686f695eeec04f8c4fe350e3159e65d" category="list-text">确保您的云提供商的 vCPU 限制允许部署具有必要数量的核心的实例。您需要验证控制台运行区域中相关实例系列的 vCPU 限制。<block ref="5843cd637232ef0567b219de30d73e1e" category="inline-link-macro-rx"></block> 。</block>
   <block id="1686a92132918f281d54cd603c1a36b8" category="paragraph">有关 vCPU 限制的更多详细信息，请参阅以下链接：</block>
   <block id="2b0807f353a429700271a9351867f260" category="inline-link">AWS 文档：Amazon EC2 服务配额</block>
-  <block id="33519b7a4b15f32177ee6e24629da21e" category="list-text"><block ref="33519b7a4b15f32177ee6e24629da21e" category="inline-link-rx"></block></block>
   <block id="e0d6a0bc9c3fe66c7c1b32f5fc7989c7" category="inline-link">Azure 文档：虚拟机 vCPU 配额</block>
-  <block id="8a1f7f28105f0b82b916d62dd700157d" category="list-text"><block ref="8a1f7f28105f0b82b916d62dd700157d" category="inline-link-rx"></block></block>
   <block id="679c6b026096af4912243f7d0fe0c56a" category="inline-link">Google Cloud 文档：资源配额</block>
-  <block id="e0c1891bead6f9e2f86ecf6043345b62" category="list-text"><block ref="e0c1891bead6f9e2f86ecf6043345b62" category="inline-link-rx"></block></block>
   <block id="c35d8883ac588dc663c36bba3983f80b" category="section-title">在云中部署数据分类</block>
   <block id="d67ea3265ba6129264b22f13c6548a5b" category="paragraph">按照以下步骤在云中部署数据分类实例。控制台代理将在云中部署实例，然后在该实例上安装数据分类软件。</block>
   <block id="8b4cc0616cd3112ce97c78446249e336" category="inline-link-macro">备用实例类型</block>
@@ -2618,4 +2608,14 @@
   <block id="76d0e11c30b5dcbca92c93eb0f33daec" category="paragraph">您可以随时恢复扫描。</block>
   <block id="e018b56ef561ad538d1aca1d6fae6b6c" category="paragraph">看<block ref="15dceb3fb9d388923f206ab616cd56a9" category="inline-xref-macro-rx"></block>了解详情。</block>
   <block id="77750efa6f5ff153acdc42067058017f" category="section-title">2025年11月10日</block>
+  <block id="71a65ebb3dc98cbee7a35c227b17a9d2" category="paragraph">如果您还没有控制台代理，请创建一个。看<block ref="d5bd3e4518f2136cfa2b600a07183cdd" category="inline-link-macro-rx"></block>，<block ref="8ebe3bab1eaa1107c63d6c8e11f3037a" category="inline-link-macro-rx"></block> ， 或者<block ref="289d689c55d02ef047cce8b209e7a21e" category="inline-link-macro-rx"></block>。</block>
+  <block id="546e9d6a80a7f338dcca2f303d981d2a" category="paragraph">你也可以<block ref="9335525199017a57f50f3ba5f9c0cf66" category="inline-link-macro-rx"></block>在您网络中的 Linux 主机上，或者在云端的 Linux 主机上。</block>
+  <block id="3235c8cdd5c8a3cd602a2a8decbafa9f" category="paragraph">如果您还没有控制台代理，请在您的云提供商中创建一个控制台代理。看<block ref="b2c450c7df7c979218a1429cc503ab8d" category="inline-link-rx"></block>或者<block ref="7691630da4595c7d76220391074f5afa" category="inline-link-rx"></block>， 或者<block ref="8606c10a78408f0e631fb74a4fa73403" category="inline-link-rx"></block>。大多数情况下，您可能需要在尝试激活数据分类之前设置好控制台代理，因为大多数<block ref="5a10f16ec2dbaf433a4be955405143be" category="inline-link-rx"></block>但有些情况下，你需要现在就设置一个。</block>
+  <block id="b9b4d509fe9e3e77716d45d551ade64d" category="paragraph">请注意，您也可以<block ref="66fb3c1341fae0e6f8743c669eb701a1" category="inline-link-rx"></block>在网络或云端的 Linux 主机上。一些计划在本地安装数据分类的用户可能还会选择在本地安装控制台代理。</block>
+  <block id="639d50c4b484797455c51239e20b934e" category="paragraph">可能有些情况下你需要使用<block ref="b343c1bfd082abc4974fc8258a47d6f6" category="inline-link-rx"></block>。</block>
+  <block id="b5a65ac63c30d18f443b0320e2b34254" category="inline-link-macro">了解如何在政府区域部署控制台代理</block>
+  <block id="eb77a4cd659fccb7fe8612f8103da806" category="paragraph"><block ref="c0002063ba45db75f04eb8bb8388dddc" category="inline-link-macro-rx"></block>。</block>
+  <block id="f918c4aee73951e03ee5c0a40ad23d9e" category="list-text"><block ref="f918c4aee73951e03ee5c0a40ad23d9e" category="inline-link-macro-rx"></block></block>
+  <block id="d642b544681a16a1135a35722647009f" category="list-text"><block ref="d642b544681a16a1135a35722647009f" category="inline-link-macro-rx"></block></block>
+  <block id="7a1e3b83c1962dc960f34e0a588fe7c6" category="list-text"><block ref="7a1e3b83c1962dc960f34e0a588fe7c6" category="inline-link-macro-rx"></block></block>
 </blocks>
