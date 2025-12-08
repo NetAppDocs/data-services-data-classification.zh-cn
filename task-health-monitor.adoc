@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: task-health-monitor.html 
+keywords: health monitor, disk usage, disk utilization, cpu usage, memory usage, metrics 
+summary: 数据分类能够提供关于使用情况和利用情况的洞察，从而帮助优化性能和解决问题。 
+---
+= 监控NetApp Data Classification的运行状况
+:hardbreaks:
+:allow-uri-read: 
+:firstname: :nofooter
+:author: :nofooter
+:authorinitials: :
+:authors: :nofooter
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Data Classification健康监视器仪表板提供实时监控和性能洞察。健康监视器会捕获有关您的数据分类基础架构、系统运行状况、使用指标和利用率数据的信息，使您能够识别和解决问题。
+
+
+
+== 健康监测洞察
+
+健康监测仪表盘以四类信息呈现信息。
+
+* **基础设施状况**
++
+查看版本状态、系统稳定性、部署类型和机器规模等信息。
+
+* **问题容器**
++
+查看“问题容器”字段，以了解哪些容器已停止或频繁重启。利用这些信息调查具体的容器。
+
+* 系统信息
++
+系统信息面板捕获有关NetApp Console和数据分类的关键信息，例如公共和私有 IP 地址、主机名、操作系统、控制台版本和控制台 ID。
+
+* **用途和使用方法**
++
+查看 CPU 使用率、磁盘利用率、磁盘使用率和内存使用率。这些值以存储单位（GB）或总使用量的百分比显示。如果任何字段显示警告，请选择该警告以获取相关信息和补救建议。
+
+
+
+
+
+== 访问健康监测仪表板
+
+. 在数据分类中，选择**配置**。
+. 在“配置”标题下，选择“数据分类运行状况监视器”。
+. 在健康监测仪表板中，您可以：
++
+** 审查使用情况和利用情况。如果任何使用情况或利用率指标显示警告，请选择该警告以获取解决问题的建议。
+** 切换图表以显示 CPU 使用率、磁盘利用率、磁盘使用率和内存使用率。您可以更改 x 轴，以按小时（6、12 或 24 小时）或天（2、7 或 14 天）显示内容。
+** 刷新仪表盘以查看最新数据指标。
++
+image:health-monitor.png["健康监测仪表板的屏幕截图"]
+
+
+
+

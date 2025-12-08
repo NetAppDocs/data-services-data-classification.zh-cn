@@ -2618,4 +2618,36 @@
   <block id="f918c4aee73951e03ee5c0a40ad23d9e" category="list-text"><block ref="f918c4aee73951e03ee5c0a40ad23d9e" category="inline-link-macro-rx"></block></block>
   <block id="d642b544681a16a1135a35722647009f" category="list-text"><block ref="d642b544681a16a1135a35722647009f" category="inline-link-macro-rx"></block></block>
   <block id="7a1e3b83c1962dc960f34e0a588fe7c6" category="list-text"><block ref="7a1e3b83c1962dc960f34e0a588fe7c6" category="inline-link-macro-rx"></block></block>
+  <block id="6a6493990827c82055e808631b52c236" category="doc">1.49 版</block>
+  <block id="640602402999fbf572de482a35f449bc" category="paragraph">本次数据分类版本更新包含错误修复和以下更新：</block>
+  <block id="c257ad0ab1dd1ba68f40f6d92155f5dd" category="paragraph-title">在健康监测仪表板中监控指标和性能</block>
+  <block id="d62744b30354624c6087760cfd47ae58" category="paragraph">数据分类现在提供了一个健康监控仪表板，可以实时监控您的资源，并提供有关内存使用情况、磁盘使用情况、磁盘利用率等方面的见解。借助健康监控仪表板提供的信息，您可以查看部署的基础架构，并获得优化存储和性能的见解。</block>
+  <block id="3b3cf1105e8b8d40f3cb14b9f956e666" category="inline-link-macro">监控数据分类的运行状况</block>
+  <block id="699330677c1a0f32d795bf5b4ef62c06" category="paragraph">有关详细信息，请参阅 <block ref="47a26f0a929ccc455d276fcbc1329665" category="inline-link-macro-rx"></block>。</block>
+  <block id="bf17c0b6bb3350440ee2a9bb4f2c9d89" category="paragraph-title">提升了装载性能</block>
+  <block id="b6a3c9ea2c8f586e05010be520e7c46c" category="paragraph">数据分类中所有页面的加载性能均已得到提升，从而创造了更高效的用户体验。</block>
+  <block id="c7a647b1e9f70e39870907a0d37fc861" category="summary">数据分类能够提供关于使用情况和利用情况的洞察，从而帮助优化性能和解决问题。</block>
+  <block id="c208094b8f607967357f585bbb210ee8" category="doc">监控NetApp Data Classification的运行状况</block>
+  <block id="55378ce4db7316dfb9237beedafacea5" category="paragraph">NetApp Data Classification健康监视器仪表板提供实时监控和性能洞察。健康监视器会捕获有关您的数据分类基础架构、系统运行状况、使用指标和利用率数据的信息，使您能够识别和解决问题。</block>
+  <block id="74284c840f1a46105287599aeeb36666" category="section-title">健康监测洞察</block>
+  <block id="99c8a52d112bc64ea49b7c3ae9466bb1" category="paragraph">健康监测仪表盘以四类信息呈现信息。</block>
+  <block id="31d69bd302c379e8dd3809d44fd66b0b" category="list-text">**基础设施状况**</block>
+  <block id="224bc922db3535905d796b83072bab9e" category="paragraph">查看版本状态、系统稳定性、部署类型和机器规模等信息。</block>
+  <block id="6cf6002236ce4335abed24751f5b76ab" category="list-text">**问题容器**</block>
+  <block id="36dc167dffd8c19c769e418537d40622" category="paragraph">查看“问题容器”字段，以了解哪些容器已停止或频繁重启。利用这些信息调查具体的容器。</block>
+  <block id="fecbcd93350c62d4fa51da76bf1a71d1" category="list-text">系统信息</block>
+  <block id="56c4481830e251a9c86a214c55e28f89" category="paragraph">系统信息面板捕获有关NetApp Console和数据分类的关键信息，例如公共和私有 IP 地址、主机名、操作系统、控制台版本和控制台 ID。</block>
+  <block id="daf2396a7df11bb386f6f0b6e764d25d" category="list-text">**用途和使用方法**</block>
+  <block id="c0da9201fe0226c2cfae194eb58f075e" category="paragraph">查看 CPU 使用率、磁盘利用率、磁盘使用率和内存使用率。这些值以存储单位（GB）或总使用量的百分比显示。如果任何字段显示警告，请选择该警告以获取相关信息和补救建议。</block>
+  <block id="0e5df83893e08f2ce609d5d98a243034" category="section-title">访问健康监测仪表板</block>
+  <block id="e56e80fd2d4ecf280907b94ef6dc65d3" category="list-text">在数据分类中，选择**配置**。</block>
+  <block id="0ba19edf70d40c73c09b6ece96976c62" category="list-text">在“配置”标题下，选择“数据分类运行状况监视器”。</block>
+  <block id="9849eb5259dead598d64015da2440d80" category="list-text">在健康监测仪表板中，您可以：</block>
+  <block id="1e89a4779f111b1b55332c656e31c873" category="list-text">审查使用情况和利用情况。如果任何使用情况或利用率指标显示警告，请选择该警告以获取解决问题的建议。</block>
+  <block id="1f3e983d3d3718d5420e82cddb623f74" category="list-text">切换图表以显示 CPU 使用率、磁盘利用率、磁盘使用率和内存使用率。您可以更改 x 轴，以按小时（6、12 或 24 小时）或天（2、7 或 14 天）显示内容。</block>
+  <block id="741cc455cec02a51740c82ff294658cd" category="list-text">刷新仪表盘以查看最新数据指标。</block>
+  <block id="323f5d636a1eaba87aab3adcb85ff2db" category="inline-image-macro">健康监测仪表板的屏幕截图</block>
+  <block id="6ece59dbc8c65f220411ec2ce290cfd6" category="paragraph"><block ref="6ece59dbc8c65f220411ec2ce290cfd6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2727f68982ff25e8b3c57e026120561d" category="section-title">2025年12月8日</block>
+  <block id="3b02682cee7334412169a53934571445" category="sidebar">监控系统健康状况</block>
 </blocks>
