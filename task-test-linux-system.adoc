@@ -16,7 +16,7 @@ summary: 在 Linux 主机上手动安装数据分类之前，您可以在主机�
 [role="lead"]
 在 Linux 主机上手动安装NetApp Data Classification之前，可以选择在主机上运行脚本以验证安装数据分类的所有先决条件是否都已具备。您可以在网络中的 Linux 主机上或云中的 Linux 主机上运行此脚本。主机可以连接到互联网，或者主机可以驻留在没有互联网访问的站点（暗站）。
 
-还有一个先决条件测试脚本，它是数据分类安装脚本的一部分。此处描述的脚本专门为想要独立于运行数据分类安装脚本来验证 Linux 主机的用户设计。
+数据分类安装脚本包含一个测试脚本，以确保您的环境满足要求。您可以单独运行此脚本来验证 Linux 主机是否已准备就绪，然后再运行安装脚本。
 
 
 
@@ -24,11 +24,11 @@ summary: 在 Linux 主机上手动安装数据分类之前，您可以在主机�
 
 您将执行以下任务。
 
-. 如果您尚未安装控制台代理，则可以选择安装一个。您可以在未安装控制台代理的情况下运行测试脚本，但脚本会检查控制台代理和数据分类主机之间的连接 - 因此建议您安装控制台代理。
-. 准备主机并验证其是否满足所有要求。
-. 启用数据分类主机的出站互联网访问。
-. 验证所有系统上的所有必需端口是否都已启用。
-. 下载并运行先决条件测试脚本。
+* 如果您尚未安装控制台代理，则可以选择安装一个。您可以在未安装控制台代理的情况下运行测试脚本，但脚本会检查控制台代理和数据分类主机之间的连接 - 因此建议您安装控制台代理。
+* 准备主机并验证其是否满足所有要求。
+* 启用数据分类主机的出站互联网访问。
+* 验证所有系统上的所有必需端口是否都已启用。
+* 下载并运行先决条件测试脚本。
 
 
 
@@ -37,19 +37,24 @@ summary: 在 Linux 主机上手动安装数据分类之前，您可以在主机�
 
 您需要先安装控制台代理，然后才能安装和使用数据分类。但是，您可以在没有控制台代理的情况下运行先决条件脚本。
 
-你可以 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["在本地安装控制台代理"^]在您的网络中的 Linux 主机上或云中的 Linux 主机上。一些计划在本地安装数据分类的用户可能还会选择在本地安装控制台代理。
+你可以 link:https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["在本地安装控制台代理"^] 在您网络中的 Linux 主机上，或者在云端的 Linux 主机上。如果控制台代理安装在本地，您也可以在本地安装数据分类。
 
-要在您的云提供商环境中创建控制台代理，请参阅 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["在 AWS 中创建控制台代理"^]， https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["在 Azure 中创建控制台代理"^] ， 或者 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["在 GCP 中创建控制台代理"^]。
+要在您的云提供商环境中创建控制台代理，请参阅：
 
-运行先决条件脚本时，您将需要控制台代理系统的 IP 地址或主机名。如果您在您的场所安装了控制台代理，您将获得此信息。如果控制台代理部署在云中，您可以从控制台中找到此信息：选择帮助图标，然后选择*支持*，然后选择*控制台代理*。
+* https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["在 AWS 中创建控制台代理"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["在 Azure 中创建控制台代理"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["在 GCP 中创建控制台代理"^]
+
+
+运行先决条件脚本时，需要控制台代理系统的 IP 地址或主机名。如果您在本地安装了控制台代理，则可以获取此信息。如果控制台代理部署在云端，您可以从控制台中找到此信息：选择帮助图标，然后选择“支持”；在“代理和审核”部分，选择“转到代理”。
 
 
 
 == 验证主机要求
 
-数据分类软件必须在满足特定操作系统要求、RAM 要求、软件要求等的主机上运行。
+数据分类软件必须运行在满足特定操作系统要求、内存要求和软件要求的主机上。
 
-* 与其他应用程序共享的主机不支持数据分类 - 该主机必须是专用主机。
+* 数据分类必须运行在专用主机上。主机不能与其他应用程序或第三方软件（例如防病毒软件）共享。
 * 在您的场所构建主机系统时，您可以根据计划进行数据分类扫描的数据集的大小从这些系统大小中进行选择。
 +
 [cols="17,17,27,31"]

@@ -6,7 +6,6 @@
   <block id="9c2e66c7cc7479b8b57b9b1aa0225853" category="inline-link-macro">部署另一个数据分类实例</block>
   <block id="322805244d3cfbc06b20be41ebf54d36" category="inline-link-macro">使用多个控制台代理</block>
   <block id="813ae9f2c1d0f0f27d01eeab67dcb1d7" category="paragraph">数据分类不会对其可以扫描的数据量施加限制。每个控制台代理支持扫描和显示 500 TiB 的数据。要扫描超过 500 TiB 的数据，<block ref="d1d02c710daba5ea82985e30be7b0051" category="inline-link-macro-rx"></block>然后<block ref="b84ff2addee2a287f168d097865dda36" category="inline-link-macro-rx"></block>。 + 控制台 UI 显示来自单个连接器的数据。有关查看来自多个控制台代理的数据的提示，请参阅<block ref="1fc134af43ed7d59a9071c288f242f94" category="inline-link-macro-rx"></block>。</block>
-  <block id="c459d0d5027551c8ad596d2701837012" category="list-text">与其他应用程序共享的主机不支持数据分类 - 该主机必须是专用主机。</block>
   <block id="14246e64b6cc314c499299b0f4808cdb" category="list-text">在您的场所构建主机系统时，您可以根据计划进行数据分类扫描的数据集的大小从这些系统大小中进行选择。</block>
   <block id="8c270421a057347baf727ea386f58d8f" category="cell">系统大小</block>
   <block id="2b55387dd066c5bac646ac61543d152d" category="cell">CPU</block>
@@ -2167,7 +2166,6 @@
   <block id="1be13928b8bb7dda39b97e766c497b4e" category="summary">在 Linux 主机上手动安装数据分类之前，您可以在主机上运行脚本来验证安装数据分类的所有先决条件是否都已具备。您可以在网络中的 Linux 主机上或云中的 Linux 主机上运行此脚本。主机可以连接到互联网，或者主机可以驻留在没有互联网访问的站点。</block>
   <block id="16b2ab7371415f7c5eda355d2064fce6" category="doc">检查您的 Linux 主机是否已准备好安装NetApp Data Classification</block>
   <block id="1cd2484a5f2f38d921ddaabe75696063" category="paragraph">在 Linux 主机上手动安装NetApp Data Classification之前，可以选择在主机上运行脚本以验证安装数据分类的所有先决条件是否都已具备。您可以在网络中的 Linux 主机上或云中的 Linux 主机上运行此脚本。主机可以连接到互联网，或者主机可以驻留在没有互联网访问的站点（暗站）。</block>
-  <block id="d415bef0d68feb20309fa2927304dc79" category="paragraph">还有一个先决条件测试脚本，它是数据分类安装脚本的一部分。此处描述的脚本专门为想要独立于运行数据分类安装脚本来验证 Linux 主机的用户设计。</block>
   <block id="bf647454e36069fd16f1a7a35cf6a865" category="section-title">入门指南</block>
   <block id="88a37f7fbc3214e9153d0377c4db9ded" category="paragraph">您将执行以下任务。</block>
   <block id="241053df5606e0d439be4d3e91d4224b" category="list-text">如果您尚未安装控制台代理，则可以选择安装一个。您可以在未安装控制台代理的情况下运行测试脚本，但脚本会检查控制台代理和数据分类主机之间的连接 - 因此建议您安装控制台代理。</block>
@@ -2176,11 +2174,7 @@
   <block id="1dc78a625057b828e3c9842b6a68f0f6" category="list-text">验证所有系统上的所有必需端口是否都已启用。</block>
   <block id="638dfa4dd42c802c871ad02b969b48ab" category="list-text">下载并运行先决条件测试脚本。</block>
   <block id="e9baee2a4f78225d19d9d1c38a6df205" category="paragraph">您需要先安装控制台代理，然后才能安装和使用数据分类。但是，您可以在没有控制台代理的情况下运行先决条件脚本。</block>
-  <block id="faf8844abf71745359231ca0c3b68035" category="paragraph">你可以<block ref="343ab61366cc70436c2320a4d03ee96b" category="inline-link-rx"></block>在您的网络中的 Linux 主机上或云中的 Linux 主机上。一些计划在本地安装数据分类的用户可能还会选择在本地安装控制台代理。</block>
-  <block id="da43836db702b2bca882af8c4b45817c" category="paragraph">要在您的云提供商环境中创建控制台代理，请参阅<block ref="063a55799f8d644bc7ac566504e81809" category="inline-link-rx"></block>，<block ref="d06e67507fcb22c356889f00d5b444fe" category="inline-link-rx"></block> ， 或者<block ref="6805b3d46343d30ae27cc1503d8e2a50" category="inline-link-rx"></block>。</block>
-  <block id="e6527c2694cae7b14a8260e681318eb1" category="paragraph">运行先决条件脚本时，您将需要控制台代理系统的 IP 地址或主机名。如果您在您的场所安装了控制台代理，您将获得此信息。如果控制台代理部署在云中，您可以从控制台中找到此信息：选择帮助图标，然后选择*支持*，然后选择*控制台代理*。</block>
   <block id="93144470251168b3e5488b736447f48f" category="section-title">验证主机要求</block>
-  <block id="5a35c7694b8f3829307dcde4ac0f06a9" category="paragraph">数据分类软件必须在满足特定操作系统要求、RAM 要求、软件要求等的主机上运行。</block>
   <block id="2e7d217490cca9f4436994c93bba3bd5" category="paragraph">如果您计划使用其他数据分类主机作为扫描器节点（在分布式模型中），请在此时将这些规则添加到您的主系统：</block>
   <block id="810dff52416162c2f79a643152a575ba" category="admonition">对于安装在没有互联网连接的站点的主机系统，不需要本节。</block>
   <block id="2c9810189a9662217559e6c599b47a67" category="cell">8080 (TCP)、443 (TCP) 和 80。9000</block>
@@ -2650,4 +2644,13 @@
   <block id="6ece59dbc8c65f220411ec2ce290cfd6" category="paragraph"><block ref="6ece59dbc8c65f220411ec2ce290cfd6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2727f68982ff25e8b3c57e026120561d" category="section-title">2025年12月8日</block>
   <block id="3b02682cee7334412169a53934571445" category="sidebar">监控系统健康状况</block>
+  <block id="199728aa05786f9f41b3140d025353e2" category="list-text">数据分类必须运行在专用主机上。主机不能与其他应用程序或第三方软件（例如防病毒软件）共享。</block>
+  <block id="cc2f809338aeb90513fd5d335abc18b2" category="paragraph">数据分类安装脚本包含一个测试脚本，以确保您的环境满足要求。您可以单独运行此脚本来验证 Linux 主机是否已准备就绪，然后再运行安装脚本。</block>
+  <block id="ac5df91391e146d13ac61a909161e5e5" category="paragraph">你可以 <block ref="b05bc1a82ba8aa93695b18917e23ffd8" category="inline-link-macro-rx"></block> 在您网络中的 Linux 主机上，或者在云端的 Linux 主机上。如果控制台代理安装在本地，您也可以在本地安装数据分类。</block>
+  <block id="6d69772abdf589ea602f8071cbf783ed" category="paragraph">要在您的云提供商环境中创建控制台代理，请参阅：</block>
+  <block id="57d97cf09f86f81d75b459840c0ba8eb" category="list-text"><block ref="57d97cf09f86f81d75b459840c0ba8eb" category="inline-link-rx"></block></block>
+  <block id="a3ac13f6218d44f6f15beadc4d86502e" category="list-text"><block ref="a3ac13f6218d44f6f15beadc4d86502e" category="inline-link-rx"></block></block>
+  <block id="99472e84d7b0a6bdf69b082286217650" category="list-text"><block ref="99472e84d7b0a6bdf69b082286217650" category="inline-link-rx"></block></block>
+  <block id="6c1aa195a9abc1b402b9f2ded0d68124" category="paragraph">运行先决条件脚本时，需要控制台代理系统的 IP 地址或主机名。如果您在本地安装了控制台代理，则可以获取此信息。如果控制台代理部署在云端，您可以从控制台中找到此信息：选择帮助图标，然后选择“支持”；在“代理和审核”部分，选择“转到代理”。</block>
+  <block id="7a49d8bea04f537bdd8b9c0dadc345aa" category="paragraph">数据分类软件必须运行在满足特定操作系统要求、内存要求和软件要求的主机上。</block>
 </blocks>
