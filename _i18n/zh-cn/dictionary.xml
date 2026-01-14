@@ -6,7 +6,6 @@
   <block id="9c2e66c7cc7479b8b57b9b1aa0225853" category="inline-link-macro">部署另一个数据分类实例</block>
   <block id="322805244d3cfbc06b20be41ebf54d36" category="inline-link-macro">使用多个控制台代理</block>
   <block id="813ae9f2c1d0f0f27d01eeab67dcb1d7" category="paragraph">数据分类不会对其可以扫描的数据量施加限制。每个控制台代理支持扫描和显示 500 TiB 的数据。要扫描超过 500 TiB 的数据，<block ref="d1d02c710daba5ea82985e30be7b0051" category="inline-link-macro-rx"></block>然后<block ref="b84ff2addee2a287f168d097865dda36" category="inline-link-macro-rx"></block>。 + 控制台 UI 显示来自单个连接器的数据。有关查看来自多个控制台代理的数据的提示，请参阅<block ref="1fc134af43ed7d59a9071c288f242f94" category="inline-link-macro-rx"></block>。</block>
-  <block id="14246e64b6cc314c499299b0f4808cdb" category="list-text">在您的场所构建主机系统时，您可以根据计划进行数据分类扫描的数据集的大小从这些系统大小中进行选择。</block>
   <block id="8c270421a057347baf727ea386f58d8f" category="cell">系统大小</block>
   <block id="2b55387dd066c5bac646ac61543d152d" category="cell">CPU</block>
   <block id="05289cee10f1f9057410b216de0d7e36" category="cell">RAM（必须禁用交换内存）</block>
@@ -32,7 +31,6 @@
   <block id="e7d3c98d4730560139776bd99350f7c9" category="list-text">*GCP 机器类型*：“n2-standard-16”。<block ref="0560993eb8cc456f0c5f18a57a7d0f71" category="inline-link-macro-rx"></block> 。</block>
   <block id="114b40cee02180a916d6e0a652f1300d" category="list-text">*UNIX 文件夹权限*：需要以下最低 UNIX 权限：</block>
   <block id="b0f2b97dc5d2b76b26e040408bb1d8af" category="cell">文件夹</block>
-  <block id="9dc48a158dad20b2148d68f6a5863b5e" category="cell">最低权限</block>
   <block id="d42b9c57d24cf5db3bd8d332dc35437f" category="cell">/tmp</block>
   <block id="f1e98237c93c0717db2bfa4c6177762f" category="cell"><block ref="4d0e8b4926781b53ee3d95354f5c8bb5" prefix="" category="inline-code"></block></block>
   <block id="68ab1268abb7e5f5688810968df97d6b" category="cell">/选择</block>
@@ -50,7 +48,6 @@
   <block id="d4113e36e86a18cdd4a4813e9e66b30e" category="list-text">必须在主机系统上启用高级矢量扩展 (AVX2)。</block>
   <block id="f2183b09e54e4aa491c008ea8ca08bbc" category="list-text">*Red Hat 订阅管理*：主机必须在 Red Hat 订阅管理中注册。如果未注册，系统将无法访问存储库来在安装期间更新所需的第三方软件。</block>
   <block id="c925667b183375955ce7e62c22a4acdf" category="list-text">*附加软件*：安装数据分类之前，必须在主机上安装以下软件：</block>
-  <block id="2a2958e5280a05650587dc8d454a5f8d" category="list-text">根据您使用的操作系统，您需要安装其中一个容器引擎：</block>
   <block id="117c0c98e2a5cb3503de68c655378d13" category="inline-link">查看安装说明</block>
   <block id="42b04f3730744d602d0c4b812384dce9" category="list-text">Docker Engine 版本 19.3.1 或更高版本。<block ref="bbcf0e5e8b0c8687d84c2c22a5ad2ecf" category="inline-link-rx"></block> 。</block>
   <block id="1e61042bc6437e79f5a1cc09c86acd1a" category="list-text">Podman 版本 4 或更高版本。要安装 Podman，请输入<block ref="9305f04686d4e3dadce4d1e9e77d9d71" prefix="(" category="inline-code"></block>）。</block>
@@ -1031,7 +1028,6 @@
   <block id="fdc70de4a3ff53369e5ddb3633c1a655" category="paragraph">_节省机会_组件显示您可以删除或分层到较便宜的对象存储的数据。 《节省机会》中的数据每 2 小时更新一次。您也可以手动更新数据。</block>
   <block id="07d1846c53b76f00910e641f12d09fd8" category="list-text">从数据分类菜单中，选择*治理*。</block>
   <block id="70de9418b6d77c7f4c2d4632b262c0df" category="list-text">在治理仪表板的每个节省机会图块中，选择*优化存储*以在调查页面中查看过滤的结果。要发现您应该删除或分层到较便宜的存储的任何数据，请调查_节省机会_。</block>
-  <block id="da7e456f74e6e77de59afc145e42d85d" category="list-text">*陈旧数据* - 上次修改的数据是在 3 年前。</block>
   <block id="dc6d9a4419750aae3db17878ffe18e5c" category="inline-link-macro">查看显示的重复文件类型</block>
   <block id="5791d2ebf242b348a1cbfa550a356083" category="list-text">*重复文件* - 您正在扫描的数据源中其他位置重复的文件。<block ref="4f528c73ac5ca4ef85380f36d4dccad7" category="inline-link-macro-rx"></block> 。</block>
   <block id="dfd23906ba391609b608a93fdd40fdb2" category="admonition">如果您的任何数据源实现了数据分层，则可以在“陈旧数据”类别中识别已经驻留在对象存储中的旧数据。</block>
@@ -1125,21 +1121,8 @@
   <block id="bec06ffefcc7ab6b7882b310c3c7790a" category="list-text">通过搜索、排序、扩展特定文件的详细信息、单击“调查结果”查看屏蔽信息或下载文件列表来调查数据。</block>
   <block id="3265c9e86d312c6ca0f5f0bd0ae3bb17" category="summary">NetApp Data Classification使您能够自定义敏感信息的搜索，并根据与您的组织相关的个别模式和关键字定制服务。</block>
   <block id="79dfb2dc15cbc8bb59c764a1eeb110a7" category="doc">在NetApp Data Classification中创建自定义分类</block>
-  <block id="e53ce77d74c0a69af874134b7d8f39cf" category="paragraph">使用NetApp Data Classification，您可以创建敏感信息的自定义搜索。搜索范围可以限定为正则表达式（regex）。</block>
-  <block id="166182078c23275fb3140bd76772894f" category="paragraph">自定义分类仅适用于地图和分类扫描，不适用于仅映射扫描。此功能目前处于预览状态。</block>
   <block id="b89901231bd925d9935358eec83c9df7" category="list-text">选择**自定义分类**选项卡。</block>
-  <block id="75397441bf4c14c2afae2e04e7cd5571" category="list-text">选择**添加新分类器**按钮。</block>
-  <block id="2dec625d6c345cf302dbf7d35c450b10" category="list-text">为新分类器添加分类器名称和描述。</block>
-  <block id="46d2a8f57f8272ef959d08642ec54e72" category="list-text">选择将分类器添加为*个人标识符*或*类别*。</block>
-  <block id="69750659c6ac332ddddc11e18c4ac065" category="inline-image-macro">添加分类器的屏幕截图</block>
-  <block id="160081b5f7d9182afb44b790dcb7357e" category="paragraph"><block ref="160081b5f7d9182afb44b790dcb7357e" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">选择“下一步”。</block>
-  <block id="0290a20bef89a572b708f13b5de6010d" category="list-text">要将自定义添加为正则表达式，请选择**自定义正则表达式**，然后选择**下一步**。</block>
-  <block id="ce6c93af63d5a72eb3c15bc99afe14ec" category="inline-image-macro">创建正则表达式的对话框的屏幕截图。</block>
-  <block id="2fbc1bcaba732168404159c46526458c" category="list-text">添加一个模式来检测数据的特定信息。选择**验证**来确认您输入的语法。<block ref="931af7ddfc52cb7655deb8b332ab2e24" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="6d7ee64f46753faf45fb70361a3d7659" category="list-text">选择**完成**来创建自定义分类。</block>
   <block id="becce430afb103abe05ad66b3e6cde8a" category="inline-xref-macro">生成合规性报告</block>
-  <block id="92dbbe7b48f44c4348b9a878f60f182e" category="paragraph">新的定制将在下一次计划扫描中捕获。要查看结果，请参阅<block ref="9d0d45f702bd2dff4853a9920dd0f534" category="inline-xref-macro-rx"></block>。</block>
   <block id="c96a9d84a663911f2a121acca6ddb4ba" category="summary">完成几个步骤即可在云中部署NetApp Data Classification。  NetApp Console将数据分类实例部署在与控制台代理相同的云提供商网络中。</block>
   <block id="e7d1c98dba976d189ba1f2507302b650" category="doc">使用NetApp Console在云中部署NetApp Data Classification</block>
   <block id="6ce84a46ad99469863f22b588d00cd1b" category="paragraph">您可以使用NetApp Console在云中部署NetApp Data Classification。控制台将数据分类实例部署在与控制台代理相同的云提供商网络中。</block>
@@ -2125,7 +2108,6 @@
   <block id="e7e9f49f4584c68b9d97c578e73b7583" category="list-text">在控制台的右上角，选择“帮助”图标，然后选择“*支持*”。</block>
   <block id="2974170a8b1b5b4a2ac69aacd4c1c9c3" category="list-text">从支持注册页面找到您的帐户 ID 序列号。</block>
   <block id="b50f0a46135bcb7083b1f2f82032fc26" category="inline-image-macro">帮助菜单的屏幕截图，其中支持是第一个选项</block>
-  <block id="379f9cd57d97013f3f7fdd24f692a0b1" category="paragraph"><block ref="379f9cd57d97013f3f7fdd24f692a0b1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="dd50e314c18933734174c1156dd9237f" category="inline-link">NetApp 的支持注册网站</block>
   <block id="78f94e749b89d69dcbf3baff21ccb958" category="list-text">导航至<block ref="e1c4be66250fd76d5c52bfe2cb7daee2" category="inline-link-rx"></block>并选择*我不是注册的NetApp客户*。</block>
   <block id="d4f633ef130727b2776fa7f45024ca7d" category="list-text">填写必填字段（带有红色星号的字段）。</block>
@@ -2148,7 +2130,6 @@
   <block id="5bc1315a63455544e7a917a7cc968939" category="paragraph">这些 NSS 凭证与您的特定控制台帐户 ID 相关联。属于控制台组织的用户可以从*支持 &gt; NSS 管理*访问这些凭据。</block>
   <block id="328a2c1e7778e9edaf79d90c51409ac4" category="list-text">如果您有客户级帐户，则可以添加一个或多个 NSS 帐户。</block>
   <block id="e3cd99e4aa330ae6bdfb3754d83ae962" category="list-text">如果您有合作伙伴或经销商帐户，则可以添加一个或多个 NSS 帐户，但不能与客户级帐户一起添加。</block>
-  <block id="e8d4092baef6680c6a35d5228ae31de2" category="paragraph"><block ref="e8d4092baef6680c6a35d5228ae31de2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c0e0b7ff0de9558404e9b77ece42948a" category="list-text">选择*NSS 管理 &gt; 添加 NSS 帐户*。</block>
   <block id="85b9386ed443776127e099931d73448a" category="list-text">当出现提示时，选择“*继续*”以重定向到 Microsoft 登录页面。</block>
   <block id="d59e0b46782e48a01966e5c7ccc38d17" category="paragraph">NetApp使用 Microsoft Entra ID 作为特定于支持和许可的身份验证服务的身份提供者。</block>
@@ -2160,8 +2141,6 @@
   <block id="a04a3a5322782e8c18d0d64be7e1ccbc" category="paragraph">如果您已有客户级 NSS 帐户并尝试添加合作伙伴级帐户，情况也是如此。</block>
   <block id="1afe8a81cfddc9fa9559e272bb6b9496" category="list-text">成功登录后， NetApp将存储 NSS 用户名。</block>
   <block id="1dcb63fd55c4d22e87cb32275b8cc808" category="inline-image-macro">三个水平点的图标</block>
-  <block id="0dfcbbbe02d3e96f8ad78782e8772587" category="paragraph">这是系统生成的映射到您的电子邮件的 ID。在*NSS 管理*页面上，您可以显示来自<block ref="5151db0ded96d46f40ae09b5e5b167a1" category="inline-image-macro-rx" type="image"></block>菜单。</block>
-  <block id="fc79de85a483938f72fbcb9822ec0ae3" category="list-text">如果您需要刷新登录凭证令牌，还有一个*更新凭证*选项<block ref="5151db0ded96d46f40ae09b5e5b167a1" category="inline-image-macro-rx" type="image"></block>菜单。</block>
   <block id="b14d512a3c64fb5df16f6721b0603c63" category="paragraph">使用此选项会提示您再次登录。请注意，这些帐户的令牌将在 90 天后过期。我们将发布通知来提醒您此事。</block>
   <block id="1be13928b8bb7dda39b97e766c497b4e" category="summary">在 Linux 主机上手动安装数据分类之前，您可以在主机上运行脚本来验证安装数据分类的所有先决条件是否都已具备。您可以在网络中的 Linux 主机上或云中的 Linux 主机上运行此脚本。主机可以连接到互联网，或者主机可以驻留在没有互联网访问的站点。</block>
   <block id="16b2ab7371415f7c5eda355d2064fce6" category="doc">检查您的 Linux 主机是否已准备好安装NetApp Data Classification</block>
@@ -2588,7 +2567,6 @@
   <block id="d34f29080dba1970a613ab39b7166d0c" category="paragraph">本次数据分类版本更新包括错误修复、安全改进和性能提升。</block>
   <block id="8905ad2fb9f028e6bd28666015b4b50a" category="paragraph-title">增强扫描进度清晰度</block>
   <block id="206c07a2ed5644be711186a00b2c6ae2" category="paragraph">扫描配置现在包含对扫描完成情况的更深入洞察。以前，进度条只在扫描进行时显示。现在，扫描完成后进度条仍然可见，以确认扫描已成功完成。您还可以查看已映射和已扫描的文件数量。</block>
-  <block id="dc9fb8f25cdf758c060f4782f41b0b0f" category="paragraph">有关扫描设置的更多信息，请参阅 <block ref="19cf1405cd38e956788f418f2be34a68" category="inline-link-macro-rx"></block>。</block>
   <block id="eb3cd7064baa457b68c9e6f4bc37005a" category="paragraph">数据分类会比较所有文件（数据库除外）是否存在重复项，如果存在重复项，则进行以下操作：</block>
   <block id="0ca96e556827c0f5e25df8d0643f52ed" category="list-text">1 MB 或更大</block>
   <block id="618a117288f96069f1cdbf0f4bded643" category="list-text">或包含个人信息或敏感个人信息</block>
@@ -2653,4 +2631,95 @@
   <block id="99472e84d7b0a6bdf69b082286217650" category="list-text"><block ref="99472e84d7b0a6bdf69b082286217650" category="inline-link-rx"></block></block>
   <block id="6c1aa195a9abc1b402b9f2ded0d68124" category="paragraph">运行先决条件脚本时，需要控制台代理系统的 IP 地址或主机名。如果您在本地安装了控制台代理，则可以获取此信息。如果控制台代理部署在云端，您可以从控制台中找到此信息：选择帮助图标，然后选择“支持”；在“代理和审核”部分，选择“转到代理”。</block>
   <block id="7a49d8bea04f537bdd8b9c0dadc345aa" category="paragraph">数据分类软件必须运行在满足特定操作系统要求、内存要求和软件要求的主机上。</block>
+  <block id="dab1073bd81b638476185f7da08c7e72" category="list-text">选择与您计划使用数据分类扫描的数据集相符的大小。</block>
+  <block id="baf6246d7a1f90583599825a4d8818c0" category="cell">最低权限</block>
+  <block id="cd3fbf7c4da6e490eec17762a02afcb8" category="list-text">根据您使用的操作系统，您需要安装其中一个容器引擎：</block>
+  <block id="9f4066a8aad2a422e68c5b69dd9472f8" category="paragraph">有关扫描设置的更多信息，请参阅 <block ref="26da27bca2c7e859f7f769768b8a4285" category="inline-link-macro-rx"></block>。</block>
+  <block id="a4abecdc1a189db5254898cad3b99a7e" category="doc">1.50 版</block>
+  <block id="0bbdca5358fc47c779aaa8d26a52510f" category="paragraph-title">自定义分类改进</block>
+  <block id="3d1c64f6b833049963a84f1722911079" category="paragraph">数据分类功能现在支持创建自定义数据类别。您可以上传文件来微调数据分类所使用的 AI 模型，以便将类别标记应用于数据。所有自定义分类的界面都得到了改进。</block>
+  <block id="1ea7cf77170c31be18fc52c7e9649923" category="paragraph">有关详细信息，请参阅 <block ref="c45381d223df5e8e5c4b98a60b8b65d3" category="inline-link-macro-rx"></block>。</block>
+  <block id="3e1e55a16c45f87e5a51189ca804eaf3" category="paragraph-title">自定义过期数据定义</block>
+  <block id="97b36bc8814884dc26bf5a568d08d691" category="paragraph">数据分类功能现在允许您自定义过期数据的定义，以满足您组织的需求。此前，过时数据被定义为三年前最后一次修改的数据。现在，可以根据上次访问时间或上次修改时间来识别过时的数据；时间段可以从 6 个月前到 10 年前不等。</block>
+  <block id="493a301aeed6d63ec61fcc12caab7b22" category="inline-link-macro">自定义过期数据定义</block>
+  <block id="14748686f892545cd3b61c5ed2221369" category="paragraph">有关详细信息，请参阅 <block ref="a0a0e231fdda706f469e0c838920ede3" category="inline-link-macro-rx"></block>。</block>
+  <block id="e887aed8f9c3dbecd37e8896d96b6637" category="paragraph-title">性能提升</block>
+  <block id="0106b64c8d04b65e1353d763ca518487" category="paragraph">数据分类、数据映射报告和调查页面上的筛选器等所有页面的加载时间都已缩短。</block>
+  <block id="ff7b9533f576d72772ad31931f1070c3" category="paragraph-title">调查报告预计完成时间</block>
+  <block id="317bcae14c763efc48845c774a224df6" category="paragraph">下载调查报告时，“数据分类”现在会显示下载完成的预计时间。</block>
+  <block id="6abf7fab7b752e46fde7722aa48e8370" category="list-text">*过期数据* - 默认情况下，如果数据上次修改时间超过 3 年，则该数据被视为过期数据。您可以[自定义过期数据的定义](task-stale-data.html)。</block>
+  <block id="c44dcda9842080ca5e1535aa1424097c" category="paragraph">NetApp Data Classification允许您创建自定义类别或个人标识符，以识别特定于您组织监管和合规要求的数据。</block>
+  <block id="30e06b6620c9e16c96bc86941ba219fa" category="paragraph">数据分类支持两种类型的自定义分类器：类别和个人标识符。自定义类别是根据您上传的一组文件创建的，数据分类功能会根据这些文件创建一个 AI 模型，以识别您组织中的类似数据（例如，一家健康研究公司可能会创建一个临床分析类别）。使用关键字列表或正则表达式 (regex) 创建自定义个人标识符，以识别贵组织特有的、可能构成合规风险的信息。</block>
+  <block id="ad1196a8e2ab72278c680e142d978bc4" category="paragraph">所有自定义分类都可以在自定义分类控制面板中找到。</block>
+  <block id="1ba1b3a444d3d64f9daabf45fb989fd2" category="section-title">创建自定义个人标识符</block>
+  <block id="b4939a2e8d6bd43aaa8bc680f9eae2fb" category="paragraph">数据分类功能允许您使用上下文关键字或正则表达式创建自定义个人标识符，以识别贵组织特有的数据。</block>
+  <block id="ffc8a633e652805bd5ef66036dbc527c" category="paragraph-title">关键词要求</block>
+  <block id="e795baca6e06f00e94a8ede6d1df02c6" category="paragraph">如果您使用关键词列表创建个人标识符，则该列表必须满足以下要求：</block>
+  <block id="dbdc75dca548c0496ce98b34a114fe10" category="list-text">关键词输入不区分大小写。</block>
+  <block id="33cbb77faa9b15f7237792726483de99" category="list-text">关键词必须至少包含三个字符。长度少于三个字符的单词将被忽略。</block>
+  <block id="9b2456bacc9d094f1cd53f784d659a37" category="list-text">重复的词语只会添加一次。</block>
+  <block id="b19b7076c7db40a4b28fe26aec9c9b4b" category="list-text">关键词总数不能超过 50 万个字符。列表中必须至少包含一个关键词。</block>
+  <block id="cf1e8338b7ca586bb5f08c18c3ae72c2" category="list-text">选择**+ 新建分类器**以创建自定义分类器。</block>
+  <block id="cf7d4d402d28087d21ec9bec73735b5b" category="list-text">请选择*个人标识符*。（可选）选择“屏蔽结果”以屏蔽检测到的个人数据。</block>
+  <block id="c716b644cde6bcf010e93cdafcb078a0" category="list-text">选择**下一步**。</block>
+  <block id="bd4c44c38eaba14b323cbe03eea80fda" category="inline-image-macro">选择分类器类型的屏幕截图。</block>
+  <block id="c27932e7af336b0cc016dbf946dd3dc6" category="paragraph"><block ref="c27932e7af336b0cc016dbf946dd3dc6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="22fa659d0a0e0b67e69dcc66c25fbc92" category="inline-image-macro">创建自定义关键词分类器的屏幕截图。</block>
+  <block id="2bdbb2525ac7bacd2b3d7bbcd0882360" category="list-text">要添加带关键词的分类器，请选择**关键词**。请输入关键词列表，每个关键词占一行。请确保关键词符合要求。 <block ref="eadc639f92793e875eac44a06d796796" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c8b0a564997abd595267a333d8fe04e4" category="paragraph">要将分类器添加为正则表达式，请选择**正则表达式**，然后添加一个模式来检测数据的特定信息。选择**验证**以确认您输入的语法正确。</block>
+  <block id="cd1c98088a39f34696fe79ebc1562bec" category="inline-image-macro">创建正则表达式对话框的屏幕截图。</block>
+  <block id="469301e5e880e425be8c3237a9909f8a" category="paragraph"><block ref="469301e5e880e425be8c3237a9909f8a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="69de7e8ad4204438d509ae28653d0494" category="list-text">（可选）输入一个应该与正则表达式模式匹配的示例字符串，然后选择**测试**进行检查。</block>
+  <block id="7b94065cc0be228fca6962098693c997" category="list-text">（可选）添加邻近词。如果添加邻近词，数据分类仅在邻近词与匹配字符串相邻时才标记正则表达式模式。</block>
+  <block id="e882fe7b3895b8dcc5b7bcf492c3a817" category="list-text">输入**分类器名称**和**描述**，以便在仪表板中标识自定义类别。</block>
+  <block id="e945e9a3916160ca29d877b518797840" category="list-text">选择**保存**以创建自定义个人标识符。</block>
+  <block id="11e3c6d90314baadaf9594e0d711327d" category="paragraph">创建自定义个人标识符后，其结果将在下次计划扫描中捕获。为了更快地获取结果，请执行按需扫描。要查看结果，请参阅 <block ref="9d0d45f702bd2dff4853a9920dd0f534" category="inline-xref-macro-rx"></block>。</block>
+  <block id="ee23f91f9500eeb3cb3e89e705562b0c" category="section-title">创建自定义类别</block>
+  <block id="7376edb702d9f8b9c9ab4cd81594643c" category="paragraph">通过自定义类别，您可以对特定于您组织的数据进行分类。自定义类别是根据您上传的文本文件创建的，数据分类功能会根据这些文件创建一个人工智能模型，以识别其他文件中的类似信息。</block>
+  <block id="634023398ed1caee657db7fc4eb08979" category="list-title">训练数据要求</block>
+  <block id="5508b330ba8096375edcddabb69df349" category="list-text">训练数据集必须至少包含 25 个文件。最大文件数为 1,000。</block>
+  <block id="1f0391202e3ca0e262147c4807d1247d" category="list-text">所有文件必须直接位于您提供的文件路径中。</block>
+  <block id="1476c5f6234c59512221e8fdd2d77b60" category="list-text">所有文件必须大于 100 字节。</block>
+  <block id="7764de07beec7179c2ed0242747ba52a" category="list-text">数据分类训练数据必须是以下文件类型之一：CSV、DOCX、DOC、GZ、JSON、PDF、PPTX、TXT、RTT、XLS 或 XLSX。您可以上传所有支持的文件类型的组合。</block>
+  <block id="a49188ca3667eda075a449f49fa25fda" category="list-text">在NetApp Data Classification中，选择“自定义分类”。</block>
+  <block id="c8f6ab5cc81dd9729dc1fa1107541cc8" category="list-text">选择 *+ 新建分类器*。</block>
+  <block id="93b1450efc0df8091ae7ecdd258dd189" category="list-text">选择“自定义类别”作为分类器类型，然后**下一步**。</block>
+  <block id="7d52d3b40d52e36a1f4c546542c8d0a3" category="list-text">使用一系列基于文本的文件来定义自定义类别的逻辑。请提供*工作地址*的IP地址，然后从下拉菜单中选择*音量*。</block>
+  <block id="582dcf1234f91300d5dd559e2b759d04" category="paragraph">输入包含训练数据的目录的**目录路径**。</block>
+  <block id="dc6d46e682032130076140b1c6b9f422" category="list-text">选择“加载文件”进行数据分类，以执行文件检查。您可以查看文件摘要，其中列出了文件名、大小、类型和备注（如果该文件被认为适合用于培训）。</block>
+  <block id="60d2aee5a316a80a131d402c7cfaa44a" category="inline-image-macro">屏幕截图显示了上传用于训练的文件摘要。</block>
+  <block id="6ca27c96af59179d21a409d88cb4139c" category="paragraph"><block ref="6ca27c96af59179d21a409d88cb4139c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="839860ecb593c72a6c18f98bd45565b0" category="list-text">要更改文件路径或重新上传文件，请选择**更改路径**，然后输入数据并再次加载文件。</block>
+  <block id="78edc8efdc4ac520c8f06ac58e069eac" category="list-text">当您对上传的文件满意后，请选择**下一步**。</block>
+  <block id="baacdea09c8bef5361744801ca025b67" category="list-text">选择**保存**以创建自定义类别。</block>
+  <block id="d2edcb6e893e23e45a9b667d3d7f0c9e" category="paragraph">创建自定义类别后，其结果将在下次计划扫描中捕获。为了更快地获取结果，请手动启动扫描。</block>
+  <block id="de6c38194e516df4fcb360803e7bc45b" category="section-title">编辑自定义分类器</block>
+  <block id="00af115e508e98110cd2d8e399b9ee0d" category="paragraph">创建个人标识符后，您可以修改其逻辑。您无法更改个人标识符的类型或逻辑类型；例如，您无法将自定义类别更改为自定义个人标识符。您也不能将基于关键字的自定义标识符更改为基于正则表达式的自定义标识符。</block>
+  <block id="df302e54bc4bbb3693588fc462ffbeb1" category="list-text">确定要删除的分类器，然后选择操作菜单<block ref="2f43b42fd833d1e77420a8dae7419000" prefix=" " category="inline-code"></block> 在它那一行的末尾。</block>
+  <block id="7796faadbea75fe3608c9ba1d9f44e44" category="list-text">选择**编辑逻辑**。</block>
+  <block id="7453a1c1616bf1348f6f77fc1196c4df" category="list-text">如果要修改关键词，请添加、删除或编辑相应的关键词。如果要修改正则表达式，请输入新的正则表达式并进行验证。（可选）添加邻近关键词。</block>
+  <block id="b545932772e1164fe11f0b729a00c13f" category="list-text">选择“保存”以应用更改。</block>
+  <block id="0aba856a8621c76c8747404bef41ae34" category="section-title">删除自定义分类器</block>
+  <block id="cbeceb64fbec50832e1e348746cb5499" category="list-text">确定要删除的分类器，然后选择操作菜单<block ref="2f43b42fd833d1e77420a8dae7419000" prefix=" " category="inline-code"></block> 在它那一行的末尾。</block>
+  <block id="5eb8d39406f33bac15e75a46db7ad955" category="list-text">选择**删除分类器**。</block>
+  <block id="cce78dc6ebbec7385a01f2146d6d01c8" category="section-title">下一步</block>
+  <block id="9d0d45f702bd2dff4853a9920dd0f534" category="list-text"><block ref="9d0d45f702bd2dff4853a9920dd0f534" category="inline-xref-macro-rx"></block></block>
+  <block id="14e54339fc3ec740d220afd6b1ee35ed" category="summary">自定义NetApp Data Classification中过期数据的定义，使报告符合您的组织需求。</block>
+  <block id="b5a4424f99a791a0f222cc5ae7923d73" category="doc">在NetApp Data Classification中自定义过期数据定义</block>
+  <block id="9c7dd10cb5831cf239a4bc5dedbb332b" category="paragraph">NetApp Data Classification可识别过时数据，帮助您发现节省成本的机会和治理风险。由于不同组织环境中对过时数据的定义可能有所不同，因此您可以自定义数据分类如何定义过时数据。</block>
+  <block id="a19fda4781709630dbfb543922e4d612" category="paragraph">过期数据可以根据其上次访问时间或上次修改时间来定义。时间段选择范围从 6 个月前到 10 年前。</block>
+  <block id="24ece81002d5816b98626cc57ced872d" category="paragraph">默认情况下，如果数据上次修改时间距今已有三年，则该数据被视为过期数据。</block>
+  <block id="c3d635823e7267511f7a0ba59b131053" category="list-title">定义过期数据</block>
+  <block id="41c8212e8259ff083fe9cdf357f8a4a6" category="list-text">在勒索软件恢复能力中，选择**配置**。</block>
+  <block id="2d6e84f94b10924500cc07871b84c4bc" category="list-text">在“配置”页面中，滚动到“**过期数据定义**”标题。</block>
+  <block id="de1a225a67ee04f4d574bda78a6c7680" category="list-text">在“文件属性”下拉菜单中，选择是否要根据文件的“上次访问时间”或“上次修改时间”来定义过期数据。</block>
+  <block id="656961d589e5ba765f1a77e91cdda2d0" category="list-text">选择过期数据定义的时间段。</block>
+  <block id="62fd673ebe947916da532bb59f514b32" category="inline-image-macro">过时数据定义选项的屏幕截图</block>
+  <block id="7b144ea2005a4117bc235b1bec83f6c5" category="paragraph"><block ref="7b144ea2005a4117bc235b1bec83f6c5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8d5311b8775f8a9ea8945d76095bb698" category="list-text">选择**保存**。</block>
+  <block id="38fc1b337c0ea26463916fc2913205c1" category="paragraph"><block ref="38fc1b337c0ea26463916fc2913205c1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7019a39846e9a2c7f7a80eaba91e4a41" category="paragraph"><block ref="7019a39846e9a2c7f7a80eaba91e4a41" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1d593c3f7480ada9580d93cd753c3f93" category="paragraph">这是系统生成的映射到您的电子邮件的 ID。在*NSS 管理*页面上，您可以显示来自<block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block>菜单。</block>
+  <block id="872eaae7deb6035c20f9bfe6deefd03d" category="list-text">如果您需要刷新登录凭证令牌，还有一个*更新凭证*选项<block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block>菜单。</block>
+  <block id="4a0d328244ebc11cdcdafe7537ab73a0" category="section-title">2026年1月14日</block>
 </blocks>

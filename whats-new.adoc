@@ -18,6 +18,32 @@ summary: 了解NetApp Data Classification的新功能。
 
 
 
+== 2026年1月14日
+
+
+
+=== 1.50 版
+
+本次数据分类版本更新包含错误修复和以下更新：
+
+.自定义分类改进
+数据分类功能现在支持创建自定义数据类别。您可以上传文件来微调数据分类所使用的 AI 模型，以便将类别标记应用于数据。所有自定义分类的界面都得到了改进。
+
+有关详细信息，请参阅 link:https://docs.netapp.com/us-en/data-services-data-classification/task-custom-classification.html["创建自定义分类"^]。
+
+.自定义过期数据定义
+数据分类功能现在允许您自定义过期数据的定义，以满足您组织的需求。此前，过时数据被定义为三年前最后一次修改的数据。现在，可以根据上次访问时间或上次修改时间来识别过时的数据；时间段可以从 6 个月前到 10 年前不等。
+
+有关详细信息，请参阅 link:https://docs.netapp.com/us-en/data-services-data-classification/task-stale-data.html["自定义过期数据定义"^]。
+
+.性能提升
+数据分类、数据映射报告和调查页面上的筛选器等所有页面的加载时间都已缩短。
+
+.调查报告预计完成时间
+下载调查报告时，“数据分类”现在会显示下载完成的预计时间。
+
+
+
 == 2025年12月8日
 
 
@@ -47,7 +73,7 @@ summary: 了解NetApp Data Classification的新功能。
 .增强扫描进度清晰度
 扫描配置现在包含对扫描完成情况的更深入洞察。以前，进度条只在扫描进行时显示。现在，扫描完成后进度条仍然可见，以确认扫描已成功完成。您还可以查看已映射和已扫描的文件数量。
 
-有关扫描设置的更多信息，请参阅 link:task-managing-repo-scanning.html#view-the-scan-status-for-your-repositories["更改存储库的NetApp Data Classification扫描设置"^]。
+有关扫描设置的更多信息，请参阅 link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html#view-the-scan-status-for-your-repositories["更改存储库的NetApp Data Classification扫描设置"^]。
 
 
 
