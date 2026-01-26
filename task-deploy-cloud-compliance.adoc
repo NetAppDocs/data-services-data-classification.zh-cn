@@ -33,7 +33,7 @@ summary: 完成几个步骤即可在云中部署NetApp Data Classification。  N
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]先决条件
 [role="quick-margin-para"]
-确保您的环境能够满足先决条件。这包括实例的出站互联网访问、控制台代理和数据分类之间通过端口 443 的连接等等。  << 先决条件，请参阅完整列表>>。
+确保您的环境能够满足先决条件。这包括实例的出站互联网访问、Console 代理与 Data Classification 在端口 443 上的连接等。<<前提条件,查看完整列表>>。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"]部署数据分类
 [role="quick-margin-para"]
