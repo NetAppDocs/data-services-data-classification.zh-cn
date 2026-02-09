@@ -18,6 +18,34 @@ summary: 了解NetApp Data Classification的新功能。
 
 
 
+== 2026 年 2 月 09 日
+
+
+
+=== 1.50 版
+
+本次数据分类版本更新包含错误修复和以下更新：
+
+.直接从 NetApp Console 画布使用 Amazon FSxN for ONTAP 激活数据分类
+现在，您可以直接从 NetApp Console 画布为 ONTAP 系统启用 Amazon FSxN，从而更快地启动 FSxN 系统的数据分类。
+
+有关将数据分类与 Amazon FSxN for ONTAP 结合使用的更多信息，请参见 link:https://docs.netapp.com/us-en/data-services-data-classification/task-scanning-fsx.html["扫描 Amazon FSxN for ONTAP 卷"^]。
+
+.提高调查目录的导出限制
+现在，从调查控制面板导出有关目录的调查报告时，您可以包含 10,000 行。此前限制为 5,000 行，此次增加支持对数据治理和合规性的大规模调查。
+
+有关详细信息，请参见 link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["调查数据"^]。
+
+.提高了复制和移动的限制
+现在，在复制或移动文件时，您可以移动最大为 250 MB 的文件，这比之前的 50 MB 限制有所增加。
+
+有关详细信息，请参见 link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["调查数据"^]。
+
+.改进了低分辨率屏幕的显示效果
+Data Classification 提高了低分辨率屏幕的显示性能，增强了用户体验。
+
+
+
 == 2026年1月14日
 
 

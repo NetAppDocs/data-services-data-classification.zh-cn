@@ -586,29 +586,10 @@
   <block id="7d72055dc8f09beeb77f4fa9d71f6382" category="paragraph">过滤器选择包括：</block>
   <block id="a66a4b74b70237f4c0cbce83303f74d2" category="list-text">“未分类 - 无法恢复上次访问时间” - 这显示由于缺少写入权限而未分类的文件。</block>
   <block id="3856c8caab06eda61e5fe3e07996939a" category="list-text">“已分类并更新的上次访问时间” - 这显示已分类的文件，并且数据分类无法将上次访问时间重置回原始日期。此过滤器仅与您打开*缺少“写入属性”权限时扫描*的环境相关。</block>
-  <block id="eacfad7ae9e6aba32bdbef2948b1d628" category="summary">扫描数据库模式时， NetApp Data Classification无法提供某些特性和功能。</block>
-  <block id="e6dbbec80e173d3f91cf2b227477d31c" category="doc">NetApp Data Classification中支持和不支持的数据库功能</block>
-  <block id="ad52d3616ca8f733ae442a642767c792" category="paragraph">扫描数据库模式时， NetApp Data Classification无法提供某些特性和功能。请参阅下面的列表。</block>
-  <block id="990222def8053839fd07dd4a3c81e9dc" category="inline-link-macro">如此处所述</block>
-  <block id="69ff49bbb82445d0bebdf7216cb4bd32" category="paragraph">您可以将数据库模式添加到数据分类中进行扫描<block ref="32350e7a1f032d301549bb941192cdc0" category="inline-link-macro-rx"></block>。</block>
   <block id="a1fa27779242b4902f7ae3bdd5c6d508" category="cell">类型</block>
   <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">描述</block>
-  <block id="a71f76c3256e4c206a4841d8eb0fed35" category="cell">SQL 服务器</block>
-  <block id="35686630aa3baddc18c904374e570233" category="cell">亚马逊 RDS</block>
-  <block id="06df33001c1d7187fdd81ea1f5b277aa" category="cell">操作</block>
-  <block id="d779bee8155408e2ad4426f42de462a9" category="cell">创建已保存的查询</block>
   <block id="900eba0c97923d74bd8d9e6190e07264" category="cell">✓</block>
-  <block id="c101058e7ea21bbbf2a5ac893088e90b" category="cell">标记</block>
-  <block id="773ecc684d98231f8f23773727622446" category="cell">分配给</block>
-  <block id="cd6ae20e52d83f601c5fa12b66f0f6d0" category="cell">重新扫描</block>
-  <block id="9dd4e461268c8034f5c8564e155c67a6" category="cell">x</block>
-  <block id="f2a6c498fb90ee345d997f888fce3b18" category="cell">删除</block>
-  <block id="6bc362dbf494c61ea117fe3c71ca48a5" category="cell">移动</block>
-  <block id="5fb63579fc981698f97d55bfecb213ea" category="cell">复制</block>
-  <block id="b021df6aac4654c454f46c77646e745f" category="cell">标签</block>
-  <block id="f3f43e30c8c7d78c6ac0173515e57a00" category="cell">筛选器</block>
   <block id="59f5223754fb9750ccf313de64e06099" category="cell">已保存的查询</block>
-  <block id="e80df5ee03a17fe47c471debd1cb6a7b" category="cell">扫描分析状态</block>
   <block id="f5cd54184b354671d5c99cf48104cc07" category="cell">系统类型</block>
   <block id="a45da96d0bf6575970f2d27af22be28a" category="cell">系统</block>
   <block id="8e1608d6951087912c426bcb53d12280" category="cell">存储库</block>
@@ -621,8 +602,6 @@
   <block id="eed7cc7f64269eb19a98b58ae0d79b6f" category="cell">发现时间</block>
   <block id="189f63f277cd73395561651753563065" category="cell">标签</block>
   <block id="3e9f09095e53d4aa46d296b9c32b7be4" category="cell">扫描分析事件</block>
-  <block id="7c2647ff45382a42029e7a109ef1b4c5" category="cell">文件/目录路径</block>
-  <block id="c24fd35c406c9694e3bee288f8825b5c" category="cell">权限过滤器</block>
   <block id="26ec7ebe8b7297e79affc05b3e89352b" category="cell">标识符数量</block>
   <block id="c24fc9c3402e7cb47c72d71cf6d864be" category="cell">目录类型</block>
   <block id="2fb58660fd44cbdef76a54519a9a9737" category="cell">创建时间</block>
@@ -2044,10 +2023,6 @@
   <block id="fb8a04662bc42d13ae8a2d1bddbc05b3" category="cell">状态始终为“见解有限”</block>
   <block id="29344a3c58cf84dcf0144a3627f021d1" category="cell">文件哈希</block>
   <block id="4df26807127a67f2d98166e4384eea07" category="cell">用户/组权限</block>
-  <block id="ba3e4178a9b73e03e42aae6548738221" category="section-title">数据分类扫描数据的速度有多快</block>
-  <block id="9ece336caf3d2b843dafc984e27b323e" category="paragraph">扫描速度受网络延迟、磁盘延迟、网络带宽、环境大小、文件分布大小等影响。</block>
-  <block id="fd09538b9e640fbf352f46c0fa44b064" category="list-text">执行仅映射扫描时，数据分类每天可以扫描 100 到 150 TiB 的数据。</block>
-  <block id="7df1c51c08a7ab21455acfcdd0b1cfe4" category="list-text">执行地图和分类扫描时，数据分类每天可以扫描 15 到 40 TiB 的数据。</block>
   <block id="fa9ebe7c0c0614d0f74c794a58db2fad" category="summary">完成几个步骤即可直接使用NetApp Data Classification开始扫描StorageGRID内的数据。</block>
   <block id="6638c5bc122a9b4e0222774a95a04fd5" category="doc">使用NetApp Data Classification扫描StorageGRID数据</block>
   <block id="dc3fd4fe9b1bb66db60a59be3884a90c" category="section-title">查看StorageGRID要求</block>
@@ -2688,7 +2663,6 @@
   <block id="dc6d46e682032130076140b1c6b9f422" category="list-text">选择“加载文件”进行数据分类，以执行文件检查。您可以查看文件摘要，其中列出了文件名、大小、类型和备注（如果该文件被认为适合用于培训）。</block>
   <block id="60d2aee5a316a80a131d402c7cfaa44a" category="inline-image-macro">屏幕截图显示了上传用于训练的文件摘要。</block>
   <block id="6ca27c96af59179d21a409d88cb4139c" category="paragraph"><block ref="6ca27c96af59179d21a409d88cb4139c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="839860ecb593c72a6c18f98bd45565b0" category="list-text">要更改文件路径或重新上传文件，请选择**更改路径**，然后输入数据并再次加载文件。</block>
   <block id="78edc8efdc4ac520c8f06ac58e069eac" category="list-text">当您对上传的文件满意后，请选择**下一步**。</block>
   <block id="baacdea09c8bef5361744801ca025b67" category="list-text">选择**保存**以创建自定义类别。</block>
   <block id="d2edcb6e893e23e45a9b667d3d7f0c9e" category="paragraph">创建自定义类别后，其结果将在下次计划扫描中捕获。为了更快地获取结果，请手动启动扫描。</block>
@@ -2722,4 +2696,17 @@
   <block id="872eaae7deb6035c20f9bfe6deefd03d" category="list-text">如果您需要刷新登录凭证令牌，还有一个*更新凭证*选项<block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block>菜单。</block>
   <block id="4a0d328244ebc11cdcdafe7537ab73a0" category="section-title">2026年1月14日</block>
   <block id="0683badfe3a5feea962602495f98c990" category="paragraph">确保您的环境能够满足先决条件。这包括实例的出站互联网访问、Console 代理与 Data Classification 在端口 443 上的连接等。<block ref="c513c1ef65e57d26fcca4062f05d2f7b" category="inline-xref-macro-rx"></block>。</block>
+  <block id="9f8adb7ebffc39f306c40ef2d6a377b1" category="paragraph-title">直接从 NetApp Console 画布使用 Amazon FSxN for ONTAP 激活数据分类</block>
+  <block id="880dc0b44905babcfa6685da86ba8117" category="paragraph">现在，您可以直接从 NetApp Console 画布为 ONTAP 系统启用 Amazon FSxN，从而更快地启动 FSxN 系统的数据分类。</block>
+  <block id="dd8a2d3b3415c2980790a672dff3757f" category="inline-link-macro">扫描 Amazon FSxN for ONTAP 卷</block>
+  <block id="db8b5cff328cee1f4914855b931bae02" category="paragraph">有关将数据分类与 Amazon FSxN for ONTAP 结合使用的更多信息，请参见 <block ref="48a47292b9e31aff1079bbdaa3cd4739" category="inline-link-macro-rx"></block>。</block>
+  <block id="3ee3e594e3bac0471e4cda35acc3588a" category="paragraph-title">提高调查目录的导出限制</block>
+  <block id="45f99b8f539f37cc0379b65d3ddafbbf" category="paragraph">现在，从调查控制面板导出有关目录的调查报告时，您可以包含 10,000 行。此前限制为 5,000 行，此次增加支持对数据治理和合规性的大规模调查。</block>
+  <block id="e733aab9ce2fc5320fbdd563cba5e12b" category="paragraph">有关详细信息，请参见 <block ref="d8b3109a5818cc0f43ade4650ffede11" category="inline-link-macro-rx"></block>。</block>
+  <block id="80f498ef50d7bad5da9acf441b502c0f" category="paragraph-title">提高了复制和移动的限制</block>
+  <block id="401f234e1c84943381dd951c39f2ce3c" category="paragraph">现在，在复制或移动文件时，您可以移动最大为 250 MB 的文件，这比之前的 50 MB 限制有所增加。</block>
+  <block id="244d30ed7d7da13b1f80f1fa008af700" category="paragraph-title">改进了低分辨率屏幕的显示效果</block>
+  <block id="80bb2719fe9feeb03d5cc88bd71e8a81" category="paragraph">Data Classification 提高了低分辨率屏幕的显示性能，增强了用户体验。</block>
+  <block id="ce4f285e19831c82557359b34d7010e8" category="paragraph">Data Classification 显示数据训练的预计完成时间。..要更改文件路径或重新上传文件，请选择 **更改路径**，然后输入数据并重新加载文件。</block>
+  <block id="c9d872b23d54864ab58551a55106a3db" category="section-title">2026 年 2 月 09 日</block>
 </blocks>
