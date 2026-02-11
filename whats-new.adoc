@@ -22,7 +22,7 @@ summary: 了解NetApp Data Classification的新功能。
 
 
 
-=== 1.50 版
+=== 1.51 版
 
 本次数据分类版本更新包含错误修复和以下更新：
 
