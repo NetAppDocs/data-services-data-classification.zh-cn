@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-deploy-compliance-dark-site.html 
-keywords: cloud compliance, bluexp, data sense, get started, web browser connectivity, cloud compliance access, privacy, linux, ubuntu, compliance, on-premises, dark site, upgrade, private mode, docker, podman, rhel, bluexp classification, classification, install, cloud data sense, linux host 
+keywords: cloud compliance, data sense, get started, web browser connectivity, cloud compliance access, privacy, linux, ubuntu, compliance, on-premises, dark site, upgrade, private mode, docker, podman, rhel, bluexp classification, classification, install, cloud data sense, linux host 
 summary: 完成几个步骤即可在没有互联网访问的本地站点的 Linux 主机上安装NetApp Data Classification- 也称为“私有模式”。这种类型的安装非常适合您的安全站点。 
 ---
 = 在没有互联网访问的 Linux 主机上安装NetApp Data Classification
@@ -16,5 +16,377 @@ summary: 完成几个步骤即可在没有互联网访问的本地站点的 Linu
 [role="lead"]
 在没有互联网访问权限的本地站点的 Linux 主机上安装NetApp Data Classification称为_私有模式_。这种安装类型使用安装脚本，与NetApp Console SaaS 层没有连接。
 
+link:https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["了解 Console 代理和 Data Classification 的不同部署模式"^]。
 
-IMPORTANT: BlueXP私有模式（传统BlueXP接口）通常用于没有互联网连接的本地环境和安全云区域，其中包括 AWS Secret Cloud、AWS Top Secret Cloud 和 Azure IL6。NetApp继续通过传统的BlueXP界面支持这些环境。有关旧版BlueXP界面中的私有模式文档，请参阅link:https://docs.netapp.com/us-en/console-setup-admin/media/BlueXP-Private-Mode-legacy-interface.pdf["BlueXP私人模式的 PDF 文档"^]。
+您也可以 link:task-deploy-compliance-onprem.html["在具有互联网访问权限的本地站点部署 Data Classification"]。
+
+数据分类安装脚本首先检查系统和环境是否满足所需的先决条件。如果所有先决条件都满足，则安装开始。如果您想独立于运行数据分类安装来验证先决条件，您可以下载一个单独的软件包，该软件包仅测试先决条件。link:task-test-linux-system.html["了解如何检查您的 Linux 主机是否已准备好安装数据分类"] 。
+
+
+
+== 支持的数据源
+
+在安装专用模式（有时称为"离线"或"暗"站点）时，Data Classification 只能扫描来自本地站点的数据源的数据。此时，Data Classification 可以扫描以下*本地*数据源：
+
+* 本地ONTAP系统
+* 数据库模式
+
+
+在私有模式下部署数据分类时，当前不支持扫描 Cloud Volumes ONTAP、Azure NetApp Files 或 FSx for ONTAP 账户。
+
+
+
+== 限制
+
+大多数 Data Classification 功能在没有互联网访问权限的站点中部署时起作用。但是，某些需要访问互联网的功能不受支持，例如：
+
+* 为不同用户设置控制台角色（例如，Account Admin 或 Compliance Viewer）
+* 使用 NetApp Copy and Sync 复制和同步源文件
+* 从 Console 进行自动软件升级
++
+Console 代理和 Data Classification 都需要定期手动升级才能启用新功能。您可以在 Data Classification UI 页面底部看到 Data Classification 版本。检查link:whats-new.html["数据分类发行说明"]以查看每个版本中的新功能以及是否需要这些功能。然后，您可以按照步骤 https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-connector.html["升级 Console Agent"^]和<<升级 Data Classification 软件,升级您的 Data Classification 软件>>。
+
+
+
+
+
+== 快速启动
+
+按照以下步骤快速开始，或者向下滚动到其余部分以获取完整详细信息。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"] 安装 Console 代理
+[role="quick-margin-para"]
+如果尚未在私有模式下安装 Console 代理，请立即 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-private-mode.html["部署 Console 代理"^]在 Linux 主机上安装。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"] 审阅数据分类先决条件
+[role="quick-margin-para"]
+请确保您的 Linux 系统符合<<准备 Linux 主机系统,主机要求>>，已安装所有必需的软件，并且您的脱机环境符合要求的<<验证 Console 和数据分类的先决条件,权限和连接性>>。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"]下载并部署数据分类
+[role="quick-margin-para"]
+从 NetApp Support Site 下载数据分类软件，并将安装程序文件复制到您计划使用的 Linux 主机。然后启动安装向导，并按照提示部署数据分类实例。
+
+
+
+== 安装 Console 代理
+
+如果您尚未在离线站点的 Linux 主机上以私有模式安装 Console 代理，请 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-private-mode.html["部署 Console 代理"^]。
+
+
+
+== 准备 Linux 主机系统
+
+Data Classification 软件必须在满足特定操作系统要求、RAM 要求、软件要求等的主机上运行。
+
+* 数据分类必须运行在专用主机上。主机不能与其他应用程序或第三方软件（例如防病毒软件）共享。
+* 选择与您计划使用数据分类扫描的数据集相符的大小。
++
+[cols="17,17,27,31"]
+|===
+| 系统大小 | CPU | RAM（必须禁用交换内存） | 磁盘 
+
+
+| *超大* | 32 个 CPU | 128 GB 内存  a| 
+** / 上 1 TiB SSD，或 /opt 上 100 GiB 可用
+** /var/lib/docker 上可用 895 GiB
+** /tmp 上 5 GiB
+** *对于 Podman，/var/tmp 上有 30 GB*
+
+
+
+
+| *大的* | 16 个 CPU | 64 GB 内存  a| 
+** / 上 500 GiB SSD，或 /opt 上 100 GiB 可用
+** /var/lib/docker 或 Podman /var/lib/containers 上可用 400 GiB
+** /tmp 上 5 GiB
+** *对于 Podman，/var/tmp 上有 30 GB*
+
+
+|===
+* 在云中为数据分类安装部署计算实例时，建议您使用满足上述“大型”系统要求的系统：
++
+** *Amazon Elastic Compute Cloud (Amazon EC2) 实例类型*：“m6i.4xlarge”。link:reference-instance-types.html#aws-instance-types["查看其他 AWS 实例类型"^] 。
+** *Azure VM 大小*：“Standard_D16s_v3”。link:reference-instance-types.html#azure-instance-types["查看其他 Azure 实例类型"^] 。
+** *GCP 机器类型*：“n2-standard-16”。link:reference-instance-types.html#gcp-instance-types["查看其他 GCP 实例类型"^] 。
+
+
+* *UNIX 文件夹权限*：需要以下最低 UNIX 权限：
++
+[cols="25,25"]
+|===
+| 文件夹 | 最低权限 
+
+
+| /tmp | `rwxrwxrwt` 
+
+
+| /选择 | `rwxr-xr-x` 
+
+
+| /var/lib/docker | `rwx------` 
+
+
+| /usr/lib/systemd/系统 | `rwxr-xr-x` 
+|===
+* *操作系统*：
++
+** 以下操作系统需要使用 Docker 容器引擎：
++
+*** Red Hat Enterprise Linux 版本 7.8 和 7.9
+*** Ubuntu 22.04（需要数据分类版本 1.23 或更高版本）
+*** Ubuntu 24.04（需要数据分类版本 1.23 或更高版本）
+
+
+** 以下操作系统需要使用 Podman 容器引擎，并且需要数据分类版本 1.30 或更高版本：
++
+*** Red Hat Enterprise Linux 版本 8.8、8.10、9.0、9.1、9.2、9.3、9.4、9.5 和 9.6。
+
+
+** 必须在主机系统上启用高级矢量扩展 (AVX2)。
+
+
+* *Red Hat 订阅管理*：主机必须在 Red Hat 订阅管理中注册。如果未注册，系统将无法访问存储库来在安装期间更新所需的第三方软件。
+* *附加软件*：安装数据分类之前，必须在主机上安装以下软件：
++
+** 根据您使用的操作系统，您需要安装其中一个容器引擎：
++
+*** Docker Engine 版本 19.3.1 或更高版本。 https://docs.docker.com/engine/install/["查看安装说明"^] 。
+*** Podman 版本 4 或更高版本。要安装 Podman，请输入(`sudo yum install podman netavark -y`）。
+
+
+
+
+
+
+* Python 版本 3.6 或更高版本。 https://www.python.org/downloads/["查看安装说明"^] 。
++
+** *NTP 注意事项*： NetApp建议配置数据分类系统以使用网络时间协议 (NTP) 服务。数据分类系统和控制台代理系统之间的时间必须同步。
+
+
+
+
+* *Firewalld 注意事项*：如果您计划使用 `firewalld`，我们建议您在安装数据分类之前启用它。运行以下命令进行配置 `firewalld`以便与数据分类兼容：
++
+....
+firewall-cmd --permanent --add-service=http
+firewall-cmd --permanent --add-service=https
+firewall-cmd --permanent --add-port=80/tcp
+firewall-cmd --permanent --add-port=8080/tcp
+firewall-cmd --permanent --add-port=443/tcp
+firewall-cmd --reload
+....
++
+请注意，每次启用或更新时都必须重新启动 Docker 或 Podman `firewalld`设置。
+
+
+
+
+TIP: 安装后，数据分类主机系统的 IP 地址无法更改。
+
+
+
+== 验证 Console 和数据分类的先决条件
+
+在部署 Data Classification 之前，请查看以下先决条件，以确保您具有受支持的配置。
+
+* 确保 Console 代理具有为数据分类实例部署资源和创建安全组的权限。您可以在 https://docs.netapp.com/us-en/console-setup-admin/reference-permissions.html["NetApp 提供的策略"^]中找到最新的 Console 权限。
+* 确保可以继续运行 Data Classification。Data Classification 实例需要保持开启状态，以持续扫描您的数据。
+* 确保 Web 浏览器连接到 Data Classification。启用 Data Classification 后，确保用户从与 Data Classification 实例有连接的主机访问 Console 界面。
++
+Data Classification 实例使用专用 IP 地址来确保其他人无法访问索引数据。因此，您用于访问 Console 的 Web 浏览器必须与该专用 IP 地址建立连接。该连接可能来自与 Data Classification 实例位于同一网络内的主机。
+
+
+
+
+
+== 验证所有必需的端口均已启用
+
+您必须确保所有必需的端口都已打开，以便控制台代理、数据分类、Active Directory 和数据源之间进行通信。
+
+[cols="25,25,50"]
+|===
+| 连接类型 | 端口 | 描述 
+
+
+| 控制台代理<>数据分类 | 8080 (TCP)、6000 (TCP)、443 (TCP) 和 80。9000  a| 
+控制台代理的安全组必须允许通过端口 6000 和 443 与 Data Classification 实例之间的入站和出站流量。
+
+* 端口 6000 是必需的，以便 Data Classification BYOL 许可证在暗站点中工作。
+* 端口 8080 应处于打开状态，以便在 Console 中查看安装进度。
+* 如果在 Linux 主机上使用防火墙，则 Ubuntu 服务器内部进程需要端口 9000。
+
+
+
+
+| 控制台代理<> ONTAP集群 (NAS) | 443（TCP）  a| 
+控制台使用 HTTPS 发现ONTAP集群。如果您使用自定义防火墙策略，则它们必须满足以下要求：
+
+* Console 代理主机必须允许通过端口 443 进行出站 HTTPS 访问。如果 Console 代理在云中，则预定义的安全组允许所有出站通信。
+* ONTAP集群必须允许通过端口 443 进行入站 HTTPS 访问。默认的“mgmt”防火墙策略允许来自所有 IP 地址的入站 HTTPS 访问。如果您修改了此默认策略，或者创建了自己的防火墙策略，则必须将 HTTPS 协议与该策略关联并启用从控制台代理主机的访问。
+
+
+
+
+| 数据分类 <> ONTAP集群  a| 
+* 对于 NFS - 111 (TCP\UDP) 和 2049 (TCP\UDP)
+* 对于 CIFS - 139 (TCP\UDP) 和 445 (TCP\UDP)
+
+ a| 
+数据分类需要网络连接到每个 Cloud Volumes ONTAP 子网或本地 ONTAP 系统。Cloud Volumes ONTAP 的安全组必须允许来自数据分类实例的入站连接。
+
+确保这些端口对数据分类实例开放：
+
+* 对于 NFS - 111 和 2049
+* 对于 CIFS - 139 和 445
+
+
+NFS 卷导出策略必须允许从数据分类实例进行访问。
+
+
+
+| 数据分类<> Active Directory | 389（TCP 和 UDP）、636（TCP）、3268（TCP）和 3269（TCP）  a| 
+您必须已经为公司用户设置了 Active Directory。此外，数据分类需要 Active Directory 凭据来扫描 CIFS 卷。
+
+您必须具有 Active Directory 的信息：
+
+* DNS 服务器 IP 地址，或多个 IP 地址
+* 服务器的用户名和密码
+* 域名（Active Directory 名称）
+* 您是否使用安全 LDAP (LDAPS)
+* LDAP 服务器端口（LDAP 通常为 389，安全 LDAP 通常为 636）
+
+
+
+
+| 如果在 Linux 主机上使用防火墙 | 9000 | Ubuntu 服务器内部流程所需。 
+|===
+
+
+== 在本地 Linux 主机上安装数据分类
+
+对于典型配置，您将在单个主机系统上安装该软件。
+
+image:diagram_deploy_onprem_single_host_no_internet.png["显示在没有互联网访问的情况下使用本地部署的单个 Data Classification 实例时可以扫描的数据源的位置的图表。"]
+
+在脱机环境中的单个本地主机上安装 Data Classification 软件时，请执行以下步骤。
+
+请注意，安装数据分类时会记录所有安装活动。如果您在安装过程中遇到任何问题，您可以查看安装审计日志的内容。它被写给 `/opt/netapp/install_logs/`。
+
+.开始之前
+* 验证您的 Linux 系统是否满足<<准备 Linux 主机系统,主机要求>>。
+* 请确认已安装两个必备软件包（Docker Engine 或 Podman 和 Python 3）。
+* 确保您在 Linux 系统上拥有 root 权限。
+* 确认您的离线环境符合要求的 <<验证 Console 和数据分类的先决条件,权限和连接性>>。
+
+
+.步骤
+. 在互联网配置的系统中，从 https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/["NetApp 支持站点"^]下载数据分类软件。您应该选择的文件名为 *DataSense-offline-bundle-<version>.tar.gz*。
+. 将安装程序包复制到计划在专用模式下使用的 Linux 主机。
+. 在主机上解压缩安装程序包，例如：
++
+[source, cli]
+----
+tar -xzf DataSense-offline-bundle-v1.25.0.tar.gz
+----
++
+这将提取所需的软件和实际安装文件 *cc_onprem_installer.tar.gz*。
+
+. 在主机上解压缩安装文件，例如：
++
+[source, cli]
+----
+tar -xzf cc_onprem_installer.tar.gz
+----
+. 从 Data Classification 中，选择 *Deploy Classification On-Premises or Cloud*。
++
+image:screenshot-deploy-classification.png["选择按钮以激活数据分类的屏幕截图。"]
+
+. 选择 *Deploy* 开始本地安装。
+. 将显示 _Deploy Data Classification On Premises_ 对话框。复制提供的命令（例如： `sudo ./install.sh -a 12345 -c 27AG75 -t 2198qq --darksite`）并将其粘贴到文本文件中，以便稍后使用。然后选择 *Close* 以关闭对话框。
+. 在主机上，输入您复制的命令，然后按照一系列提示进行操作，或者您可以提供包含所有必需参数的完整命令作为命令行参数。
++
+请注意，安装程序会执行预检查，以确保您的系统和网络要求已满足，从而成功安装。
+
++
+[cols="50a,50"]
+|===
+| 根据提示输入参数： | 输入完整命令： 
+
+
+ a| 
+.. 粘贴您从第 8 步复制的信息：
+`sudo ./install.sh -a <account_id> -c <client_id> -t <user_token> --darksite`
+.. 输入数据分类主机的 IP 地址或主机名，以便控制台代理系统可以访问它。
+.. 输入控制台代理主机的 IP 地址或主机名，以便数据分类系统可以访问它。
+
+| 或者，您可以提前创建整个命令，并提供必要的主机参数：
+`sudo ./install.sh -a <account_id> -c <client_id> -t <user_token> --host <ds_host> --manager-host <cm_host> --no-proxy --darksite` 
+|===
++
+变量值：
+
++
+** _account_id_ = NetApp帐户 ID
+** _client_id_ = 控制台代理客户端 ID（如果客户端 ID 中没有后缀“clients”，则添加后缀）
+** _user_token_ = JWT 用户访问令牌
+** _ds_host_ = 数据分类系统的 IP 地址或主机名。
+** _cm_host_ = 控制台代理系统的 IP 地址或主机名。
+
+
+
+
+.结果
+数据分类安装程序安装包、注册安装并安装数据分类。安装可能需要 10 到 20 分钟。
+
+如果主机和 Console 代理实例之间存在端口 8080 连接，您将在"数据分类"选项卡中看到安装进度。
+
+.下一步
+从配置页面中，您可以选择要扫描的本地 link:task-getting-started-compliance.html["本地 ONTAP 集群"] 和 link:task-scanning-databases.html["数据库"]。
+
+
+
+== 升级 Data Classification 软件
+
+由于 Data Classification 软件会定期更新新功能，因此您应该定期检查新版本，以确保您使用的是最新的软件和功能。您需要手动升级 Data Classification 软件，因为没有互联网连接以自动执行升级。
+
+.开始之前
+* 我们建议您将 Console 代理软件升级到最新版本 https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-connector.html["请参见 Console 代理升级步骤"^]。
+* 从 Data Classification 版本 1.24 开始，您可以对任何未来版本的软件进行升级。
++
+如果您的 Data Classification 软件运行的是 1.24 之前的版本，则一次只能升级一个主要版本。例如，如果安装了 1.21.x 版本，则只能升级到 1.22.x。如果您落后于几个主要版本，则需要多次升级软件。
+
+
+
+.步骤
+. 在互联网配置的系统中，从 https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/["NetApp 支持站点"^]下载数据分类软件。您应该选择的文件名为 *DataSense-offline-bundle-<version>.tar.gz*。
+. 将软件包复制到暗站点中安装 Data Classification 的 Linux 主机。
+. 在主机上解压缩软件包，例如：
++
+[source, cli]
+----
+tar -xvf DataSense-offline-bundle-v1.25.0.tar.gz
+----
++
+这将提取安装文件 *cc_onprem_installer.tar.gz*。
+
+. 在主机上解压缩安装文件，例如：
++
+[source, cli]
+----
+tar -xzf cc_onprem_installer.tar.gz
+----
++
+这将提取升级脚本 *start_darksite_upgrade.sh* 和任何所需的第三方软件。
+
+. 在主机上运行升级脚本，例如：
++
+[source, cli]
+----
+start_darksite_upgrade.sh
+----
+
+
+.结果
+主机上的 Data Classification 软件已升级。更新可能需要 5 至 10 分钟。
+
+您可以通过检查 Data Classification UI 页面底部的版本来验证软件是否已更新。
