@@ -58,7 +58,7 @@ API 是安全的，它使用与 UI 相同的身份验证方法。您可以在lin
 
 == 访问 Swagger API 参考
 
-要进入 Swagger，您需要数据分类实例的 IP 地址。对于云部署，您将使用公共 IP 地址。然后你需要进入这个端点：
+要进入 Swagger，您需要 Data Classification 实例的 IP 地址。对于云部署，您将使用公用 IP 地址。然后，您需要进入此端点：
 
 \https://<classification_ip>/documentation
 

@@ -150,7 +150,6 @@
   <block id="33fc2a8f6921fec02571495993aa2c6c" category="doc">1.42 版</block>
   <block id="83962582dc3c189ba60063fe7990755c" category="paragraph">此次BlueXP classification发布包括：</block>
   <block id="2dcf334efa4f886393cac0e44ff5a917" category="paragraph-title">工作环境批量扫描</block>
-  <block id="530bfca85ebf27593e2eac002245d941" category="paragraph">BlueXP classification支持工作环境的批量操作。您可以选择启用映射扫描、启用映射和分类扫描、禁用扫描或在工作环境中跨卷创建自定义配置。如果您对单个卷进行选择，它将覆盖批量选择。要执行批量操作，请导航到**配置**页面并进行选择。</block>
   <block id="7c021042892d25e3e5d4271749e03344" category="paragraph-title">本地下载调查报告</block>
   <block id="5914525550e0efce454828b3fc5f9313" category="paragraph">BlueXP classification支持将数据调查报告下载到本地以便在浏览器中查看。如果选择本地选项，数据调查仅以 CSV 格式提供，并且仅显示前 10,000 行数据。</block>
   <block id="6b41c846432704bbeebdc71cd92e0ac2" category="inline-link-macro">使用BlueXP classification调查组织中存储的数据</block>
@@ -270,7 +269,6 @@
   <block id="567ead09d16d940fef8acf1a3c2c193f" category="inline-link-macro">REST API 文档</block>
   <block id="d0e3c0b1617fba7e035a47001abbc7c1" category="paragraph">API 是安全的，它使用与 UI 相同的身份验证方法。您可以在<block ref="bbdacd4f187c413013ce0d7ecba5c48f" category="inline-link-macro-rx"></block>。</block>
   <block id="6bb2320a7f7d5e941653039f26a38ad9" category="section-title">访问 Swagger API 参考</block>
-  <block id="888780bfecc282aba4e5f15e11e6820e" category="paragraph">要进入 Swagger，您需要数据分类实例的 IP 地址。对于云部署，您将使用公共 IP 地址。然后你需要进入这个端点：</block>
   <block id="49ef162b6621f970581074315940ec6c" category="paragraph">\https://&lt;classification_ip&gt;/documentation</block>
   <block id="b62dbbecd6533f9627427d34160e7d75" category="section-title">使用 API 的示例</block>
   <block id="b7fd2e4068e2c6cc68317c7892c5290c" category="paragraph">以下示例显示了复制文件的 API 调用。</block>
@@ -1004,7 +1002,6 @@
   <block id="cd44aff9043f042044d20fa9200a9168" category="section-title">审查节省机会</block>
   <block id="fdc70de4a3ff53369e5ddb3633c1a655" category="paragraph">_节省机会_组件显示您可以删除或分层到较便宜的对象存储的数据。 《节省机会》中的数据每 2 小时更新一次。您也可以手动更新数据。</block>
   <block id="07d1846c53b76f00910e641f12d09fd8" category="list-text">从数据分类菜单中，选择*治理*。</block>
-  <block id="70de9418b6d77c7f4c2d4632b262c0df" category="list-text">在治理仪表板的每个节省机会图块中，选择*优化存储*以在调查页面中查看过滤的结果。要发现您应该删除或分层到较便宜的存储的任何数据，请调查_节省机会_。</block>
   <block id="dc6d9a4419750aae3db17878ffe18e5c" category="inline-link-macro">查看显示的重复文件类型</block>
   <block id="5791d2ebf242b348a1cbfa550a356083" category="list-text">*重复文件* - 您正在扫描的数据源中其他位置重复的文件。<block ref="4f528c73ac5ca4ef85380f36d4dccad7" category="inline-link-macro-rx"></block> 。</block>
   <block id="dfd23906ba391609b608a93fdd40fdb2" category="admonition">如果您的任何数据源实现了数据分层，则可以在“陈旧数据”类别中识别已经驻留在对象存储中的旧数据。</block>
@@ -1962,7 +1959,6 @@
   <block id="adcb3e6ce7bf6f310cc7c150d73e39d4" category="admonition">Active Directory 凭据仅在第一个 CIFS DP 卷的存储 VM 中注册，因此该 SVM 上的所有 DP 卷都将被扫描。驻留在其他 SVM 上的任何卷都不会注册 Active Directory 凭据，因此不会扫描这些 DP 卷。</block>
   <block id="c9432a4b3ef8c50667dceb6a027d5680" category="summary">使用NetApp Data Classification扫描您的数据源。</block>
   <block id="7eaeb503df6e9fb630a0111ac9c034f2" category="doc">使用NetApp Data Classification扫描数据源</block>
-  <block id="687ce8e05e4f5d157be5f8738db8aa34" category="paragraph">NetApp Data Classification会扫描您选择的存储库（卷、数据库模式或其他用户数据）中的数据，以识别个人和敏感数据。然后，数据分类会映射您的组织数据、对每个文件进行分类并识别数据中的预定义模式。扫描结果是个人信息、敏感个人信息、数据类别和文件类型的索引。</block>
   <block id="b40a529e19b349b56269e632043e4fe8" category="paragraph">您可以在卷级别或数据库模式级别启用和禁用扫描。</block>
   <block id="646bc7d1943891ea9ee0b55f37b428e2" category="list-text">**仅映射扫描**仅提供数据的高级概览，并在选定的数据源上执行。仅映射扫描比映射和分类扫描花费的时间更少，因为它们不访问文件来查看其中的数据。您可能希望首先执行此操作来确定研究领域，然后对这些领域执行地图和分类扫描。</block>
   <block id="a6555d8888ac95f7925f179ea7e8d4a8" category="paragraph">下表显示了一些差异：</block>
@@ -2784,4 +2780,8 @@
   <block id="85455891651214d50e704a4b3e9dde66" category="list-text">在主机上运行升级脚本，例如：</block>
   <block id="fe3ff1241868ed00f70bff14bc52b03f" category="paragraph">主机上的 Data Classification 软件已升级。更新可能需要 5 至 10 分钟。</block>
   <block id="49b552306f6783aaacb171a8b657cff7" category="paragraph">您可以通过检查 Data Classification UI 页面底部的版本来验证软件是否已更新。</block>
+  <block id="cba92860b6fdcba3c2c5e8085cf4c2b9" category="paragraph">BlueXP classification 支持工作环境的批量操作。您可以选择启用映射扫描、启用映射和分类扫描、禁用扫描或在工作环境中跨卷创建自定义配置。如果您为单个卷进行选择，它将覆盖批量选择。要执行批量操作，请导航到**配置**页面并进行选择。</block>
+  <block id="c360e0cba3ce8612a20efd7da0fa5d7a" category="paragraph">要进入 Swagger，您需要 Data Classification 实例的 IP 地址。对于云部署，您将使用公用 IP 地址。然后，您需要进入此端点：</block>
+  <block id="421d31e2b03d6dcfd776134e6cc90fb8" category="list-text">在治理仪表板的每个节省机会图块中，选择 *优化存储* 以在调查页面中查看筛选结果。要发现您应该删除或分层到更便宜存储的任何数据，请调查 _节省机会_。</block>
+  <block id="18b124736f5cbc7b1873c54b1dac2d6f" category="paragraph">NetApp Data Classification 会扫描您选择的存储库中的数据（卷、数据库架构或其他用户数据），以识别个人数据和敏感数据。Data Classification 然后会映射您的组织数据，对每个文件进行分类，并识别数据中的预定义模式。扫描结果是个人信息、敏感个人信息、数据类别和文件类型的索引。</block>
 </blocks>
