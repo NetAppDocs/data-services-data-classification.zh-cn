@@ -1,0 +1,27 @@
+= 1.52 版
+:allow-uri-read: 
+
+
+
+
+=== 1.52 版
+
+.资源验证
+为了确保可靠性，Data Classification 现在可以在扫描、报告生成和操作中验证可用的内存和磁盘资源。当内存使用率超过 95% 或磁盘空间低于 6 GB 时，Data Classification 会自动暂停操作。一旦资源充足，操作就会恢复。
+
+要监视系统资源，请参见 link:https://docs.netapp.com/us-en/data-services-data-classification/task-health-monitor.html["监控数据分类的运行状况"^]。
+
+.提高了复制和移动的限制
+CIFS 目标现在支持复制和移动功能。两个操作的每个文件大小限制已从之前的 50 MB 限制增加到 1 GB。这两个操作的操作限制已增加到 1 TB 或 500 万个文件。
+
+有关详细信息，请参见 link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["调查数据"^]。
+
+.Active Directory 集成配置权限
+Data Classification 中对 Active Directory (AD) 集成设置的更改现在仅限于管理员。查看者不再能够修改 AD 设置。
+
+有关 Classification viewer 角色的详细信息，请参见 link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html#data-service-roles["数据服务角色"^]。
+
+.透明代理支持
+Data Classification 现在支持透明代理配置，可在代理或受限网络环境中实现更顺畅的部署。
+
+有关在受限环境中部署的详细信息，请参见 link:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html["在没有互联网访问的 Linux 主机上安装NetApp Data Classification"^]。

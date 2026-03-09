@@ -2563,7 +2563,6 @@
   <block id="c257ad0ab1dd1ba68f40f6d92155f5dd" category="paragraph-title">在健康监测仪表板中监控指标和性能</block>
   <block id="d62744b30354624c6087760cfd47ae58" category="paragraph">数据分类现在提供了一个健康监控仪表板，可以实时监控您的资源，并提供有关内存使用情况、磁盘使用情况、磁盘利用率等方面的见解。借助健康监控仪表板提供的信息，您可以查看部署的基础架构，并获得优化存储和性能的见解。</block>
   <block id="3b3cf1105e8b8d40f3cb14b9f956e666" category="inline-link-macro">监控数据分类的运行状况</block>
-  <block id="699330677c1a0f32d795bf5b4ef62c06" category="paragraph">有关详细信息，请参阅 <block ref="47a26f0a929ccc455d276fcbc1329665" category="inline-link-macro-rx"></block>。</block>
   <block id="bf17c0b6bb3350440ee2a9bb4f2c9d89" category="paragraph-title">提升了装载性能</block>
   <block id="b6a3c9ea2c8f586e05010be520e7c46c" category="paragraph">数据分类中所有页面的加载性能均已得到提升，从而创造了更高效的用户体验。</block>
   <block id="c7a647b1e9f70e39870907a0d37fc861" category="summary">数据分类能够提供关于使用情况和利用情况的洞察，从而帮助优化性能和解决问题。</block>
@@ -2746,8 +2745,6 @@
   <block id="2c68446a47623409683fed996b7df333" category="cell">Ubuntu 服务器内部流程所需。</block>
   <block id="ab911b02f3c83f7b8747e04d52424221" category="section-title">在本地 Linux 主机上安装数据分类</block>
   <block id="ce9b3c0997395cdac24ac84544289f19" category="paragraph">对于典型配置，您将在单个主机系统上安装该软件。</block>
-  <block id="c929bf2a4cebf50fb64dab464b664919" category="inline-image-macro">显示在没有互联网访问的情况下使用本地部署的单个 Data Classification 实例时可以扫描的数据源的位置的图表。</block>
-  <block id="416689a150e5347df135e4852392a307" category="paragraph"><block ref="416689a150e5347df135e4852392a307" category="inline-image-macro-rx" type="image"></block></block>
   <block id="946fda64b6781af330daa1fb854c8c52" category="paragraph">在脱机环境中的单个本地主机上安装 Data Classification 软件时，请执行以下步骤。</block>
   <block id="fc33df80766251e78dbe2beb48ec9528" category="list-text">请确认已安装两个必备软件包（Docker Engine 或 Podman 和 Python 3）。</block>
   <block id="0986e42aa866cf4296d7c23872a54555" category="list-text">确认您的离线环境符合要求的 <block ref="f3782c1c0d192695b13bd06d4ac05496" category="inline-xref-macro-rx"></block>。</block>
@@ -2784,4 +2781,19 @@
   <block id="c360e0cba3ce8612a20efd7da0fa5d7a" category="paragraph">要进入 Swagger，您需要 Data Classification 实例的 IP 地址。对于云部署，您将使用公用 IP 地址。然后，您需要进入此端点：</block>
   <block id="421d31e2b03d6dcfd776134e6cc90fb8" category="list-text">在治理仪表板的每个节省机会图块中，选择 *优化存储* 以在调查页面中查看筛选结果。要发现您应该删除或分层到更便宜存储的任何数据，请调查 _节省机会_。</block>
   <block id="18b124736f5cbc7b1873c54b1dac2d6f" category="paragraph">NetApp Data Classification 会扫描您选择的存储库中的数据（卷、数据库架构或其他用户数据），以识别个人数据和敏感数据。Data Classification 然后会映射您的组织数据，对每个文件进行分类，并识别数据中的预定义模式。扫描结果是个人信息、敏感个人信息、数据类别和文件类型的索引。</block>
+  <block id="115a395f1bda3cdb62e75cfe1529d431" category="paragraph">有关详细信息，请参见 <block ref="a35c82bf99053365807ff01dc40bc5d1" category="inline-link-macro-rx"></block>。</block>
+  <block id="59ff8a6991a0f51816a1d27ab0590821" category="paragraph-title">提高复制和移动的限制</block>
+  <block id="5db4431afc8c4647c29360449ee80225" category="doc">1.52 版</block>
+  <block id="1cc9fa7904bbb11e4569869878e58bbb" category="paragraph-title">资源验证</block>
+  <block id="19458db6dfda018080434d803401d712" category="paragraph">为了确保可靠性，Data Classification 现在可以在扫描、报告生成和操作中验证可用的内存和磁盘资源。当内存使用率超过 95% 或磁盘空间低于 6 GB 时，Data Classification 会自动暂停操作。一旦资源充足，操作就会恢复。</block>
+  <block id="0c246fa8aa5b9bb6f56169910551448c" category="paragraph">要监视系统资源，请参见 <block ref="a35c82bf99053365807ff01dc40bc5d1" category="inline-link-macro-rx"></block>。</block>
+  <block id="427468160760189964c9cf7fcaa52709" category="paragraph">CIFS 目标现在支持复制和移动功能。两个操作的每个文件大小限制已从之前的 50 MB 限制增加到 1 GB。这两个操作的操作限制已增加到 1 TB 或 500 万个文件。</block>
+  <block id="6d965e454a055e436e41408f02aad8e1" category="paragraph-title">Active Directory 集成配置权限</block>
+  <block id="a14fc25490ab294bb8fb754cd29f6486" category="paragraph">Data Classification 中对 Active Directory (AD) 集成设置的更改现在仅限于管理员。查看者不再能够修改 AD 设置。</block>
+  <block id="40abfc355f5aea2697c05cedc7637005" category="inline-link-macro">数据服务角色</block>
+  <block id="86b37aec2cfdfa690aeb8de2465ae8f4" category="paragraph">有关 Classification viewer 角色的详细信息，请参见 <block ref="152b8a96499e0e41ff478a993b579623" category="inline-link-macro-rx"></block>。</block>
+  <block id="262af560e91bb5d3ce2340e565954dbf" category="paragraph-title">透明代理支持</block>
+  <block id="9478b45dce4de73855a8e0b13720f895" category="paragraph">Data Classification 现在支持透明代理配置，可在代理或受限网络环境中实现更顺畅的部署。</block>
+  <block id="89f7afc8a9b178d4b4346f224d8bffc7" category="paragraph">有关在受限环境中部署的详细信息，请参见 <block ref="6804ab8e5e77245509e3dc550ef5b67d" category="inline-link-macro-rx"></block>。</block>
+  <block id="df4bdd45174b09881add6730bdfaf045" category="section-title">2026 年 3 月 09 日</block>
 </blocks>
