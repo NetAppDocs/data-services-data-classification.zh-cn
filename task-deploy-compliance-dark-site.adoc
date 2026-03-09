@@ -266,6 +266,8 @@ NFS 卷导出策略必须允许从数据分类实例进行访问。
 
 对于典型配置，您将在单个主机系统上安装该软件。
 
+image:diagram_deploy_onprem_single_host_no_internet.png["显示在没有互联网访问的情况下使用本地部署的单个 Data Classification 实例时可以扫描的数据源的位置的图表。"]
+
 在脱机环境中的单个本地主机上安装 Data Classification 软件时，请执行以下步骤。
 
 请注意，安装数据分类时会记录所有安装活动。如果您在安装过程中遇到任何问题，您可以查看安装审计日志的内容。它被写给 `/opt/netapp/install_logs/`。
