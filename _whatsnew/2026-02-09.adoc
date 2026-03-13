@@ -21,7 +21,7 @@
 .提高复制和移动的限制
 现在，在复制或移动文件时，您可以移动最大为 250 MB 的文件，这比之前的 50 MB 限制有所增加。
 
-有关详细信息，请参见 link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["调查数据"^]。
+有关详细信息，请参见link:https://docs.netapp.com/us-en/data-services-data-classification/task-copy-move.html["复制、移动和删除数据"^]。
 
 .改进了低分辨率屏幕的显示效果
 Data Classification 提高了低分辨率屏幕的显示性能，增强了用户体验。

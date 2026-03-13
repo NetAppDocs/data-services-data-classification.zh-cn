@@ -1,0 +1,83 @@
+---
+sidebar: sidebar 
+permalink: task-copy-move.html 
+keywords: investigation, filter, delete, copy, move, flexclone, sync 
+summary: 在调查仪表板中过滤数据后，您可以复制、移动和删除非结构化数据。 
+---
+= 使用 NetApp Data Classification 复制、移动和删除文件
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+除了提供有关治理和节省机会的见解外，NetApp Data Classification 还使您能够从其 Investigation 仪表板对文件执行操作。在 Investigation 仪表板中过滤数据后，您可以复制、移动和删除非结构化数据。执行这些操作可以提高合规性，例如，将文件移动到更安全的位置，或者通过删除旧文件或重复文件来节省成本。
+
+
+
+== 复制文件
+
+Data Classification 支持复制大小不超过 1 GB 的文件。您可以复制总共 1 TB 的数据或 500 万个文件，以先达到的限制为准。您可以将文件复制到 CIFS 共享或 NFS 目标。复制源文件时不会对源文件产生影响。
+
+.步骤
+. 在调查仪表板中，选择要复制的文件。
+. 在文件列表上方，选择**复制**。
++
+image:screenshot-copy-move-delete.png["调查页面中操作的屏幕截图"]
+
+. 选择副本的目标协议：**NFS** 或 **CIFS**。
+. 如果选择了 NFS，请使用正斜杠输入目标路径，例如 `hostname:/path/to/destination`。
++
+如果选择了 CIFS，请使用反斜杠输入目标路径，例如 `\\server\share\path`。还要输入 CIFS 共享的 **Username** 和 **Password** 凭据。
+
++
+image:screenshot-copy-nfs.png["NFS 文件复制功能的屏幕截图"]
+
+. 选择 **Submit**。
+
+
+
+
+== 移动文件
+
+Data Classification 支持移动大小不超过 1 GB 的文件。您可以移动总共 1 TB 的数据或 500 万个文件，以先达到的限制为准。您可以将文件移动到 CIFS 或 NFS 目标。
+
+.步骤
+. 在调查仪表板中，选择要移动的文件。
++
+image:screenshot-copy-move-delete.png["调查页面中操作的屏幕截图"]
+
+. 在文件列表上方，选择**移动**。
+. 选择目标的协议：**NFS** 或 **CIFS**。
+. 如果选择了 NFS，请使用正斜杠输入目标路径，例如 `hostname:/path/to/destination`。
++
+如果选择了 CIFS，请使用反斜杠输入目标路径，例如 `\\server\share\path`。还要输入 CIFS 共享的 **Username** 和 **Password** 凭据。
+
+. （可选）选择 **Leave breadcrumb** 在源卷中留下一个面包屑文件，解释文件被移动的位置和原因。
++
+.. 如果您选择了 **Leave breadcrumb**，请输入一个说明性文本，说明移动文件的理由，并在必要时说明新位置。
++
+image:screenshot-move-nfs.png["NFS 文件移动功能的屏幕截图"]
+
+
+
+. 选择 **Move items**。
+
+
+
+
+== 删除文件
+
+在调查仪表板上筛选数据以发现节省空间和成本的机会时，您可以删除这些文件。仅非结构化文件支持删除文件。
+
+.步骤
+. 在 Investigation 仪表板中，选择要删除的文件。
+. 在确认对话框中，输入 "permanently delete"。
+. 选择 **Delete File** 以确认此操作。
++
+image:screenshot-delete.png["删除对话框的屏幕截图"]
+
+

@@ -4,7 +4,7 @@ permalink: reference-log-in-to-instance.html
 keywords: log in, data sense, classification 
 summary: 有时您可能需要登录NetApp Data Classification系统，以便访问日志文件或编辑配置文件。 
 ---
-= 登录NetApp Data Classification系统
+= 登录到 NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

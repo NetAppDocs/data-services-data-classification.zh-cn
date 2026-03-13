@@ -4,7 +4,7 @@ permalink: faq-cloud-compliance.html
 keywords: faq, frequently asked questions, questions, cloud compliance, data sense 
 summary: 如果您只是想快速找到问题的答案，此常见问题解答可以为您提供帮助。 
 ---
-= 关于 NetApp Data Classification 的常见问题
+= NetApp Data Classification 常见问题
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

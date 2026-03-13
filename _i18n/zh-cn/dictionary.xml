@@ -664,7 +664,6 @@
   <block id="5215d51f00cbd59bd4f5379564dd2607" category="section-title">上次访问的时间戳</block>
   <block id="766aa8e7cd2a6b2b085c6107a7da9b88" category="paragraph">当数据分类对目录进行扫描时，扫描会影响目录的**上次访问**字段。当您查看**上次访问**字段时，该元数据反映扫描的日期和时间或用户上次访问目录的时间。</block>
   <block id="e96a6a2be46b8b1357ec2a787a1d1300" category="summary">有时您可能需要登录NetApp Data Classification系统，以便访问日志文件或编辑配置文件。</block>
-  <block id="3bdd1ff20ed6998a7cc8219fdca4e271" category="doc">登录NetApp Data Classification系统</block>
   <block id="3ce6ca22e847cbd536ba7c715301377a" category="paragraph">您需要登录NetApp Data Classification系统，以便访问日志文件或编辑配置文件。</block>
   <block id="2b5271618e7493a8c77e7b4639d819b8" category="paragraph">当数据分类安装在您本地的 Linux 机器上或在云中部署的 Linux 机器上时，您可以直接访问配置文件和脚本。</block>
   <block id="b432bef38adffbc05fc1ceb150787a02" category="paragraph">当数据分类部署在云中时，您需要通过 SSH 连接到数据分类实例。您可以通过输入用户和密码，或使用控制台代理安装期间提供的 SSH 密钥，通过 SSH 连接到系统。  SSH 命令是：</block>
@@ -1569,7 +1568,6 @@
   <block id="0079344bb0661607100d432cde92e6a5" category="list-text">在配置页面上，选择*配置*以查看每个 CIFS 和 NFS 卷的状态并纠正任何错误。</block>
   <block id="e90444baa59788bd6471cf703b12a16e" category="summary">您可以通过查看数据调查页面中的详细信息来调查来自您组织的数据。查看治理仪表板后，您可以在这里继续您的研究。</block>
   <block id="4c257f0482d661d1986f92f057e1c581" category="doc">使用NetApp Data Classification调查组织中存储的数据</block>
-  <block id="7ce237dbe0011dccdc7c96c7be17d6ec" category="paragraph">数据调查仪表板显示文件和目录级别的数据洞察，使您能够对结果进行排序和过滤。数据调查页面提供有关文件和目录元数据和权限的见解以及识别重复文件。通过文件、目录和数据库级别的洞察，您可以采取措施来提高组织的合规性并节省存储空间。数据调查页面还支持移动、复制和删除文件。</block>
   <block id="8d6bb2090f1e71e8cabff59cd97a6f5f" category="admonition">要从调查页面获得见解，您必须对数据源执行完整的分类扫描。仅进行过映射扫描的数据源不会显示文件级别的详细信息。</block>
   <block id="adbc89b69fed239a539f916b53592ab9" category="section-title">数据调查结构</block>
   <block id="7fc46b0c25bc13694774a84c4a0f5b4b" category="paragraph">数据调查页面将数据分类到三个选项卡中：</block>
@@ -2429,7 +2427,6 @@
   <block id="a1b1318193a35f78be2416bedbe04261" category="sidebar">查看有关您的数据的治理详细信息</block>
   <block id="056f094fced7be2185f9f1e21b455e6b" category="sidebar">查看有关您的数据的合规性详细信息</block>
   <block id="93f515959ce6187b986c42fa6959168b" category="sidebar">私人数据类别</block>
-  <block id="d208d030068b6bbb840e4e251deaf193" category="sidebar">创建自定义扫描</block>
   <block id="bd3668f2876c07e4375041fda913dc31" category="sidebar">管理已保存的查询</block>
   <block id="91cace02ed792be8683fda1544dfb32c" category="sidebar">修改扫描设置</block>
   <block id="2a79af6160ec8fbec237f8058c6c9de3" category="sidebar">管理数据分类</block>
@@ -2797,5 +2794,49 @@
   <block id="df4bdd45174b09881add6730bdfaf045" category="section-title">2026 年 3 月 09 日</block>
   <block id="c929bf2a4cebf50fb64dab464b664919" category="inline-image-macro">显示在没有互联网访问的情况下使用本地部署的单个 Data Classification 实例时可以扫描的数据源的位置的图表。</block>
   <block id="416689a150e5347df135e4852392a307" category="paragraph"><block ref="416689a150e5347df135e4852392a307" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e70d49c282a7c52a8996f7a8357c7524" category="doc">关于 NetApp Data Classification 的常见问题</block>
+  <block id="4ccc6bc65ccfbf776471461699df7790" category="inline-link-macro">复制、移动和删除数据</block>
+  <block id="26f19c45862fe8f967db0b3b7d289ad3" category="paragraph">有关详细信息，请参见<block ref="151ab796904ad3ebe669fb675d8fec0a" category="inline-link-macro-rx"></block>。</block>
+  <block id="ad5b3224be1d6831dcf88a793785b1f1" category="doc">NetApp Data Classification 常见问题</block>
+  <block id="621a6cff40fed66e7b90194843eb20fb" category="doc">NetApp Data Classification 法律声明</block>
+  <block id="b231d70c2e9c026262bda45de2cf8e61" category="doc">登录到 NetApp Data Classification</block>
+  <block id="f214292b356953b67175bbd37992066d" category="summary">在调查仪表板中过滤数据后，您可以复制、移动和删除非结构化数据。</block>
+  <block id="645af234aa1818d98e8bb6c780fb0e42" category="doc">使用 NetApp Data Classification 复制、移动和删除文件</block>
+  <block id="4c6b11e5b29f298bdccac50248f21007" category="paragraph">除了提供有关治理和节省机会的见解外，NetApp Data Classification 还使您能够从其 Investigation 仪表板对文件执行操作。在 Investigation 仪表板中过滤数据后，您可以复制、移动和删除非结构化数据。执行这些操作可以提高合规性，例如，将文件移动到更安全的位置，或者通过删除旧文件或重复文件来节省成本。</block>
+  <block id="558f28628ba8ab4cb8420949524832d3" category="section-title">复制文件</block>
+  <block id="e54a222aee96b176f405c4031ff80909" category="paragraph">Data Classification 支持复制大小不超过 1 GB 的文件。您可以复制总共 1 TB 的数据或 500 万个文件，以先达到的限制为准。您可以将文件复制到 CIFS 共享或 NFS 目标。复制源文件时不会对源文件产生影响。</block>
+  <block id="37214830ec688e601a722f40084e9795" category="list-text">在调查仪表板中，选择要复制的文件。</block>
+  <block id="2d2f00419a0dd0229c58522ea98e71ae" category="list-text">在文件列表上方，选择**复制**。</block>
+  <block id="b9e9b1bb4d8b072a482f32c6e7d7ff72" category="inline-image-macro">调查页面中操作的屏幕截图</block>
+  <block id="cca60a4ec6a536a71654abbbd1c54e3a" category="paragraph"><block ref="cca60a4ec6a536a71654abbbd1c54e3a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="07f527a3198ae416b045c995367ab422" category="list-text">选择副本的目标协议：**NFS** 或 **CIFS**。</block>
+  <block id="4885cff36928d8614fad0e3d21b27679" category="list-text">如果选择了 NFS，请使用正斜杠输入目标路径，例如<block ref="8ed050b486343bdef7b6adadf5b986b8" prefix=" " category="inline-code"></block>。</block>
+  <block id="6a3331936dcbbbfa4db946e4d0f00e9b" category="paragraph">如果选择了 CIFS，请使用反斜杠输入目标路径，例如<block ref="52938cbc0a420230679e4ae98bb4a89a" prefix=" " category="inline-code"></block>。还要输入 CIFS 共享的 **Username** 和 **Password** 凭据。</block>
+  <block id="c64976420b21ffb4d1ba97533079e81c" category="inline-image-macro">NFS 文件复制功能的屏幕截图</block>
+  <block id="12ceb039500c1e7536d6a926d04beed0" category="paragraph"><block ref="12ceb039500c1e7536d6a926d04beed0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="005315d0bf05e5d249f46e46e20423d3" category="list-text">选择 **Submit**。</block>
+  <block id="ed86a97d5bcbda5898269baae37b79f7" category="section-title">移动文件</block>
+  <block id="0ac97eb58eed3141f29d93b87eb4d0b7" category="paragraph">Data Classification 支持移动大小不超过 1 GB 的文件。您可以移动总共 1 TB 的数据或 500 万个文件，以先达到的限制为准。您可以将文件移动到 CIFS 或 NFS 目标。</block>
+  <block id="fbb338a6c6a711b7c940515c513f15de" category="list-text">在调查仪表板中，选择要移动的文件。</block>
+  <block id="2066527d248d6275b0ce325ff50ec8fb" category="list-text">在文件列表上方，选择**移动**。</block>
+  <block id="2a993e09d9313401f99dcee0ed7245f9" category="list-text">选择目标的协议：**NFS** 或 **CIFS**。</block>
+  <block id="1ab5ecdad0b7cf47d71967b3f0e1f51b" category="list-text">（可选）选择 **Leave breadcrumb** 在源卷中留下一个面包屑文件，解释文件被移动的位置和原因。</block>
+  <block id="465b61ed91de19635de96ea746fcd8dd" category="list-text">如果您选择了 **Leave breadcrumb**，请输入一个说明性文本，说明移动文件的理由，并在必要时说明新位置。</block>
+  <block id="f7e4b92188f5354ca61e9869df6224cc" category="inline-image-macro">NFS 文件移动功能的屏幕截图</block>
+  <block id="9b1a8f320a2c08a8370e356510090979" category="paragraph"><block ref="9b1a8f320a2c08a8370e356510090979" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7afd3db29a42496704a6705958fec121" category="list-text">选择 **Move items**。</block>
+  <block id="19e43848563797a6f937c7895b604754" category="section-title">删除文件</block>
+  <block id="bf7a8fa340e92f5931d748d2f4929afb" category="paragraph">在调查仪表板上筛选数据以发现节省空间和成本的机会时，您可以删除这些文件。仅非结构化文件支持删除文件。</block>
+  <block id="fe3f40b2ceb6ec005d118e22ab125813" category="list-text">在 Investigation 仪表板中，选择要删除的文件。</block>
+  <block id="9f9603fa59f6dd606ff86c8b621cae42" category="list-text">在确认对话框中，输入 "permanently delete"。</block>
+  <block id="de44f74c0cf208f9b074a847f28871e1" category="list-text">选择 **Delete File** 以确认此操作。</block>
+  <block id="9c213e0d48408ad93cdfc881eb4f22dd" category="inline-image-macro">删除对话框的屏幕截图</block>
+  <block id="d5c79828ec7e224f24ce0c5c7bdfd94a" category="paragraph"><block ref="d5c79828ec7e224f24ce0c5c7bdfd94a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b1e91143d215d79313744660e8a25c51" category="inline-link-macro">移动、复制和删除文件</block>
+  <block id="5f346df67220a8ad49f8534209369421" category="paragraph">数据调查仪表板显示对数据的文件和目录级见解，使您能够对结果进行排序和筛选。数据调查页面提供了有关文件和目录元数据和权限以及识别重复文件的见解。借助文件、目录和数据库级别的见解，您可以采取行动来提高组织的合规性并节省存储空间。数据调查页面也支持 <block ref="53552aaf1401627b381eb7f88c3339dc" category="inline-link-macro-rx"></block>。</block>
+  <block id="f394fbb29081ecb4ff4624bf5701d2c0" category="inline-link-macro">复制、移动和删除非结构化文件</block>
+  <block id="380916f8eca732c161f7d63bc771658e" category="admonition">过滤数据后，您可以<block ref="80925d04faafa25188db966788d6cf44" category="inline-link-macro-rx"></block>提高合规性或优化存储。</block>
+  <block id="a05935ba37500bcaabc75b8fac4a4d69" category="inline-link-macro">从调查仪表板复制、移动和删除数据</block>
+  <block id="dccdd7229b11ad459b3b6fd7edf24186" category="list-text"><block ref="dccdd7229b11ad459b3b6fd7edf24186" category="inline-link-macro-rx"></block></block>
+  <block id="5b077e4667590c350e8809dec7c16b8f" category="sidebar">检查 Linux 主机的就绪性</block>
+  <block id="44c26efa4311ed85b7e12474f8bd2eaf" category="sidebar">删除数据源</block>
 </blocks>
