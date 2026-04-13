@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-add-group-id-as-open.html 
 keywords: permissions, open to organization, file access 
-summary: '当组 ID 附加到 NFS 文件共享中的文件或文件夹时，它们定义了文件或文件夹的权限；例如它们是否“对组织开放”。如果某些组 ID (GID) 最初未设置“向组织开放”权限级别，则可以将该权限添加到 GID，以便附加该 GID 的任何文件和文件夹都将被视为“向组织开放”。' 
+summary: '当组 ID 附加到 NFS 文件共享中的文件或文件夹时，它们定义了文件或文件夹的权限。如果组 ID 未设置为"对组织开放"权限级别，则可以将该权限添加到 GID，以便附加了该 GID 的任何文件和文件夹都将被视为"对组织开放"。' 
 ---
 = 在NetApp Data Classification其他组 ID 定义为对组织开放
 :hardbreaks:

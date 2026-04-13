@@ -965,7 +965,6 @@
   <block id="ca3e2e8380ad6cedd810ec4fc49fa9e7" category="paragraph">如果您需要修改 Active Directory 集成中的任何值，请单击“*编辑*”按钮并进行更改。</block>
   <block id="024205acf9405311336c02bbd2193b70" category="inline-image-macro">更多按钮</block>
   <block id="59cb665cd7462a904eefb54d13262d58" category="paragraph">您还可以选择<block ref="aa89719a78a5f0c3ea3c4b3d03b565b2" category="inline-image-macro-rx" type="image"></block>按钮，然后*删除 Active Directory*。</block>
-  <block id="0ee0dd7645f9fd01a3094af2719826bf" category="summary">当组 ID 附加到 NFS 文件共享中的文件或文件夹时，它们定义了文件或文件夹的权限；例如它们是否“对组织开放”。如果某些组 ID (GID) 最初未设置“向组织开放”权限级别，则可以将该权限添加到 GID，以便附加该 GID 的任何文件和文件夹都将被视为“向组织开放”。</block>
   <block id="fdb7ec2123850e91ea909a1c5335e442" category="doc">在NetApp Data Classification其他组 ID 定义为对组织开放</block>
   <block id="b838209e951016249a0803fc3f2aabb9" category="paragraph">当组 ID (GID) 附加到 NFS 文件共享中的文件或文件夹时，它们定义了文件或文件夹的权限；例如它们是否“对组织开放”。如果某些 GID 最初未设置“向组织开放”权限级别，您可以向 GID 添加该权限，以便任何附加了该 GID 的文件和文件夹都将被视为“向组织开放”。</block>
   <block id="bd4a9628c6b0a95d8b9d51e8beb243af" category="paragraph">在您进行此更改并且NetApp Data Classification重新扫描您的文件和文件夹后，任何附加了这些组 ID 的文件和文件夹都将在“调查详细信息”页面中显示此权限，并且它们还将出现在您显示文件权限的报告中。</block>
@@ -2842,4 +2841,7 @@
   <block id="05ae2f7ed42f24ad34227986da264aae" category="paragraph-title">支持 RHEL 9.7</block>
   <block id="3864a6ab3937a10a6f13bfa0f593150c" category="paragraph">数据分类已添加 Red Hat Enterprise Linux v9.7，用于手动本地安装，包括暗站点部署。</block>
   <block id="900e4148b2c0433fc2c6d0435cf489cd" category="paragraph">以下操作系统需要使用 Podman 容器引擎，并且需要 Data Classification 1.30 或更高版本：Red Hat Enterprise Linux 版本 8.8、8.10、9.0、9.1、9.2、9.3、9.4、9.5、9.6 和 9.7。</block>
+  <block id="9011586cd2cbb8095aa94a58c4af72fd" category="doc">1.53 版</block>
+  <block id="0afc92b0bdc2ed57893a82b6cc2587d3" category="summary">当组 ID 附加到 NFS 文件共享中的文件或文件夹时，它们定义了文件或文件夹的权限。如果组 ID 未设置为"对组织开放"权限级别，则可以将该权限添加到 GID，以便附加了该 GID 的任何文件和文件夹都将被视为"对组织开放"。</block>
+  <block id="403f4a170e2d1c03d329e0f0dd8d1b84" category="section-title">2026 年 4 月 13 日</block>
 </blocks>
