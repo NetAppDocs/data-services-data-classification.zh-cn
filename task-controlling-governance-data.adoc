@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-controlling-governance-data.html 
 keywords: savings, stale data, duplicate data, highlights, data discovery assessment report, data mapping overview report, data repositories, sensitive data, wide permissions, open permissions, age of data, size of data, classification, costs of data 
-summary: 控制与组织存储资源上的数据相关的成本。  NetApp Data Classification可识别系统中陈旧数据、重复文件和超大文件的数量，以便您可以决定是否要删除某些文件或将某些文件分层到成本较低的对象存储中。 
+summary: 通过 Data Classification，您可以通过识别陈旧数据、重复文件和大型文件，然后将其删除或分层到更便宜的对象存储来降低存储成本 
 ---
-= 使用NetApp Data Classification查看组织中存储的数据的治理详细信息
+= 使用 NetApp Data Classification 查看有关组织数据的治理详细信息
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

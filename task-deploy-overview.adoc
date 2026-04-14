@@ -4,7 +4,7 @@ permalink: task-deploy-overview.html
 keywords: cloud compliance, data sense, get started, deploy cloud data sense, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, bluexp classification 
 summary: 规划哪种NetApp Data Classification部署可以满足您的需求。 
 ---
-= 您应该使用哪种NetApp Data Classification部署？
+= 选择您的 NetApp Data Classification 部署方法
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
