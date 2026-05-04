@@ -36,6 +36,8 @@ sidebar:
         url: "/task-deploy-cloud-compliance.html"
       - title: 在可以访问互联网的 Linux 主机上安装
         url: "/task-deploy-compliance-onprem.html"
+      - title: 使用 OVA 安装本地
+        url: "/task-deploy-ova.html"
       - title: 在没有互联网访问的本地 Linux 主机上安装
         url: "/task-deploy-compliance-dark-site.html"
       - title: 检查 Linux 主机的就绪性

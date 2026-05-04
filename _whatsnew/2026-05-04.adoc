@@ -1,0 +1,11 @@
+= 使用 OVA 部署 Data Classification
+:allow-uri-read: 
+
+
+
+
+=== 使用 OVA 部署 Data Classification
+
+NetApp Data Classification 现在支持使用 VMware Open Virtual Appliance (OVA) 进行部署，为本地 VMware vSphere 环境提供了简化的部署策略。
+
+有关详细信息，请参见 link:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-ova.html["使用 OVA 部署 Data Classification"^]。

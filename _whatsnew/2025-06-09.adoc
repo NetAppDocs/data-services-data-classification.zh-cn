@@ -1,14 +1,11 @@
-= 1.44 版
+= 改进了治理仪表板的更新时间
 :allow-uri-read: 
 
 
 
 
-=== 1.44 版
+=== 改进了治理仪表板的更新时间
 
-此次BlueXP classification发布包括：
-
-.改进了治理仪表板的更新时间
 治理仪表板各个组件的更新时间已得到改善。下表显示了每个组件的更新频率。
 
 [cols="1,1"]
@@ -53,8 +50,14 @@
 |===
 您可以查看上次更新的时间，并按敏感度级别手动更新重复文件、非业务数据、已保存的搜索、陈旧数据和顶级数据存储库组件。有关治理仪表板的更多信息，请参阅link:https://docs.netapp.com/us-en/data-services-data-classification/task-controlling-governance-data.html["查看有关组织中存储的数据的治理详细信息"]。
 
-.性能和安全性改进
+
+
+=== 性能和安全性改进
+
 已做出改进以提高BlueXP分类的性能、内存消耗和安全性。
 
-.错误修复
+
+
+=== 错误修复
+
 Redis 已升级，以提高BlueXP classification的可靠性。BlueXP classification现在使用 Elasticsearch 来提高扫描期间文件计数报告的准确性。

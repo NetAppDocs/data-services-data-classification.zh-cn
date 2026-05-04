@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: task-deploy-ova.html 
+keywords: deploy, install, vmware, ova, open virtual appliance 
+summary: 'NetApp Data Classification 支持使用 Open Virtual Appliance (OVA) 为本地 vSphere 环境进行部署。OVA 部署方法提供了一个预先验证的 NetApp 托管环境，以简化部署。' 
+---
+= 使用 VMware Open Virtual Appliance 部署 NetApp Data Classification
+:allow-uri-read: 
+:no-hardbreaks: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Data Classification 支持使用 VMware Open Virtual Appliance (OVA) 进行部署，提供托管包以在本地 VMware vSphere 环境中安装和运行 Data Classification。OVA 部署方法提供了一个预先验证的 NetApp 托管环境，以简化部署。
+
+对于新的基于 VMware 的部署，建议使用此方法。
+
+
+
+== 前提条件
+
+在使用 OVA 文件安装 NetApp Data Classification 之前，必须具有：
+
+* VMware vSphere 环境
+* 分配给设备的静态 IPv4 地址
+* 可从目标网络访问的 DNS 服务器
+* 已启用对设备的 SSH 访问
+* link:https://mysupport.netapp.com/site/user/registration["NetApp 支持站点凭据"] 下载安装程序
+
+
+
+
+== 在 VMware vSphere 中部署 OVA
+
+. 从 link:https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/["NetApp 支持站点"^] 下载 OVA 文件。选择适合您环境的 OVA 设备：
++
+|===
+| OVA 设备 | 生产规模 | 文件扫描限制 
+
+
+| `DataClassification-<version>-L.ova` | 标准生产工作负载：16 个 CPU、64 GB RAM、500 GB 磁盘 | 2.5 亿个文件 
+
+
+| `DataClassification-<version>-XL.ova` | 大型生产工作负载：32 个 CPU、128 GB RAM、1 TB 磁盘 | 5 亿个文件 
+|===
+. 输入 vSphere 客户端。右键单击目标集群或主机，然后选择 *Deploy OVF Template* > *Create VM from OVA*。
+. 上传您在第一步中下载的 OVA 文件。
+. 指定 *VM 名称* 和目标数据中心、主机或集群和数据存储库。
+. 接受 NetApp 最终用户许可协议。
+. 自定义模板。您必须提供以下信息：
++
+** **主机名** - 设备的名称
+** **IPv4 地址** - 管理接口的静态 IPv4 地址
+** **IPv4 子网掩码** - 例如 255.255.255.0
+** **IPv4 网关地址** - 默认网关
+** **主要 DNS** - 所需的 DNS 解析器
++
+（可选）添加 **辅助 DNS**，并以逗号分隔的列表形式添加 **搜索域**（例如 `corp.local,lab.local`）和 **NTP 服务器**。
+
+
+
+. 为默认 Linux 用户设置 *Admin password*。
++
+
+NOTE: 密码用于 root 访问、SSH 访问和系统管理。请安全存储密码。
+
+. 查看摘要。选择 *Finish* 进行部署。
+. 部署完成后，打开 VM。
+
+
+
+
+== 安装 Data Classification
+
+. 从 link:https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/["NetApp 支持站点"^] 下载 Data Classification 软件。
++
+选择名为 *DATASENSE-INSTALLER-<version>.tar.gz* 的文件。
+
+. 在控制台中，选择*治理>分类*。
+. 选择 *Deploy Classification*。
++
+image:screenshot-deploy-classification.png["选择按钮以激活数据分类的屏幕截图。"]
+
+. 根据您是在云中准备的实例上还是在本地准备的实例上安装数据分类，选择适当的*部署*选项来启动数据分类安装。
+. 将显示“在本地部署数据分类”对话框。复制提供的命令（例如： `sudo ./install.sh -a 12345 -c 27AG75 -t 2198qq` ) 并将其粘贴到文本文件中，以便稍后使用。然后选择*关闭*以关闭对话框。
+. 使用管理员用户通过 SSH 连接到 OVA 设备。
+. 运行生成的安装命令以完成安装并向组织注册系统。
+
+
+
+
+== 下一步
+
+* link:task-scanning-overview.html["配置对数据源的扫描"]
+

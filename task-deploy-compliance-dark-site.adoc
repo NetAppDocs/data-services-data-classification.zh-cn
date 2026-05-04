@@ -18,7 +18,8 @@ summary: 完成几个步骤即可在没有互联网访问的本地站点的 Linu
 
 link:https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["了解 Console 代理和 Data Classification 的不同部署模式"^]。
 
-您也可以 link:task-deploy-compliance-onprem.html["在具有互联网访问权限的本地站点部署 Data Classification"]。
+
+TIP: 对于本地 VMware vSphere 部署，Data Classification 支持简化的link:task-deploy-ova.html["使用 OVA 部署"]。
 
 数据分类安装脚本首先检查系统和环境是否满足所需的先决条件。如果所有先决条件都满足，则安装开始。如果您想独立于运行数据分类安装来验证先决条件，您可以下载一个单独的软件包，该软件包仅测试先决条件。link:task-test-linux-system.html["了解如何检查您的 Linux 主机是否已准备好安装数据分类"] 。
 
@@ -390,3 +391,10 @@ start_darksite_upgrade.sh
 主机上的 Data Classification 软件已升级。更新可能需要 5 至 10 分钟。
 
 您可以通过检查 Data Classification UI 页面底部的版本来验证软件是否已更新。
+
+
+
+== 下一步
+
+* link:task-scanning-overview.html["配置对数据源的扫描"]
+

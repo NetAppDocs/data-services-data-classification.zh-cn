@@ -67,11 +67,9 @@
   <block id="672224b23e2b17f35b0d4bf8aa4f1c43" category="inline-image-macro">显示如何配置已保存的查询并保存它的屏幕截图。</block>
   <block id="47a922638f32c230008676e9ffb143c9" category="paragraph"><block ref="47a922638f32c230008676e9ffb143c9" category="inline-image-macro-rx" type="image"></block></block>
   <block id="02d6fe4579b4d035f1741bff636a2bf4" category="paragraph">创建搜索或策略后，您可以在**已保存的查询**选项卡中查看它。</block>
-  <block id="2808185c0a48de3cd5dcc0d92f453531" category="doc">1.35 版</block>
   <block id="4f13d17cc7a60ec8546d7892c87e3acf" category="paragraph-title">扫描StorageGRID数据</block>
   <block id="3c857514c210414567713ffec9077aff" category="paragraph">BlueXP classification支持扫描StorageGRID中的数据。</block>
   <block id="60c09f1a3afdb367fc787929a52bce2c" category="paragraph">有关详细信息，请参阅<block ref="01dac562b0502c43b97eebbd4bf4b35d" category="inline-link-macro-rx"></block>。</block>
-  <block id="5413a43995a4a97a249b7b24fbf3e785" category="doc">1.36 版</block>
   <block id="44b53ed30a4c420b95b8adba575b84a6" category="paragraph-title">支持 RHEL 9.4</block>
   <block id="409886e91bb1c98ce7537a6ea025aa8e" category="paragraph">此版本除了支持以前支持的版本外，还提供对 Red Hat Enterprise Linux v9.4 的支持。这适用于BlueXP classification的任何手动本地安装，包括暗站部署。</block>
   <block id="a851e95484895c6e743c9be7755facd2" category="paragraph">以下操作系统需要使用 Podman 容器引擎，并且需要BlueXP classification版本 1.30 或更高版本：Red Hat Enterprise Linux 版本 8.8、9.0、9.1、9.2、9.3 和 9.4。</block>
@@ -79,7 +77,6 @@
   <block id="ff7cd37eefd2efb9fa7f8feccf820e44" category="paragraph">详细了解<block ref="7abbc5be80bdd5f0d4a0233853932b40" category="inline-link-rx"></block>。</block>
   <block id="7062dd46798946172bc9078744756dfc" category="paragraph-title">改进的扫描性能</block>
   <block id="8455b67ff73ad2f75c922d81e0449780" category="paragraph">此版本提供了改进的扫描性能。</block>
-  <block id="c1922490c576eff789b323f98c667589" category="doc">1.37 版</block>
   <block id="e5450ac8535429efc574bc7d9388dd9a" category="paragraph">此BlueXP classification版本包括以下更新。</block>
   <block id="415b27bc5d78b639dc8c74a6e8f93e19" category="paragraph-title">支持 RHEL 8.10</block>
   <block id="52ff638e6cd24bd3aebc0578d753181c" category="paragraph">此版本除了支持以前支持的版本外，还提供对 Red Hat Enterprise Linux v8.10 的支持。这适用于BlueXP classification的任何手动本地安装，包括暗站部署。</block>
@@ -88,9 +85,7 @@
   <block id="ed86b5b4b59dfed3be7d90507a982e16" category="paragraph">详细了解<block ref="8a553bdd7b5187af06654af7127bede8" category="inline-link-rx"></block>。</block>
   <block id="a7e418c0221e06b9bb3fa8ebc082ece2" category="paragraph-title">支持 NFS v4.1</block>
   <block id="f1a9c2f106d86fe27271e4f8f0c0bd59" category="paragraph">此版本除了支持以前支持的版本外，还提供对 NFS v4.1 的支持。</block>
-  <block id="5ae300808387123005a76abbd5a99f46" category="doc">1.38 版</block>
   <block id="074f06822cc9864b1be34066c52ec21d" category="paragraph">此BlueXP classification版本包括一般改进和错误修复。</block>
-  <block id="0a401367ec8a2cd84bb197e6d12c99af" category="doc">1.39 版</block>
   <block id="1a58f9988f87b599ed71b9c7430034c2" category="paragraph">此BlueXP classification版本更新了数据调查报告的导出流程。此导出更新对于对您的数据执行额外分析、对数据创建额外可视化或与他人共享数据调查结果很有用。</block>
   <block id="a4a7057d917e03803441c79badd6d519" category="paragraph">以前，数据调查报告导出限制为 10,000 行。在此版本中，限制已被取消，以便您可以导出所有数据。此更改使您能够从数据调查报告中导出更多数据，从而为您的数据分析提供更大的灵活性。</block>
   <block id="72fa9e7ff6f311a170ad8d720dff3f2f" category="paragraph">您可以选择工作环境、卷、目标文件夹以及 JSON 或 CSV 格式。导出的文件名包含时间戳，以帮助您识别数据的导出时间。</block>
@@ -141,19 +136,15 @@
   <block id="70c351474b2828e2c0dff97793686bc4" category="paragraph-title">提高分类模型的准确性</block>
   <block id="19c8ed5c1b936813e368bc7d83dbccf2" category="inline-link-macro">预定义类别</block>
   <block id="3c83d9ffa8db579e805de307f057c519" category="paragraph">机器学习模型的准确率<block ref="4258f204d4b8f149538aa226ed3589d3" category="inline-link-macro-rx"></block>提高了11%。</block>
-  <block id="4fce1192bdd8d2ff506dd6d380e85fdd" category="doc">1.41 版</block>
   <block id="3bc103100363af5c774f4610f1cd7eec" category="paragraph">此BlueXP classification版本包括一般改进和错误修复。它还包括：</block>
   <block id="52c386a5357f2ccbc556ebac8ae2b5f2" category="paragraph-title">扫描状态</block>
   <block id="6a5c0bfd72f9b6c51f4f17f0d32a0bf5" category="paragraph">BlueXP classification跟踪卷上的初始映射和分类扫描的实时进度。单独的进度条跟踪映射和分类扫描，显示扫描文件总数的百分比。您还可以将鼠标悬停在进度条上来查看已扫描的文件数和文件总数。跟踪扫描状态可以更深入地了解扫描进度，使您能够更好地规划扫描并了解资源分配。</block>
   <block id="dea24de819351c63f66685576d21ee25" category="paragraph">要查看扫描状态，请导航到BlueXP classification中的**配置**，然后选择**工作环境配置**。每卷的进度均按行显示。</block>
-  <block id="33fc2a8f6921fec02571495993aa2c6c" category="doc">1.42 版</block>
-  <block id="83962582dc3c189ba60063fe7990755c" category="paragraph">此次BlueXP classification发布包括：</block>
   <block id="2dcf334efa4f886393cac0e44ff5a917" category="paragraph-title">工作环境批量扫描</block>
   <block id="7c021042892d25e3e5d4271749e03344" category="paragraph-title">本地下载调查报告</block>
   <block id="5914525550e0efce454828b3fc5f9313" category="paragraph">BlueXP classification支持将数据调查报告下载到本地以便在浏览器中查看。如果选择本地选项，数据调查仅以 CSV 格式提供，并且仅显示前 10,000 行数据。</block>
   <block id="6b41c846432704bbeebdc71cd92e0ac2" category="inline-link-macro">使用BlueXP classification调查组织中存储的数据</block>
   <block id="e5ec12d2090a6862ed376344a123c006" category="paragraph">有关更多信息，请参阅<block ref="fceb47647e62ca77cd0675b07a84c97b" category="inline-link-macro-rx"></block> 。</block>
-  <block id="67840d2b3ccd99d7c6db2904273f95ef" category="doc">1.43 版</block>
   <block id="3e05db4c28329af069ba30406ce8330c" category="paragraph-title">优先进行分类扫描</block>
   <block id="4aff63c206df7556bccc48f3a5f50de4" category="paragraph">数据分类除了支持仅映射扫描之外，还支持对映射和分类扫描进行优先排序的功能，使您可以选择首先完成哪些扫描。在扫描开始期间和开始之前，支持对地图和分类扫描进行优先排序。如果您选择在扫描过程中确定扫描的优先级，则映射扫描和分类扫描都会被优先处理。</block>
   <block id="f5d1ea19c8b9424efdf2f986ffd4074f" category="paragraph">有关更多信息，请参阅<block ref="b9518738dcb31100f52b6bb549f809dc" category="inline-link-macro-rx"></block> 。</block>
@@ -169,8 +160,6 @@
   <block id="1005b3a447fe9caf1ce373cf96b4dc01" category="inline-link-macro">**已保存的搜索**</block>
   <block id="7d05e5a22d1961e95b7be92d35164378" category="paragraph">**政策** 选项卡已重命名<block ref="8d1bca00b0b16766f87fd78ec3ac185e" category="inline-link-macro-rx"></block>。功能没有改变。</block>
   <block id="2e2e722b53fe801ed6bcd1713f8325ac" category="paragraph-title">将扫描事件发送到审核页面</block>
-  <block id="0d01ca23121427aff206ecc678cb7af3" category="inline-link-macro">NetApp Console 审计页面</block>
-  <block id="0fddd3e20389e20ca1c63de5412406ae" category="paragraph">数据分类支持发送分类事件（扫描启动时和扫描结束时）到<block ref="3dcf10816a01bda1b4320932f26d59f3" category="inline-link-macro-rx"></block>。</block>
   <block id="ddba4621d4e9a4c39c38ef2131834760" category="list-title">安全更新</block>
   <block id="0a39c7bc14a0f00de22f1ead79c18b0c" category="list-text">Keras 包已更新，缓解了漏洞（BDSA-2025-0107 和 BDSA-2025-1984）。</block>
   <block id="408f8b982d641a307784a27c0fb6d9c9" category="list-text">Docker 容器配置已更新。容器不再有权访问主机的网络接口来制作原始网络数据包。通过减少不必要的访问，此更新可减轻潜在的安全风险。</block>
@@ -178,7 +167,6 @@
   <block id="38942def5d8bae857c7eab12e7216c36" category="paragraph">已经实施了代码增强，以减少 RAM 使用率并提高数据分类的整体性能。</block>
   <block id="2a81eb3b4a7f22fb1fdb159561b71f3f" category="paragraph-title">错误修复</block>
   <block id="223594359ca2e5c0c959aa756dea2d50" category="paragraph">导致StorageGRID扫描失败、调查页面过滤选项无法加载以及无法下载大容量评估的数据发现评估的错误已得到修复。</block>
-  <block id="1c4322a2b157ac1326426ebdbd680c74" category="doc">1.44 版</block>
   <block id="c7ea7ba68a180dd7fffb65d260820bdf" category="paragraph-title">改进了治理仪表板的更新时间</block>
   <block id="4a225b50559fc3e5c91e7a224bca4f82" category="paragraph">治理仪表板各个组件的更新时间已得到改善。下表显示了每个组件的更新频率。</block>
   <block id="2cb05e4bb7830be982f0922fed86b4cd" category="cell">组件</block>
@@ -203,8 +191,6 @@
   <block id="98b92205e576b5e6498a01750fffbf6b" category="paragraph-title">性能和安全性改进</block>
   <block id="890d5712449921f1a6ffa08636045ac2" category="paragraph">已做出改进以提高BlueXP分类的性能、内存消耗和安全性。</block>
   <block id="cb000a9ed4aba8f6a1db1f518019d44e" category="paragraph">Redis 已升级，以提高BlueXP classification的可靠性。BlueXP classification现在使用 Elasticsearch 来提高扫描期间文件计数报告的准确性。</block>
-  <block id="d0169e5c24cd4c5e05dcb7edb4ca10d7" category="doc">1.45 版</block>
-  <block id="8321b9867214f5caa9d5a37197549cfb" category="paragraph">此BlueXP classification版本包括优化资源利用率的代码更改以及：</block>
   <block id="8f993d1847870bf5334f9e8a709029c8" category="paragraph-title">改进了添加文件共享进行扫描的工作流程</block>
   <block id="7363f98210e80281886d9b88b644899c" category="paragraph">将文件共享添加到文件共享组的工作流程已经简化。该流程现在还根据身份验证类型（Kerberos 或 NTLM）区分 CIFS 协议支持。</block>
   <block id="628bc6ea752b2d2bd10bc4f22b8cfcca" category="inline-link-macro">扫描文件共享</block>
@@ -213,15 +199,12 @@
   <block id="4c59149345d32f10d4c1edb221d77028" category="paragraph">您现在可以在“调查”选项卡中查看有关捕获的文件的文件所有者的更多信息。在“调查”选项卡中查看文件的元数据时，找到文件所有者，然后选择“查看详细信息”以查看用户名、电子邮件和 SAM 帐户名称。您还可以查看该用户拥有的其他物品。此功能仅适用于具有 Active Directory 的工作环境。</block>
   <block id="499dd7659f4fa7b600ca3796c449e41b" category="inline-link-macro">调查组织中存储的数据</block>
   <block id="726bb63ef50725c7e3c4766906388acd" category="paragraph">有关更多信息，请参阅<block ref="26029df2267a3a60cd67c1340e62ae48" category="inline-link-macro-rx"></block> 。</block>
-  <block id="7a4e65e1bd3f1685ea059c893a13cb58" category="doc">1.46 版</block>
-  <block id="98f52421b10c8b076970cd9d4bc2932c" category="paragraph">此数据分类版本包括错误修复和以下更新：</block>
   <block id="2c3661dfa2b24a2bf7320699cd536d69" category="paragraph-title">审计页面中增强的扫描事件洞察</block>
   <block id="56693a88c5f83646349fbcd49bc5c045" category="paragraph">审计页面现在支持对BlueXP classification的扫描事件的增强洞察。审计页面现在显示系统扫描的开始时间、系统状态以及任何问题。共享和系统的状态仅适用于映射扫描。</block>
   <block id="00b752fcc4ff0f02c4a53ddfe7ca85f1" category="inline-link-macro">监控NetApp Console操作</block>
   <block id="2602ef05ceb5e5b51fe554db44e59c2c" category="paragraph">有关审计页面的更多信息，请参阅<block ref="33e0fa7818f83bbe32f6e9c2e830952c" category="inline-link-macro-rx"></block>。</block>
   <block id="e5d2f68147d287044a7fffa2d0926eae" category="paragraph-title">支持 RHEL 9.6</block>
   <block id="f1513d7b9b8ef1acb75bb450ddd12a6c" category="paragraph">此版本增加了对 Red Hat Enterprise Linux v9.6 的支持，用于手动本地安装BlueXP classification，包括暗站部署。</block>
-  <block id="ffc4cf2b04c0381567893ed4b4045ccf" category="doc">1.47 版</block>
   <block id="6f36bf9a9811b172de79706eb4020697" category="paragraph-title">BlueXP classification现为NetApp Data Classification</block>
   <block id="5aac44f6ff056f1c6c2f526f52fa4c03" category="paragraph">BlueXP classification已重命名为NetApp Data Classification。除了重命名之外，用户界面也得到了增强。</block>
   <block id="bc2fe31b1e2682a9a79513d792e9c721" category="paragraph-title">BlueXP现在是NetApp Console</block>
@@ -601,8 +584,6 @@
   <block id="763275034b3bde5ad4f0fb074a35e741" category="cell">重复项</block>
   <block id="b30d2f4e379d4d1d15b42fb01207e52c" category="summary">数据分类软件必须在满足特定操作系统要求、RAM 要求、软件要求等的主机上运行。在云中部署数据分类时，建议您使用具有“大型”特性的系统以实现全部功能。</block>
   <block id="abf286473c09b28744e63e974cf9988b" category="doc">支持的NetApp Data Classification实例类型</block>
-  <block id="6daeedd88ba8cb7688391f66dd283257" category="paragraph">NetApp Data Classification软件必须在满足特定操作系统要求、RAM 要求、软件要求等的主机上运行。在云中部署数据分类时，我们建议您使用具有“大型”特性的系统以实现全部功能。</block>
-  <block id="31bcdb40fe40bdf5535d17bbb6b1231c" category="paragraph">在下表中，如果标记为“默认”的系统在您安装数据分类的区域中不可用，则将部署表中的下一个系统。</block>
   <block id="c050baa4e510e3ce3e02b5da38a1c517" category="section-title">AWS 实例类型</block>
   <block id="1e4f0991fe8c17eeb30a08a567b6faeb" category="cell">实例类型</block>
   <block id="9b751021fe03877034959f96cd4215c8" category="cell">32 个 CPU、128 GB RAM、1 TiB gp3 SSD</block>
@@ -1263,7 +1244,6 @@
   <block id="532b2291afa0585aed0b7f83e343086f" category="inline-xref">权限和连接性</block>
   <block id="6bbd76aed7b9a40fed8eed718cd10a57" category="list-text">验证您的离线环境是否满足要求<block ref="95ceef71f2a9d15ceaa6dd17e75c1dd0" category="inline-xref-macro-rx"></block>。</block>
   <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link">NetApp 支持站点</block>
-  <block id="c9a87a7f951d4e7d4680cb07a4c60b9f" category="list-text">从下载数据分类软件<block ref="0a75c5e2697813218978a09f1ac8297e" category="inline-link-rx"></block>。您应该选择的文件名为 *DATASENSE-INSTALLER-&lt;version&gt;.tar.gz*。</block>
   <block id="bbdb5f5f026c712f36de4a68700316f5" category="list-text">将安装程序文件复制到您计划使用的 Linux 主机（使用<block ref="8a444a43bdf534c0c6338bb7809659b3" prefix=" " category="inline-code"></block>或其他方法）。</block>
   <block id="65a0409250bc34ad7aed301586de5abc" category="list-text">在主机上解压安装程序文件，例如：</block>
   <block id="f74ff5e319b8679db4cb8aab068461b0" category="list-text">在控制台中，选择*治理&gt;分类*。</block>
@@ -1294,17 +1274,12 @@
   <block id="d4c51b5a828be356e15e6075078acbf3" category="paragraph">数据分类安装程序安装包、注册安装并安装数据分类。安装可能需要 10 到 20 分钟。</block>
   <block id="055e0d252fbbc82a23ab2191fb431592" category="paragraph">如果主机和控制台代理实例之间通过端口 8080 建立连接，您将在控制台的“数据分类”选项卡中看到安装进度。</block>
   <block id="0f6783da8066ed936cd9826db896cc6b" category="summary">规划哪种NetApp Data Classification部署可以满足您的需求。</block>
-  <block id="8a627e808de2c30fa43886f0bdb6620c" category="paragraph">您可以通过不同的方式部署NetApp Data Classification。了解哪种方法可以满足您的需求。</block>
-  <block id="6598d8c3ced0847c96a82744bde57ec0" category="paragraph">数据分类可以通过以下方式部署：</block>
   <block id="a7955816207c66ef93518de3b208c0d2" category="inline-link-macro">使用控制台在云中部署</block>
   <block id="61e7b2134b2bd5446d16fd5d98582544" category="list-text"><block ref="718e5bf832b7dc2d474175d5c8eba439" category="inline-link-macro-rx"></block> 。控制台将数据分类实例部署在与控制台代理相同的云提供商网络中。</block>
   <block id="7c454725651fa93e75c3603da01e3ae2" category="inline-link-macro">在可以访问互联网的 Linux 主机上安装</block>
   <block id="08858c16551aba16c4305089845b505e" category="list-text"><block ref="953e3010369667b8110edc0847a61543" category="inline-link-macro-rx"></block> 。在您的网络中的 Linux 主机上或云中的 Linux 主机上安装数据分类，前提是该主机可以访问互联网。如果您希望使用同样位于本地的数据分类实例来扫描本地ONTAP系统，则这种类型的安装可能是一个不错的选择，尽管这不是必需的。</block>
   <block id="5be81ee840734d5fff39d8fb451e87de" category="inline-link-macro">在没有互联网访问的本地站点的 Linux 主机上安装</block>
   <block id="53732c49c909038650b435483c435d88" category="list-text"><block ref="7ec82fd84f3aea81a9c6badedcfda318" category="inline-link-macro-rx"></block>，也称为_私人模式_。这种安装类型使用安装脚本，与控制台 SaaS 层没有连接。</block>
-  <block id="967c2f231d9eedd4e80f0b4308527637" category="paragraph">无论是在有互联网访问的 Linux 主机上安装，还是在没有互联网访问的 Linux 主机上进行本地安装，都使用安装脚本。脚本首先检查系统和环境是否满足先决条件。如果满足先决条件，则安装开始。如果您想独立于运行数据分类安装来验证先决条件，您可以下载一个单独的软件包，该软件包仅测试先决条件。</block>
-  <block id="5163ac50e7f6c9b31163f15317256ad2" category="inline-link-macro">检查您的 Linux 主机是否已准备好安装数据分类</block>
-  <block id="0864d0b8a39fc12ae74c4773b2a77ebb" category="paragraph">请参阅<block ref="52b086fa7b78412e3e0a859256e795c9" category="inline-link-macro-rx"></block> 。</block>
   <block id="e1e216bf40960616935ca16f6eb23050" category="summary">如果您希望NetApp Data Classification排除驻留在特定数据源目录中的扫描数据，则可以将这些目录名称添加到配置文件中。应用此更改后，数据分类引擎将排除这些目录中的扫描数据。</block>
   <block id="24559753da5c8b45ef15b1ad5d8f01de" category="doc">从NetApp Data Classification扫描中排除特定目录</block>
   <block id="7d9aed9048d0f40617358d6c89d937c2" category="paragraph">如果您希望NetApp Data Classification从扫描中排除特定目录，则可以将这些目录名称添加到配置文件中。应用此更改后，数据分类引擎将从扫描中排除这些目录。</block>
@@ -2192,14 +2167,12 @@
   <block id="a1fe52ea216874a5214f41ae7e5bbd63" category="section-title">2024年10月10日</block>
   <block id="28dc8814bfe656bc8e29052d1508b999" category="section-title">2024年9月2日</block>
   <block id="d7cf77b2e56bc33512915804de4711b6" category="section-title">2024年8月5日</block>
-  <block id="3b506912c9fbc6e924c90fcd67f9e81d" category="section-title">1.34 版</block>
   <block id="70d1ac1a529ac546d3e60b81ee464a1d" category="paragraph">此BlueXP classification版本包括以下更新。</block>
   <block id="44a73383773bebac3194e73bd06397a8" category="paragraph-title">从 CentOS 更改为 Ubuntu</block>
   <block id="6a1611bc2c4a6c8c16154f81c0323dc2" category="paragraph">BlueXP classification已将其针对 Microsoft Azure 和 Google Cloud Platform (GCP) 的 Linux 操作系统从 CentOS 7.9 更新为 Ubuntu 22.04。</block>
   <block id="d70ebaa1f93a5c2b07653dd485593661" category="inline-link">在具有互联网访问权限的Linux主机上安装并准备Linux主机系统</block>
   <block id="6a69f78db41581cfd7a75502f076641e" category="paragraph">有关部署详细信息，请参阅<block ref="bff73d8b740f372e10ebba82fd5cc0db" category="inline-link-rx"></block>。</block>
   <block id="65f1f74c15350fb3342360320ff8c717" category="section-title">2024年7月1日</block>
-  <block id="29ca6f4adc7aee37872328bb347b7543" category="section-title">1.33 版</block>
   <block id="d61892207457d808cffbfc18b9dcd8ad" category="paragraph-title">支持 Ubuntu</block>
   <block id="0db04e76c6afbdb79f128758ee937013" category="paragraph">此版本支持 Ubuntu 24.04 Linux 平台。</block>
   <block id="b83927d03444ee961e834ea1c3b0581b" category="paragraph-title">地图扫描收集元数据</block>
@@ -2211,17 +2184,14 @@
   <block id="9b28a6e87457a6a3bfb03009dcd0b84a" category="inline-link-macro">映射和分类扫描之间有什么区别</block>
   <block id="5ea8b091093d54a8d17a734f5a2613d1" category="paragraph">有关详细信息，请参阅<block ref="1f8ed6e5fe2de61322f9de0ebb8b7505" category="inline-link-macro-rx"></block> 。</block>
   <block id="e4aecca06323b10cc72f8605553dacea" category="section-title">2024年6月5日</block>
-  <block id="decdab3311a7d521fe764d5d580ddd35" category="section-title">1.32 版</block>
   <block id="7910c8307cac3d62eca8ac0d42301b38" category="paragraph-title">配置页面中的新映射状态列</block>
   <block id="cfbaa8108dcd3c438f032a03ea5c380b" category="paragraph">此版本现在在配置页面中显示一个新的映射状态列。新列可帮助您识别映射是否正在运行、排队、暂停或更多。</block>
   <block id="6195c7a1534de8abb0c4706e15d24a3c" category="inline-link">更改扫描设置</block>
   <block id="1f206e2cb955d5e4de5225f30ab20ee9" category="paragraph">有关状态的解释，请参阅<block ref="d5d0647f1bb783c2ee28e91247e20822" category="inline-link-rx"></block>。</block>
   <block id="93716955add4f66b2af685a33bac4789" category="section-title">2024年5月15日</block>
-  <block id="362a66c8caf141f86c11be1e2f936c77" category="section-title">1.31 版</block>
   <block id="d1e72f4d21bb915d180e5f6d1e9d4264" category="paragraph-title">分类是BlueXP中的一项核心服务</block>
   <block id="e8c9a8c8c457fc72bf3b116575089845" category="paragraph">BlueXP classification现在作为BlueXP中的一项核心功能提供，每个连接器最多可免费扫描 500 TiB 的数据。无需分类许可或付费订阅。由于我们将BlueXP classification功能的重点放在新版本扫描NetApp存储系统上，因此某些旧功能将仅对之前已支付许可证费用的客户可用。当付费合同到期时，这些旧功能的使用将失效。</block>
   <block id="9c0269454c5c35ffc377aed6baf6d638" category="section-title">2024年4月1日</block>
-  <block id="e6a70634d4a42783e6d5918eff0a0ab6" category="section-title">1.30 版</block>
   <block id="1f2986b833ebc6f322deb045aeee0ad8" category="paragraph-title">增加了对 RHEL v8.8 和 v9.3 BlueXP classification的支持</block>
   <block id="bed0a63060826a7b1ed8cba91cb12ba6" category="paragraph">此版本除了之前支持的 9.x 之外，还支持 Red Hat Enterprise Linux v8.8 和 v9.3，它需要 Podman，而不是 Docker 引擎。这适用于BlueXP classification的任何手动本地安装。</block>
   <block id="2c435ff16ae089dc2d457e7776588268" category="paragraph">以下操作系统需要使用 Podman 容器引擎，并且需要BlueXP classification版本 1.30 或更高版本：Red Hat Enterprise Linux 版本 8.8、9.0、9.1、9.2 和 9.3。</block>
@@ -2235,7 +2205,6 @@
   <block id="f943db85a7c2edd799890ddb18f29cab" category="inline-link">在没有互联网访问的 Linux 主机上安装BlueXP classification</block>
   <block id="51113453f591a14d5c9aa29ed4c673ee" category="paragraph">如果您在没有互联网访问的情况下部署了BlueXP classification，则需要手动升级。有关详细信息，请参阅<block ref="99892e361f57f56d51a62e67f9505dc2" category="inline-link-rx"></block>。</block>
   <block id="b8a98fcc40c83e855fb31eabe2a4360d" category="section-title">2024年3月4日</block>
-  <block id="512d4a337ec357edd106a616e83b1a1f" category="section-title">1.29 版</block>
   <block id="2155776a968fa3c23d5147a57832435f" category="paragraph-title">现在您可以排除驻留在特定数据源目录中的扫描数据</block>
   <block id="81e333e3a0fd82b01c14e8eb52437152" category="paragraph">如果您希望BlueXP classification排除驻留在特定数据源目录中的扫描数据，则可以将这些目录名称添加到BlueXP classification的配置文件中。此功能使您能够避免扫描不必要的目录，或避免返回错误的个人数据结果。</block>
   <block id="4f7f682e1cf9bdb2a99803b608a4cba1" category="paragraph"><block ref="e9b412144eab992a1669232ef41dc93d" category="inline-link-rx"></block> 。</block>
@@ -2243,29 +2212,20 @@
   <block id="1647534ed4603d68f73fd3f261af9b65" category="paragraph">如果您需要BlueXP classification来扫描超过 2.5 亿个文件，您可以在云部署或本地安装中使用超大实例。这种系统最多可以扫描 5 亿个文件。</block>
   <block id="21945ea03234b0d3124095ee6fd8427b" category="paragraph"><block ref="6ace692244f983096552c0b273619a12" category="inline-link-rx"></block> 。</block>
   <block id="c630754f942c555264fff115d6b5e9b2" category="section-title">2024年1月10日</block>
-  <block id="536149161458a7a77ae5b72258f34e48" category="section-title">1.27 版</block>
   <block id="fe2063e5676e0308022c99eb2466140c" category="paragraph-title">调查页面结果显示总大小以及项目总数</block>
   <block id="6cff48344cb111c0fcdb424ba18c6bcf" category="paragraph">调查页面中的过滤结果除了显示文件总数外，还显示项目的总大小。这在移动文件、删除文件等操作时很有帮助。</block>
   <block id="bb5b2f81c2aa7d8df9263c590efda3e6" category="paragraph-title">将其他组 ID 配置为“向组织开放”</block>
   <block id="617de59f0823cef046ababc40408cb92" category="inline-link-macro">添加其他组 ID 作为“对组织开放”</block>
   <block id="73b91e38353381a5358557fef0936ca8" category="paragraph">现在，如果组最初没有设置该权限，您可以直接从BlueXP classification将 NFS 中的组 ID 配置为“向组织开放”。任何附加了这些组 ID 的文件和文件夹都将在调查详情页面中显示为“向组织开放”。了解如何<block ref="3412c0c43e6acc979ac67717176325f7" category="inline-link-macro-rx"></block>。</block>
   <block id="3500d4b863ccad6f25298c3ab1519e74" category="section-title">2023年12月14日</block>
-  <block id="552c9ad11d5dffc1189fa270ca015445" category="section-title">版本 1.26.6</block>
-  <block id="5cc6a6599bfa6671ce515940a0badce7" category="paragraph">此版本包含一些小的改进。</block>
   <block id="e2175eca7cd7227e608f98540d53af5e" category="paragraph">该版本还删除了以下选项：</block>
-  <block id="cfb92709c6d193fc86ee41b349cbe288" category="list-text">在目录调查期间，无法使用目录计算个人身份信息 (PII) 数据数量的选项。请参阅<block ref="0b922dd9827c419654172323345089b8" category="inline-link-macro-rx"></block> 。</block>
   <block id="544cac1ecf4d7d5eb4b8b563c0d90c5a" category="section-title">2023年11月6日</block>
-  <block id="0778a32085af8830c408efb93cb7239f" category="section-title">版本 1.26.3</block>
   <block id="e25bae53fb1951841531279fa78ee63a" category="paragraph">此版本已修复以下问题</block>
   <block id="299ea648aaf9c598beed6ef12a6ef415" category="list-text">修复了仪表板中显示系统扫描的文件数量不一致的问题。</block>
   <block id="c6e9efb915fb85dd556a71294988c99a" category="list-text">通过处理和报告名称和元数据中带有特殊字符的文件和目录来改进扫描行为。</block>
   <block id="d36a1ccbf2d01a1ff61c0e50416882e9" category="section-title">2023年10月4日</block>
-  <block id="a7dfa38887a337aec315ca23d79dc622" category="section-title">1.26 版</block>
   <block id="74246010013353726bd9ff99866fa7d4" category="paragraph-title">支持在 RHEL 版本 9 上本地安装BlueXP classification</block>
-  <block id="efbacc885d0798efa8b4d06d61cb578e" category="paragraph">Red Hat Enterprise Linux 8 和 9 版本不支持 Docker 引擎；而BlueXP classification安装需要该引擎。我们现在支持在 RHEL 9.0、9.1 和 9.2 上使用 Podman 版本 4 或更高版本作为容器基础设施进行BlueXP classification安装。如果您的环境需要使用最新版本的 RHEL，现在您可以在使用 Podman 时安装BlueXP classification（版本 1.26 或更高版本）。</block>
-  <block id="efe06748da92e661d7225cc7ec109b32" category="paragraph">目前，在使用 RHEL 9.x 时，我们不支持暗站安装或分布式扫描环境（使用主节点和远程扫描器节点）。</block>
   <block id="b9d5019337501d72be4adcf007f7d84c" category="section-title">2023年9月5日</block>
-  <block id="3f1982a78707e6a0e0433cad5b5a037d" category="section-title">1.25 版</block>
   <block id="6ce2a7f72f88b0710fcd4fd7c8040621" category="paragraph-title">中小型部署暂时不可用</block>
   <block id="6c7040f055c36964a640c88c62785b1b" category="paragraph">当您在 AWS 中部署BlueXP classification实例时，此时无法选择 *部署 &gt; 配置* 并选择小型或中型实例。您仍然可以通过选择*部署&gt;部署*来使用大实例大小部署实例。</block>
   <block id="a4338ca25ea7436675e99fe5320a9d8a" category="paragraph-title">在调查结果页面中为最多 100,000 个项目添加标签</block>
@@ -2273,7 +2233,6 @@
   <block id="d0b71ca8d45c425a9eafb601e1eb4c3c" category="paragraph-title">识别最小文件大小为 1 MB 的重复文件</block>
   <block id="40733cb3233c3b83d0f3ecc4ee6fed65" category="paragraph">BlueXP classification仅用于在文件大小为 50 MB 或更大时识别重复文件。现在可以识别以 1 MB 开头的重复文件。您可以使用调查页面过滤器“文件大小”和“重复项”来查看您的环境中哪些特定大小的文件是重复的。</block>
   <block id="deac043b98b13aa9a1a0d041a820ee2c" category="section-title">2023年7月17日</block>
-  <block id="314ecd7c1da8864532628a8aa4a6c85b" category="section-title">1.24 版</block>
   <block id="025b17159c4d2dd28926bdc5b13436e2" category="paragraph-title">BlueXP classification识别出两种新的德国个人数据</block>
   <block id="9fee27139efd09e005728f7dbfa349f2" category="paragraph">BlueXP classification可以识别和分类包含以下类型数据的文件：</block>
   <block id="22b67d0a50677e01d48389e716223457" category="inline-link-macro">查看BlueXP classification可以在您的数据中识别的所有类型的个人数据</block>
@@ -2288,7 +2247,6 @@
   <block id="d80e88cc1f3abb9239aa87a019057d8b" category="inline-link-macro">了解有关BlueXP classificationAPI 的更多信息</block>
   <block id="31fcc22988d07002d58b5a25a50056c4" category="paragraph"><block ref="ad3b8a781fb3bfe4825e830a10bd8f59" category="inline-link-macro-rx"></block> 。</block>
   <block id="40d3210136139f5fa0cdf31aed565820" category="section-title">2023年6月6日</block>
-  <block id="5a78709b3e68f78b25a72a31cfcaa8f0" category="section-title">1.23 版</block>
   <block id="04e04c61cd37ca8f12b83c892c2c46ea" category="paragraph-title">搜索数据主体名称时现在支持日语</block>
   <block id="3a3337f232548d40f54052862077499b" category="inline-link-macro">数据主体访问请求报告</block>
   <block id="931c126009c96d8f8ce9770df003478d" category="inline-link-macro">数据调查页面中的“数据主体”过滤器</block>
@@ -2303,7 +2261,6 @@
   <block id="e1161f065b10936afc930fd3d9d0c76f" category="paragraph-title">暗网现已支持 Data Sense BYOL 许可证</block>
   <block id="164199ecac7ab88714ff0c68b5fb98f0" category="paragraph">现在，您可以将 Data Sense BYOL 许可证上传到暗站中的BlueXP digital wallet中，以便在许可证不足时收到通知。</block>
   <block id="70c95406986fbb3626df1a393daf99ce" category="section-title">2023年4月3日</block>
-  <block id="288d139ea0d21561e65bec74c2f7c646" category="section-title">1.22 版</block>
   <block id="e4279e9f497576fcde3caeb67ed0f96d" category="paragraph-title">新数据发现评估报告</block>
   <block id="5b9233dec22bab321ca47a360d9950b6" category="inline-link">了解如何生成和使用数据发现评估报告</block>
   <block id="9669b178481453beb0e2edf206fb5692" category="paragraph">数据发现评估报告对扫描环境进行了高级分析，以突出显示系统的发现并显示关注区域和潜在的补救步骤。本报告的目标是提高人们对数据治理问题、数据安全漏洞以及数据集的数据合规性差距的认识。<block ref="9aee3318dd7918d722246357cd8063ac" category="inline-link-rx"></block> 。</block>
@@ -2314,10 +2271,8 @@
   <block id="e75f898f4dbad5388881095e9582c693" category="inline-link">了解如何检查您的 Linux 主机是否已准备好安装BlueXP classification</block>
   <block id="4ea787a4759c0904647bf00934108410" category="paragraph">如果您想独立于运行BlueXP classification安装来验证您的 Linux 系统是否满足所有先决条件，您可以下载一个单独的脚本，该脚本仅测试先决条件。<block ref="5e1d943ca6af2f5a9cb8f87395f318ef" category="inline-link-rx"></block> 。</block>
   <block id="d673bedebce5131101d3c3583efe3e40" category="section-title">2023年3月7日</block>
-  <block id="321553493f3e3f76105c5f5c5633b4c1" category="section-title">1.21 版</block>
   <block id="b4602fb47c1d6ee0427e2682d3a0ca06" category="paragraph-title">从BlueXP classificationUI 添加您自己的自定义类别的新功能</block>
   <block id="3e55ef3a5ecc1c61843dac319870a00a" category="paragraph">BlueXP classification现在允许您添加自己的自定义类别，以便BlueXP classification能够识别适合这些类别的文件。  BlueXP classification有很多<block ref="5836292d8632cade998e14bbf16972f4" category="inline-link-rx"></block>，因此此功能使您能够添加自定义类别，以识别在数据中找到组织独有的信息的位置。</block>
-  <block id="bca8069b731ea966c03da0cea318f9d1" category="paragraph-title">现在您可以从BlueXP classificationUI 添加自定义关键字</block>
   <block id="c9383e3b8d4c0ef8e217c6982644630b" category="paragraph">BlueXP classification已经能够添加自定义关键字， BlueXP classification将在未来的扫描中识别这些关键字。但是，您需要登录BlueXP classificationLinux 主机并使用命令行界面添加关键字。在此版本中，添加自定义关键字的功能位于BlueXP classificationUI 中，这使得添加和编辑这些关键字变得非常容易。</block>
   <block id="7e5ec3b51659d16db2e72438a8ca680a" category="paragraph-title">当“上次访问时间”发生变化时， BlueXP classification不会扫描文件</block>
   <block id="f9bee7a7e545f0d95664d3ccaa7b7151" category="paragraph">默认情况下，如果BlueXP classification没有足够的“写入”权限，系统将不会扫描卷中的文件，因为BlueXP classification无法将“上次访问时间”恢复为原始时间戳。但是，如果您不介意将上次访问时间重置为文件中的原始时间，则可以在配置页面中覆盖此行为，以便BlueXP classification可以扫描卷，而不管权限如何。</block>
@@ -2333,7 +2288,6 @@
   <block id="27bfd524829d2f58c611b9380403face" category="list-text">对于没有互联网访问的网站（暗站）， BlueXP classification安装程序现在会执行预检查，以确保您的系统和网络要求满足成功安装的要求。</block>
   <block id="64abb83963bf9db8126f2ee52cdc0390" category="list-text">安装审计日志文件现在已保存；它们被写入<block ref="2f5e01665193c4e95e37ac69411567bb" prefix=" " category="inline-code"></block>。</block>
   <block id="7d04cce0092e695d038c8ac0c2c6c212" category="section-title">2023年2月5日</block>
-  <block id="4d892f9a0cb70711d12ffb41d4d77d8b" category="section-title">1.20 版</block>
   <block id="f0da8cded20db5ee6dce9c1c4da7bcd8" category="paragraph-title">能够向任何电子邮件地址发送基于策略的通知电子邮件</block>
   <block id="af415967f6e10a35f69e4fdddc729da2" category="paragraph">在BlueXP classification的早期版本中，当某些关键策略返回结果时，您可以向您帐户中的BlueXP用户发送电子邮件警报。此功能使您能够在不在线时收到通知以保护您的数据。现在，您还可以从策略向不在您的BlueXP帐户中的任何其他用户（最多 20 个电子邮件地址）发送电子邮件警报。</block>
   <block id="01111213f34b03537871696a29c018fa" category="inline-link">详细了解如何根据策略结果发送电子邮件提醒</block>
@@ -2343,12 +2297,10 @@
   <block id="7a726788f7018e2e33cf2248365cb342" category="paragraph-title">使用BlueXP classification可以移动 1500 万个文件</block>
   <block id="21aa7ff00797b2159931293ba0196475" category="paragraph">过去，您可以通过BlueXP classification将最多 100,000 个源文件移动到任何 NFS 共享。现在您一次最多可以移动 1500 万个文件。</block>
   <block id="e25a297a27416e76c1a8e01af56d07ed" category="paragraph-title">能够查看有权访问 SharePoint Online 文件的用户数量</block>
-  <block id="6e0f24b07c077e6e557a1d0fac76b6c1" category="paragraph">过滤器“具有访问权限的用户数量”现在支持存储在 SharePoint Online 存储库中的文件。过去仅支持 CIFS 共享上的文件。请注意，此时不基于活动目录的 SharePoint 组将不会计入此过滤器。</block>
   <block id="cab6c5a0928827eecbe652fb21944075" category="paragraph-title">操作状态面板中添加了新的“部分成功”状态</block>
   <block id="d889002fb629aff0cd2d82543e5f378b" category="inline-link">了解如何查看操作状态面板</block>
   <block id="f936ab7640aaf50ac88f9f70993bd303" category="paragraph">新的“部分成功”状态表示BlueXP classification操作已完成，一些项目失败，一些项目成功，例如，当您移动或删除 100 个文件时。此外，“完成”状态已重命名为“成功”。过去，“完成”状态可能会列出成功和失败的操作。现在“成功”状态意味着所有项目上的所有操作都成功。<block ref="75a8438a4d837357264f215af439f18c" category="inline-link-rx"></block> 。</block>
   <block id="98dafe2aa2310496897ef8155a1d9413" category="section-title">2023年1月9日</block>
-  <block id="58080b77f4121259ffde5ce32650fff6" category="section-title">1.19 版</block>
   <block id="5e6d4a84337eb1e0ff5a019edf3a15d6" category="paragraph-title">能够查看包含敏感数据和过于宽松的文件图表</block>
   <block id="fbe297fe9bdb2184be0e67e56d41549d" category="paragraph">治理仪表板添加了一个新的“敏感数据和广泛权限”区域，该区域提供了包含敏感数据（包括敏感数据和敏感个人数据）且过于宽松的文件的热图。这可以帮助您了解敏感数据可能存在的风险。<block ref="b6419b51c73e0c028146cb926b306794" category="inline-link-rx"></block> 。</block>
   <block id="738f7059231d5fe5c1e22879f52682fd" category="paragraph-title">数据调查页面新增三个过滤器</block>
@@ -2501,8 +2453,6 @@
   <block id="3eb0c5821ef609291db2736478cac268" category="section-title">启用和禁用StorageGRID桶上的扫描</block>
   <block id="00b3ff2a0f57c13aa4ca3a4252659456" category="cell">\ https://support.compliance.api.bluexp.netapp.com/ \ https://hub.docker.com \ https://auth.docker.io \ https://registry-1.docker.io \ https://index.docker.io/ \ https://dseasb33srnrn.cloudfront.net/ \ https://production.cloudflare.docker.com/</block>
   <block id="a326c778205842f816c52ca7e63cae5d" category="cell">https://support.compliance.api.bluexp.netapp.com/</block>
-  <block id="649b850f0bca668f5279a8b29028973a" category="paragraph">本次BlueXP分类版本包含：</block>
-  <block id="73bb8d1c85014ba6981a002bd9fc9364" category="doc">1.48 版</block>
   <block id="d34f29080dba1970a613ab39b7166d0c" category="paragraph">本次数据分类版本更新包括错误修复、安全改进和性能提升。</block>
   <block id="8905ad2fb9f028e6bd28666015b4b50a" category="paragraph-title">增强扫描进度清晰度</block>
   <block id="206c07a2ed5644be711186a00b2c6ae2" category="paragraph">扫描配置现在包含对扫描完成情况的更深入洞察。以前，进度条只在扫描进行时显示。现在，扫描完成后进度条仍然可见，以确认扫描已成功完成。您还可以查看已映射和已扫描的文件数量。</block>
@@ -2529,8 +2479,6 @@
   <block id="f918c4aee73951e03ee5c0a40ad23d9e" category="list-text"><block ref="f918c4aee73951e03ee5c0a40ad23d9e" category="inline-link-macro-rx"></block></block>
   <block id="d642b544681a16a1135a35722647009f" category="list-text"><block ref="d642b544681a16a1135a35722647009f" category="inline-link-macro-rx"></block></block>
   <block id="7a1e3b83c1962dc960f34e0a588fe7c6" category="list-text"><block ref="7a1e3b83c1962dc960f34e0a588fe7c6" category="inline-link-macro-rx"></block></block>
-  <block id="6a6493990827c82055e808631b52c236" category="doc">1.49 版</block>
-  <block id="640602402999fbf572de482a35f449bc" category="paragraph">本次数据分类版本更新包含错误修复和以下更新：</block>
   <block id="c257ad0ab1dd1ba68f40f6d92155f5dd" category="paragraph-title">在健康监测仪表板中监控指标和性能</block>
   <block id="d62744b30354624c6087760cfd47ae58" category="paragraph">数据分类现在提供了一个健康监控仪表板，可以实时监控您的资源，并提供有关内存使用情况、磁盘使用情况、磁盘利用率等方面的见解。借助健康监控仪表板提供的信息，您可以查看部署的基础架构，并获得优化存储和性能的见解。</block>
   <block id="3b3cf1105e8b8d40f3cb14b9f956e666" category="inline-link-macro">监控数据分类的运行状况</block>
@@ -2573,7 +2521,6 @@
   <block id="baf6246d7a1f90583599825a4d8818c0" category="cell">最低权限</block>
   <block id="cd3fbf7c4da6e490eec17762a02afcb8" category="list-text">根据您使用的操作系统，您需要安装其中一个容器引擎：</block>
   <block id="9f4066a8aad2a422e68c5b69dd9472f8" category="paragraph">有关扫描设置的更多信息，请参阅 <block ref="26da27bca2c7e859f7f769768b8a4285" category="inline-link-macro-rx"></block>。</block>
-  <block id="a4abecdc1a189db5254898cad3b99a7e" category="doc">1.50 版</block>
   <block id="0bbdca5358fc47c779aaa8d26a52510f" category="paragraph-title">自定义分类改进</block>
   <block id="3d1c64f6b833049963a84f1722911079" category="paragraph">数据分类功能现在支持创建自定义数据类别。您可以上传文件来微调数据分类所使用的 AI 模型，以便将类别标记应用于数据。所有自定义分类的界面都得到了改进。</block>
   <block id="1ea7cf77170c31be18fc52c7e9649923" category="paragraph">有关详细信息，请参阅 <block ref="c45381d223df5e8e5c4b98a60b8b65d3" category="inline-link-macro-rx"></block>。</block>
@@ -2673,11 +2620,8 @@
   <block id="80bb2719fe9feeb03d5cc88bd71e8a81" category="paragraph">Data Classification 提高了低分辨率屏幕的显示性能，增强了用户体验。</block>
   <block id="ce4f285e19831c82557359b34d7010e8" category="paragraph">Data Classification 显示数据训练的预计完成时间。..要更改文件路径或重新上传文件，请选择 **更改路径**，然后输入数据并重新加载文件。</block>
   <block id="c9d872b23d54864ab58551a55106a3db" category="section-title">2026 年 2 月 09 日</block>
-  <block id="0cd5c5ab4d8a458ece2a760f674c681e" category="doc">1.51 版</block>
   <block id="58c2f245ba9fee2040b80ea19d9ccd7c" category="inline-link-macro">了解 Console 代理和 Data Classification 的不同部署模式</block>
   <block id="9da1ffd588a2b7dde94c64757653a38a" category="paragraph"><block ref="cb90c21a9c44c9ac5d86b04e8dfb0fb3" category="inline-link-macro-rx"></block>。</block>
-  <block id="3883c68756cb61eec195bb6e108336ba" category="inline-link-macro">在具有互联网访问权限的本地站点部署 Data Classification</block>
-  <block id="aff289904c75641e7044ceeb9e922006" category="paragraph">您也可以 <block ref="9d4e9d68c29b6863b7c77f4a02e40d14" category="inline-link-macro-rx"></block>。</block>
   <block id="eb7c0a54a684e3bfabc7abd5ff6851ad" category="paragraph">在安装专用模式（有时称为"离线"或"暗"站点）时，Data Classification 只能扫描来自本地站点的数据源的数据。此时，Data Classification 可以扫描以下*本地*数据源：</block>
   <block id="318a375199576f5d44d9caad0d810341" category="paragraph">在私有模式下部署数据分类时，当前不支持扫描 Cloud Volumes ONTAP、Azure NetApp Files 或 FSx for ONTAP 账户。</block>
   <block id="15626ba7e1a3568f27f269f3c7356d0d" category="paragraph">大多数 Data Classification 功能在没有互联网访问权限的站点中部署时起作用。但是，某些需要访问互联网的功能不受支持，例如：</block>
@@ -2754,7 +2698,6 @@
   <block id="18b124736f5cbc7b1873c54b1dac2d6f" category="paragraph">NetApp Data Classification 会扫描您选择的存储库中的数据（卷、数据库架构或其他用户数据），以识别个人数据和敏感数据。Data Classification 然后会映射您的组织数据，对每个文件进行分类，并识别数据中的预定义模式。扫描结果是个人信息、敏感个人信息、数据类别和文件类型的索引。</block>
   <block id="115a395f1bda3cdb62e75cfe1529d431" category="paragraph">有关详细信息，请参见 <block ref="a35c82bf99053365807ff01dc40bc5d1" category="inline-link-macro-rx"></block>。</block>
   <block id="59ff8a6991a0f51816a1d27ab0590821" category="paragraph-title">提高复制和移动的限制</block>
-  <block id="5db4431afc8c4647c29360449ee80225" category="doc">1.52 版</block>
   <block id="1cc9fa7904bbb11e4569869878e58bbb" category="paragraph-title">资源验证</block>
   <block id="19458db6dfda018080434d803401d712" category="paragraph">为了确保可靠性，Data Classification 现在可以在扫描、报告生成和操作中验证可用的内存和磁盘资源。当内存使用率超过 95% 或磁盘空间低于 6 GB 时，Data Classification 会自动暂停操作。一旦资源充足，操作就会恢复。</block>
   <block id="0c246fa8aa5b9bb6f56169910551448c" category="paragraph">要监视系统资源，请参见 <block ref="a35c82bf99053365807ff01dc40bc5d1" category="inline-link-macro-rx"></block>。</block>
@@ -2818,7 +2761,6 @@
   <block id="05ae2f7ed42f24ad34227986da264aae" category="paragraph-title">支持 RHEL 9.7</block>
   <block id="3864a6ab3937a10a6f13bfa0f593150c" category="paragraph">数据分类已添加 Red Hat Enterprise Linux v9.7，用于手动本地安装，包括暗站点部署。</block>
   <block id="900e4148b2c0433fc2c6d0435cf489cd" category="paragraph">以下操作系统需要使用 Podman 容器引擎，并且需要 Data Classification 1.30 或更高版本：Red Hat Enterprise Linux 版本 8.8、8.10、9.0、9.1、9.2、9.3、9.4、9.5、9.6 和 9.7。</block>
-  <block id="9011586cd2cbb8095aa94a58c4af72fd" category="doc">1.53 版</block>
   <block id="0afc92b0bdc2ed57893a82b6cc2587d3" category="summary">当组 ID 附加到 NFS 文件共享中的文件或文件夹时，它们定义了文件或文件夹的权限。如果组 ID 未设置为"对组织开放"权限级别，则可以将该权限添加到 GID，以便附加了该 GID 的任何文件和文件夹都将被视为"对组织开放"。</block>
   <block id="403f4a170e2d1c03d329e0f0dd8d1b84" category="section-title">2026 年 4 月 13 日</block>
   <block id="4282eab95027b5795f33f16206ffbe95" category="doc">将 Active Directory 与 NetApp Data Classification 集成</block>
@@ -2835,4 +2777,110 @@
   <block id="12c9b2fe1ef95f2e5943fca98c33135f" category="doc">在 NetApp Data Classification 中更改扫描设置</block>
   <block id="d45f223b29c54a03c611d6faaae58cf9" category="list-text">在 AWS 中，Data Classification 在具有 500 GiB GP2 磁盘的<block ref="8b5561a11e73285eb1f0d9f437aa0677" category="inline-link-rx"></block>上运行。操作系统映像是 Amazon Linux 2。</block>
   <block id="5d8b6e341fd15d744bee3c27b7ca8a68" category="list-text">在 AWS 中，Data Classification 在具有 500 GiB GP2 磁盘的 m6i.4xlarge 实例上运行。</block>
+  <block id="1c009e201a68e95941fe981e5fdfa016" category="inline-link-macro">使用 OVA 部署</block>
+  <block id="697a620593a003d9900b7aa00be1acc6" category="admonition">对于本地 VMware vSphere 部署，Data Classification 支持简化的<block ref="3d59e70993d210c9da20a35410c0aa19" category="inline-link-macro-rx"></block>。</block>
+  <block id="e4c84482ee4555ae482d96b91322224c" category="doc">常规改进</block>
+  <block id="3f468d12d8f20d8c9b0af0175d719e8d" category="inline-link-macro">NetApp Console 审核页面</block>
+  <block id="67e15c1e2a08f0a8a8953cf75a2f512f" category="paragraph">Data Classification 支持向 <block ref="6d2f9072000bb7a11bdbf2bb5389f581" category="inline-link-macro-rx"></block> 发送分类事件（启动扫描时和扫描结束时）。</block>
+  <block id="e51a6de645bb52eeb7e8ef9b3c883b16" category="doc">资源利用率优化</block>
+  <block id="220726f631dfe5a4dfdc0d65472b98dc" category="paragraph">此 BlueXP 分类版本包括优化资源利用率的代码更改。</block>
+  <block id="d939a4c3efbccb14bb6a8b8ec450f62d" category="doc">使用 OVA 部署 Data Classification</block>
+  <block id="c58a3e421744f0b78f692f20d074d1f6" category="paragraph">NetApp Data Classification 现在支持使用 VMware Open Virtual Appliance (OVA) 进行部署，为本地 VMware vSphere 环境提供了简化的部署策略。</block>
+  <block id="1a4ea23de9d17b2e28a82a012795f402" category="paragraph">有关详细信息，请参见 <block ref="671ddfd34f6defdc139134bff6f63dc9" category="inline-link-macro-rx"></block>。</block>
+  <block id="8744e3889336c440e17e4a85c0573d80" category="paragraph">NetApp Data Classification 软件必须在满足特定操作系统要求、RAM 要求和软件要求的主机上运行。在云中部署 Data Classification 时，我们建议您使用具有"大"特征的系统来实现全部功能。</block>
+  <block id="da49eae2f2697eebbdfcb923e399ee06" category="paragraph">在下表中，如果标记为"默认"的系统在安装 Data Classification 的区域中不可用，则将部署表中列出的下一个实例类型。</block>
+  <block id="6b9707300ae2253b20a1508cdef29b86" category="inline-link-macro">配置对数据源的扫描</block>
+  <block id="32c268474be77292e0a04f91871ff5ae" category="list-text"><block ref="32c268474be77292e0a04f91871ff5ae" category="inline-link-macro-rx"></block></block>
+  <block id="37bdabd730f5e2aa9c95ca046c4a528d" category="list-text">从<block ref="0a75c5e2697813218978a09f1ac8297e" category="inline-link-rx"></block>下载 Data Classification 软件。选择名为 *DATASENSE-INSTALLER-&lt;version&gt;.tar.gz* 的文件。</block>
+  <block id="3990c3483164e3d71f7feb035dcc5d2e" category="summary">NetApp Data Classification 支持使用 Open Virtual Appliance (OVA) 为本地 vSphere 环境进行部署。OVA 部署方法提供了一个预先验证的 NetApp 托管环境，以简化部署。</block>
+  <block id="d9a33ab3030c9b5fd7a102e28aba7be3" category="doc">使用 VMware Open Virtual Appliance 部署 NetApp Data Classification</block>
+  <block id="a130e61bd4b704e7fe34c433d0d11621" category="paragraph">NetApp Data Classification 支持使用 VMware Open Virtual Appliance (OVA) 进行部署，提供托管包以在本地 VMware vSphere 环境中安装和运行 Data Classification。OVA 部署方法提供了一个预先验证的 NetApp 托管环境，以简化部署。</block>
+  <block id="3aa8474d5b875cbd9fa36a9b295450c1" category="paragraph">对于新的基于 VMware 的部署，建议使用此方法。</block>
+  <block id="86b7d468352815e2bd2fcebcf1707ed0" category="paragraph">在使用 OVA 文件安装 NetApp Data Classification 之前，必须具有：</block>
+  <block id="e6c02e5ccba91b0f8a2da6080936e5f5" category="list-text">VMware vSphere 环境</block>
+  <block id="afe34e38b29b496b8d140d1b05f7639b" category="list-text">分配给设备的静态 IPv4 地址</block>
+  <block id="c2536178d417593ff00b31c3acd23ffa" category="list-text">可从目标网络访问的 DNS 服务器</block>
+  <block id="784e3265e48a6bd157680a38d46c8c55" category="list-text">已启用对设备的 SSH 访问</block>
+  <block id="5d0a8cdc6b9b55fd93ed84e6766e7b28" category="inline-link-macro">NetApp 支持站点凭据</block>
+  <block id="91ea08e1aa2323f4b4da558f043fb414" category="list-text"><block ref="b753d64a45d12e5e34df2907367d09a4" category="inline-link-macro-rx"></block> 下载安装程序</block>
+  <block id="8cbae09146721faac95bceac9bf5fca3" category="section-title">在 VMware vSphere 中部署 OVA</block>
+  <block id="bd7ce254f37b2c00eb5eb9946bcf0759" category="list-text">从 <block ref="1853466d175c8da4cfe77a84a98fc767" category="inline-link-macro-rx"></block> 下载 OVA 文件。选择适合您环境的 OVA 设备：</block>
+  <block id="ddde1efaada34040cfccceaa34f9b3bb" category="cell">OVA 设备</block>
+  <block id="df623f3b0eca686aa70011889478c1b4" category="cell">生产规模</block>
+  <block id="638fea7f650cbb9f4eddd66ce254fdd1" category="cell">文件扫描限制</block>
+  <block id="bccd9f0f398a2a4a23d2ef929e4a1645" category="cell"><block ref="c634ef6b6a6b888ef1b1a2d326622ee7" prefix="" category="inline-code"></block></block>
+  <block id="0e836ac8fea63f0e7d0ea76786c3a146" category="cell">标准生产工作负载：16 个 CPU、64 GB RAM、500 GB 磁盘</block>
+  <block id="6977457ec4d43a18ebcc0cc12a5b4785" category="cell">2.5 亿个文件</block>
+  <block id="8958a7a71bfe0f4a5a40d760f7e3c2f6" category="cell"><block ref="8cd39dc4f7544e158d7ef1dfbc5c4070" prefix="" category="inline-code"></block></block>
+  <block id="c758b0781d6f7df6c0ae256696eddbf2" category="cell">大型生产工作负载：32 个 CPU、128 GB RAM、1 TB 磁盘</block>
+  <block id="d5f0912c122421def604836efc37e147" category="cell">5 亿个文件</block>
+  <block id="39da8715f80fcb97588e0413c8d421b1" category="list-text">输入 vSphere 客户端。右键单击目标集群或主机，然后选择 *Deploy OVF Template* &gt; *Create VM from OVA*。</block>
+  <block id="a86160c84f70e41fb0b3c1ec91660a92" category="list-text">上传您在第一步中下载的 OVA 文件。</block>
+  <block id="ea42daee36ca14f2930377ea9c60593a" category="list-text">指定 *VM 名称* 和目标数据中心、主机或集群和数据存储库。</block>
+  <block id="0a9aa37d2e353e096772c5f826a07f7f" category="list-text">接受 NetApp 最终用户许可协议。</block>
+  <block id="78eef3c0aadecdde92b4cfc4c1ddf5e4" category="list-text">自定义模板。您必须提供以下信息：</block>
+  <block id="d472e2787bc8d836e087cb5b10e9f80d" category="list-text">**主机名** - 设备的名称</block>
+  <block id="cfec9ea037ba23cf959f507a91a6497f" category="list-text">**IPv4 地址** - 管理接口的静态 IPv4 地址</block>
+  <block id="cfc470d8c64abd61f35d1cc9e9831f55" category="list-text">**IPv4 子网掩码** - 例如 255.255.255.0</block>
+  <block id="dae24545ba4e62bae20bcbcedf0477c0" category="list-text">**IPv4 网关地址** - 默认网关</block>
+  <block id="55545e079a19ab0aaa2eb447088557fa" category="list-text">**主要 DNS** - 所需的 DNS 解析器</block>
+  <block id="398fb85648fe3bf7b1c3132bc43c8da7" category="paragraph">（可选）添加 **辅助 DNS**，并以逗号分隔的列表形式添加 **搜索域**（例如<block ref="edddc6841b263ff64dd234136625ea9e" prefix=" " category="inline-code"></block>）和 **NTP 服务器**。</block>
+  <block id="3971f79ba20dd9eea1c77eb7bcab0566" category="list-text">为默认 Linux 用户设置 *Admin password*。</block>
+  <block id="4f46c0ee9f477b4fe1294d2fa8dcdd5b" category="admonition">密码用于 root 访问、SSH 访问和系统管理。请安全存储密码。</block>
+  <block id="e70561faa323b2a08c3f90b258d6f1c6" category="list-text">查看摘要。选择 *Finish* 进行部署。</block>
+  <block id="2c6b86d7e99472d3dc260c2363c69efa" category="list-text">部署完成后，打开 VM。</block>
+  <block id="7020b99b4452945edfa566eb18678316" category="section-title">安装 Data Classification</block>
+  <block id="f1cbf08f5744cd499f0689de8053c832" category="list-text">从 <block ref="1853466d175c8da4cfe77a84a98fc767" category="inline-link-macro-rx"></block> 下载 Data Classification 软件。</block>
+  <block id="6cac65ee9c5b85cb06427233e5bdb208" category="paragraph">选择名为 *DATASENSE-INSTALLER-&lt;version&gt;.tar.gz* 的文件。</block>
+  <block id="4d4bda9c294a00ba7df9db822f19e797" category="list-text">选择 *Deploy Classification*。</block>
+  <block id="d9f71f47f93d634da4ff095ee023a20e" category="list-text">使用管理员用户通过 SSH 连接到 OVA 设备。</block>
+  <block id="b49d72dce505eca7dd3d8a331d97211c" category="list-text">运行生成的安装命令以完成安装并向组织注册系统。</block>
+  <block id="2e64cc6066537ce6e812349f63c7e206" category="paragraph">您可以通过不同的方式部署 NetApp Data Classification。查看可用的方法，选择最适合您需求的方法。</block>
+  <block id="30dabb33051152f55606045c5b5163f8" category="section-title">本地安装脚本</block>
+  <block id="c0dd91183d065fa262aad92cd66f17bf" category="paragraph">具有 Internet 访问权限的 Linux 主机上的安装和没有 Internet 访问权限的 Linux 主机上的本地安装都使用安装脚本。脚本首先检查系统和环境是否满足先决条件。如果满足先决条件，则开始安装。</block>
+  <block id="4fabfbf691d67364aed0fc8d0476cd38" category="inline-link-macro">验证您的 Linux 主机是否已准备好安装 Data Classification</block>
+  <block id="4ad6bc72849add23a7cdca295638a87d" category="paragraph">有一个单独的软件包可用于验证您的 Linux 的准备情况。要运行验证包，请参见<block ref="a3ff8db6958b78e3d36fc9bc3fcfe254" category="inline-link-macro-rx"></block>。</block>
+  <block id="e0b0747cd573746d9f139faffc729dd5" category="section-title">2026 年 5 月 4 日</block>
+  <block id="c4bc4e2f20f342faa62434be75cb6ee5" category="paragraph">*版本 1.53*</block>
+  <block id="8411d6925cd29126d060394c08a4b4ca" category="paragraph">*版本 1.52*</block>
+  <block id="65a0258fc15834bf0f84ceaa52ada501" category="paragraph">*版本 1.51*</block>
+  <block id="e4b498cddaa444d57c01009b2102f55f" category="paragraph">*版本 1.50*</block>
+  <block id="52aa7e45dc7f5ea8286631265ac1d36a" category="paragraph">*版本 1.49*</block>
+  <block id="26baa7b8a763c4e09d054abaf87bb6d0" category="paragraph">*版本 1.48*</block>
+  <block id="595d74539f06331485866d3131f447e8" category="paragraph">*版本 1.47*</block>
+  <block id="63baf28a815c716ed6e2c417cb4153b2" category="paragraph">*版本 1.46*</block>
+  <block id="1964d7d03dd19e55e353230a6f62b06e" category="paragraph">*版本 1.45*</block>
+  <block id="465901fde75bcfcdda96ed356aeeeb4f" category="paragraph">*版本 1.44*</block>
+  <block id="cb92087f3524d242231728663d9503b5" category="paragraph">*版本 1.43*</block>
+  <block id="58a9fe63f3060056d06ba740aca954b8" category="paragraph">*版本 1.42*</block>
+  <block id="0a2f2aba3f1b44682b1d94613a92546b" category="paragraph">*版本 1.41*</block>
+  <block id="cf478480279bce16082112f00be7df7f" category="paragraph">*版本 1.40*</block>
+  <block id="a624a704a460cabdb133c0962d0885ed" category="paragraph">*版本 1.37*</block>
+  <block id="f469240780f7eff6330e02b5675d0a08" category="paragraph">*版本 1.38*</block>
+  <block id="a2db02c48e35b7dca1db16acecb190ff" category="paragraph">*版本 1.36*</block>
+  <block id="ea2391a5ddbbca135950f9d480a5981a" category="paragraph">*版本 1.35*</block>
+  <block id="0e6051493f71317da4f2c7bba8dcfc97" category="paragraph">*版本 1.34*</block>
+  <block id="9a3351da91753729c142405fec71d541" category="paragraph">*版本 1.33*</block>
+  <block id="d8caf3d67521b52888bb50b0449d77f4" category="paragraph">*版本 1.32*</block>
+  <block id="413b3a9cddb127f6a98a38a39992639c" category="paragraph">*版本 1.31*</block>
+  <block id="3362688f791418f4ba8e7d0c8a358d74" category="paragraph">*版本 1.30*</block>
+  <block id="731530c0d12c82e27cfc130ae6c93804" category="paragraph">*版本 1.29*</block>
+  <block id="f67d7fa2a44e36da02cec0e1e856d491" category="paragraph">*版本 1.27*</block>
+  <block id="2c5b015f9b8d6e1cf0b8425cd79ccef1" category="paragraph">*版本 1.26.6*</block>
+  <block id="663fe31afd754e14edf62c0eeb43e3be" category="paragraph">此版本包含小的增强功能。</block>
+  <block id="cbb4d57c029ce27c745cadc11326ef01" category="list-text">在目录调查期间，不提供按目录计算个人身份信息 (PII) 数据数量的选项。请参阅 <block ref="0b922dd9827c419654172323345089b8" category="inline-link-macro-rx"></block>。</block>
+  <block id="a91d543e35a44a40abde8539454a3147" category="paragraph">*版本 1.26.3*</block>
+  <block id="dccefd0e401840dd90d719ff48e73421" category="paragraph">*版本 1.26*</block>
+  <block id="20a38ed7220ae3d563acc7f546d6a38c" category="paragraph">Red Hat Enterprise Linux 版本 8 和 9 不支持 Docker 引擎，此前 BlueXP classification 安装需要此引擎。BlueXP classification 现在支持在 RHEL 9.0、9.1 和 9.2 上使用 Podman 版本 4 或更高版本作为容器基础设施进行安装。如果您的环境需要使用最新版本的 RHEL，现在可以在使用 Podman 时安装 BlueXP classification（版本 1.26 或更高版本）。</block>
+  <block id="d47937e1bfcfc34aadafaf94f878be50" category="paragraph">目前，使用 RHEL 9.x 时，Data Classification 既不支持暗站点安装，也不支持分布式扫描环境（使用主扫描节点和远程扫描节点）。</block>
+  <block id="507beb19670add8ef909c6b465d2113f" category="paragraph">*版本 1.25*</block>
+  <block id="ff9507aa8ec2a4d65e0197283a0ffb4a" category="paragraph">*版本 1.24*</block>
+  <block id="9f35e0bca6f0baf4185ddc2208bc9831" category="paragraph">*版本 1.23*</block>
+  <block id="cc6a6fa01e9d6665a252d1f7ee507f10" category="paragraph">*版本 1.22*</block>
+  <block id="fcbfa613263a39c01238f29970301729" category="paragraph">*版本 1.21*</block>
+  <block id="8dff06822fe979f3c3274cc5f8c4b91a" category="section-title">从 BlueXP 分类用户界面添加自定义关键字</block>
+  <block id="5dd86e37bb688c2bd8d740a853836c5b" category="paragraph">*版本 1.20*</block>
+  <block id="ea618accf4845a405569f1ffa72274f5" category="paragraph">"有访问权限的用户数量"过滤器现在支持存储在 SharePoint Online 存储库中的文件。此前，仅支持 CIFS 共享上的文件。此时，非基于 Active Directory 的 SharePoint 组不计入此筛选器。</block>
+  <block id="fd472c68167f5fc3fdb653a650f9fd55" category="paragraph">*版本 1.19*</block>
+  <block id="2c6be179dba321b242cbe88c550f1815" category="sidebar">使用 OVA 安装本地</block>
 </blocks>
