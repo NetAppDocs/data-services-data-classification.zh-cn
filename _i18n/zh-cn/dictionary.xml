@@ -478,7 +478,6 @@
   <block id="705900ff5dfc71b7fab21e0a2b91555c" category="section-title">什么是控制台代理？</block>
   <block id="cec155912a2ab722f7c2cf854b71ac8c" category="paragraph">控制台代理是在您的云帐户或本地的计算实例上运行的软件，它使NetApp Console能够安全地管理云资源。您必须部署控制台代理才能使用数据分类。</block>
   <block id="315a4734119ef2ab25e03ee01718971d" category="section-title">控制台代理需要安装在哪里？</block>
-  <block id="e843321c8bae82c4d6f4061b3f93bf39" category="paragraph">扫描数据时，需要在以下位置安装NetApp Console代理：</block>
   <block id="07bffd39dd72da3f20260b9a6907adc1" category="list-text">对于 AWS 中的Cloud Volumes ONTAP或Amazon FSx for ONTAP：控制台代理位于 AWS 中。</block>
   <block id="288ed4c5031b1ff115f43b30ece3261f" category="list-text">对于 Azure 或Azure NetApp Files中的Cloud Volumes ONTAP ：控制台代理位于 Azure 中。</block>
   <block id="bcdb2f393c3c29bc329a8b2e81ff4d7b" category="list-text">对于 GCP 中的Cloud Volumes ONTAP ：控制台代理位于 GCP 中。</block>
@@ -891,7 +890,6 @@
   <block id="04e7e9631c93eec889b2ab99b5143465" category="section-title">连接到您的 Active Directory 服务器</block>
   <block id="2870ffcb03b7e55be580adce9e49dedc" category="paragraph">部署数据分类并激活数据源扫描后，您可以将数据分类与 Active Directory 集成。可以使用 DNS 服务器 IP 地址或 LDAP 服务器 IP 地址访问 Active Directory。</block>
   <block id="9d553dac60477ef9e0919509b66ec352" category="paragraph">Active Directory 凭据可以是只读的，但提供管理员凭据可确保数据分类可以读取任何需要提升权限的数据。凭证存储在数据分类实例上。</block>
-  <block id="1b27da1c6c8ab8d350478de2c14a8b2a" category="paragraph">对于 CIFS 卷/文件共享，如果您想确保文件的“上次访问时间”不会因数据分类扫描而改变，则用户应该具有写入属性权限。如果可能的话，我们建议将 Active Directory 配置的用户作为组织中对所有文件具有权限的父组的一部分。</block>
   <block id="5a2ebfb8baa378cfcfcba58bbb1380c2" category="list-title">要求</block>
   <block id="f116dfc235147909ef3b37492dd58497" category="list-text">您必须已经为公司用户设置了 Active Directory。</block>
   <block id="6fcd963bedffc4e92b9378afcac66a5a" category="list-text">您必须具有 Active Directory 的信息：</block>
@@ -2312,7 +2310,6 @@
   <block id="303c6c3b9289ea073f455b6be5394610" category="paragraph"><block ref="a4a7f22b048c40ec69122e1f7c39cfdb" category="inline-link-rx"></block> 。</block>
   <block id="4b273eb22f0e890dce8d8a73dba2425e" category="paragraph-title">BlueXP classification可以识别日本个人编号</block>
   <block id="b614eb1e8ba4ff347cc77ea1b9148636" category="paragraph">BlueXP classification可以识别和分类包含日本个人编号（也称为 My Number）的文件。这包括个人和企业我的号码。<block ref="c29cfbce54672755b7557a8e95ef0ae4" category="inline-link-rx"></block> 。</block>
-  <block id="7acae0ba2f29c1b7556d813227ddd12d" category="sidebar">NetApp数据分类使您能够扫描和分类组织混合多云中的数据。数据分类利用人工智能驱动的自然语言处理 (NLP) 进行上下文数据分析和分类，为您提供对数据的可操作洞察，以满足合规性要求、检测安全漏洞、优化成本并加速迁移。</block>
   <block id="e6d9434fa5832019fb3968212fe539d4" category="sidebar">NetApp Data Classification文档</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">开始使用</block>
   <block id="06e283ee316863d38f0fea16ba5785cc" category="sidebar">了解数据分类</block>
@@ -2509,7 +2506,6 @@
   <block id="2727f68982ff25e8b3c57e026120561d" category="section-title">2025年12月8日</block>
   <block id="3b02682cee7334412169a53934571445" category="sidebar">监控系统健康状况</block>
   <block id="199728aa05786f9f41b3140d025353e2" category="list-text">数据分类必须运行在专用主机上。主机不能与其他应用程序或第三方软件（例如防病毒软件）共享。</block>
-  <block id="cc2f809338aeb90513fd5d335abc18b2" category="paragraph">数据分类安装脚本包含一个测试脚本，以确保您的环境满足要求。您可以单独运行此脚本来验证 Linux 主机是否已准备就绪，然后再运行安装脚本。</block>
   <block id="ac5df91391e146d13ac61a909161e5e5" category="paragraph">你可以 <block ref="b05bc1a82ba8aa93695b18917e23ffd8" category="inline-link-macro-rx"></block> 在您网络中的 Linux 主机上，或者在云端的 Linux 主机上。如果控制台代理安装在本地，您也可以在本地安装数据分类。</block>
   <block id="6d69772abdf589ea602f8071cbf783ed" category="paragraph">要在您的云提供商环境中创建控制台代理，请参阅：</block>
   <block id="57d97cf09f86f81d75b459840c0ba8eb" category="list-text"><block ref="57d97cf09f86f81d75b459840c0ba8eb" category="inline-link-rx"></block></block>
@@ -2883,4 +2879,8 @@
   <block id="ea618accf4845a405569f1ffa72274f5" category="paragraph">"有访问权限的用户数量"过滤器现在支持存储在 SharePoint Online 存储库中的文件。此前，仅支持 CIFS 共享上的文件。此时，非基于 Active Directory 的 SharePoint 组不计入此筛选器。</block>
   <block id="fd472c68167f5fc3fdb653a650f9fd55" category="paragraph">*版本 1.19*</block>
   <block id="2c6be179dba321b242cbe88c550f1815" category="sidebar">使用 OVA 安装本地</block>
+  <block id="2ec24b538cd35ccc98148dea4e4a3985" category="paragraph">扫描数据时，需要将 NetApp Console 代理安装在以下位置：</block>
+  <block id="ef6714f5aeceef76c2ac34e1adaeefa3" category="paragraph">对于 CIFS 卷/文件共享，如果要确保您的文件"上次访问时间"未被 Data Classification 扫描更改，则用户应具有写入属性权限。如果可能，我们建议将 Active Directory 配置的用户设置为组织中具有所有文件权限的父组的一部分。</block>
+  <block id="e4f6181944f0dc7535179eb25f2c38b5" category="paragraph">Data Classification 安装脚本包含一个测试脚本，以确保您的环境满足要求。您可以单独运行此脚本，以在运行安装脚本之前验证 Linux 主机的就绪性。</block>
+  <block id="a10f0eec47f9088e070063edbfdc4194" category="sidebar">NetApp Data Classification 使您能够在组织的混合多云中扫描和分类数据。Data Classification 利用人工智能驱动的自然语言处理 (NLP) 进行上下文数据分析和分类，为您提供对数据的可操作见解，以解决合规性要求、检测安全漏洞、优化成本和加速迁移。</block>
 </blocks>

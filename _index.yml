@@ -1,10 +1,12 @@
 ---
 indexpage:
   title: NetApp Data Classification文档
-  summary: NetApp数据分类使您能够扫描和分类组织混合多云中的数据。数据分类利用人工智能驱动的自然语言处理 (NLP) 进行上下文数据分析和分类，为您提供对数据的可操作洞察，以满足合规性要求、检测安全漏洞、优化成本并加速迁移。
+  summary: NetApp Data Classification 使您能够在组织的混合多云中扫描和分类数据。Data Classification 利用人工智能驱动的自然语言处理
+    (NLP) 进行上下文数据分析和分类，为您提供对数据的可操作见解，以解决合规性要求、检测安全漏洞、优化成本和加速迁移。
   keywords: bluexp, data classification, cloud data sense, data sense, compliance,
     security, netapp console, bluexp classification
-  lead: NetApp数据分类使您能够扫描和分类组织混合多云中的数据。数据分类利用人工智能驱动的自然语言处理 (NLP) 进行上下文数据分析和分类，为您提供对数据的可操作洞察，以满足合规性要求、检测安全漏洞、优化成本并加速迁移。
+  lead: NetApp Data Classification 使您能够在组织的混合多云中扫描和分类数据。Data Classification 利用人工智能驱动的自然语言处理
+    (NLP) 进行上下文数据分析和分类，为您提供对数据的可操作见解，以解决合规性要求、检测安全漏洞、优化成本和加速迁移。
   tiles:
   - title: 开始使用
     links:
