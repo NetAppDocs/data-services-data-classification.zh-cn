@@ -14,13 +14,13 @@
 
 === 优先进行仅映射扫描
 
-当进行仅映射扫描时，您可以优先考虑最重要的扫描。当您拥有多个工作环境并希望确保首先完成高优先级扫描时，此功能会有所帮助。
+在进行仅地图扫描时，您可以优先考虑最重要的扫描。当您有多个工作环境并希望确保首先完成高优先级扫描时，此功能会有所帮助。
 
 默认情况下，扫描按照启动的顺序排队。通过设置扫描优先级，您可以将扫描移至队列的最前面。可以对多个扫描进行优先排序。优先级按先进先出的顺序指定，这意味着您优先考虑的第一个扫描将移至队列的最前面；您优先考虑的第二个扫描将成为队列中的第二个扫描，依此类推。
 
 优先权是一次性授予的。映射数据的自动重新扫描按照默认顺序进行。
 
-优先级仅限于link:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["仅映射扫描"^]；它不适用于地图和分类扫描。
+优先级仅限于 link:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["仅映射扫描"^]；无法用于映射和分类扫描。
 
 有关更多信息，请参阅link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html#prioritize-scans["优先扫描"^] 。
 

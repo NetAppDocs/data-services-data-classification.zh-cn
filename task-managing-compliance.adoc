@@ -45,8 +45,5 @@ TIP: 您还可以在选择系统时从“服务”面板禁用系统扫描。
 
 .步骤
 . 从“配置”页面中，选择image:button-gallery-options.gif["更多按钮"]文件共享组行中的按钮，然后单击*删除文件共享组*。
-+
-image:screenshot_compliance_remove_db.png["扫描配置页面中删除数据库服务器按钮的屏幕截图。"]
-
 . 从确认对话框中选择*删除共享组*。
 
