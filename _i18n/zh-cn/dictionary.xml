@@ -436,7 +436,6 @@
   <block id="7a86e1b46f8a8bc6d38b11447af57092" category="list-text">*数据映射扫描（仅映射扫描）*：数据分类仅扫描元数据。这对于整体数据管理和治理、快速项目范围界定、大型地产和优先级排序很有用。数据映射基于元数据，被认为是一种*快速*扫描。</block>
   <block id="00fb8639b6c2826bd3fceaa0d36399d8" category="paragraph">快速扫描后，您可以生成数据映射报告。此报告概述了您公司数据源中存储的数据，以帮助您做出有关资源利用率、迁移、备份、安全性和合规性流程的决策。</block>
   <block id="59918b13530817c9008f5a24533dcfbc" category="paragraph">完整扫描后，您可以将许多附加数据分类功能应用于数据，例如在数据调查页面中查看和优化数据、在文件中搜索名称、复制、移动和删除源文件等。</block>
-  <block id="8f6adf4dbf6fab8e9a0fa95709bc6780" category="paragraph">数据分类捕获元数据，例如：文件名、权限、创建时间、上次访问和上次修改。这包括数据调查详情页面和数据调查报告中显示的所有元数据。</block>
   <block id="b8ede2d0f0baf0dbbcd6b1caa3c24a82" category="inline-xref-macro">数据分类扫描的私人数据类别</block>
   <block id="0a2a2726fa4f033804e23ae8e734f53d" category="paragraph">数据分类可以识别多种类型的私人数据，例如个人信息（PII）和敏感个人信息（SPII）。有关私人数据的详细信息，请参阅<block ref="99786247576d4194bfb6afa2ffe45770" category="inline-xref-macro-rx"></block>。</block>
   <block id="cc6c818a7ff4844f95f831b7fea5d028" category="section-title">我可以将数据分类信息限制给特定用户吗？</block>
@@ -958,7 +957,6 @@
   <block id="5cb140d3eff23c8e0c3f2d43f10a7dbb" category="cell">对于所有系统：列出每个系统的文件数量和已用容量。对于单个系统：列出使用最多容量的文件。</block>
   <block id="6a0fd0952390e8ad81d681946aa5dcab" category="cell">提供三个图表和图形，分别表示文件的创建时间、上次修改时间或上次访问时间。根据特定日期范围列出文件数量及其已用容量。</block>
   <block id="02d0f0696835f69cefa2384249b76fd7" category="cell">列出系统中存在于特定大小范围内的文件数。</block>
-  <block id="43bdc51d30bd77ef382a419cb3655312" category="list-text">在报告图块中，选择*完整数据映射概览报告*。</block>
   <block id="fb5cbffc5e8f979523247654de6b0102" category="inline-image-macro">治理仪表板的屏幕截图显示了如何启动数据映射报告。</block>
   <block id="a1fe048fbf4d3c352f8807ca8e61a815" category="paragraph"><block ref="a1fe048fbf4d3c352f8807ca8e61a815" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6406cf838275117ab30c7dd6e659bb2b" category="paragraph">数据分类会生成一份 PDF 报告，您可以根据需要查看并发送给其他组。</block>
@@ -1659,7 +1657,6 @@
   <block id="ea7971f9c02e5fa9234d7af5cd0b34c7" category="list-text">*已排队*（橙色圆点）：任务已成功添加到扫描队列。当队列中的卷轮到达时，系统将开始映射或分类该卷。</block>
   <block id="478002532c0e9d87506035f8afb96c61" category="list-text">*正在运行*（绿点）：队列中的扫描任务正在选定的存储库上积极进行。</block>
   <block id="1110cfca2e7c6a5f3e560597c03abeab" category="list-text">*完成*（绿点）：存储库扫描已完成。</block>
-  <block id="7eac8ad7bb67a204924dcc6a4113f103" category="list-text">*错误*（红点）：扫描无法完成，因为遇到了问题。如果您需要完成某项操作，错误将出现在“所需操作”列下的工具提示中。否则，系统将显示“错误”状态并尝试恢复。完成后，状态就会改变。</block>
   <block id="4c5b4656410d347cf852f162490f2e15" category="list-text">*未扫描*：选择了“关闭”卷配置，系统未扫描该卷。</block>
   <block id="ae3859b6bf604c1664d2e6f3cb311c7f" category="inline-image-macro">显示如何选择系统配置按钮的屏幕截图。</block>
   <block id="4e66daf871fdc1f576f2af568e8fb4c4" category="paragraph"><block ref="4e66daf871fdc1f576f2af568e8fb4c4" category="inline-image-macro-rx" type="image"></block></block>
@@ -2343,7 +2340,6 @@
   <block id="77750efa6f5ff153acdc42067058017f" category="section-title">2025年11月10日</block>
   <block id="71a65ebb3dc98cbee7a35c227b17a9d2" category="paragraph">如果您还没有控制台代理，请创建一个。看<block ref="d5bd3e4518f2136cfa2b600a07183cdd" category="inline-link-macro-rx"></block>，<block ref="8ebe3bab1eaa1107c63d6c8e11f3037a" category="inline-link-macro-rx"></block> ， 或者<block ref="289d689c55d02ef047cce8b209e7a21e" category="inline-link-macro-rx"></block>。</block>
   <block id="546e9d6a80a7f338dcca2f303d981d2a" category="paragraph">你也可以<block ref="9335525199017a57f50f3ba5f9c0cf66" category="inline-link-macro-rx"></block>在您网络中的 Linux 主机上，或者在云端的 Linux 主机上。</block>
-  <block id="3235c8cdd5c8a3cd602a2a8decbafa9f" category="paragraph">如果您还没有控制台代理，请在您的云提供商中创建一个控制台代理。看<block ref="b2c450c7df7c979218a1429cc503ab8d" category="inline-link-rx"></block>或者<block ref="7691630da4595c7d76220391074f5afa" category="inline-link-rx"></block>， 或者<block ref="8606c10a78408f0e631fb74a4fa73403" category="inline-link-rx"></block>。大多数情况下，您可能需要在尝试激活数据分类之前设置好控制台代理，因为大多数<block ref="5a10f16ec2dbaf433a4be955405143be" category="inline-link-rx"></block>但有些情况下，你需要现在就设置一个。</block>
   <block id="b9b4d509fe9e3e77716d45d551ade64d" category="paragraph">请注意，您也可以<block ref="66fb3c1341fae0e6f8743c669eb701a1" category="inline-link-rx"></block>在网络或云端的 Linux 主机上。一些计划在本地安装数据分类的用户可能还会选择在本地安装控制台代理。</block>
   <block id="639d50c4b484797455c51239e20b934e" category="paragraph">可能有些情况下你需要使用<block ref="b343c1bfd082abc4974fc8258a47d6f6" category="inline-link-rx"></block>。</block>
   <block id="b5a65ac63c30d18f443b0320e2b34254" category="inline-link-macro">了解如何在政府区域部署控制台代理</block>
@@ -2465,7 +2461,6 @@
   <block id="24ece81002d5816b98626cc57ced872d" category="paragraph">默认情况下，如果数据上次修改时间距今已有三年，则该数据被视为过期数据。</block>
   <block id="c3d635823e7267511f7a0ba59b131053" category="list-title">定义过期数据</block>
   <block id="41c8212e8259ff083fe9cdf357f8a4a6" category="list-text">在勒索软件恢复能力中，选择**配置**。</block>
-  <block id="de1a225a67ee04f4d574bda78a6c7680" category="list-text">在“文件属性”下拉菜单中，选择是否要根据文件的“上次访问时间”或“上次修改时间”来定义过期数据。</block>
   <block id="656961d589e5ba765f1a77e91cdda2d0" category="list-text">选择过期数据定义的时间段。</block>
   <block id="8d5311b8775f8a9ea8945d76095bb698" category="list-text">选择**保存**。</block>
   <block id="38fc1b337c0ea26463916fc2913205c1" category="paragraph"><block ref="38fc1b337c0ea26463916fc2913205c1" category="inline-image-macro-rx" type="image"></block></block>
@@ -2755,9 +2750,6 @@
   <block id="a10f0eec47f9088e070063edbfdc4194" category="sidebar">NetApp Data Classification 使您能够在组织的混合多云中扫描和分类数据。Data Classification 利用人工智能驱动的自然语言处理 (NLP) 进行上下文数据分析和分类，为您提供对数据的可操作见解，以解决合规性要求、检测安全漏洞、优化成本和加速迁移。</block>
   <block id="0997d7248674796f4e9772751d9f8905" category="paragraph">您可以随时从配置页面开始或停止对任何系统的扫描。您还可以将扫描从仅映射扫描切换到映射和分类扫描，反之亦然。建议扫描系统中的所有卷。</block>
   <block id="b9f4fbd6355c3f44311a98b062b34192" category="paragraph">默认情况下，页面顶部的 *无写入权限扫描* 开关处于禁用状态。这意味着，如果 Data Classification 在 CIFS 中没有写属性权限，或者在 NFS 中没有写权限，系统将不会扫描文件，因为 Data Classification 无法将"上次访问时间"还原为原始时间戳。如果您不在乎上次访问时间是否重置，请打开开关，无论权限如何，都会扫描所有文件。<block ref="62855d79cc7b1c143d998d83fe5addab" category="inline-link-macro-rx"></block>。</block>
-  <block id="fb3614a6e0ed7682cf436cfe7c5fae5d" category="admonition">只有在标题区域中设置了*映射*或*全扫描*设置时，才会自动扫描添加到系统中的新卷。当所有卷的设置为*自定义*或*关闭*时，需要为添加的每个新卷手动激活扫描。</block>
-  <block id="d9db1fafb114dbc932e2b11cb164a604" category="list-text">识别要扫描的系统。选择 **激活扫描**。在下拉列表中，选择 **完全扫描**、**仅映射** 或 **管理扫描** 以打开系统菜单并在特定卷或共享上配置扫描。</block>
-  <block id="b9302979813572e59ebecefdfa33f678" category="paragraph">要启用或禁用单个卷的扫描，请在列表中找到卷或共享，然后选择卷名称旁边的 **Map**、**Full scan** 或 **Off**。</block>
   <block id="42ce018d4794bc10a2de7729c1be000e" category="list-text">*仅映射扫描*仅提供您的数据的高级概览。映射可以非常快速地在数据源上完成，因为它不会访问文件以查看其中的数据。</block>
   <block id="cdd10c18a4e0061a31cb6aef6cce9d9b" category="paragraph">您可能会受益于使用仅映射扫描快速扫描数据以识别需要更多研究的数据源，然后仅在需要的数据源或卷上启用映射和分类扫描。</block>
   <block id="d3f4fe41f6b9f72067ddd679470cf2f2" category="paragraph">优先级仅分配给仅 Map 扫描，而不分配给 Map 和 classify 扫描。</block>
@@ -2853,4 +2845,21 @@
   <block id="c5efbb0c5c86f10e09723fd321118168" category="list-text">在对话框中，输入 "uninstall" 以继续断开 Data Classification 实例与 Console 代理的连接。选择 **Uninstall** 进行确认。</block>
   <block id="9b70df306d1f1719fd9d70e02911394c" category="section-title">2026 年 5 月 11 日</block>
   <block id="bbb6c300cb8841042895c9d8861857a2" category="paragraph">*版本 1.54*</block>
+  <block id="4c6fc95f3cbd5ec1525e1e6fc454b0a0" category="admonition">仅当您启用了对所有卷的扫描时，才会自动扫描添加到系统中的新卷。如果您仅在特定卷上启用了扫描，则必须在新添加的卷上手动启用扫描。</block>
+  <block id="d8ec5f9e43a5c50ccad1744ea2a31c6e" category="list-text">识别要扫描的系统。选择 **激活扫描**。在下拉列表中，选择 **扫描所有卷：完全扫描**、**扫描所有卷：仅映射** 或 **管理扫描** 以打开系统菜单并在特定卷上配置扫描。</block>
+  <block id="a8349eec03103165ecc719d7e32b3318" category="paragraph">要启用或禁用单个卷的扫描，请在列表中查找卷。在扫描类型列中，选择 **仅映射** 或 **完全扫描**。</block>
+  <block id="cf975b28ba57e8d6ba85ec36d74a06c3" category="section-title">合规管理员 IAM 角色</block>
+  <block id="7cd2bb6be419d190aa59909bb89ac3d8" category="paragraph">数据分类现在支持合规性管理员角色来管理数据分类中的权限。合规性管理员角色无权访问资源，包括控制台代理和工作区。具有合规性管理员角色的用户必须与至少一个其他角色相关联。</block>
+  <block id="dc778a1e9a5cca347a8492c869a90dc5" category="paragraph">安装 Data Classification 时，您应具有 Console 平台管理员角色或 Compliance 管理员角色。</block>
+  <block id="0d1a008033e3d9d27f9dd95b4127ec91" category="paragraph">如果您是现有用户，访问权限应继续正常。例如，具有文件夹或项目管理员角色的平台角色具有现有访问权限。</block>
+  <block id="eeeb9dcaeb66c431b51b12eff19105f3" category="inline-link-macro">Data Classification 角色</block>
+  <block id="c105c16486992d9ad71af50fd3100019" category="paragraph">有关详细信息，请参见 <block ref="96736731356e89817dd51fb3ef396df7" category="inline-link-macro-rx"></block>。</block>
+  <block id="3b25e99cf35d3d075098a86e0854063e" category="paragraph">Data Classification 捕获元数据，例如：文件名、权限、创建时间、上次访问和上次修改。这包括 Data Investigation Details 页面和 Data Investigation Reports 中显示的所有元数据。</block>
+  <block id="9dda8f9b32e4530c6a33ed3ca126bddd" category="list-text">在报告图块中，在完整数据映射概览报告标题中选择 **下载** 按钮。</block>
+  <block id="e963c800edae5dd04e2ad17bb722cbf6" category="paragraph">如果您还没有 Console 代理，请在云提供商中创建 Console 代理。请参阅<block ref="b2c450c7df7c979218a1429cc503ab8d" category="inline-link-rx"></block>或<block ref="7691630da4595c7d76220391074f5afa" category="inline-link-rx"></block>，或<block ref="8606c10a78408f0e631fb74a4fa73403" category="inline-link-rx"></block>。在大多数情况下，您可能在尝试激活 Data Classification 之前已经设置了 Console 代理，因为大多数<block ref="5a10f16ec2dbaf433a4be955405143be" category="inline-link-rx"></block>，但在某些情况下您需要立即设置一个。</block>
+  <block id="e4ba5595b199379fdf62976ff9dafe7a" category="list-text">*错误*（红点）：扫描无法完成，因为它遇到了问题。如果需要完成操作，错误将显示在"Required action"列下的工具提示中。否则，系统将显示"错误"状态并尝试恢复。完成后，状态发生变化。</block>
+  <block id="b9ea20ef9eb4c32abc0e2419fb5f8e92" category="paragraph">有关详细信息，请参阅 <block ref="5a1aa5110d4426eba46219fc7de6d695" category="inline-xref-macro-rx"></block>。</block>
+  <block id="2b038039f3ef8f9ce689f8c48df69b42" category="list-text">在 **文件属性** 下拉菜单中，选择是否要根据 *上次访问* 或 *上次修改* 的时间定义过时数据。</block>
+  <block id="b868c7529304443a7b5d84b6c738cde0" category="inline-image-macro">过期数据定义窗口的屏幕截图</block>
+  <block id="da2b03a9c6f1e52ca9a910698a9351e1" category="paragraph"><block ref="da2b03a9c6f1e52ca9a910698a9351e1" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>

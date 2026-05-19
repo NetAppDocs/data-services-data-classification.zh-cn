@@ -12,6 +12,18 @@ Data Classification 更新并改进了配置页面，从而实现了改进的可
 
 
 
+=== 合规管理员 IAM 角色
+
+数据分类现在支持合规性管理员角色来管理数据分类中的权限。合规性管理员角色无权访问资源，包括控制台代理和工作区。具有合规性管理员角色的用户必须与至少一个其他角色相关联。
+
+安装 Data Classification 时，您应具有 Console 平台管理员角色或 Compliance 管理员角色。
+
+如果您是现有用户，访问权限应继续正常。例如，具有文件夹或项目管理员角色的平台角色具有现有访问权限。
+
+有关详细信息，请参见 link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-data-classification.html["Data Classification 角色"^]。
+
+
+
 === 使用 OVA 部署 Data Classification
 
 NetApp Data Classification 现在支持使用 VMware Open Virtual Appliance (OVA) 进行部署，为本地 VMware vSphere 环境提供了简化的部署策略。
