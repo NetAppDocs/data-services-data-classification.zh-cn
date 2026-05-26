@@ -26,7 +26,6 @@
   <block id="e6414c92b8fa46238f4135e4d3e45674" category="inline-link-macro">查看其他 AWS 实例类型</block>
   <block id="10657c54dd5c19e73ee0f8e2223b7a46" category="list-text">*Amazon Elastic Compute Cloud (Amazon EC2) 实例类型*：“m6i.4xlarge”。<block ref="2fad631c28a07a1344ecdbaabb5084bf" category="inline-link-macro-rx"></block> 。</block>
   <block id="130a6b20e1175876fb22c9520aa18c8c" category="inline-link-macro">查看其他 Azure 实例类型</block>
-  <block id="dcd6c94de63a44c707e6410206f93f30" category="list-text">*Azure VM 大小*：“Standard_D16s_v3”。<block ref="600a0a16acacbb97202eae2cd680ce79" category="inline-link-macro-rx"></block> 。</block>
   <block id="02a3b057fd8df2afe74574d8ba4929b5" category="inline-link-macro">查看其他 GCP 实例类型</block>
   <block id="e7d3c98d4730560139776bd99350f7c9" category="list-text">*GCP 机器类型*：“n2-standard-16”。<block ref="0560993eb8cc456f0c5f18a57a7d0f71" category="inline-link-macro-rx"></block> 。</block>
   <block id="114b40cee02180a916d6e0a652f1300d" category="list-text">*UNIX 文件夹权限*：需要以下最低 UNIX 权限：</block>
@@ -573,11 +572,6 @@
   <block id="eec0d212c1750829ae380457eae9d24d" category="inline-link">m6i.4xlarge</block>
   <block id="a0663cb1844f1b3415ad47f3e1336565" category="cell"><block ref="4a1901a74409198712b3543e7da252d5" category="inline-link-rx"></block>（默认）m6a.4xlarge m5a.4xlarge m5.4xlarge m4.4xlarge</block>
   <block id="254c926efe222a9cced66b6753a3b70c" category="section-title">Azure 实例类型</block>
-  <block id="7c6b159592aa05d7d8934685f5b0c4c8" category="cell">32 个 CPU、128 GB RAM、OS 磁盘（2,048 GiB，最小吞吐量 250 MB/s）和数据磁盘（1 TiB SSD，最小吞吐量 750 MB/s）</block>
-  <block id="02201d429f7390acabd29e5c0c6e22e2" category="inline-link">Standard_D32_v3</block>
-  <block id="f15da40a9b4a1b9d1900476ba761ddf8" category="cell"><block ref="98fbfccb7d937f28be2761c9fd869045" category="inline-link-rx"></block>（默认）</block>
-  <block id="dab82bd5fdaa1e12c8086bb3cfa494cb" category="inline-link">Standard_D16s_v3</block>
-  <block id="eadae203b0d698aa2181a9e07d139968" category="cell"><block ref="4267432880aa37f359eef525ee6bd13a" category="inline-link-rx"></block>（默认）</block>
   <block id="04857641e7994338feb506f5b60ebeb0" category="section-title">GCP 实例类型</block>
   <block id="79561dd1a4e00a3e05c0d892a01e77bf" category="inline-link">n2-标准-16</block>
   <block id="dd654e120269d83d0f32a6f695b8bab9" category="cell"><block ref="fc953708959f6784e56436278d753426" category="inline-link-rx"></block>（默认）n2d-standard-16 n1-standard-16</block>
@@ -2862,4 +2856,10 @@
   <block id="2b038039f3ef8f9ce689f8c48df69b42" category="list-text">在 **文件属性** 下拉菜单中，选择是否要根据 *上次访问* 或 *上次修改* 的时间定义过时数据。</block>
   <block id="b868c7529304443a7b5d84b6c738cde0" category="inline-image-macro">过期数据定义窗口的屏幕截图</block>
   <block id="da2b03a9c6f1e52ca9a910698a9351e1" category="paragraph"><block ref="da2b03a9c6f1e52ca9a910698a9351e1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="91c4fe55c7bd796476edf6804600775d" category="list-text">*Azure VM 大小*："Standard_D16_v5"。<block ref="600a0a16acacbb97202eae2cd680ce79" category="inline-link-macro-rx"></block>。</block>
+  <block id="bd2d49c1745c3584a0ed2189f44384ab" category="cell">16 个 CPU、64 GB RAM、操作系统磁盘（2,048 GiB，最低 250 MB/s 吞吐量）和数据磁盘（1 TiB SSD，最低 750 MB/s 吞吐量）</block>
+  <block id="6ab50c5db3106499118b74e41dfd25f7" category="inline-link">Standard_D32s_v5 或 Standard_D32_v5</block>
+  <block id="04642b3e738d43806ecec9fa472d1d45" category="cell"><block ref="04642b3e738d43806ecec9fa472d1d45" category="inline-link-rx"></block></block>
+  <block id="57b872af439ab61190055dee6469a0be" category="inline-link-macro">Standard_D16_v5 或 Standard_D16s_v5</block>
+  <block id="e69245882572c9873effe3c11f071ff9" category="cell"><block ref="090ec61e5794e3c2b337f1ad8d7e781f" category="inline-link-macro-rx"></block> (默认)</block>
 </blocks>

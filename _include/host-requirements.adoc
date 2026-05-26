@@ -30,7 +30,7 @@
 * 在云中为数据分类安装部署计算实例时，建议您使用满足上述“大型”系统要求的系统：
 +
 ** *Amazon Elastic Compute Cloud (Amazon EC2) 实例类型*：“m6i.4xlarge”。link:reference-instance-types.html#aws-instance-types["查看其他 AWS 实例类型"^] 。
-** *Azure VM 大小*：“Standard_D16s_v3”。link:reference-instance-types.html#azure-instance-types["查看其他 Azure 实例类型"^] 。
+** *Azure VM 大小*："Standard_D16_v5"。link:reference-instance-types.html#azure-instance-types["查看其他 Azure 实例类型"^]。
 ** *GCP 机器类型*：“n2-standard-16”。link:reference-instance-types.html#gcp-instance-types["查看其他 GCP 实例类型"^] 。
 
 
