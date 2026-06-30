@@ -56,19 +56,3 @@ image:screenshot_scan_missing_permissions.png["显示开关的屏幕截图，即
 
 
 NOTE: 配置了 SnapLock 的 ONTAP 卷具有只读权限，并且无法将上次访问时间还原为原始时间戳。
-
-
-
-=== 扫描分析事件
-
-"调查"页面中有一个名为"扫描分析事件"的筛选器，可以显示由于 Data Classification 无法还原上次访问时间而未分类的文件，也可以显示即使 Data Classification 无法还原上次访问时间也已分类的文件。
-
-image:screenshot_scan_analysis_event_filter.png["过滤器的屏幕截图，用于查看根据是否具有写入权限扫描了哪些文件，以及未扫描哪些文件。"]
-
-过滤器选择包括：
-
-* "Not classified -- Cannot revert last accessed time" - 显示由于缺少写入权限而未分类的文件。
-* "Classified and updated last accessed time" - 这显示了已分类的文件，且 Data Classification 无法将上次访问时间重置回原始日期。此过滤器仅适用于启用 *Scan without write permissions* 的环境。
-
-
-如果需要，您可以将这些结果导出到报表中，以便查看哪些文件由于权限而正在扫描或未扫描。link:task-investigate-data.html#download-your-report["了解有关数据调查报告的更多信息"^].
